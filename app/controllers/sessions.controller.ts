@@ -16,7 +16,7 @@ export class SessionsController {
 
   @Get('/sessions')
   async query() {
-    return []
+    return [{a: 1, b: 2}]
   }
 
   @Post('/sessions')
