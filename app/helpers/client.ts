@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 import { PrismaClient } from '@prisma/client'
-
 declare global {
   namespace NodeJS {
     interface Global {
@@ -13,11 +13,12 @@ let prisma: PrismaClient
 if (process.env.NODE_ENV === 'production') {
   prisma = new PrismaClient()
 } else {
-  if (!global.prisma) {
-    global.prisma = new PrismaClient()
+  if (global && !(global as any).prisma) {
+    // eslint-disable-next-line @typescript-eslint/no-extra-semi
+    ;(global as any).prisma = new PrismaClient()
   }
 
-  prisma = global.prisma
+  prisma = (global as any).prisma
 }
 
 export default prisma

@@ -1,39 +1,28 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowJs": false,
+    "strict": true,
     "moduleResolution": "Node",
     "module": "commonjs",
     "outDir": "./dist",
     "lib": ["ESNext"],
     "removeComments": true,
     "skipLibCheck": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "esModuleInterop": true,
     "preserveConstEnums": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "typings"
-    ],
+    "typeRoots": ["node_modules/@types", "typings"],
     "baseUrl": ".",
     "paths": {
       "configs/*": ["./configs/*"],
-      "app": ["app"]
-    },
+      "app": ["app"],
+      "chrome-mac/*": ["./chrome-mac/*"]
+    }
   },
   "compileOnSave": false,
-  "includes": [
-    "app/**/*",
-    "configs/**/*",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "files": [
-    "app.ts",
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "includes": ["app/**/*", "configs/**/*", "**/*.ts", "**/*.tsx"],
+  "files": ["app.ts"],
+  "exclude": ["node_modules", "dist"]
 }

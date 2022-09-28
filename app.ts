@@ -4,7 +4,7 @@ import CONSTANTS from 'configs/constants'
 import createServer from 'configs/application'
 import { bootstrapAfter } from 'configs/bootstrap'
 
-module.exports = (async (): Promise<Server> => {
+module.exports = (async (): Promise<Server | undefined> => {
   try {
     const app = await createServer()
     return app.listen(CONSTANTS.PORT, () => {

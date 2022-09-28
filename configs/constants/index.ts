@@ -4,7 +4,7 @@ import staging from './staging'
 import production from './production'
 import { ENVS } from './envs'
 
-const parsedEnvs = bootstrapBefore()
+const parsedEnvs = bootstrapBefore() as any
 
 const getCurrentEnv = (): ENVS => {
   const env = process.env?.ENV
@@ -18,13 +18,14 @@ const getCurrentEnv = (): ENVS => {
 }
 
 const getCurrentConstants = (ident: ENVS): EevRecord => {
-  let constants = development
-  const source =
+  const constants = development as any
+  const source = (
     ident === ENVS.PRODUCTION
       ? production
       : ident === ENVS.STAGING
       ? staging
       : development
+  ) as any
   Object.keys(development).forEach(key => {
     const sourceValue = source[key]
     const processValue = process.env[key]
@@ -41,7 +42,7 @@ const getCurrentConstants = (ident: ENVS): EevRecord => {
     }
   })
 
-  constants.ENV_LABEL = source.ENV_LABEL
+  constants.ENV_LABEL = source.ENV_LABEL || ''
 
   return constants
 }

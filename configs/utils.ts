@@ -1,4 +1,10 @@
-export const dictToArray = (dict: object): Array<any> =>
+interface Dict {
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  [name: string]: Function
+}
+
+// eslint-disable-next-line @typescript-eslint/ban-types
+export const dictToArray = (dict: Dict): Array<Function> =>
   Object.keys(dict).map(name => dict[name])
 
 export const print = {

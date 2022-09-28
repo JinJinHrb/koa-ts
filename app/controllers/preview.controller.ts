@@ -12,11 +12,14 @@ import { Service } from 'typedi'
 @JsonController()
 @Service()
 export class PreviewController {
-  // constructor(private initPuppeteerService: InitPuppeteerService) {}
-
   @Get('/preview')
   async query() {
     const myPuppeteer = InitPuppeteerService.getInstance('myPuppeteer')
-    return [{ name: myPuppeteer.name, ts: '2022-09-27 14:57:23' }]
+    try {
+      const browser = await myPuppeteer.getBrowser()
+      return { name: myPuppeteer.name, browser }
+    } catch (error) {
+      return { name: myPuppeteer.name, error }
+    }
   }
 }

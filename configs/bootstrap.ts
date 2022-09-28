@@ -11,8 +11,9 @@ export const bootstrapBefore = (): object => {
     return {}
   }
   print.log('.env loaded.')
-  return result.parsed
+  return result.parsed || {}
 }
 
 // "after" will trigger after the "container" mounted..
+// eslint-disable-next-line @typescript-eslint/no-empty-function
 export const bootstrapAfter = (): any => {}
