@@ -12,6 +12,10 @@ module.exports = (async (): Promise<Server | undefined> => {
       bootstrapAfter()
     })
   } catch (e) {
-    console.log(e)
+    print.danger(
+      `bootstrapAfter error for server on ${CONSTANTS.PORT}, in ${
+        CONSTANTS.ENV_LABEL
+      } mode, ${(e as Error)?.message}`,
+    )
   }
 })()
