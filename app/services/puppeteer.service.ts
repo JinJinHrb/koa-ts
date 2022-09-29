@@ -1,17 +1,8 @@
 import { localChromiumPath, MAX_PAGE_POOL_SIZE } from 'configs/puppeteer.config'
+import { TPageWrapper, TOccupiedPageInfo } from './types.d'
 import { print } from 'configs/utils'
-import puppeteer, { Page } from 'puppeteer'
+import puppeteer, { Page, PDFOptions } from 'puppeteer'
 import _ from 'lodash'
-
-interface IOccupiedPageInfo {
-  [key: number]: string
-}
-
-type TPageWrapper = {
-  page: puppeteer.Page
-  isTemp: boolean
-  occupiedIndex?: number
-}
 
 const BLANK_HREF = 'about:blank'
 
@@ -20,8 +11,8 @@ export class PuppeteerService {
   static browser?: puppeteer.Browser
 
   // 请注意 pagePool 与 occupiedPageInfo 的同步关系!
-  static pagePool: puppeteer.Page[] = []
-  static occupiedPageInfo: IOccupiedPageInfo = {} // 记录数组下标对应具体的url
+  static pagePool: Page[] = []
+  static occupiedPageInfo: TOccupiedPageInfo = {} // 记录数组下标对应具体的url
 
   static getInstance(name: string) {
     if (!PuppeteerService.instance) {
@@ -48,7 +39,7 @@ export class PuppeteerService {
   }
 
   async browserDisconnect(e: puppeteer.EventType) {
-    print.danger(`browserDisconnect e: ${e?.toString()}`)
+    e && print.danger(`browserDisconnect e: ${e?.toString()}`)
     const browser = PuppeteerService.browser
     if (!browser) {
       return
@@ -65,7 +56,7 @@ export class PuppeteerService {
 
   async visitPage(
     url: string,
-    doSomething: (page: puppeteer.Page) => unknown,
+    doSomething: (myPage: TPageWrapper) => unknown,
     timeout = 10000,
   ) {
     const myPage = await this.getPageFromPool()
@@ -81,7 +72,7 @@ export class PuppeteerService {
         // 如果是从 pagePool 中来的，记录 url
         PuppeteerService.occupiedPageInfo[myPage.occupiedIndex as number] = url
       }
-      result = doSomething(myPage.page)
+      result = doSomething(myPage)
     } catch (e) {
       print.danger(`visitPage doSomething error: ${(e as Error).message}`)
     }
@@ -100,7 +91,7 @@ export class PuppeteerService {
   async getPageFromPool() {
     const browser = await this.getBrowser()
     let isTemp = false // 判断之后是否要回收
-    let page: puppeteer.Page
+    let page: Page
     const occupiedIndexes = Object.keys(PuppeteerService.occupiedPageInfo)
     let idleIndex = -1 // 从 pagePool 中分配的下标
     if (occupiedIndexes.length >= MAX_PAGE_POOL_SIZE) {
@@ -134,6 +125,19 @@ export class PuppeteerService {
       myPage.occupiedIndex = idleIndex
     }
     return myPage
+  }
+
+  async exportPdf(myPage: TPageWrapper, path: string, pdfOptions?: PDFOptions) {
+    const page = myPage.page
+    const options = {
+      path,
+      ...pdfOptions,
+    }
+    try {
+      await page.pdf(options)
+    } catch (e) {
+      print.danger(`exportPdf error: ${(e as Error).message}`)
+    }
   }
 
   print() {

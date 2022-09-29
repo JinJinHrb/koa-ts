@@ -1,25 +1,30 @@
-import {
-  BadRequestError,
-  Post,
-  JsonController,
-  BodyParam,
-  Get,
-} from 'routing-controllers'
+import { Body, JsonController, Post } from 'routing-controllers'
 import { PuppeteerService } from '../services'
-import { Prisma } from '@prisma/client'
 import { Service } from 'typedi'
+import { TPageWrapper } from 'app/services/types'
+import path from 'path'
+import { mkdirSync } from 'configs/utils'
+import { TMP_FOLDER } from 'configs/puppeteer.config'
+import { PreviewParams } from 'app/services/preview.params'
 
 @JsonController()
 @Service()
 export class PreviewController {
-  @Get('/preview')
-  async query() {
+  @Post('/preview')
+  async query(@Body() params: PreviewParams) {
     const myPuppeteer = PuppeteerService.getInstance('myPuppeteer')
     try {
-      const browser = await myPuppeteer.getBrowser()
-      return { name: myPuppeteer.name, browser }
+      await myPuppeteer.visitPage(
+        params.url,
+        (myPage: TPageWrapper) => {
+          mkdirSync(TMP_FOLDER)
+          myPuppeteer.exportPdf(myPage, path.join(TMP_FOLDER, `./${params.name}`))
+        },
+        30000,
+      )
+      return { ok: true, params }
     } catch (error) {
-      return { name: myPuppeteer.name, error }
+      return { ok: false, error, params }
     }
   }
 }

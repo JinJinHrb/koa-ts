@@ -197,3 +197,4 @@ gen
 *.ppk
 .npmrc
 chrome-mac
+tmp
