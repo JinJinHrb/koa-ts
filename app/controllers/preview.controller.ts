@@ -5,7 +5,7 @@ import {
   BodyParam,
   Get,
 } from 'routing-controllers'
-import { InitPuppeteerService } from '../services'
+import { PuppeteerService } from '../services'
 import { Prisma } from '@prisma/client'
 import { Service } from 'typedi'
 
@@ -14,7 +14,7 @@ import { Service } from 'typedi'
 export class PreviewController {
   @Get('/preview')
   async query() {
-    const myPuppeteer = InitPuppeteerService.getInstance('myPuppeteer')
+    const myPuppeteer = PuppeteerService.getInstance('myPuppeteer')
     try {
       const browser = await myPuppeteer.getBrowser()
       return { name: myPuppeteer.name, browser }

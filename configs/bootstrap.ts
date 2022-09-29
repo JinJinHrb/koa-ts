@@ -1,7 +1,7 @@
 import { join } from 'path'
 import { print } from './utils'
 import dotenv from 'dotenv'
-import { InitPuppeteerService } from 'app/services/puppeteer.service'
+import { PuppeteerService } from 'app/services/puppeteer.service'
 
 // "before" will trigger before the app lift.
 export const bootstrapBefore = (): object => {
@@ -18,7 +18,7 @@ export const bootstrapBefore = (): object => {
 // "after" will trigger after the "container" mounted..
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 export const bootstrapAfter = async () => {
-  const myPuppeteer = InitPuppeteerService.getInstance('myPuppeteer')
+  const myPuppeteer = PuppeteerService.getInstance('myPuppeteer')
   try {
     await myPuppeteer.getBrowser()
   } catch (e) {
