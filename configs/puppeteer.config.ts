@@ -7,3 +7,7 @@ export const localChromiumPath = 'chrome-mac/Chromium.app/Contents/MacOS/Chromiu
 
 /** page 池上限 */
 export const MAX_PAGE_POOL_SIZE = 4
+
+export const chromeExtensions = [
+  // path.join(__dirname, './chrome-extensions/XLS-Viewer--Editor'),
+]

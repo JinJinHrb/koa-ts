@@ -1,4 +1,8 @@
-import { localChromiumPath, MAX_PAGE_POOL_SIZE } from 'configs/puppeteer.config'
+import {
+  chromeExtensions,
+  localChromiumPath,
+  MAX_PAGE_POOL_SIZE,
+} from 'configs/puppeteer.config'
 import { TPageWrapper, TOccupiedPageInfo } from './types.d'
 import { print } from 'configs/utils'
 import puppeteer, { Page, PDFOptions } from 'puppeteer'
@@ -29,9 +33,17 @@ export class PuppeteerService {
 
   async getBrowser() {
     if (!PuppeteerService.browser) {
+      const extStr = chromeExtensions.join(',')
       PuppeteerService.browser = await puppeteer.launch({
         executablePath: localChromiumPath,
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        headless: _.isEmpty(extStr),
+        args: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
+          _.isEmpty(extStr)
+            ? '--disable-extensions'
+            : `--disable-extensions-except=${extStr}`,
+        ],
       })
       PuppeteerService.browser.on('disconnected', this.browserDisconnect)
     }
@@ -140,7 +152,18 @@ export class PuppeteerService {
     }
   }
 
-  print() {
-    print.log(`puppeteer name: ${this.name}`)
+  inspect() {
+    print.log(
+      `puppeteer name: ${this.name}, occupiedPageInfo: ${JSON.stringify(
+        PuppeteerService.occupiedPageInfo,
+      )}, pagePool.length: ${
+        PuppeteerService.pagePool.length
+      }, chromeExtensions: ${JSON.stringify(chromeExtensions)}`,
+    )
+    return {
+      chromeExtensions,
+      'pagePool.length': PuppeteerService.pagePool.length,
+      occupiedPageInfo: PuppeteerService.occupiedPageInfo,
+    }
   }
 }

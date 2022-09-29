@@ -1,4 +1,4 @@
-import { Body, JsonController, Post } from 'routing-controllers'
+import { Body, Get, JsonController, Post } from 'routing-controllers'
 import { PuppeteerService } from '../services'
 import { Service } from 'typedi'
 import { TPageWrapper } from 'app/services/types'
@@ -26,5 +26,12 @@ export class PreviewController {
     } catch (error) {
       return { ok: false, error, params }
     }
+  }
+
+  @Get('/inspect')
+  async inspect() {
+    const myPuppeteer = PuppeteerService.getInstance('myPuppeteer')
+    const result = myPuppeteer.inspect()
+    return { ok: true, ...result }
   }
 }

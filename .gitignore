@@ -198,3 +198,4 @@ gen
 .npmrc
 chrome-mac
 tmp
+configs/chrome-extensions
