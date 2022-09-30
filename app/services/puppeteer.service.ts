@@ -15,7 +15,7 @@ export class PuppeteerService {
   static browser?: puppeteer.Browser
 
   // 请注意 pagePool 与 occupiedPageInfo 的同步关系!
-  static pagePool: Page[] = []
+  static pagePool: (Page | undefined)[] = []
   static occupiedPageInfo: TOccupiedPageInfo = {} // 记录数组下标对应具体的url
 
   static getInstance(name: string) {
@@ -48,8 +48,8 @@ export class PuppeteerService {
     return PuppeteerService.browser
   }
 
-  async browserDisconnect(e: puppeteer.EventType) {
-    e && print.danger(`browserDisconnect e: ${e?.toString()}`)
+  async browserDisconnect(e?: puppeteer.EventType) {
+    e && print.danger(`browserDisconnect e: ${e.toString()}`)
     const browser = PuppeteerService.browser
     if (!browser) {
       return
@@ -84,7 +84,23 @@ export class PuppeteerService {
       }
       result = doSomething(myPage)
     } catch (e) {
-      print.danger(`visitPage doSomething error: ${(e as Error).message}`)
+      const errprMessage = (e as Error).message
+      print.danger(`visitPage doSomething error: ${errprMessage}`)
+      if (errprMessage.includes('Session closed')) {
+        try {
+          await myPage.page.close()
+          if (
+            !myPage.isTemp &&
+            _.isNumber(myPage.occupiedIndex) &&
+            myPage.occupiedIndex > -1
+          ) {
+            PuppeteerService.pagePool[myPage.occupiedIndex as number] = undefined
+            delete PuppeteerService.occupiedPageInfo[myPage.occupiedIndex as number]
+          }
+        } catch (e) {
+          print.danger(`visitPage page.close() error: ${(e as Error).message}`)
+        }
+      }
     }
     if (myPage.isTemp) {
       try {
