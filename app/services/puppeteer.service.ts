@@ -15,7 +15,7 @@ export class PuppeteerService {
   static browser?: puppeteer.Browser
 
   // 请注意 pagePool 与 occupiedPageInfo 的同步关系!
-  static pagePool: (Page | undefined)[] = []
+  static pagePool: Page[] = []
   static occupiedPageInfo: TOccupiedPageInfo = {} // 记录数组下标对应具体的url
 
   static getInstance(name: string) {
@@ -94,7 +94,10 @@ export class PuppeteerService {
             _.isNumber(myPage.occupiedIndex) &&
             myPage.occupiedIndex > -1
           ) {
-            PuppeteerService.pagePool[myPage.occupiedIndex as number] = undefined
+            // eslint-disable-next-line @typescript-eslint/no-extra-semi
+            ;(PuppeteerService.pagePool[
+              myPage.occupiedIndex as number
+            ] as unknown as undefined) = undefined
             delete PuppeteerService.occupiedPageInfo[myPage.occupiedIndex as number]
           }
         } catch (e) {
