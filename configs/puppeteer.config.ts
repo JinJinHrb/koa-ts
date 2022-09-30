@@ -9,5 +9,6 @@ export const localChromiumPath = 'chrome-mac/Chromium.app/Contents/MacOS/Chromiu
 export const MAX_PAGE_POOL_SIZE = 4
 
 export const chromeExtensions = [
+  // path.join(__dirname, './chrome-extensions/google_ms_doc'),
   // path.join(__dirname, './chrome-extensions/XLS-Viewer--Editor'),
 ]

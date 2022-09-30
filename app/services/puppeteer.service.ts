@@ -34,16 +34,14 @@ export class PuppeteerService {
   async getBrowser() {
     if (!PuppeteerService.browser) {
       const extStr = chromeExtensions.join(',')
+      const args = ['--no-sandbox', '--disable-setuid-sandbox']
+      if (!_.isEmpty(extStr)) {
+        args.push(`--disable-extensions-except=${extStr}`)
+      }
       PuppeteerService.browser = await puppeteer.launch({
         executablePath: localChromiumPath,
         headless: _.isEmpty(extStr),
-        args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          _.isEmpty(extStr)
-            ? '--disable-extensions'
-            : `--disable-extensions-except=${extStr}`,
-        ],
+        args,
       })
       PuppeteerService.browser.on('disconnected', this.browserDisconnect)
     }

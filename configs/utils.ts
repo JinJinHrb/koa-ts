@@ -58,3 +58,25 @@ export const mkdirSync = function (path: string, mode = 0o755) {
   }
   arr.length && inner(arr.shift() as string)
 }
+
+export const getFileDataPromise = (filePath: string, encoding?: string) => {
+  return new Promise(function (rsv, rej) {
+    const cb = function (err: Error, data: unknown) {
+      if (err) {
+        return rej(err)
+      }
+      rsv(data)
+    }
+    const readFileArgs = [filePath] as unknown[]
+    if (encoding === 'buffer') {
+      readFileArgs.push(cb)
+    } else {
+      if (!encoding) {
+        encoding = 'utf8'
+      }
+      readFileArgs.push({ encoding })
+      readFileArgs.push(cb)
+    }
+    fs.readFile.apply(null, readFileArgs as any)
+  })
+}
