@@ -1,12 +1,16 @@
 import {
   chromeExtensions,
+  HEADLESS,
   localChromiumPath,
   MAX_PAGE_POOL_SIZE,
+  WINDOW_SIZE,
 } from 'configs/puppeteer.config'
 import { TPageWrapper, TOccupiedPageInfo } from './types.d'
-import { print } from 'configs/utils'
-import puppeteer, { Page, PDFOptions } from 'puppeteer'
+import { mkdirSync, print } from 'configs/utils'
+import puppeteer, { Page, PDFOptions, ScreenshotOptions } from 'puppeteer'
 import _ from 'lodash'
+import path from 'path'
+import { PreviewParams } from './preview.params'
 
 const BLANK_HREF = 'about:blank'
 
@@ -38,9 +42,12 @@ export class PuppeteerService {
       if (!_.isEmpty(extStr)) {
         args.push(`--disable-extensions-except=${extStr}`)
       }
+      if (WINDOW_SIZE?.width && WINDOW_SIZE?.height) {
+        args.push(`--window-size=${WINDOW_SIZE.width},${WINDOW_SIZE.height}`)
+      }
       PuppeteerService.browser = await puppeteer.launch({
         executablePath: localChromiumPath,
-        headless: _.isEmpty(extStr),
+        headless: !_.isEmpty(extStr) ? false : HEADLESS,
         args,
       })
       PuppeteerService.browser.on('disconnected', this.browserDisconnect)
@@ -72,7 +79,13 @@ export class PuppeteerService {
     const myPage = await this.getPageFromPool()
     let result: unknown
     try {
-      await myPage.page.goto(url, { timeout })
+      // await myPage.page.goto(url, { timeout })
+      // This is well explained in the API
+      await myPage.page.setViewport({
+        width: 1280,
+        height: 1024,
+      })
+      await myPage.page.goto(url, { waitUntil: 'networkidle2', timeout })
       if (!myPage.isTemp) {
         if (!_.isNumber(myPage.occupiedIndex) || myPage.occupiedIndex < 0) {
           throw new Error(
@@ -81,6 +94,10 @@ export class PuppeteerService {
         }
         // 如果是从 pagePool 中来的，记录 url
         PuppeteerService.occupiedPageInfo[myPage.occupiedIndex as number] = url
+      }
+      if (url.endsWith('.pdf')) {
+        await myPage.page.waitForNetworkIdle()
+        await new Promise(r => setTimeout(r, 500))
       }
       result = doSomething(myPage)
     } catch (e) {
@@ -167,6 +184,39 @@ export class PuppeteerService {
     } catch (e) {
       print.danger(`exportPdf error: ${(e as Error).message}`)
     }
+  }
+
+  async exportScreenshot(
+    myPage: TPageWrapper,
+    path: string,
+    screenshotOptions?: ScreenshotOptions,
+  ) {
+    const page = myPage.page
+    const options = {
+      path,
+      fullPage: true,
+      ...screenshotOptions,
+    }
+    try {
+      await page.screenshot(options)
+    } catch (e) {
+      print.danger(`exportScreenshot error: ${(e as Error).message}`)
+    }
+  }
+
+  async doPreview(params: PreviewParams, folderPath: string) {
+    return await this.visitPage(
+      params.url,
+      (myPage: TPageWrapper) => {
+        mkdirSync(folderPath)
+        if (params.isScreenshot) {
+          this.exportScreenshot(myPage, path.join(folderPath, `./${params.name}`))
+        } else {
+          this.exportPdf(myPage, path.join(folderPath, `./${params.name}`))
+        }
+      },
+      30000,
+    )
   }
 
   inspect() {

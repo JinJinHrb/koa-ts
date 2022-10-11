@@ -6,4 +6,6 @@ export class PreviewParams {
 
   @IsNotEmpty()
   name!: string // 文件名
+
+  isScreenshot?: boolean
 }
