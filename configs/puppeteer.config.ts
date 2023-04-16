@@ -1,6 +1,6 @@
 import path from 'path'
 
-export const BOOTSTRAP_PUPPETEER = true
+export const BOOTSTRAP_PUPPETEER = false
 
 export const TMP_FOLDER = path.join(__dirname, '../tmp')
 

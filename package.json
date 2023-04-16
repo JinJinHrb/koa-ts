@@ -5,8 +5,8 @@
   "description": "The best practice of building Koa2 with TypeScript",
   "main": "app.ts",
   "scripts": {
-    "dev": "export NODE_ENV=development; ts-node-dev -r tsconfig-paths/register app.ts",
-    "dev:debug": "export NODE_ENV=development; ts-node-dev --transpile-only --respawn --inspect -r tsconfig-paths/register app.ts",
+    "start": "export NODE_ENV=development; ts-node -r tsconfig-paths/register app.ts",
+    "dev": "export NODE_ENV=development; ts-node-dev --transpile-only --respawn --inspect -r tsconfig-paths/register app.ts",
     "dev:db": "docker compose -f docker-compose.yml up -d",
     "prettier": "prettier --write '**/*.{js,ts}'",
     "test": "jest --config .jest.config.js --no-cache --detectOpenHandles",
