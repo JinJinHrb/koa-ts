@@ -1,15 +1,28 @@
 import { Service } from 'typedi'
 import fs from 'fs'
 import pathUtil from 'path'
+import dayjs from 'dayjs'
+
+export interface IFileState extends fs.Stats {
+  life?: number
+  lifeInDay?: number
+  fname?: string
+  fileFlag?: boolean
+  directoryFlag?: boolean
+  symbolicLinkFlag?: boolean
+}
 
 @Service()
 export class ToolsService {
   /**
    * getFsStatPromise() 返回结果基础上
    * 添加额外字段
-   * life, fname, isFile, isDirectory, isSymbolicLink
+   * life, fname, fileFlag, directoryFlag, symbolicLinkFlag
    */
-  async listStatsPromise(folderPath, filterHandler) {
+  async listStatsPromise(
+    folderPath: string,
+    filterHandler?: (value: IFileState, index?: number, array?: IFileState[]) => boolean,
+  ) {
     return new Promise((rsv_root, rej_root) => {
       let fileNames: string[] = []
       new Promise<string[]>(function (rsv, rej) {
@@ -27,7 +40,7 @@ export class ToolsService {
           }
           fileNames = feed
           const q_all = feed.map(function (elem) {
-            return new Promise<fs.Stats>(function (rsv, rej) {
+            return new Promise<IFileState>(function (rsv, rej) {
               fs.stat(`${folderPath}${pathUtil.sep}${elem}`, function (err, rsp) {
                 if (err) {
                   return rej(err)
@@ -40,15 +53,17 @@ export class ToolsService {
         })
         .then(
           function (feed) {
-            var now = new Date()
+            const thisDay = dayjs(new Date())
             ;(feed || []).forEach(function (elem, i) {
               if (elem.birthtime instanceof Date) {
-                elem.life = hdlUtil.getTimeGap(elem.birthtime, now)
+                const fileBirthDay = dayjs(elem.birthtime)
+                elem.life = thisDay.diff(fileBirthDay)
+                elem.lifeInDay = thisDay.diff(fileBirthDay, 'day')
               }
               elem.fname = fileNames[i]
-              elem.isFile = elem.isFile()
-              elem.isDirectory = elem.isDirectory()
-              elem.isSymbolicLink = elem.isSymbolicLink()
+              elem.fileFlag = elem.isFile()
+              elem.directoryFlag = elem.isDirectory()
+              elem.symbolicLinkFlag = elem.isSymbolicLink()
             })
             if (filterHandler && filterHandler instanceof Function) {
               feed = feed.filter(filterHandler)

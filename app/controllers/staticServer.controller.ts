@@ -1,5 +1,4 @@
 import { Controller, Get, Req, Res, Param } from 'routing-controllers'
-import { SessionsService } from '../services'
 import { Service } from 'typedi'
 import { Request, Response } from 'koa'
 import _ from 'lodash'
@@ -10,8 +9,6 @@ import path from 'path'
 @Controller('/static')
 @Service()
 export class StaticServerController {
-  constructor(private sessionsService: SessionsService) {}
-
   @Get('/get/:fPath')
   async getFile(
     @Param('fPath') fPath: string,

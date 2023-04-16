@@ -15,6 +15,7 @@ import { Service } from 'typedi'
 import { validateOnServer } from '../lib/formily.json-schema.umd.staging'
 import schema20221124 from '../mock/schema20221124'
 import data20221124 from '../mock/data20221124'
+import dayjs from 'dayjs'
 
 @JsonController()
 @Service()
@@ -23,7 +24,13 @@ export class SessionsController {
 
   @Get('/sessions')
   async query() {
-    return [{ a: 1, b: 2, c: 2 }]
+    const date1 = new Date()
+    const date2 = new Date()
+    date2.setMinutes(date2.getMinutes() + 180)
+    date2.setDate(date2.getDate() + 999)
+    const d1 = dayjs(date1)
+    const d2 = dayjs(date2)
+    return [{ difference: d2.diff(d1, 'day', true) }]
   }
 
   @Post('/sessions')

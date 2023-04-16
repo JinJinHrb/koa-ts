@@ -1,5 +1,5 @@
 import { JsonController, Get, Controller, Post, Body } from 'routing-controllers'
-import { SessionsService } from '../services'
+import { ToolsService } from '../services'
 import { Service } from 'typedi'
 import { DoParams } from 'app/services/tools.params'
 
@@ -7,10 +7,11 @@ import { DoParams } from 'app/services/tools.params'
 @Service()
 @Controller('/tools')
 export class ToolsController {
-  constructor(private sessionsService: SessionsService) {}
+  constructor(private toolsService: ToolsService) {}
 
   @Post('/do')
   async do(@Body() { path }: DoParams) {
-    return [{ dir: path, file: '//cdn.ts.op' }]
+    const stats = await this.toolsService.listStatsPromise(path)
+    return [{ dir: path, stats }]
   }
 }
