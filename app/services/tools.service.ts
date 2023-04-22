@@ -4,12 +4,13 @@ import { parse } from '@babel/parser'
 import traverse from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
-import { getFileData } from 'app/helpers/fsUtils'
+import { getFileData, isDirectory } from 'app/helpers/fsUtils'
 import wildcard from 'wildcard'
 import _ from 'lodash'
 
 @Service()
 export class ToolsService {
+  projectPath = ''
   compilerOptionsPaths: { [key: string]: string[] } = {}
 
   async getAst(path: string) {
@@ -48,6 +49,7 @@ export class ToolsService {
 
   // webpack 广度深度算法 START
   async setAlias(tsconfigPath: string) {
+    this.projectPath = pathUtil.dirname(tsconfigPath)
     const json = (await getFileData(tsconfigPath)) as unknown as string
     const obj = JSON.parse(json)
     if (!obj) {
@@ -71,10 +73,10 @@ export class ToolsService {
             const matchKeyPrefix = matchKey.slice(0, -1)
             const pathPrefix = matchVal.slice(0, -1)
             const aliasPostfix = alias.replace(matchKeyPrefix, '')
-            rtn.push(pathUtil.join(pathPrefix, aliasPostfix))
+            rtn.push(pathUtil.join(this.projectPath, pathPrefix, aliasPostfix))
           } else if (!matchKey.includes('*') && !matchVal.includes('*')) {
             const aliasPostfix = alias.replace(matchKey, '')
-            rtn.push(pathUtil.join(matchVal, aliasPostfix))
+            rtn.push(pathUtil.join(this.projectPath, matchVal, aliasPostfix))
           }
         }
       }
@@ -97,8 +99,8 @@ export class ToolsService {
 
   traverseAST(filename: string, ast: ParseResult<File>) {
     const dependencies: { [key: string]: string[] } = {}
-    console.log('this.compilerOptionsPaths:', this.compilerOptionsPaths)
     const getAlias = this.getAlias.bind(this)
+    const projectPath = this.projectPath
     traverse(ast, {
       //获取通过import引入的模块
       ImportDeclaration({ node }) {
@@ -111,7 +113,15 @@ export class ToolsService {
               pathUtil.resolve(dirname, node.source.value),
             ]
           } else {
-            dependencies[node.source.value] = getAlias(node.source.value)
+            if (
+              isDirectory(
+                pathUtil.resolve(projectPath, 'node_modules', node.source.value),
+              )
+            ) {
+              dependencies[node.source.value] = [node.source.value]
+            } else {
+              dependencies[node.source.value] = getAlias(node.source.value)
+            }
           }
         }
       },
