@@ -6,7 +6,7 @@
   "main": "app.ts",
   "scripts": {
     "start": "export NODE_ENV=development; ts-node -r tsconfig-paths/register app.ts",
-    "dev": "export NODE_ENV=development; ts-node-dev --transpile-only --respawn --inspect -r tsconfig-paths/register app.ts",
+    "dev": "export NODE_ENV=development; ts-node-dev --transpile-only -O '{\"esModuleInterop\": true}' --respawn --inspect -r tsconfig-paths/register app.ts",
     "dev:db": "docker compose -f docker-compose.yml up -d",
     "prettier": "prettier --write '**/*.{js,ts}'",
     "test": "jest --config .jest.config.js --no-cache --detectOpenHandles",
@@ -54,12 +54,18 @@
     "typescript": "^4.8.3"
   },
   "dependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/generator": "^7.21.4",
+    "@babel/parser": "^7.21.4",
+    "@babel/traverse": "^7.21.4",
     "@prisma/client": "^3.8.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "dayjs": "^1.11.7",
     "dotenv": "^12.0.3",
+    "fs": "^0.0.1-security",
     "husky": "^8.0.1",
+    "json-object-mapper": "^1.7.1",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
@@ -67,9 +73,10 @@
     "koa-router": "^10.1.1",
     "lodash": "^4.17.21",
     "mime-types": "^2.1.35",
-    "puppeteer": "^18.0.5",
+    "puppeteer": "^19.10.1",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.9.0",
-    "typedi": "^0.10.0"
+    "typedi": "^0.10.0",
+    "wildcard": "^2.0.0"
   }
 }

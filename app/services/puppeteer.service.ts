@@ -6,8 +6,14 @@ import {
   WINDOW_SIZE,
 } from 'configs/puppeteer.config'
 import { TPageWrapper, TOccupiedPageInfo } from './types.d'
-import { mkdirSync, print } from 'configs/utils'
-import puppeteer, { Page, PDFOptions, ScreenshotOptions } from 'puppeteer'
+import { mkdirSync, print } from 'app/helpers/fsUtils'
+import puppeteer, {
+  Page,
+  PDFOptions,
+  ScreenshotOptions,
+  Browser,
+  EventType,
+} from 'puppeteer'
 import _ from 'lodash'
 import path from 'path'
 import { PreviewParams } from './preview.params'
@@ -16,7 +22,7 @@ const BLANK_HREF = 'about:blank'
 
 export class PuppeteerService {
   static instance: PuppeteerService
-  static browser?: puppeteer.Browser
+  static browser?: Browser
 
   // 请注意 pagePool 与 occupiedPageInfo 的同步关系!
   static pagePool: Page[] = []
@@ -55,7 +61,7 @@ export class PuppeteerService {
     return PuppeteerService.browser
   }
 
-  async browserDisconnect(e?: puppeteer.EventType) {
+  async browserDisconnect(e?: EventType) {
     e && print.danger(`browserDisconnect e: ${e.toString()}`)
     const browser = PuppeteerService.browser
     if (!browser) {

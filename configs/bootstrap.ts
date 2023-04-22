@@ -1,5 +1,5 @@
 import { join } from 'path'
-import { print } from './utils'
+import { print } from 'app/helpers/fsUtils'
 import dotenv from 'dotenv'
 import { PuppeteerService } from 'app/services/puppeteer.service'
 import { BOOTSTRAP_PUPPETEER } from './puppeteer.config'

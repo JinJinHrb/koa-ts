@@ -2,9 +2,9 @@ import { Controller, Get, Req, Res, Param } from 'routing-controllers'
 import { Service } from 'typedi'
 import { Request, Response } from 'koa'
 import _ from 'lodash'
-import { getFileDataPromise } from 'configs/utils'
 import mime from 'mime-types'
 import path from 'path'
+import { getFileData } from 'app/helpers/fsUtils'
 
 @Controller('/static')
 @Service()
@@ -25,7 +25,7 @@ export class StaticServerController {
     } else {
       return new Error(`invalid contentType: "${contentType}", fPath: "${fPath}"`)
     }
-    const buffer = (await getFileDataPromise(fPath, 'buffer')) as Buffer
+    const buffer = (await getFileData(fPath, 'buffer')) as Buffer
     return buffer
   }
 }
