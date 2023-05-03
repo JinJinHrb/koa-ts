@@ -64,6 +64,8 @@
     "dayjs": "^1.11.7",
     "dotenv": "^12.0.3",
     "fs": "^0.0.1-security",
+    "graphology": "^0.25.1",
+    "graphology-types": "^0.24.7",
     "husky": "^8.0.1",
     "json-object-mapper": "^1.7.1",
     "koa": "^2.13.4",

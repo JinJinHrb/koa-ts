@@ -3,15 +3,28 @@ import pathUtil from 'path'
 import { parse } from '@babel/parser'
 import traverse from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
-import { File } from '@babel/types'
-import { getFileData, isDirectory } from 'app/helpers/fsUtils'
+import {
+  File,
+  ImportDefaultSpecifier,
+  ImportNamespaceSpecifier,
+  ImportSpecifier,
+} from '@babel/types'
+import { getFileData, isDirectory, isFile } from 'app/helpers/fsUtils'
 import wildcard from 'wildcard'
 import _ from 'lodash'
+import Graph, { DirectedGraph } from 'graphology'
+import { IStringLiteral } from './types'
+
+type VariableSpecifierKey =
+  | ImportDefaultSpecifier
+  | ImportNamespaceSpecifier
+  | ImportSpecifier
 
 @Service()
 export class ToolsService {
   projectPath = ''
   compilerOptionsPaths: { [key: string]: string[] } = {}
+  directedGraph = new DirectedGraph()
 
   async getAst(path: string) {
     const code = (await getFileData(pathUtil.resolve(path, path)))?.toString()
@@ -24,18 +37,20 @@ export class ToolsService {
   alterCode(ast: ParseResult<File>) {
     traverse(ast, {
       enter(path) {
+        // 遍历没有引用的 businessOppNo
         if (
           !path.isReferencedIdentifier() &&
           path.isIdentifier({ name: 'businessOppNo' })
         ) {
-          const parent = path.findParent(path => path.isObjectExpression())
+          // const parent = path.findParent(path => path.isObjectExpression())
           console.log(
-            '#118 !isReferencedIdentifier && "businessOppNo":',
+            '#44 !isReferencedIdentifier && "businessOppNo":',
             path.node,
-            'parent ObjectExpression:',
-            parent,
+            // 'parent ObjectExpression:',
+            // parent,
           )
         }
+        // 遍历所有箭头函数
         /* if (path.isArrayExpression()) {
           path.traverse({
             Identifier() {
@@ -48,6 +63,7 @@ export class ToolsService {
   }
 
   // webpack 广度深度算法 START
+  // 参考：https://juejin.cn/post/6850418113901985805
   async setAlias(tsconfigPath: string) {
     this.projectPath = pathUtil.dirname(tsconfigPath)
     const json = (await getFileData(tsconfigPath)) as unknown as string
@@ -59,9 +75,44 @@ export class ToolsService {
     return this.compilerOptionsPaths
   }
 
+  /*
+   * 根据 node: module 规则寻找可能的地址
+   */
+  findFilePathByCandidate(candidate: string) {
+    if (isDirectory(candidate)) {
+      if (isFile(pathUtil.resolve(candidate, 'index.ts'))) {
+        return pathUtil.resolve(candidate, 'index.ts')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.tsx'))) {
+        return pathUtil.resolve(candidate, 'index.tsx')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.d.ts'))) {
+        return pathUtil.resolve(candidate, 'index.d.ts')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.js'))) {
+        return pathUtil.resolve(candidate, 'index.js')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.jsx'))) {
+        return pathUtil.resolve(candidate, 'index.jsx')
+      }
+    } else if (!candidate.endsWith('/') && !candidate.endsWith('.')) {
+      if (isFile(candidate + '.ts')) {
+        return candidate + '.ts'
+      } else if (isFile(candidate + '.tsx')) {
+        return candidate + '.tsx'
+      } else if (isFile(candidate + '.d.ts')) {
+        return candidate + '.d.ts'
+      } else if (isFile(candidate + '.js')) {
+        return candidate + '.js'
+      } else if (isFile(candidate + '.jsx')) {
+        return candidate + '.jsx'
+      }
+    }
+    if (isFile(candidate)) {
+      return candidate
+    }
+    return undefined
+  }
+
   getAlias(alias: string) {
     const matchKeys = Object.keys(this.compilerOptionsPaths)
-    const rtn: string[] = []
+    const candidates: string[] = []
     for (const matchKey of matchKeys) {
       if (wildcard(matchKey, alias)) {
         const matchArray = (this.compilerOptionsPaths[matchKey] ?? []) as string[]
@@ -73,60 +124,233 @@ export class ToolsService {
             const matchKeyPrefix = matchKey.slice(0, -1)
             const pathPrefix = matchVal.slice(0, -1)
             const aliasPostfix = alias.replace(matchKeyPrefix, '')
-            rtn.push(pathUtil.join(this.projectPath, pathPrefix, aliasPostfix))
+            candidates.push(pathUtil.join(this.projectPath, pathPrefix, aliasPostfix))
           } else if (!matchKey.includes('*') && !matchVal.includes('*')) {
             const aliasPostfix = alias.replace(matchKey, '')
-            rtn.push(pathUtil.join(this.projectPath, matchVal, aliasPostfix))
+            candidates.push(pathUtil.join(this.projectPath, matchVal, aliasPostfix))
+          } else {
+            console.warn('getAlias #92 unprocessed alias:', alias)
           }
         }
       }
     }
-    return _.uniq(rtn)
+    const fPaths = _.uniq(candidates)
+    for (const fPath of fPaths) {
+      const realPath = this.findFilePathByCandidate(fPath)
+      if (!_.isNil(realPath)) {
+        return realPath
+      }
+    }
+    console.warn('getAlias #121 fPaths:', fPaths, 'alias:', alias)
+    return ''
   }
 
   async recurStepOne(filename: string) {
     // 读入文件
     const ast = await this.getAst(filename)
-    // 遍历AST抽象语法🌲
-    const dependencies = this.traverseAST(filename, ast)
-
+    // 遍历AST抽象语法树
+    const { fileDependencies, npmDependencies, aliasFileMap, aliasNpmMap } =
+      this.traverseAST(filename, ast)
+    const graph = this.buildFileDependencyGraph(filename, fileDependencies)
     //返回文件名称，和依赖关系
     return {
       filename,
-      dependencies,
+      fileDependencies,
+      npmDependencies,
+      aliasFileMap,
+      aliasNpmMap,
+      graph,
     }
   }
 
+  buildFileDependencyGraph(filename: string, fileDependencies: string[]) {
+    if (this.isGraphSource(filename)) {
+      return this.directedGraph
+    }
+    fileDependencies.forEach(b => {
+      this.buildDirectedGrpah(filename, b)
+    })
+    return this.directedGraph
+  }
+
+  buildDirectedGrpah(a: string, b: string) {
+    // eslint-disable-next-line @typescript-eslint/no-extra-semi
+    if (!this.directedGraph.hasNode(a)) {
+      this.directedGraph.addNode(a)
+    }
+    if (!this.directedGraph.hasNode(b)) {
+      this.directedGraph.addNode(b)
+    }
+    const edge = this.directedGraph.edge(a, b)
+    if (!this.directedGraph.hasEdge(edge)) {
+      this.directedGraph.addDirectedEdge(a, b)
+    }
+    return this.directedGraph
+  }
+
+  /**
+   * 判断某个资源是否是起点
+   */
+  isGraphSource(source: string) {
+    return this.directedGraph.findEdge((...args) => {
+      return args[2] === source
+    })
+  }
+
+  /* getGraphArray(entryModule) {
+    const graphArray = [entryModule]
+    for (let i = 0; i < graphArray.length; i++) {
+      const item = graphArray[i]
+      const { dependencies } = item //拿到文件所依赖的模块集合(键值对存储)
+      for (let j in dependencies) {
+        graphArray.push(one(dependencies[j])) //敲黑板！关键代码，目的是将入口模块及其所有相关的模块放入数组
+      }
+    }
+  }
+
+  getGraph(graphArray) {
+    const graph = {}
+    graphArray.forEach(item => {
+      graph[item.filename] = {
+        dependencies: item.dependencies,
+        code: item.code,
+      }
+    })
+    return graph
+  } */
+
   traverseAST(filename: string, ast: ParseResult<File>) {
-    const dependencies: { [key: string]: string[] } = {}
-    const getAlias = this.getAlias.bind(this)
-    const projectPath = this.projectPath
+    const dirname = pathUtil.dirname(filename),
+      aliasFileMap: { [key: string]: string } = {},
+      aliasNpmMap: { [key: string]: string } = {},
+      fileDependencies: string[] = [],
+      npmDependencies: string[] = [],
+      getAlias = this.getAlias.bind(this),
+      findFilePathByCandidate = this.findFilePathByCandidate.bind(this),
+      projectPath = this.projectPath
+    const hasReferenceVariableSpecifierMap = new Map<any, string[]>()
+    const nonReferenceVariableSpecifierMap = new Map<any, string[]>()
+
     traverse(ast, {
       //获取通过import引入的模块
-      ImportDeclaration({ node }) {
+      ImportDeclaration(path) {
+        const { node } = path
         if (node.importKind === 'value') {
-          const dirname = pathUtil.dirname(filename)
+          if (
+            node.source.value.endsWith('.css') ||
+            node.source.value.endsWith('.less') ||
+            node.source.value.endsWith('.sass')
+          ) {
+            return
+          }
           // const newFile = './' + pathUtil.join(dirname, node.source.value)
           //保存所依赖的模块
+
+          let alias = ''
           if (node.source.value.indexOf('.') === 0) {
-            dependencies[node.source.value] = [
-              pathUtil.resolve(dirname, node.source.value),
-            ]
+            alias = aliasFileMap[node.source.value] =
+              findFilePathByCandidate(pathUtil.resolve(dirname, node.source.value)) ??
+              pathUtil.resolve(dirname, node.source.value)
           } else {
-            if (
+            const tempAlias = getAlias(node.source.value)
+            if (tempAlias) {
+              alias = aliasFileMap[node.source.value] = tempAlias
+            } else if (
               isDirectory(
                 pathUtil.resolve(projectPath, 'node_modules', node.source.value),
               )
             ) {
-              dependencies[node.source.value] = [node.source.value]
-            } else {
-              dependencies[node.source.value] = getAlias(node.source.value)
+              alias = aliasNpmMap[node.source.value] = node.source.value
+            } else if (
+              isFile(pathUtil.resolve(projectPath, 'node_modules', node.source.value))
+            ) {
+              alias = aliasNpmMap[node.source.value] = node.source.value
+            }
+          }
+
+          if (node.specifiers) {
+            // "type": "ImportSpecifier"
+            const specifiers = path.node.specifiers
+              .filter(a => ['ImportDefaultSpecifier', 'ImportSpecifier'].includes(a.type))
+              .map(a => a)
+            for (const specifier of specifiers) {
+              const name = specifier.local.name
+              const binding = path.scope.getBinding(name)
+              if (binding?.referenced === false) {
+                const arr = nonReferenceVariableSpecifierMap.get(alias) ?? []
+                arr.push(name)
+                nonReferenceVariableSpecifierMap.set(alias, arr)
+              } else if (binding?.referenced === true) {
+                const arr = hasReferenceVariableSpecifierMap.get(alias) ?? []
+                arr.push(name)
+                hasReferenceVariableSpecifierMap.set(alias, arr)
+              }
             }
           }
         }
       },
+      CallExpression(path) {
+        if (path.node.callee.type === 'Import') {
+          const arg1 = path.node.arguments[0] as unknown as IStringLiteral
+          const value = arg1.value
+
+          if (
+            value.endsWith('.css') ||
+            value.endsWith('.less') ||
+            value.endsWith('.sass')
+          ) {
+            return
+          }
+          // const newFile = './' + pathUtil.join(dirname, node.source.value)
+          //保存所依赖的模块
+
+          let alias = ''
+          if (value.indexOf('.') === 0) {
+            alias = aliasFileMap[value] =
+              findFilePathByCandidate(pathUtil.resolve(dirname, value)) ??
+              pathUtil.resolve(dirname, value)
+          } else {
+            const tempAlias = getAlias(value)
+            if (tempAlias) {
+              alias = aliasFileMap[value] = tempAlias
+            } else if (
+              isDirectory(pathUtil.resolve(projectPath, 'node_modules', value))
+            ) {
+              alias = aliasNpmMap[value] = value
+            } else if (isFile(pathUtil.resolve(projectPath, 'node_modules', value))) {
+              alias = aliasNpmMap[value] = value
+            }
+          }
+          const arr = hasReferenceVariableSpecifierMap.get(alias) ?? []
+          hasReferenceVariableSpecifierMap.set(alias, arr)
+        }
+      },
     })
-    return dependencies
+
+    const toDelKeys: any[] = []
+    nonReferenceVariableSpecifierMap.forEach((value, key, map) => {
+      if (!_.isNil(hasReferenceVariableSpecifierMap.get(key))) {
+        console.log(
+          'ToolsService #219',
+          key + ' = ' + value,
+          'hasReferenceVariableSpecifierMap:',
+          hasReferenceVariableSpecifierMap.get(key),
+        )
+        toDelKeys.push(key)
+      }
+    })
+    toDelKeys.forEach(k => {
+      nonReferenceVariableSpecifierMap.delete(k)
+    })
+
+    Object.keys(aliasFileMap).forEach(k => {
+      fileDependencies.push(aliasFileMap[k])
+    })
+    Object.keys(aliasNpmMap).forEach(k => {
+      npmDependencies.push(aliasNpmMap[k])
+    })
+    return { fileDependencies, npmDependencies, aliasFileMap, aliasNpmMap }
   }
+
   // webpack 广度深度算法 END
 }

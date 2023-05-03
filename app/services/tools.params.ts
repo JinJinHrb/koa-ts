@@ -1,6 +1,6 @@
 import { IsNotEmpty } from 'class-validator'
 
-export class AlterCodeParams {
+export class GetAstAndAlterCodeParams {
   @IsNotEmpty()
   path!: string
 }

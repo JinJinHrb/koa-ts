@@ -6,6 +6,7 @@
     "module": "commonjs",
     "outDir": "./dist",
     "lib": ["ESNext"],
+    "target": "es2020",
     "removeComments": true,
     "skipLibCheck": true,
     "noImplicitAny": true,

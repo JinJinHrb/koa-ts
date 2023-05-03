@@ -1,11 +1,12 @@
 import { JsonController, Get, Controller, Post, Body } from 'routing-controllers'
 import { ToolsService } from '../services'
 import { Service } from 'typedi'
-import { ByRegExpParams, AlterCodeParams } from 'app/services/tools.params'
+import { ByRegExpParams, GetAstAndAlterCodeParams } from 'app/services/tools.params'
 import pathUtil from 'path'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
 import { getFsStatPromise, isDirectory, listStatsPromise } from 'app/helpers/fsUtils'
+import _ from 'lodash'
 
 @JsonController()
 @Service()
@@ -13,8 +14,8 @@ import { getFsStatPromise, isDirectory, listStatsPromise } from 'app/helpers/fsU
 export class ToolsController {
   constructor(private toolsService: ToolsService) {}
 
-  @Post('/alterCode')
-  async do(@Body() { path }: AlterCodeParams) {
+  @Post('/getAstAndAlterCode')
+  async do(@Body() { path }: GetAstAndAlterCodeParams) {
     let ast: ParseResult<File> | ParseResult<File>[] | undefined, stats
     if (isDirectory(path)) {
       stats = await listStatsPromise(path)
@@ -42,11 +43,67 @@ export class ToolsController {
     return { filePath: this.toolsService.getAlias(filePath) }
   }
 
-  @Post('/getApisByRegExp')
-  async getApisByRegExp(@Body() { filePath, regExp, tsconfigPath }: ByRegExpParams) {
+  @Post('/traverseToGetGraph')
+  async traverseToGetGraph(@Body() { filePath, regExp, tsconfigPath }: ByRegExpParams) {
     // tsconfigPath
-    this.toolsService.setAlias(tsconfigPath)
-    const { filename, dependencies } = await this.toolsService.recurStepOne(filePath)
-    return { filename, dependencies }
+    await this.toolsService.setAlias(tsconfigPath)
+
+    let tempFileDependencies: string[] = []
+    const {
+      filename,
+      fileDependencies,
+      // npmDependencies,
+      // aliasFileMap,
+      // aliasNpmMap,
+      graph,
+    } = await this.toolsService.recurStepOne(filePath)
+    tempFileDependencies = fileDependencies
+    let notSourceFileDependencies: string[]
+
+    while (
+      !_.isEmpty(
+        (notSourceFileDependencies = tempFileDependencies.filter(
+          fd => !this.toolsService.isGraphSource(fd),
+        )),
+      )
+    ) {
+      for (const fd of notSourceFileDependencies) {
+        try {
+          const {
+            // filename,
+            fileDependencies,
+            // npmDependencies,
+            // aliasFileMap,
+            // aliasNpmMap,
+            // graph,
+          } = await this.toolsService.recurStepOne(fd)
+          tempFileDependencies = fileDependencies
+        } catch (e) {
+          console.error('traverseToGetGraph #83 error:', e, '\ndependency path:', fd)
+        }
+      }
+    }
+
+    return {
+      filename,
+      // fileDependencies,
+      // npmDependencies,
+      // aliasFileMap,
+      // aliasNpmMap,
+      size: graph.directedSize,
+      graph: graph.toJSON(),
+    }
+  }
+
+  @Post('/buildDirectedGraph')
+  async buildDirectedGraph() {
+    // tsconfigPath
+    this.toolsService.buildDirectedGrpah('shanghai', 'beijing')
+    this.toolsService.buildDirectedGrpah('beijing', 'tianjing')
+    this.toolsService.buildDirectedGrpah('hangzhou', 'shanghai')
+    this.toolsService.buildDirectedGrpah('shanghai', 'nanjing')
+    this.toolsService.buildDirectedGrpah('nanjing', 'shanghai')
+    const graph = this.toolsService.buildDirectedGrpah('nanjing', 'tianjing')
+    return graph.toJSON()
   }
 }
