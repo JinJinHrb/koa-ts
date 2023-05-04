@@ -5,8 +5,15 @@ import { ByRegExpParams, GetAstAndAlterCodeParams } from 'app/services/tools.par
 import pathUtil from 'path'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
-import { getFsStatPromise, isDirectory, listStatsPromise } from 'app/helpers/fsUtils'
+import {
+  getFsStatPromise,
+  isDirectory,
+  listFilteredFilesPromise,
+  listStatsPromise,
+} from 'app/helpers/fsUtils'
 import _ from 'lodash'
+import graphNodes from 'app/mock/graphNodes'
+import fs from 'fs'
 
 @JsonController()
 @Service()
@@ -15,7 +22,7 @@ export class ToolsController {
   constructor(private toolsService: ToolsService) {}
 
   @Post('/getAstAndAlterCode')
-  async do(@Body() { path }: GetAstAndAlterCodeParams) {
+  async getAstAndAlterCode(@Body() { path }: GetAstAndAlterCodeParams) {
     let ast: ParseResult<File> | ParseResult<File>[] | undefined, stats
     if (isDirectory(path)) {
       stats = await listStatsPromise(path)
@@ -34,7 +41,7 @@ export class ToolsController {
   }
 
   @Post('/getPathByAlias')
-  async setAlias(
+  async getPathByAlias(
     @Body() { tsconfigPath, filePath }: Pick<ByRegExpParams, 'tsconfigPath' | 'filePath'>,
   ) {
     if (tsconfigPath) {
@@ -48,7 +55,7 @@ export class ToolsController {
     // tsconfigPath
     await this.toolsService.setAlias(tsconfigPath)
 
-    let tempFileDependencies: string[] = []
+    let notSourceFileDependencies: string[] = []
     const {
       filename,
       fileDependencies,
@@ -57,33 +64,39 @@ export class ToolsController {
       // aliasNpmMap,
       graph,
     } = await this.toolsService.recurStepOne(filePath)
-    tempFileDependencies = fileDependencies
-    let notSourceFileDependencies: string[]
+    notSourceFileDependencies = fileDependencies
 
-    while (
-      !_.isEmpty(
-        (notSourceFileDependencies = tempFileDependencies.filter(
-          fd => !this.toolsService.isGraphSource(fd),
-        )),
-      )
-    ) {
-      for (const fd of notSourceFileDependencies) {
-        try {
-          const {
-            // filename,
-            fileDependencies,
-            // npmDependencies,
-            // aliasFileMap,
-            // aliasNpmMap,
-            // graph,
-          } = await this.toolsService.recurStepOne(fd)
-          tempFileDependencies = fileDependencies
-        } catch (e) {
-          console.error('traverseToGetGraph #83 error:', e, '\ndependency path:', fd)
-        }
+    while (!_.isEmpty(notSourceFileDependencies)) {
+      const fd = notSourceFileDependencies.shift() as string
+      try {
+        const {
+          // filename,
+          fileDependencies,
+          // npmDependencies,
+          // aliasFileMap,
+          // aliasNpmMap,
+          // graph,
+        } = await this.toolsService.recurStepOne(fd)
+        fileDependencies.forEach(fd => {
+          if (
+            !fd.endsWith('.css') &&
+            !fd.endsWith('.less') &&
+            !fd.endsWith('.sass') &&
+            !fd.endsWith('.svg') &&
+            !this.toolsService.isGraphSource(fd)
+          ) {
+            notSourceFileDependencies.push(fd)
+          }
+        })
+      } catch (e) {
+        console.error('traverseToGetGraph #83 error:', e, '\ndependency path:', fd)
       }
     }
-
+    console.log(
+      'traverseToGetGraph #86',
+      'tempFileDependencies:',
+      notSourceFileDependencies,
+    )
     return {
       filename,
       // fileDependencies,
@@ -105,5 +118,33 @@ export class ToolsController {
     this.toolsService.buildDirectedGrpah('nanjing', 'shanghai')
     const graph = this.toolsService.buildDirectedGrpah('nanjing', 'tianjing')
     return graph.toJSON()
+  }
+
+  @Post('/listFilteredFilesDemo')
+  async listFilteredFilesDemo(
+    @Body()
+    { folderPath, isRecur: pIsRecur }: { folderPath: string; isRecur?: boolean | string },
+  ) {
+    const isRecur = _.isString(pIsRecur) ? pIsRecur === 'Y' : Boolean(pIsRecur)
+    const candidates = (await listFilteredFilesPromise({
+      filterHandler: a => a.fileFlag ?? false,
+      folderPath,
+      isRecur,
+      mapHandler: a => {
+        return a.absPath as string
+      },
+    })) as string[]
+    const toRemovePaths = candidates.filter(
+      a =>
+        !a.includes('/resources/') &&
+        !a.includes('/formily-xtd') &&
+        !graphNodes.map(a => a.key).includes(a),
+    )
+    toRemovePaths.forEach(path => {
+      fs.unlink(path, function (err) {
+        if (err) return console.error(`delete file "${path}" error:`, err)
+      })
+    })
+    return toRemovePaths
   }
 }

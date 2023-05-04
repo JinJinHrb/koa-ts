@@ -30,7 +30,7 @@ export class ToolsService {
     const code = (await getFileData(pathUtil.resolve(path, path)))?.toString()
     return parse(code, {
       sourceType: 'module',
-      plugins: ['typescript', 'jsx'],
+      plugins: ['typescript', 'jsx', 'decorators-legacy'],
     })
   }
 
@@ -102,6 +102,8 @@ export class ToolsService {
         return candidate + '.js'
       } else if (isFile(candidate + '.jsx')) {
         return candidate + '.jsx'
+      } else if (isFile(candidate + '.svg')) {
+        return candidate + '.svg'
       }
     }
     if (isFile(candidate)) {
@@ -236,13 +238,6 @@ export class ToolsService {
       ImportDeclaration(path) {
         const { node } = path
         if (node.importKind === 'value') {
-          if (
-            node.source.value.endsWith('.css') ||
-            node.source.value.endsWith('.less') ||
-            node.source.value.endsWith('.sass')
-          ) {
-            return
-          }
           // const newFile = './' + pathUtil.join(dirname, node.source.value)
           //保存所依赖的模块
 
@@ -290,39 +285,35 @@ export class ToolsService {
         }
       },
       CallExpression(path) {
-        if (path.node.callee.type === 'Import') {
+        if (
+          path.node.callee.type === 'Import' ||
+          (path.node.callee.type === 'Identifier' && path.node.callee.name === 'require')
+        ) {
           const arg1 = path.node.arguments[0] as unknown as IStringLiteral
           const value = arg1.value
 
-          if (
-            value.endsWith('.css') ||
-            value.endsWith('.less') ||
-            value.endsWith('.sass')
-          ) {
-            return
-          }
           // const newFile = './' + pathUtil.join(dirname, node.source.value)
           //保存所依赖的模块
 
-          let alias = ''
+          // let alias = ''
           if (value.indexOf('.') === 0) {
-            alias = aliasFileMap[value] =
+            /* alias = */ aliasFileMap[value] =
               findFilePathByCandidate(pathUtil.resolve(dirname, value)) ??
               pathUtil.resolve(dirname, value)
           } else {
             const tempAlias = getAlias(value)
             if (tempAlias) {
-              alias = aliasFileMap[value] = tempAlias
+              /* alias = */ aliasFileMap[value] = tempAlias
             } else if (
               isDirectory(pathUtil.resolve(projectPath, 'node_modules', value))
             ) {
-              alias = aliasNpmMap[value] = value
+              /* alias = */ aliasNpmMap[value] = value
             } else if (isFile(pathUtil.resolve(projectPath, 'node_modules', value))) {
-              alias = aliasNpmMap[value] = value
+              /* alias = */ aliasNpmMap[value] = value
             }
           }
-          const arr = hasReferenceVariableSpecifierMap.get(alias) ?? []
-          hasReferenceVariableSpecifierMap.set(alias, arr)
+          // const arr = hasReferenceVariableSpecifierMap.get(alias) ?? []
+          // hasReferenceVariableSpecifierMap.set(alias, arr)
         }
       },
     })

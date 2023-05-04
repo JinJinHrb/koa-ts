@@ -19,6 +19,8 @@ export interface IFileState extends fs.Stats {
   fileFlag?: boolean
   directoryFlag?: boolean
   symbolicLinkFlag?: boolean
+  absPath?: string
+  depth?: number
 }
 
 export const print = {
@@ -188,6 +190,88 @@ export const getFileDataPromise = (filePath: string, encoding: string) => {
   })
 }
 
+interface IlistFilteredFilesParams {
+  folderPath: string
+  filterHandler?: TFilterHandler
+  folderFilterHandler?: (str: string) => boolean
+  mapHandler?: (state: IFileState) => Partial<IFileState> | string
+  isRecur?: boolean
+}
+
+/**
+ * 广度优先遍历文件夹查找文件
+ */
+export const listFilteredFilesPromise = ({
+  folderPath,
+  filterHandler,
+  folderFilterHandler,
+  mapHandler,
+  isRecur,
+}: IlistFilteredFilesParams) => {
+  // 当 stats.sameLevel 长度为零时进入下一层，stats.nextLevel（下一层）长度为零时结束程序
+  const recurHandler = function (
+    rsv: (value: unknown) => void,
+    rej: (value: unknown) => void,
+    subFolderPath: string,
+    filterHandler?: TFilterHandler,
+    stats: {
+      depth: number
+      results: IFileState[]
+      sameLevel: string[]
+      nextLevel: string[]
+    } = { depth: 0, results: [], sameLevel: [], nextLevel: [] },
+  ) {
+    listStatsPromise(subFolderPath, a => a.directoryFlag ?? false)
+      .then(feed => {
+        ;(feed || []).forEach(a => {
+          const folderPath = pathUtil.resolve(subFolderPath, a.fname as string)
+          if (!_.isFunction(folderFilterHandler) || folderFilterHandler(folderPath)) {
+            stats.nextLevel.push(folderPath)
+          }
+        })
+        if (_.isFunction(subFolderPath) && !folderFilterHandler?.(subFolderPath)) {
+          return []
+        }
+        return listStatsPromise(subFolderPath, filterHandler)
+      })
+      .then(feed => {
+        ;(feed || []).forEach(b => {
+          const a: IFileState = b
+          a.absPath = pathUtil.resolve(subFolderPath, a.fname as string)
+          a.depth = stats.depth
+          stats.results.push(a)
+        })
+        if (stats.sameLevel.length > 0) {
+          const nextFolderPath = stats.sameLevel.shift() as string
+          recurHandler(rsv, rej, nextFolderPath, filterHandler, stats)
+          return Promise.reject(null)
+        }
+        if (stats.nextLevel.length < 1 || !isRecur) {
+          if (_.isFunction(mapHandler)) {
+            rsv((stats.results || []).map(mapHandler))
+          } else rsv(stats.results || [])
+          return Promise.reject(null)
+        }
+        stats.sameLevel = stats.nextLevel
+        stats.nextLevel = []
+        stats.depth = stats.depth + 1
+        const nextFolderPath = stats.sameLevel.shift() as string
+        recurHandler(rsv, rej, nextFolderPath, filterHandler, stats)
+      })
+      .then(null, err => {
+        if (!err) {
+          return
+        }
+        rej(err)
+      })
+  }
+  return new Promise((rsvRoot, rejRoot) => {
+    recurHandler(rsvRoot, rejRoot, folderPath, filterHandler)
+  })
+}
+
+type TFilterHandler = (value: IFileState, index?: number, array?: IFileState[]) => boolean
+
 /**
  * getFsStatPromise() 返回结果基础上
  * 添加额外字段
@@ -195,7 +279,7 @@ export const getFileDataPromise = (filePath: string, encoding: string) => {
  */
 export const listStatsPromise = async (
   folderPath: string,
-  filterHandler?: (value: IFileState, index?: number, array?: IFileState[]) => boolean,
+  filterHandler?: TFilterHandler,
 ) => {
   return new Promise<IFileState[] | undefined>((rsv_root, rej_root) => {
     let fileNames: string[] = []
