@@ -120,8 +120,8 @@ export class ToolsController {
     return graph.toJSON()
   }
 
-  @Post('/listFilteredFilesDemo')
-  async listFilteredFilesDemo(
+  @Post('/removeFilteredFilesDemo')
+  async removeFilteredFilesDemo(
     @Body()
     { folderPath, isRecur: pIsRecur }: { folderPath: string; isRecur?: boolean | string },
   ) {
@@ -136,8 +136,13 @@ export class ToolsController {
     })) as string[]
     const toRemovePaths = candidates.filter(
       a =>
+        !a.includes('/shared/types/') &&
         !a.includes('/resources/') &&
-        !a.includes('/formily-xtd') &&
+        !a.includes('/formily-xtd/') &&
+        !a.includes('/test/') &&
+        !a.includes('/__test__/') &&
+        !a.includes('/__tests__/') &&
+        !a.includes('/constants/env/') &&
         !graphNodes.map(a => a.key).includes(a),
     )
     toRemovePaths.forEach(path => {
