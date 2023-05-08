@@ -1,7 +1,8 @@
 import { Service } from 'typedi'
 import pathUtil from 'path'
 import { parse } from '@babel/parser'
-import traverse from '@babel/traverse'
+import traverse, { NodePath } from '@babel/traverse'
+import { ExportNamedDeclaration } from '@babel/types'
 import { ParseResult } from '@babel/parser'
 import {
   File,
@@ -9,11 +10,12 @@ import {
   ImportNamespaceSpecifier,
   ImportSpecifier,
 } from '@babel/types'
-import { getFileData, isDirectory, isFile } from 'app/helpers/fsUtils'
+import { getFileData, getFileDataSync, isDirectory, isFile } from 'app/helpers/fsUtils'
 import wildcard from 'wildcard'
 import _ from 'lodash'
 import Graph, { DirectedGraph } from 'graphology'
 import { IStringLiteral } from './types'
+import { dynamicImportExportHandler as originDynamicImportExportHandler } from './toolsHelper'
 
 type VariableSpecifierKey =
   | ImportDefaultSpecifier
@@ -79,19 +81,10 @@ export class ToolsService {
    * 根据 node: module 规则寻找可能的地址
    */
   findFilePathByCandidate(candidate: string) {
-    if (isDirectory(candidate)) {
-      if (isFile(pathUtil.resolve(candidate, 'index.ts'))) {
-        return pathUtil.resolve(candidate, 'index.ts')
-      } else if (isFile(pathUtil.resolve(candidate, 'index.tsx'))) {
-        return pathUtil.resolve(candidate, 'index.tsx')
-      } else if (isFile(pathUtil.resolve(candidate, 'index.d.ts'))) {
-        return pathUtil.resolve(candidate, 'index.d.ts')
-      } else if (isFile(pathUtil.resolve(candidate, 'index.js'))) {
-        return pathUtil.resolve(candidate, 'index.js')
-      } else if (isFile(pathUtil.resolve(candidate, 'index.jsx'))) {
-        return pathUtil.resolve(candidate, 'index.jsx')
-      }
-    } else if (!candidate.endsWith('/') && !candidate.endsWith('.')) {
+    if (isFile(candidate)) {
+      return candidate
+    }
+    if (!candidate.endsWith('/') && !candidate.endsWith('.')) {
       if (isFile(candidate + '.ts')) {
         return candidate + '.ts'
       } else if (isFile(candidate + '.tsx')) {
@@ -104,10 +97,31 @@ export class ToolsService {
         return candidate + '.jsx'
       } else if (isFile(candidate + '.svg')) {
         return candidate + '.svg'
+      } else if (isFile(candidate + '.json')) {
+        return candidate + '.json'
       }
     }
-    if (isFile(candidate)) {
-      return candidate
+    if (isDirectory(candidate)) {
+      if (isFile(pathUtil.resolve(candidate, 'index.ts'))) {
+        return pathUtil.resolve(candidate, 'index.ts')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.tsx'))) {
+        return pathUtil.resolve(candidate, 'index.tsx')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.d.ts'))) {
+        return pathUtil.resolve(candidate, 'index.d.ts')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.js'))) {
+        return pathUtil.resolve(candidate, 'index.js')
+      } else if (isFile(pathUtil.resolve(candidate, 'index.jsx'))) {
+        return pathUtil.resolve(candidate, 'index.jsx')
+      } else if (isFile(pathUtil.resolve(candidate, 'package.json'))) {
+        try {
+          const packageJsonPath = pathUtil.resolve(candidate, 'package.json')
+          const rawData = getFileDataSync(packageJsonPath).toString()
+          const data = JSON.parse(rawData)
+          return pathUtil.resolve(candidate, data.main)
+        } catch (e) {
+          console.error('findFilePathByCandidate #102 error:', e)
+        }
+      }
     }
     return undefined
   }
@@ -152,7 +166,7 @@ export class ToolsService {
     const ast = await this.getAst(filename)
     // 遍历AST抽象语法树
     const { fileDependencies, npmDependencies, aliasFileMap, aliasNpmMap } =
-      this.traverseAST(filename, ast)
+      await this.traverseAST(filename, ast)
     const graph = this.buildFileDependencyGraph(filename, fileDependencies)
     //返回文件名称，和依赖关系
     return {
@@ -221,7 +235,7 @@ export class ToolsService {
     return graph
   } */
 
-  traverseAST(filename: string, ast: ParseResult<File>) {
+  async traverseAST(filename: string, ast: ParseResult<File>) {
     const dirname = pathUtil.dirname(filename),
       aliasFileMap: { [key: string]: string } = {},
       aliasNpmMap: { [key: string]: string } = {},
@@ -229,6 +243,7 @@ export class ToolsService {
       npmDependencies: string[] = [],
       getAlias = this.getAlias.bind(this),
       findFilePathByCandidate = this.findFilePathByCandidate.bind(this),
+      dynamicImportExportHandler = originDynamicImportExportHandler.bind(this),
       projectPath = this.projectPath
     const hasReferenceVariableSpecifierMap = new Map<any, string[]>()
     const nonReferenceVariableSpecifierMap = new Map<any, string[]>()
@@ -291,29 +306,39 @@ export class ToolsService {
         ) {
           const arg1 = path.node.arguments[0] as unknown as IStringLiteral
           const value = arg1.value
-
-          // const newFile = './' + pathUtil.join(dirname, node.source.value)
-          //保存所依赖的模块
-
-          // let alias = ''
-          if (value.indexOf('.') === 0) {
-            /* alias = */ aliasFileMap[value] =
-              findFilePathByCandidate(pathUtil.resolve(dirname, value)) ??
-              pathUtil.resolve(dirname, value)
-          } else {
-            const tempAlias = getAlias(value)
-            if (tempAlias) {
-              /* alias = */ aliasFileMap[value] = tempAlias
-            } else if (
-              isDirectory(pathUtil.resolve(projectPath, 'node_modules', value))
-            ) {
-              /* alias = */ aliasNpmMap[value] = value
-            } else if (isFile(pathUtil.resolve(projectPath, 'node_modules', value))) {
-              /* alias = */ aliasNpmMap[value] = value
-            }
-          }
-          // const arr = hasReferenceVariableSpecifierMap.get(alias) ?? []
-          // hasReferenceVariableSpecifierMap.set(alias, arr)
+          dynamicImportExportHandler({
+            value,
+            dirname,
+            projectPath,
+            aliasFileMap,
+            aliasNpmMap,
+          })
+        }
+      },
+      ExportNamedDeclaration(path) {
+        const { node } = path
+        if (node.exportKind === 'value' && !_.isEmpty(node.source?.value)) {
+          const value = node.source?.value as string
+          dynamicImportExportHandler({
+            value,
+            dirname,
+            projectPath,
+            aliasFileMap,
+            aliasNpmMap,
+          })
+        }
+      },
+      ExportAllDeclaration(path) {
+        const { node } = path
+        if ((node as any).exportKind === 'value' && !_.isEmpty(node.source?.value)) {
+          const value = node.source?.value as string
+          dynamicImportExportHandler({
+            value,
+            dirname,
+            projectPath,
+            aliasFileMap,
+            aliasNpmMap,
+          })
         }
       },
     })

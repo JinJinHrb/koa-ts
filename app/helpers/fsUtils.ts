@@ -86,6 +86,17 @@ export const mkdirSync = function (path: string, mode = 0o755) {
   arr.length && inner(arr.shift() as string)
 }
 
+export const getFileDataSync = (filePath: string, encoding?: string) => {
+  if (encoding === 'buffer') {
+    return fs.readFileSync(filePath)
+  } else {
+    if (!encoding) {
+      encoding = 'utf8'
+    }
+    return fs.readFileSync(filePath, { encoding } as any)
+  }
+}
+
 export const getFileData = (filePath: string, encoding?: string) => {
   return new Promise<Buffer>(function (rsv, rej) {
     const cb = function (err: Error, data: Buffer) {

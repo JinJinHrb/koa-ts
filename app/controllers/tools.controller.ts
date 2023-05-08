@@ -6,6 +6,8 @@ import pathUtil from 'path'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
 import {
+  getFileData,
+  getFileDataSync,
   getFsStatPromise,
   isDirectory,
   listFilteredFilesPromise,
@@ -47,15 +49,20 @@ export class ToolsController {
     if (tsconfigPath) {
       await this.toolsService.setAlias(tsconfigPath)
     }
-    return { filePath: this.toolsService.getAlias(filePath) }
+    return { filePath: this.toolsService.getAlias(filePath as string) }
   }
 
   @Post('/traverseToGetGraph')
-  async traverseToGetGraph(@Body() { filePath, regExp, tsconfigPath }: ByRegExpParams) {
+  async traverseToGetGraph(
+    @Body() { filePath, filePaths, tsconfigPath, noRecur }: ByRegExpParams,
+  ) {
+    if (_.isEmpty(filePath) && !_.isEmpty(filePaths)) {
+      filePath = filePaths?.shift()
+    }
+
     // tsconfigPath
     await this.toolsService.setAlias(tsconfigPath)
 
-    let notSourceFileDependencies: string[] = []
     const {
       filename,
       fileDependencies,
@@ -63,40 +70,44 @@ export class ToolsController {
       // aliasFileMap,
       // aliasNpmMap,
       graph,
-    } = await this.toolsService.recurStepOne(filePath)
-    notSourceFileDependencies = fileDependencies
+    } = await this.toolsService.recurStepOne(filePath as string)
 
-    while (!_.isEmpty(notSourceFileDependencies)) {
-      const fd = notSourceFileDependencies.shift() as string
-      try {
-        const {
-          // filename,
-          fileDependencies,
-          // npmDependencies,
-          // aliasFileMap,
-          // aliasNpmMap,
-          // graph,
-        } = await this.toolsService.recurStepOne(fd)
-        fileDependencies.forEach(fd => {
-          if (
-            !fd.endsWith('.css') &&
-            !fd.endsWith('.less') &&
-            !fd.endsWith('.sass') &&
-            !fd.endsWith('.svg') &&
-            !this.toolsService.isGraphSource(fd)
-          ) {
-            notSourceFileDependencies.push(fd)
-          }
-        })
-      } catch (e) {
-        console.error('traverseToGetGraph #83 error:', e, '\ndependency path:', fd)
+    if (noRecur !== true) {
+      const notSourceFileDependencies: string[] = fileDependencies
+      while (!_.isEmpty(notSourceFileDependencies) || !_.isEmpty(filePaths)) {
+        const fd = !_.isEmpty(notSourceFileDependencies)
+          ? (notSourceFileDependencies.shift() as string)
+          : (filePaths?.shift() as string)
+        try {
+          const {
+            // filename,
+            fileDependencies,
+            // npmDependencies,
+            // aliasFileMap,
+            // aliasNpmMap,
+            // graph,
+          } = await this.toolsService.recurStepOne(fd)
+          fileDependencies.forEach(fd => {
+            if (
+              !fd.endsWith('.css') &&
+              !fd.endsWith('.less') &&
+              !fd.endsWith('.sass') &&
+              !fd.endsWith('.svg') &&
+              !this.toolsService.isGraphSource(fd)
+            ) {
+              notSourceFileDependencies.push(fd)
+            }
+          })
+        } catch (e) {
+          console.error('traverseToGetGraph #83 error:', e, '\ndependency path:', fd)
+        }
       }
+      console.log(
+        'traverseToGetGraph #86',
+        'tempFileDependencies:',
+        notSourceFileDependencies,
+      )
     }
-    console.log(
-      'traverseToGetGraph #86',
-      'tempFileDependencies:',
-      notSourceFileDependencies,
-    )
     return {
       filename,
       // fileDependencies,
@@ -136,6 +147,7 @@ export class ToolsController {
     })) as string[]
     const toRemovePaths = candidates.filter(
       a =>
+        !a.endsWith('package.json') &&
         !a.includes('/shared/types/') &&
         !a.includes('/resources/') &&
         !a.includes('/formily-xtd/') &&
@@ -151,5 +163,17 @@ export class ToolsController {
       })
     })
     return toRemovePaths
+  }
+
+  @Post('/parsePackageJsonDemo')
+  parsePackageJsonDemo(@Body() { folderPath }: { folderPath: string }) {
+    try {
+      const packageJsonPath = pathUtil.resolve(folderPath, 'package.json')
+      const rawData = getFileDataSync(packageJsonPath).toString()
+      const data = JSON.parse(rawData)
+      return pathUtil.resolve(folderPath, data.main)
+    } catch (e) {
+      console.error('findFilePathByCandidate #102 error:', e)
+    }
   }
 }

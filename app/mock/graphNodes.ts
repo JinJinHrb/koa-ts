@@ -93,6 +93,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/routes.ts',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/routes/sync.js',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/routes/sync.ts',
   },
   {
@@ -492,6 +495,15 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/reducers/alert.ts',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/constant.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/routePath.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/Dashboard/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/index.tsx',
   },
   {
@@ -538,6 +550,9 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/OrderManagement/OrderDetail/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/routes/quotation/sync.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/index.tsx',
@@ -643,9 +658,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/DetailPage/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/routePath.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/ListPage/index.tsx',
@@ -904,6 +916,105 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/search.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Container/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ContentWrap/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ModuleTitle/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchForm/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/FormBottomBtnGroup/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ClassificationHeader/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Details/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Layout/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SegContainer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OverrideAnchor/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OperateLog/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OverrideTabs/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DescriptionBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/BottomBtnGroup/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/RouterContainer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/EditArea/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ModuleHomeHeader/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/FormLayout/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Fold/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Uploader/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/TagSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/NoControlReactSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/NoControlAntInput/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/TableBatchActionPanel/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Dropdown/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/PicAttachmentPreview/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ErrorBoundary/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/FormDrawer/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/AiTools/TaskManager/index.css',
@@ -1401,10 +1512,40 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/index.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/middlewares/Auth.jsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/middlewares/AccountType.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/nav.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/AuthLimite/index.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/Dashboard/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/middlewares/PlatformGuard.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/Dashboard/global.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/WaClientIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/useIsWaEntryVisible.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/index.ts',
@@ -1443,6 +1584,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/index.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/index.tsx',
   },
   {
@@ -1453,18 +1597,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Container/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchTable/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchForm/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ContentWrap/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/finance.ts',
@@ -1560,7 +1692,22 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/MailModal/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/RouterContainer/index.tsx',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Create/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Detail/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Update/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/context.ts',
@@ -1630,24 +1777,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Create/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Detail/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Update/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/context/index.tsx',
@@ -1747,6 +1876,9 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/routes/setting/async.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/index.tsx',
@@ -1869,7 +2001,7 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ListPageLayout/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/hooks',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/hooks.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/GroupMenu/index.tsx',
@@ -1897,9 +2029,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/utils.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/index.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/AddPage/CustomerDetailSnippet.ts',
@@ -2154,6 +2283,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/EllipsisText/index.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/index.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/DetailPage/index.css',
   },
   {
@@ -2338,6 +2470,12 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/CloseIcon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/Modal/ConfirmDeleteModal.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/Modal/FolderOrLabelModal.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/comps/Button/style.css',
@@ -2532,7 +2670,7 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/FastReply/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MailDetail/components',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MailDetail/components.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MailDetail/components/MailSendStatus.tsx',
@@ -2661,6 +2799,159 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/xss.ts',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Container/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/common/style/overrideAntd.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/FormItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/ComplexFormItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/OverrideRadio/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/TimePicker/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/RenderSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/NavPanel/index.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ContentWrap/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ModuleTitle/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/uw3.0/ITabs/index.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchTable/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchForm/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/FormBottomBtnGroup/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/ConfirmCancelModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ClassificationHeader/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/DragDndHoc/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/common/style/common.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Details/StatusLine/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Details/DetailDescription/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Details/DetailBtnGroup/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Layout/LeftRight.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/SelectedConditions/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/config.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hoc/withReduxForm.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SegContainer/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OverrideAnchor/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OperateLog/TimeLine.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OverrideTabs/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DescriptionBlock/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/BottomBtnGroup/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/RouterContainer/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MainWrap/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/EditArea/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SceneDropdown/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ModuleHomeHeader/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/FormLayout/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Fold/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Uploader/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/TagSelect/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/TagSelect/AddTag.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/TagSelect/config.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/NoControlReactSelect/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ToAdvancedScreenLink/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/TableBatchActionPanel/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Dropdown/SwitchRatio/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/Exchange/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/EdmFissionExchange/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/PageHeader/index.css',
   },
   {
@@ -2787,7 +3078,22 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/AiTools/CreateTask/components/TaskCard/index.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/validator/index.ts',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/AdapterComponents/ArrayItems/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/AdapterComponents/Upload/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/AdapterComponents/PreviewText/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/AdapterComponents/XtCustomSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/xt-leads-select/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/xt-tag-select/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ModalForm/index.tsx',
@@ -2865,6 +3171,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/withdrawal.js',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/order.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/helpers/ocr.ts',
   },
   {
@@ -2904,6 +3213,99 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/localForage.ts',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/authMapRoute.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/AuthLimite/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/icons/NoInput.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/HelperService/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/Caculator/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/icons/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/GlobalNotification/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/updateLog.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/HelperService/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/platform.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/platform.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/social/seat/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/social/seat/api.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Card/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Kanban/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/CommonFunctions/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/TaskList/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SubAccountFirstStep/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MarketingModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/DataVForm/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AccountData/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SettingModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/PerformanceReport/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/DataV/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SetLoginPwd/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/fetch.ts',
   },
   {
@@ -2914,6 +3316,24 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/mall.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/meta.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/product.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/clientele.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/staff.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/order.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/common.d.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductEdit/SchemaField.tsx',
@@ -3015,6 +3435,39 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/RenewTips/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/CRMOpeningModal.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/components/Carousel/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/CRMOpeningTitle.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/components/Introduction/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/aiTools/AIFastIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/aiTools/AIGoodIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/aiTools/AIMoreIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/aiTools/AISaveIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/SubSetPwdSuccess.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/SubAccountPassword.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessForm/SchemaField.tsx',
   },
   {
@@ -3034,9 +3487,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/error/index.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Uploader/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/utils.ts',
@@ -3060,37 +3510,10 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/register/index.ts',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Container/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/common/style/overrideAntd.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/uw3.0/ITabs/index.js',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchTable/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchForm/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/NavPanel/index.js',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ContentWrap/index.css',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/agenda.d.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/business.d.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ModuleTitle/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx',
@@ -3156,7 +3579,7 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/BaseInfoOperateModal/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/OrderManagement/PI/messages',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/OrderManagement/PI/messages.json',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/OrderManagement/PI/index.css',
@@ -3177,10 +3600,52 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/Mail/MailForm/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/RouterContainer/style.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MainWrap/index.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/hooks/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/util.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MainWrap/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Editor/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Detail/Content/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/messages.json',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/utilityFuncs.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/validate.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/index.tsx',
@@ -3210,9 +3675,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/lifeCycle.ts',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hoc/withReduxForm.tsx',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerEditor/components/index.ts',
   },
   {
@@ -3223,6 +3685,18 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hoc/withAddress.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/formily/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/RelatedInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/types/api/ListType.ts',
@@ -3258,39 +3732,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/index.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/hooks/index.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/util.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MainWrap/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Editor/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Detail/Content/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/messages',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/style.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/index.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/utilityFuncs.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/NavPanel/style.css',
   },
   {
@@ -3312,7 +3753,7 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/messages',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/messages.json',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/style.css',
@@ -3327,16 +3768,10 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductAll/Table/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SceneDropdown/index.tsx',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductImport/index.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductAll/Table/filter.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OverrideTabs/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/BriefInfo/index.tsx',
@@ -3612,6 +4047,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/index.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/UserCenter/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/index.css',
   },
   {
@@ -3858,10 +4296,19 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ListPageLayout/style.less',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/hooks.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/constant.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/GroupMenu/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/GroupMenu/CaretLeftOutlined.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/trackManager/sensorEventId.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/AddPage/ModuleCard/index.tsx',
@@ -3901,9 +4348,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/heighSeas.d.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/index.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HighSeasRule/CustomerFollowing/index.css',
@@ -4179,6 +4623,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/PurchaseOrderList/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/403/NoPermission.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/PurchaseFilterDropDown/style.css',
   },
   {
@@ -4197,9 +4644,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/PurchaseOrderListOperationBar/UpdateStatus.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SegContainer/index.tsx',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/DetailPage/components/GeneralInfo/BasicMsg.tsx',
   },
   {
@@ -4215,9 +4659,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/index.ts',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/constant.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/util.ts',
   },
   {
@@ -4225,6 +4666,45 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/quick-schema.json',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/date.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/dateTime.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/decimalNumber.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/fileUpload.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/imageUpload.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/integerNumber.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/multiLineInput.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/multiSelect.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/newModule.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/select.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/singleLineInput.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/PlusCircleOutlined.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customizeFields/exclamationCircle.svg',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsListOperationBar/index.tsx',
@@ -4255,9 +4735,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsFormDrawer/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/common.d.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/constants.ts',
@@ -4326,6 +4803,30 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/getUtilityElement.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/moment.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/hooks/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/portal.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/loading.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/pickDataProps.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/utils.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/baseArrayContext.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/types.d.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/components/SegContainer/index.tsx',
   },
   {
@@ -4371,16 +4872,10 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/settingLine.svg',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/social/seat/api.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Social/WhatsApp/SeatManagement/styles.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Social/WhatsApp/SeatManagement/SeatTable.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/social/seat/index.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Social/components/SeatEmpty/index.tsx',
@@ -4488,6 +4983,24 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/FilterCondition/FilterCondition.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/ConfirmIcon/ConfirmIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/ConfirmContent/ConfirmContent.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/403/NoPermission.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierImport/SupplierImport.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/FilterDropdown/FilterDropdown.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/ComplexFilter/ComplexFilter.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/components/TopBlock/index.css',
   },
   {
@@ -4507,9 +5020,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/components/ProductInfo/EditDrawer/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/PicAttachmentPreview/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/components/ProductInfo/selectProduct.tsx',
@@ -4612,6 +5122,9 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/FormDrawer/cancel.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/CreateForm/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/common/Button/style.css',
@@ -4731,6 +5244,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/SelectAddresseeModal/style.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MultiEmailSelect/MultiEmailSelect.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/LargeAttachment/CloudDiskUploader/Footer.tsx',
   },
   {
@@ -4797,10 +5313,25 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/common/Error/style.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MailDetail/components/index.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/resources/icons/mail_inner_attachment.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/resources/icons/mail_inner_attachment.tsx',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/resources/icons/full_screen.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/resources/icons/close.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/CloudDiskFileTree/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/FadeOperation/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MailDetail/components/MailDetailSenderCard.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MailDetail/components/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomRadio/style.css',
@@ -4810,6 +5341,9 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Signature/SignaturePreview/WrappedSignature.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Dashboard/Setting/EmailManageSetting/components/UnbindModal.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/resources/icons/main_bind_icon.tsx',
@@ -4848,6 +5382,12 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/PicturePreview/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/MutipleEmailInput/isEmail.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/MutipleEmailInput/ReactMultiEmail.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/prng4.js',
   },
   {
@@ -4876,6 +5416,75 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/RegisterForm/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/FormItem/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/ComplexFormItem/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/TimePicker/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/RenderSelect/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/breadcrumb.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/NavPanel/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/uw3.0/ITabs/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/ConfirmCancelModal/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/EditCell/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/Pagination/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Details/StatusLine/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Details/DetailDescription/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Details/DetailBtnGroup/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Layout/LeftRight.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/SelectedConditions/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hoc/withReduxForm.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OperateLog/TimeLineItem.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OperateLog/TimeLineItem.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/foreignTradePlatform/svg/SceneDropdown.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SceneDropdown/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Dropdown/SwitchRatio/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/Exchange/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/EdmFissionExchange/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/leadsAI/leftArrow.svg',
@@ -4929,6 +5538,21 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/images/leads/nextBtn.png',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/AdapterComponents/XtCustomSelect/util.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/preview-text/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/xt-leads-select/MyComponent.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/xt-leads-select/style.less',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/AiTools/CreateTask/components/Tag/index.css',
   },
   {
@@ -4939,6 +5563,150 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/AiTools/CreateTask/components/WAClientTrigger/client.png',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/components/ContentSection/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/HelpPanel/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/currency.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/commonSetting/RateManage/service/type.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/Caculator/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/Header/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/AdviseModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/icons/QuestionIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/icons/ToolIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/icons/UpdateIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/icons/RightArrow.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/GlobalNotification/AgendaNotice.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/checkCircleFill.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/websocket/types.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/GlobalNotification/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/social/seat/type.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Card/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/Funnel.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/Pie.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/LineChart.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/PieChart.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/FunnelChart.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/homeIcons/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/up.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/down.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Kanban/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/utils.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/CommonFunctions/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/TaskList/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/TaskList/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/useCRMProtocolVersion.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SubAccountFirstStep/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MarketingModal/MemberGuide.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/Setting.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/home.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/DataVForm/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AccountData/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/home.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SettingModal/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/OrderTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/QuotationTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/ProductTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/PerformanceReport/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/DataV/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SetPasswordOperate/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/NotSetLoginPassword.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SetLoginPwd/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductEdit/ModuleCard/index.tsx',
@@ -4963,9 +5731,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/types/product.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/product.d.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/ProductGroupCascader/index.d.ts',
@@ -5007,13 +5772,22 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/QuotationEdit/QuickCustomerModal.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/types/quotation.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/QuotationEdit/PicAttachment/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Editor/components/ProductSelectTable/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/commonSetting/RateManage/service/type.ts',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/clientele.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/staff.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/email.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/sharedApi.ts',
@@ -5058,10 +5832,46 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/OrderEdit/QuickCustomerModal.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/types/order.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/OrderEdit/PicAttachment/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/OrderEditor/components/ProductSelectTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/components/Carousel/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/components/Introduction/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/LeadsNavIcon.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/CustomerManageIcon.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/EDMSvgIcon.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/components/Carousel/Carousel.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/components/Introduction/Introduction.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/component/PasswordInput/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/component/ValidaInput/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsFormDrawer/components/SocialMediaSelectInput.tsx',
@@ -5082,9 +5892,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessForm/components/StageOptionsSelect.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Uploader/index.css',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/components/BindPhoneForm/style.css',
   },
   {
@@ -5095,21 +5902,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/components/EnterpriseAuthForm/helper.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/uw3.0/ITabs/style.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/breadcrumb.js',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/NavPanel/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/OverrideRadio/style.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ModuleTitle/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/style.css',
@@ -5163,61 +5955,16 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/DocuPreview/index.js',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/ConfirmCancelModal/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImport/CustomerImportHistory.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/components/FinishStep.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/components/ProcessingStep.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/components/StartStep.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/BusinessCardModal/components/attachment.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/BusinessCardModal/components/ocrScan.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hoc/withReduxForm.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/validate.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/types.d.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/TagSelect/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/config.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/Table/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/constant.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AgendaFormModal/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/DelBtn/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/ToAdvancedScreenLink/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/components/QuotationImportButton/index.tsx',
@@ -5266,6 +6013,159 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/QuotationTerm/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/Header/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/PersonInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/ProductTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/Protocol/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useCustomerContacts.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useOpportunitys.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useFirmTitles.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/usePublicInfo.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useCurrencys.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useDirectors.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useBeneficiaryAccounts.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useOrderAvailable.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useCrmMember.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useDataMap.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useResponsibleUsers.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useCustomerEnum.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useAllResponsibleUsers.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/componets/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/GenderSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/componets/Email/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/ContactFormModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/TransferCustomerModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/utils.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImport/CustomerImportHistory.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/components/FinishStep.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/components/ProcessingStep.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/components/StartStep.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/CustomerImportSteps/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/BusinessCardModal/components/attachment.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/BusinessCardModal/components/ocrScan.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerEditor/components/BasicInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerEditor/components/CharacteristicInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerEditor/components/ManageMentInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerEditor/components/RenderContact.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/validate.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/types.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/formily/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/formily/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/formily/duplicateFieldsConfig.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/FilterSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/config.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/index.css',
@@ -5328,6 +6228,21 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/index.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/BankInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/Header/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/PersonInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/ProductTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/Protocol/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductAll/Table/index.css',
   },
   {
@@ -5341,9 +6256,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/ProductDelBtn/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/utils.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/ProductGroupCascader/index.tsx',
@@ -5361,19 +6273,16 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductAll/Table/reducer.ts',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/foreignTradePlatform/svg/SceneDropdown.tsx',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductImport/productImport.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SceneDropdown/index.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductImport/importRecord.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/AdvancedScreen/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductAll/Table/save-condition.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/OverrideTabs/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/DescriptionBlock/index.tsx',
@@ -5577,6 +6486,12 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/EDMTemplateModal/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/hooks/useModalVisible/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/hooks/useTableParams/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/CreateDomainModal/style.css',
   },
   {
@@ -5634,10 +6549,37 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/TreeMenu/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/Calendar/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/SiderBar/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/DateControl/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/ActionPanel/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskList/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/CreateTodoDrawer.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/ScheduleGuide/ScheduleGuide.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AgendaTable/components/index.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AgendaTable/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/CreateAgendaDrawer.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/index.tsx',
@@ -5649,10 +6591,22 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Filter/utils.ts',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/List/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/FormItem/index.tsx',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/ActionPanel/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Header/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/BusinessList/BusinessList.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/ComplexFilter/ComplexFilter.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Filter/utils.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/form.ts',
@@ -5679,10 +6633,25 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/Quick/Contact/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessDetail/components/TopBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessDetail/components/GeneralInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessDetail/components/RelatedInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/BusinessStage/BusinessStage.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/UserCenter/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/components/Payment/PriceTitle/style.css',
@@ -5745,6 +6714,12 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Fields/SelectAddressField/withCountryMethods.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/TopBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/GenerallInfo/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/FirmSetting/pubInfo/components/pubCard/index.css',
   },
   {
@@ -5766,10 +6741,22 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/UserCenter/component/BasicInfo/AccountRightBlockList/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/useIsWaEntryVisible.tsx',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/ProductsGroup/components/SortableTree/components/SortableTreeItem/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/ProductsGroup/components/SortableTree/components/SortableTreeItem/index.tsx',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/DraggableRowTable/DraggableRowTable.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/BusinessStageMange/hooks/useColumns.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/BusinessStageMange/hooks/useActions.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/CreateBusinessState/CreateBusinessStage.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/StatisticValue/StatisticValue.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/Setting/AutoCreate/index.css',
@@ -5805,9 +6792,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/style.module.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/hooks.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/OperationBar/SendEmail.tsx',
   },
   {
@@ -5839,9 +6823,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SelectAddresseeModal/constants.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/components/index.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Filter/AdvanceFilter/contant.ts',
@@ -6117,9 +7098,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/CreateAgenda/style.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/index.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useLeadsContacts.ts',
   },
   {
@@ -6174,13 +7152,16 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/FilterCondition/style.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/supplier/NoPermission.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/403/style.module.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/PurchaseOrderList/StatusIcon.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/PurchaseOrderList/hooks/useColumns.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SegContainer/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/utils.ts',
@@ -6189,7 +7170,67 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/DetailPage/components/GeneralInfo/style.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/TopBar/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/ToolBox/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/QuickBox/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/ToolBox/RenderNode/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/Module/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/Module/quick.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/Module/quick-item.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/ArrayItems/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/Input/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/TextArea/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/Select/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/DatePicker/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/NumberPicker/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/Upload/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/MultipleSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/CustomerNoInput/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/GeoSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/XtCustomSelect/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsListTabsBar/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsList/hooks/useColumns.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsList/hooks/useActions.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsFormDrawer/SchemaField.tsx',
@@ -6213,9 +7254,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/component/amount-and-currency/MyComponent.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/preview-text/index.tsx',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/component/AddSelect/select.tsx',
   },
   {
@@ -6223,6 +7261,12 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/array-base/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/hooks/useClickAway.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/hooks/usePrefixCls.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/components/SegContainer/index.css',
@@ -6244,9 +7288,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Social/WhatsApp/AccountManagement/MessageContent/ChatRecord/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/social/seat/type.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/social/QuestionMark.svg',
@@ -6312,10 +7353,49 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierListOperationBar/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierList/hooks/useColumns.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierList/hooks/useActions.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/OperateTags/OperateTags.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/FilterCondition/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SaveFilter/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/ConfirmIcon/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/ConfirmContent/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/403/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierImport/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierImport/History.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierImport/Form/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierImport/utils.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/FilterDropdown/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/ComplexFilter/ComplexFilterForm.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/components/TopBlock/UpdateTagForm/UpdateTagForm.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/components/GeneralInfo/style.css',
@@ -6369,10 +7449,19 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Popconfirm/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ProductWelcome/ProductWelcome.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/RouterContainer/components/style.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ImgPreview/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/CreateForm/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ColorDropDown/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomInput/style.css',
@@ -6418,6 +7507,18 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/SelectAddresseeModal/components/TreeNode/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/utils/array.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MultiEmailSelect/Item.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/MultiEmailSelect/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/utils/keycode.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/LargeAttachment/CloudDiskUploader/FileName.tsx',
@@ -6543,7 +7644,19 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/common/CustomTag/style.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/CloudDiskFileTree/type.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/FadeOperation/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Dashboard/Setting/EmailManageSetting/components/style.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/EmailSelectField/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/MutipleEmailInput/style.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/PartnerPlanForm/style.css',
@@ -6558,16 +7671,112 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/MegCaptureIcon.js',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/EditCell/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/Pagination/index.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/AiTools/ResultList/List/utils.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/components/TagsSelect/components/DropDownFooter/index.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/index.ts',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/components/TagsSelect/index.module.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/components/TagsSelect/index.module.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/LoadingOutlined.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/InboxOutlined.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/UploadOutlined.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/CheckOutlined.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/PlusOutlined.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/icons/EditOutlined.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/preview-text/style.less',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/xt-leads-select/util.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/components/ContentSection/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/components/ContentSection/ContentItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/HelpPanel/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/Header/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/feedback.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/AdviseModal/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/api.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/Funnel.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/BusinessOppStageFunnelChart.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/homeIcons/BusinessIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/homeIcons/CustomerIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/homeIcons/EmailIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/homeIcons/OrderIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/homeIcons/ProductIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/crmIcons/homeIcons/QuotationIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/TaskList/components/TaskItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MarketingModal/MemberGuide.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/Table/config.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/OrderTable/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/Table/config.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/QuotationTable/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/AddModal/ProductTable/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductEdit/ModuleCard/style.css',
@@ -6642,6 +7851,27 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/OrderEditor/components/ProductSelectTable/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/components/Carousel/Carousel.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/components/Introduction/Introduction.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/components/Carousel/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/AIAssistantModal/components/Introduction/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/CheckOutLined.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/component/PasswordInput/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/component/ValidaInput/index.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/xt-select-input/MyComponent.tsx',
   },
   {
@@ -6675,22 +7905,7 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/DocuPreview/index.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/ConfirmCancelModal/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/operation.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/index.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ResponsibleUser/index.tsx',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/Table/index.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/Table/config.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/components/SideDrawBriefInfo/index.tsx',
@@ -6741,10 +7956,121 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/config.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/Table/index.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/CommonTitle.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/Table/config.tsx',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/Header/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/PersonInfo/config.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/PersonInfo/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/ProductTable/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/Protocol/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/componets/SocielMedia/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/componets/TelephoneGroup/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/SegContainerHeader/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ModuleRelatedInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/FirmMemberSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/Fold/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/CustomTable/virtual-table.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ResizeTable/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/componets/Email/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useCheckEmail.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/contact.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/ContactFormModal/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/TransferCustomerModal/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/TransferCustomerModal/components/PublicInfoSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/components/CustomerInfoDrawer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/AssignBtn.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/freeBtn.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/ClaimBtn.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/TransferBtn.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/api/operation.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerEditor/components/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/formily/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/formily/components/LabelText/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hooks/asyncData/useDynamicTypes.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/FilterSelect/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ResponsibleUser/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/Table/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/components/SideDrawBriefInfo/index.tsx',
@@ -6798,6 +8124,24 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/config.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/CommonTitle.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/Header/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/PersonInfo/config.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/PersonInfo/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/ProductTable/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/Protocol/style.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/ProductGroupCascader/util.ts',
   },
   {
@@ -6814,6 +8158,12 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductEdit/ProductGroupCascader/index.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductImport/productImport.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductImport/importRecord.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/AdvancedScreen/SchemaField.tsx',
@@ -6957,6 +8307,12 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/Section/style.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/form/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/CheckBox/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/ContentErrorModal/index.css',
   },
   {
@@ -7011,6 +8367,18 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/Certification/Certification.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/customer.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/measured.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/roll.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/useIsCertify.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/AddressBookManagement/components/BookTaskTable/config.css',
   },
   {
@@ -7035,6 +8403,57 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/AddressBookManagement/components/ContactFormDrawer/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/Calendar/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/Calendar/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/SiderBar/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/DateControl/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/agenda.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/ActionPanel/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/util.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/utils/todo.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/components/DetailDrawer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskList/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/components/TodoForm/TodoForm.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/ScheduleGuide/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AgendaTable/components/CustomerInfoDrawer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AgendaTable/components/AgendaInfoDrawer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/components/AgendaForm/AgendaForm.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/config.tsx',
   },
   {
@@ -7053,10 +8472,67 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/style.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/FormItem/index.css',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/List/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/List/components/DrawerInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/util.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/List/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/foreignTradePlatform/svg/AdvancedScreen.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/ActionPanel/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Header/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/FilterDropdown/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/OperateBar/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/hooks/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/BusinessList/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/ComplexFilter/SchemaField.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/ComplexFilter/schema.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/SaveFilter/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/ComplexFilter/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/EditableInput/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessDetail/components/TopBlock/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/modals/LossOrderReasonModal.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/hook.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessDetail/components/GeneralInfo/config.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/BusinessStage/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/config.tsx',
@@ -7083,6 +8559,15 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/components/Table/components/index.ts',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/TopBlock/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/TopBlock/CopyModal.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/GenerallInfo/style.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/UserCenter/component/BasicInfo/CapacityStatusBar/index.css',
   },
   {
@@ -7093,6 +8578,12 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/ProductsGroup/components/SortableTree/components/TreeItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/CreateBusinessState/BusinessStageForm/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/StatisticValue/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/Setting/AutoCreate/Rules/index.css',
@@ -7140,6 +8631,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/HomePage/components/DropdownButtons/index.module.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/HomePage/components/OperationBar/JoinAutomation/JoinAutomation.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/PopoverTip/index.tsx',
   },
   {
@@ -7158,6 +8652,24 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/EllipsisElements/index.module.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customerImport/importFinishIcon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customerImport/dataImportIcon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customerImport/uploadFileIcon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customerImport/closeImportIcon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customerImport/questionIcon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/customerImport/abnormalIcon.svg',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/customerManagement/importRecord.css',
   },
   {
@@ -7173,7 +8685,7 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/customerManagement/components/QuickCreateCustomFieldModal.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/customerManagement/hooks',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/customerManagement/hooks.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/utils/createCraftNode.tsx',
@@ -7257,6 +8769,24 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/CreateAgenda/components/AgendaForm/index.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/DynamicBlock/components/EmailBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/DynamicBlock/components/EdmBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/DynamicBlock/components/BusinessBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/DynamicBlock/components/QuotationBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/DynamicBlock/components/OrderBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/DynamicBlock/components/AgendaBlock/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/whatsapp_icon.svg',
   },
   {
@@ -7299,6 +8829,78 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/ComplexFilter/schema.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/TopBar/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/TopBar/SaveModal/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/ToolBox/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/ToolBox/ListCard.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/ToolBox/ComponentCard/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Carousel/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/QuickBox/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/ToolBox/RenderNode/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/Module/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/rules.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/Container/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/style.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/ArrayItems/ArrayItemsSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/Input/InputSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/TextArea/TextAreaSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/Select/SelectSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/DatePicker/DatePickerSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/NumberPicker/NumberPickerSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/Upload/UploadSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/GeoSelect/GeoSelectSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/XtCustomSelect/XtCustomSelectSetting.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsList/hooks/useColumns.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/PickStatusConfirm/index.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsFormDrawer/components/ModuleCard.tsx',
   },
   {
@@ -7314,13 +8916,7 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/DetailPage/components/GeneralInfo/ContactCard/style.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/__builtins__/utils.tsx',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/component/amount-and-currency/index.less',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/preview-text/style.less',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/component/AddSelect/utils.ts',
@@ -7356,10 +8952,37 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierFormDrawer/CustomTypeSelect/CustomTypeSelect.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierList/hooks/useColumns.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SaveFilter/SaveFilter.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierImport/Form/Form.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/ComplexFilter/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierFormDrawer/CustomTypeSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/components/TopBlock/UpdateTagForm/style.module.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/DetailPage/components/GeneralInfo/ContactCard/style.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PITemplate/components/Preview/PreviewRender/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ProductWelcome/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ProductWelcome/components/Introduction/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ColorDropDown/style.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/CloudDiskUploader/FilePrefix.tsx',
@@ -7375,6 +8998,9 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/CloudDiskUploader/Search/useSearchItems.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/EditableTag/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/LargeAttachment/CloudDiskUploader/FilePrefix.tsx',
@@ -7425,13 +9051,25 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/components/TagsSelect/components/DropDownFooter/index.module.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/index.ts',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Header/GlobalSearch/components/ContentSection/ContentItem/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/types.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/TaskList/components/TaskItem/style.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/style.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/formilyPubFormModal/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/components/Carousel/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/components/Introduction/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/xt-select-input/style.less',
@@ -7444,9 +9082,6 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/FirmManagement/FirmCreateForm/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ResponsibleUser/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/components/SideDrawBriefInfo/DrawerTitle.tsx',
@@ -7488,9 +9123,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AddNewField/AddConcatField.tsx',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/index.tsx',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Editor/components/AdjustNumberValue/index.tsx',
   },
   {
@@ -7513,6 +9145,117 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Preview/components/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/componets/SocielMedia/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/SegContactForm/componets/TelephoneGroup/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/SegContainerHeader/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ModuleRelatedInfo/config.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ModuleRelatedInfo/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/Fold/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/CustomTable/virtual-table.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ResizeTable/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/Icons/AssignIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/FreeIcon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/Icons/ClaimIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Buttons/Icons/TransferIcon.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/TopBlock/formily/components/LabelText/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/AddCustomer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/AddContact/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/components/AgendaForm/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/EmailBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/EdmBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/BusinessBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/QuotationBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/OrderBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/AgendaBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/WhatsAppBlock/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/TotalAmount.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/CreatedTime.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/CustomerInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/RegionSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/WebAddress.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/ContactInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/CustomerSource.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/CustomerStatus.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/CustomerType.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/Select.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ResponsibleUser/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/components/SideDrawBriefInfo/DrawerTitle.tsx',
@@ -7552,6 +9295,9 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Preview/components/style.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/CurrencyMarkSelect/index.tsx',
@@ -7677,6 +9423,15 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/TemplateCore/components/Banner/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/form/validate.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/form/input/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/CheckBox/style.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/SeeClickPersonModal/index.tsx',
   },
   {
@@ -7698,7 +9453,100 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeDetailInfo/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/base.d.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/Calendar/components/CalendarItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/components/ActionGroup/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/components/TaskPopoverContent/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/delete.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/components/DetailDrawer/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/hook.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/const.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/hooks/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/components/TodoForm/SchemeField.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/components/TodoForm/schema.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/components/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AgendaTable/components/AgendaInfoDrawer/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/useAgendaDetail.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/components/AgendaForm/SchemeField.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/components/AgendaForm/schema.ts',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/DropableList/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/StatisticSearch/StatisticSearch.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/ConvertToLossModal/ConvertToLossModal.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/FilterCondition/FilterCondition.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/List/components/ContactSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/List/components/CustomerSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/FilterDropdown/FilterDropdown.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/OperateBar/OperateBar.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/hooks/useColumns.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/hooks/useActions.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/SalesAmount/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/SaveFilter/SaveFilter.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/modals/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/modals/validate.ts',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/index.ts',
@@ -7713,6 +9561,15 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/DeleteModal/index.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/components/Table/components/SiderBar/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/TopBlock/helper.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/TopBlock/copyModal.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/ProductsGroup/components/SortableTree/components/Handle/index.tsx',
   },
   {
@@ -7722,10 +9579,22 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/ProductsGroup/components/SortableTree/components/TreeItem/index.module.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/CreateBusinessState/BusinessStageForm/BusinessStageForm.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/Setting/AutoCreate/FirstEnableModal/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/images/warning.png',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/AutomationFilled.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/HomePage/components/OperationBar/JoinAutomation/TaskSelectModal.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/HomePage/components/OperationBar/JoinAutomation/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/PopoverTip/index.css',
@@ -7764,7 +9633,22 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/CreateAgenda/components/AgendaForm/style.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/index.ts',
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/email_icon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/edm_icon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/business_icon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/quotation_icon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/order_icon.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/agenda_icon.svg',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/PurchaseOrderFormDrawer/ModuleCard/style.css',
@@ -7780,6 +9664,66 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/PurchaseOrder/components/PurchaseOrderFormDrawer/PurchaseOrderGoodsTermList/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/TopBar/SaveModal/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Carousel/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/date.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/dateTime.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/decimalNumber.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/fileUpload.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/imageUpload.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/integerNumber.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/multiLineInput.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/multiSelect.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/newModule.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/select.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/singleLineInput.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/PlusCircleOutlined.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/customizeFields/exclamationCircle.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/Container/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/setting.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/ArrayItems/utils.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/component/user/Select/setting.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/PickStatusConfirm/index.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Logistics/components/LogisticsFormDrawer/components/ModuleCard.css',
@@ -7821,6 +9765,12 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierFormDrawer/CustomTypeSelect/style.module.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Supplier/components/SupplierImport/Form/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ProductWelcome/components/Introduction/Introduction.tsx',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/CloudDiskUploader/hooks.ts',
   },
   {
@@ -7837,6 +9787,9 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/CloudDiskUploader/Search/query.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/EditableTag/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/LargeAttachment/CloudDiskUploader/hooks.ts',
@@ -7887,9 +9840,6 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AgendaFormModal/components/AgendaForm/validate.ts',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/agenda.ts',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/components/QuotationImportButton/importRecord.css',
   },
   {
@@ -7899,28 +9849,94 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AddNewField/index.css',
   },
   {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/index.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/style.css',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/index.ts',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/DraggableTable/components/DragDndHoc/index.tsx',
-  },
-  {
-    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/common/style/common.css',
-  },
-  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/svg/move.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/Status.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/BuyerKeyword.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/FirmTitle.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/MainAccount.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/\bQuotationKeyword.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/QuoteDeadline.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/QuoteTime.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/ProductKeyword.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/Tags.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/TotalAmount/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/components/AgendaForm/validate.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/components/AgendaForm/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/DynamicBlock/components/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/RangeDatePicker/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/items.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/AdvancedScreen/Content/Form/items/select.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/components/SideDrawBriefInfo/DrawerTitle.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/components/SideDrawBriefInfo/ProductAmount/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/TransactionStatus.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/DealType.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/BuyerKeyword.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/FirmTitle.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/MainAccount.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/OrderKeyword.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/PaymentMethod.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/PiCreatedTime.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/ProductKeyword.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/Tags.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/TotalAmount/index.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/CurrencyMarkSelect/index.css',
@@ -7986,6 +10002,9 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/ResizerContainer/components/Resizer/style.module.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/form/input/style.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/SeeClickPersonModal/index.css',
   },
   {
@@ -8004,13 +10023,157 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/ComplaintModal/style.css',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/Calendar/components/CalendarItem/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/components/ActionGroup/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/Schedule/components/TaskItem/components/TaskPopoverContent/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/hooks/useCreateTodo.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/hooks/useScope.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/hooks/useUpdateTodo.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/hooks/useTodoDetail.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/components/ContactSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/components/AssociateObjectSelect/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/useContacts.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/useCreateAgenda.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/useReferenceObject.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/useScope.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/hooks/useUpdateAgenda.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/components/BasicInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/components/ContactInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/components/CharacteristicInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/components/ManageMentInfo/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/RefereceSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/ReferenceType.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/FollowCtx.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/TimerPicker.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/BusinessItem/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/DropableList/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/DropableList/Components/List.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/FilterCondition/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/FilterDropdown/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/OperateBar/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/SalesAmount/SalesAmount.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/TotalAmount.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/CreatedTime.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/RegionSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/WebAddress.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/Select.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/BusinessStage.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/BusinessInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/AdvancedInput.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/ContactInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/TimePicker.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/PriceRange/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/CustomerInfo.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/VA/CFSB.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/VA/Currency.js',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/Exclamatory.js',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/ProductsGroup/components/SortableTree/components/InputItem/index.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/CreateBusinessState/BusinessStageForm/SchemeField.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/CreateBusinessState/BusinessStageForm/schema.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/HomePage/components/OperationBar/JoinAutomation/TaskSelect.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/customerManagement/components/BuyVipConfirm.tsx',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/components/customerManagement/components/CustomFieldLimitConfirm.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ProductWelcome/components/Introduction/style.module.css',
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/validator/components/EmailRepeatTable/style.css',
@@ -8022,6 +10185,21 @@ export default [
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/formily-xtd/validator/components/LeadsEmailDuplicate/CustomTable.tsx',
   },
   {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/items.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/TotalAmount/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/RangeDatePicker/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/items.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/TotalAmount/index.css',
+  },
+  {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/ColorPicker/style.module.css',
   },
   {
@@ -8029,5 +10207,71 @@ export default [
   },
   {
     key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/TextAlignButton/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/components/ContactSelect/ContactSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/components/AssociateObjectSelect/AssociateObjectSelect.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/style.module.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/components/BasicInfo/validate.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/GenerallInfo/components/ContactInfo/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SvgComponents/contactMail.svg',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/select.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/items.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/BusinessItem/components/index.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/BusinessItem/style.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/items.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/select.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/PriceRange/index.css',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateAgenda/const.ts',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/BusinessItem/components/ContactIcon/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/AgendaEdit/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/FormDrawer/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/BusinessEdit/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/CustomerEdit/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/LeadsEdit/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/OrderEdit/index.tsx',
+  },
+  {
+    key: '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/QuotationEdit/index.tsx',
   },
 ]
