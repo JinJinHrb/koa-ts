@@ -16,6 +16,11 @@ import {
 import _ from 'lodash'
 import graphNodes from 'app/mock/graphNodes'
 import fs from 'fs'
+import {
+  findQueryGeneral,
+  findReduxConnect,
+  removeUnusedVars,
+} from 'app/services/toolsHelper'
 
 @JsonController()
 @Service()
@@ -26,6 +31,7 @@ export class ToolsController {
   @Post('/getAstAndAlterCode')
   async getAstAndAlterCode(@Body() { path }: GetAstAndAlterCodeParams) {
     let ast: ParseResult<File> | ParseResult<File>[] | undefined, stats
+    let result: any = []
     if (isDirectory(path)) {
       stats = await listStatsPromise(path)
       const promises: Promise<ParseResult<File>>[] | undefined = stats
@@ -36,10 +42,12 @@ export class ToolsController {
       ast = await Promise.all(promises as Promise<ParseResult<File>>[])
     } else {
       stats = await getFsStatPromise(path)
-      ast = await this.toolsService.getAst(path)
-      this.toolsService.alterCode(ast)
+      const code = (await getFileData(path))?.toString()
+      ast = await this.toolsService.getAstByCode(code)
+      // result = removeUnusedVars(ast, code)
+      result = findQueryGeneral(ast)
     }
-    return { path, ast, stats }
+    return { path, ast, stats, result }
   }
 
   @Post('/getPathByAlias')

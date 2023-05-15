@@ -1,9 +1,8 @@
 import { Service } from 'typedi'
 import pathUtil from 'path'
-import { parse } from '@babel/parser'
+import { parse, ParseResult } from '@babel/parser'
 import traverse, { NodePath } from '@babel/traverse'
 import { ExportNamedDeclaration } from '@babel/types'
-import { ParseResult } from '@babel/parser'
 import {
   File,
   ImportDefaultSpecifier,
@@ -29,7 +28,14 @@ export class ToolsService {
   directedGraph = new DirectedGraph()
 
   async getAst(path: string) {
-    const code = (await getFileData(pathUtil.resolve(path, path)))?.toString()
+    const code = (await getFileData(path))?.toString()
+    return parse(code, {
+      sourceType: 'module',
+      plugins: ['typescript', 'jsx', 'decorators-legacy'],
+    })
+  }
+
+  async getAstByCode(code: string) {
     return parse(code, {
       sourceType: 'module',
       plugins: ['typescript', 'jsx', 'decorators-legacy'],
@@ -37,31 +43,85 @@ export class ToolsService {
   }
 
   alterCode(ast: ParseResult<File>) {
+    const result: any[] = []
     traverse(ast, {
-      enter(path) {
-        // 遍历没有引用的 businessOppNo
+      ImportDeclaration(path) {
+        const { node } = path
         if (
-          !path.isReferencedIdentifier() &&
-          path.isIdentifier({ name: 'businessOppNo' })
+          node.importKind === 'value' &&
+          node.source.value.includes('crmEmail/actions')
         ) {
-          // const parent = path.findParent(path => path.isObjectExpression())
-          console.log(
-            '#44 !isReferencedIdentifier && "businessOppNo":',
-            path.node,
-            // 'parent ObjectExpression:',
-            // parent,
-          )
+          // const newFile = './' + pathUtil.join(dirname, node.source.value)
+          //保存所依赖的模块
+          if (node.specifiers) {
+            // "type": "ImportSpecifier"
+            const specifiers = node.specifiers
+              .filter(a =>
+                [
+                  'ImportNamespaceSpecifier',
+                  // 'ImportDefaultSpecifier',
+                  // 'ImportSpecifier',
+                ].includes(a.type),
+              )
+              .map(a => a)
+            for (const specifier of specifiers) {
+              const name = specifier.local.name
+              const binding = path.scope.getBinding(name)
+              if (binding?.referenced === true) {
+                const bindings = binding.scope.bindings
+                // const connectNode = Object.keys(bindings)
+                //   .filter(a => a === 'ccc')
+                // .map(a => bindings[a])[0].path.parent
+                // result.push(bindings['connect'].identifier)
+                // result.push(connectNode)
+                // find connect
+                const bindingKeys = Object.keys(bindings)
+                for (const bindingKey of bindingKeys) {
+                  const bindingNode = bindings[bindingKey]
+                  const pathParent = bindingNode.path?.parent
+                  if (
+                    pathParent.type === 'ImportDeclaration' &&
+                    pathParent.source.value === 'react-redux'
+                  ) {
+                    const possibleConnect = pathParent.specifiers.filter(
+                      a =>
+                        a.type === 'ImportSpecifier' &&
+                        a.local.name === bindingKey &&
+                        a.imported.name === 'connect',
+                    )?.[0]
+                    if (possibleConnect) {
+                      // result.push(bindings[bindingKey].identifier)
+                      // console.log(
+                      //   'bindingNode.referencePaths:',
+                      //   bindingNode.referencePaths,
+                      // )
+                      const calleeNode = bindingNode.referencePaths.filter(
+                        a => a.key === 'callee',
+                      )?.[0]
+                      console.log('calleeNode.parent:', calleeNode?.parent)
+                      result.push(calleeNode?.parent)
+                    }
+                  }
+                }
+                /* Object.keys(bindings).forEach(k => {
+                  console.log(
+                    'ToolsService #64',
+                    'name:',
+                    name,
+                    'key:',
+                    k,
+                    'the binding name:',
+                    bindings[k],
+                  )
+                  result.push(bindings[k].identifier)
+                }) */
+              }
+            }
+          }
         }
-        // 遍历所有箭头函数
-        /* if (path.isArrayExpression()) {
-          path.traverse({
-            Identifier() {
-              console.log('Called!')
-            },
-          })
-        } */
       },
     })
+    return result
   }
 
   // webpack 广度深度算法 START
