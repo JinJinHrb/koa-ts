@@ -5,6 +5,7 @@ import traverse from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
 import generate from '@babel/generator'
+import _ from 'lodash'
 
 export const dynamicImportExportHandler = function (
   this: ToolsService,
@@ -55,10 +56,14 @@ export const removeUnusedVars = (ast: ParseResult<File>, code: string) => {
 }
 
 export const findQueryGeneral = (ast: ParseResult<File>) => {
-  const result: any = []
+  const result: any = {
+    usedEnumMembers: [],
+    unusedEnumMembers: [],
+  }
+  let enumMembers: string[] = []
   traverse(ast, {
     FunctionDeclaration(path) {
-      if (result.length > 0) {
+      if (result.usedEnumMembers.length > 0) {
         path.stop()
         return
       }
@@ -86,13 +91,25 @@ export const findQueryGeneral = (ast: ParseResult<File>) => {
               return
             }
             if (usageEquivalent.type === 'MemberExpression') {
-              result.push(usageEquivalent.property.name)
+              if (_.isEmpty(enumMembers)) {
+                const programPath = path.findParent(p => p.isProgram())
+                programPath.traverse({
+                  TSEnumDeclaration(declarePath) {
+                    if (declarePath.node.id.name === usageEquivalent.object.name) {
+                      enumMembers = declarePath.node.members.map(a => (a.id as any)?.name)
+                      declarePath.stop()
+                    }
+                  },
+                })
+              }
+              result.usedEnumMembers.push(usageEquivalent.property.name)
             }
           },
         })
       }
     },
   })
+  result.unusedEnumMembers = enumMembers.filter(a => !result.usedEnumMembers.includes(a))
   return result
 }
 

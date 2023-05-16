@@ -31,7 +31,7 @@ export class ToolsController {
   @Post('/getAstAndAlterCode')
   async getAstAndAlterCode(@Body() { path }: GetAstAndAlterCodeParams) {
     let ast: ParseResult<File> | ParseResult<File>[] | undefined, stats
-    let result: any = []
+    let result: any = {}
     if (isDirectory(path)) {
       stats = await listStatsPromise(path)
       const promises: Promise<ParseResult<File>>[] | undefined = stats
