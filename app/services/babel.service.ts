@@ -1,28 +1,18 @@
 import { Service } from 'typedi'
 import pathUtil from 'path'
 import { parse, ParseResult } from '@babel/parser'
-import traverse, { NodePath } from '@babel/traverse'
-import { ExportNamedDeclaration } from '@babel/types'
-import {
-  File,
-  ImportDefaultSpecifier,
-  ImportNamespaceSpecifier,
-  ImportSpecifier,
-} from '@babel/types'
+import traverse from '@babel/traverse'
+import { File } from '@babel/types'
 import { getFileData, getFileDataSync, isDirectory, isFile } from 'app/helpers/fsUtils'
 import wildcard from 'wildcard'
 import _ from 'lodash'
-import Graph, { DirectedGraph } from 'graphology'
+import { DirectedGraph } from 'graphology'
 import { IStringLiteral } from './types'
-import { dynamicImportExportHandler as originDynamicImportExportHandler } from './toolsHelper'
-
-type VariableSpecifierKey =
-  | ImportDefaultSpecifier
-  | ImportNamespaceSpecifier
-  | ImportSpecifier
+import { dynamicImportExportHandler as originDynamicImportExportHandler } from './babelHelper'
 
 @Service()
-export class ToolsService {
+export class BabelService {
+  tsconfigPath = ''
   projectPath = ''
   compilerOptionsPaths: { [key: string]: string[] } = {}
   directedGraph = new DirectedGraph()
@@ -77,8 +67,8 @@ export class ToolsService {
                 // find connect
                 const bindingKeys = Object.keys(bindings)
                 for (const bindingKey of bindingKeys) {
-                  const bindingNode = bindings[bindingKey]
-                  const pathParent = bindingNode.path?.parent
+                  const theBinding = bindings[bindingKey]
+                  const pathParent = theBinding.path?.parent
                   if (
                     pathParent.type === 'ImportDeclaration' &&
                     pathParent.source.value === 'react-redux'
@@ -95,7 +85,7 @@ export class ToolsService {
                       //   'bindingNode.referencePaths:',
                       //   bindingNode.referencePaths,
                       // )
-                      const calleeNode = bindingNode.referencePaths.filter(
+                      const calleeNode = theBinding.referencePaths.filter(
                         a => a.key === 'callee',
                       )?.[0]
                       console.log('calleeNode.parent:', calleeNode?.parent)
@@ -105,7 +95,7 @@ export class ToolsService {
                 }
                 /* Object.keys(bindings).forEach(k => {
                   console.log(
-                    'ToolsService #64',
+                    'BabelService #64',
                     'name:',
                     name,
                     'key:',
@@ -127,6 +117,7 @@ export class ToolsService {
   // webpack 广度深度算法 START
   // 参考：https://juejin.cn/post/6850418113901985805
   async setAlias(tsconfigPath: string) {
+    this.tsconfigPath = tsconfigPath
     this.projectPath = pathUtil.dirname(tsconfigPath)
     const json = (await getFileData(tsconfigPath)) as unknown as string
     const obj = JSON.parse(json)
@@ -217,7 +208,7 @@ export class ToolsService {
         return realPath
       }
     }
-    console.warn('getAlias #121 fPaths:', fPaths, 'alias:', alias)
+    // console.warn('getAlias #121 fPaths:', fPaths, 'alias:', alias)
     return ''
   }
 
@@ -295,8 +286,32 @@ export class ToolsService {
     return graph
   } */
 
-  async traverseAST(filename: string, ast: ParseResult<File>) {
-    const dirname = pathUtil.dirname(filename),
+  async getImportedFileByAlias(filePath: string, sourceValue: string) {
+    const dirname = pathUtil.dirname(filePath)
+    let alias = ''
+    if (sourceValue.indexOf('.') === 0) {
+      alias =
+        this.findFilePathByCandidate(pathUtil.resolve(dirname, sourceValue)) ??
+        pathUtil.resolve(dirname, sourceValue)
+    } else {
+      const tempAlias = this.getAlias(sourceValue)
+      if (tempAlias) {
+        alias = tempAlias
+      } else if (
+        isDirectory(pathUtil.resolve(this.projectPath, 'node_modules', sourceValue))
+      ) {
+        alias = sourceValue
+      } else if (
+        isFile(pathUtil.resolve(this.projectPath, 'node_modules', sourceValue))
+      ) {
+        alias = sourceValue
+      }
+    }
+    return alias
+  }
+
+  async traverseAST(filePath: string, ast: ParseResult<File>) {
+    const dirname = pathUtil.dirname(filePath),
       aliasFileMap: { [key: string]: string } = {},
       aliasNpmMap: { [key: string]: string } = {},
       fileDependencies: string[] = [],
@@ -407,7 +422,7 @@ export class ToolsService {
     nonReferenceVariableSpecifierMap.forEach((value, key, map) => {
       if (!_.isNil(hasReferenceVariableSpecifierMap.get(key))) {
         console.log(
-          'ToolsService #219',
+          'BabelService #219',
           key + ' = ' + value,
           'hasReferenceVariableSpecifierMap:',
           hasReferenceVariableSpecifierMap.get(key),

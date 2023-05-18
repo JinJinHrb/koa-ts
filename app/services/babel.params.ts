@@ -3,6 +3,9 @@ import { IsNotEmpty } from 'class-validator'
 export class GetAstAndAlterCodeParams {
   @IsNotEmpty()
   path!: string
+
+  @IsNotEmpty()
+  tsconfigPath!: string
 }
 
 export class ByRegExpParams {

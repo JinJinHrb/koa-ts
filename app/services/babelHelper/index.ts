@@ -1,14 +1,14 @@
 import pathUtil from 'path'
-import { ToolsService } from '../tools.service'
+import { BabelService } from '../babel.service'
 import { isDirectory, isFile } from '../../helpers/fsUtils'
-import traverse from '@babel/traverse'
+import traverse, { Node, NodePath } from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
 import generate from '@babel/generator'
 import _ from 'lodash'
 
 export const dynamicImportExportHandler = function (
-  this: ToolsService,
+  this: BabelService,
   {
     value,
     dirname,
@@ -53,6 +53,168 @@ export const removeUnusedVars = (ast: ParseResult<File>, code: string) => {
     },
     code,
   )
+}
+
+export const findConnectActions = async (
+  ast: ParseResult<File>,
+  filePath: string,
+  babelService: BabelService,
+) => {
+  const result: any = {
+    localConnect: '',
+    actionsDependencies: [], // { key, value, sourceValue }
+  }
+  traverse(ast, {
+    ImportDeclaration(path) {
+      const { node } = path
+      if (node.source.value !== 'react-redux') {
+        return
+      }
+      const connectSpecifier = node.specifiers.filter(
+        (a: any) => a.imported.name === 'connect',
+      )[0]
+      if (!connectSpecifier) {
+        return
+      }
+      result.localConnect = connectSpecifier.local.name
+      const binding = path.scope.getBinding(result.localConnect)
+      const bindings = binding?.scope.bindings || {}
+      const bindKeys = Object.keys(bindings)
+      /* bindKeys: [
+        'React',                'PureComponent',
+        'connect',              'bindActionCreators',
+        'Link',                 'Breadcrumb',
+        'Tabs',                 'push',
+        'classNames',           'matchBreadcrumbs',
+        'matchTradeBradCrumbs', 'style',
+        'modalActions',         'faqActions',
+        'EMModalUsages',        'mapQueryTag',
+        'EMSideFunctionType',   'TabPane',
+        'NavPanel'
+      ] */
+      if (
+        binding?.referenced === false ||
+        !bindKeys.includes('bindActionCreators') ||
+        !bindKeys.includes('connect')
+      ) {
+        path.stop()
+        return
+      }
+      const bindActionCreators = bindings['bindActionCreators']
+      let i = 0,
+        bindActionCreatorsReference: NodePath<Node>
+      while (
+        !_.isEmpty(bindActionCreators.referencePaths) &&
+        !_.isNil((bindActionCreatorsReference = bindActionCreators.referencePaths[i++]))
+      ) {
+        // bindActionCreatorsContainer.scope.getBinding(result.localConnect)
+        const spreadElementNames: any = []
+        const objectPropertyMap: any = {}
+        const unknownElements: any = []
+
+        const firstContainerArgument = (bindActionCreatorsReference.container as any)
+          .arguments[0]
+        if (firstContainerArgument.type === 'ObjectExpression') {
+          // console.log(
+          //   `(${i})`,
+          //   '#100 bindActionCreators.referencePaths[i].container.arguments[0].properties',
+          //   firstContainerArgument.properties,
+          // )
+          firstContainerArgument.properties.forEach((el: any) => {
+            if (el.type === 'SpreadElement') {
+              spreadElementNames.push(el.argument.name)
+            } else if (el.type === 'ObjectProperty') {
+              objectPropertyMap[el.key.name] = el.value.name
+            } else {
+              unknownElements.push(el)
+            }
+          })
+        }
+
+        const objectPropertyNames = Object.keys(objectPropertyMap).map(
+          a => objectPropertyMap[a],
+        )
+        result.spreadElementNames = {
+          ...spreadElementNames,
+          ...result.spreadElementNames,
+        }
+        result.objectPropertyMap = {
+          ...objectPropertyMap,
+          ...result.objectPropertyMap,
+        }
+        result.unknownElements = {
+          ...unknownElements,
+          ...result.unknownElements,
+        }
+        ;[...spreadElementNames, ...objectPropertyNames].forEach(k => {
+          const referenceActionsBinding = bindActionCreatorsReference.scope.getBinding(k)
+          const referenceActionsBindingDeclaration =
+            referenceActionsBinding?.path.findParent(path => path.isImportDeclaration())
+          const sourceValue = (referenceActionsBindingDeclaration?.node as any).source
+            .value
+          const referenceActionsBindingDeclarationSpecifiers = (
+            referenceActionsBindingDeclaration?.node as any
+          ).specifiers
+          const referenceActionsBindingDeclarationSpecifier =
+            referenceActionsBindingDeclarationSpecifiers.filter(
+              (a: any) => a.local.name === k,
+            )[0]
+          if (
+            referenceActionsBindingDeclarationSpecifier.type ===
+            'ImportNamespaceSpecifier'
+          ) {
+            result.actionsDependencies.push({
+              isNamespace: true,
+              localName: k,
+              sourceValue,
+            })
+          } else {
+            const importedName = referenceActionsBindingDeclarationSpecifier.imported.name
+            result.actionsDependencies.push({
+              localName: k,
+              importedName,
+              sourceValue,
+            })
+          }
+        })
+        // WangFan TODO 2023-05-18 22:24:49
+        findEmbeddedComponent(bindActionCreatorsReference)
+      }
+    },
+  })
+  for (const ad of result.actionsDependencies) {
+    const sourceValue = ad.sourceValue
+    const dependencyPath = await babelService.getImportedFileByAlias(
+      filePath,
+      sourceValue,
+    )
+    ad.dependencyPath = dependencyPath
+  }
+  return result
+}
+
+const findEmbeddedComponent = (bindActionCreatorsReference: NodePath<Node>) => {
+  const bindActionCreatorsParentsPath = bindActionCreatorsReference.findParent(
+    path => path.parentPath.node.type === 'Program',
+  )
+  console.log(
+    '#184 bindActionCreatorsParentsPath.node',
+    bindActionCreatorsParentsPath.node,
+  )
+  /*
+    // 情形一：
+    const mapDispatch = (dispatch: Dispatch) => ({
+      actions: bindActionCreators({ ...actions, change, push, touch }, dispatch),
+    })
+  */
+  if (bindActionCreatorsParentsPath.node.type === 'VariableDeclaration') {
+    const variableDeclarator = bindActionCreatorsReference.findParent(
+      path =>
+        path.type === 'VariableDeclarator' &&
+        path.parentPath.node.start === bindActionCreatorsParentsPath.node.start,
+    )
+    console.log('#211 variableDeclarator:', variableDeclarator)
+  }
 }
 
 export const findQueryGeneral = (ast: ParseResult<File>) => {
@@ -177,7 +339,7 @@ export const findReduxConnect = (ast: ParseResult<File>) => {
               }
               /* Object.keys(bindings).forEach(k => {
                   console.log(
-                    'ToolsService #64',
+                    'BabelService #64',
                     'name:',
                     name,
                     'key:',
