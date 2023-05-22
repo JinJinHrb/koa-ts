@@ -62,8 +62,27 @@ export const findConnectActions = async (
 ) => {
   const result: any = {
     localConnect: '',
+    localCompose: '',
     actionsDependencies: [], // { key, value, sourceValue }
+    warnings: [],
   }
+  traverse(ast, {
+    ImportDeclaration(path) {
+      const { node } = path
+      if (node.source.value !== 'redux') {
+        return
+      }
+      const composeSpecifier = node.specifiers.filter(
+        (a: any) => a.imported.name === 'compose',
+      )[0]
+      if (!composeSpecifier) {
+        return
+      }
+      result.localCompose = composeSpecifier.local.name
+      path.stop()
+    },
+  })
+
   traverse(ast, {
     ImportDeclaration(path) {
       const { node } = path
@@ -129,6 +148,14 @@ export const findConnectActions = async (
               unknownElements.push(el)
             }
           })
+        } else if (firstContainerArgument.type === 'Identifier') {
+          const identifierName = firstContainerArgument.name
+          spreadElementNames.push(identifierName)
+        } else {
+          result.warnings.push(
+            '[warning] #152 firstContainerArgument.type unprocessed:',
+            firstContainerArgument.type,
+          )
         }
 
         const objectPropertyNames = Object.keys(objectPropertyMap).map(
@@ -146,46 +173,58 @@ export const findConnectActions = async (
           ...unknownElements,
           ...result.unknownElements,
         }
-        ;[...spreadElementNames, ...objectPropertyNames].forEach(k => {
-          const referenceActionsBinding = bindActionCreatorsReference.scope.getBinding(k)
-          const referenceActionsBindingDeclaration =
-            referenceActionsBinding?.path.findParent(path => path.isImportDeclaration())
-          const sourceValue = (referenceActionsBindingDeclaration?.node as any).source
-            .value
-          const referenceActionsBindingDeclarationSpecifiers = (
-            referenceActionsBindingDeclaration?.node as any
-          ).specifiers
-          const referenceActionsBindingDeclarationSpecifier =
-            referenceActionsBindingDeclarationSpecifiers.filter(
-              (a: any) => a.local.name === k,
-            )[0]
-          if (
-            referenceActionsBindingDeclarationSpecifier.type ===
-            'ImportNamespaceSpecifier'
-          ) {
-            result.actionsDependencies.push({
-              isNamespace: true,
-              localName: k,
-              sourceValue,
-            })
-          } else {
-            const importedName = referenceActionsBindingDeclarationSpecifier.imported.name
-            result.actionsDependencies.push({
-              localName: k,
-              importedName,
-              sourceValue,
-            })
-          }
-        })
-        // WangFan TODO 2023-05-18 22:24:49
-        const embeddedComponentResponse = findEmbeddedComponent(
+        ;[...spreadElementNames, ...objectPropertyNames]
+          .filter(a => a)
+          .forEach(k => {
+            const referenceActionsBinding =
+              bindActionCreatorsReference.scope.getBinding(k)
+            const referenceActionsBindingDeclaration =
+              referenceActionsBinding?.path.findParent(path => path.isImportDeclaration())
+            const sourceValue = (referenceActionsBindingDeclaration?.node as any)?.source
+              .value
+            const referenceActionsBindingDeclarationSpecifiers = (
+              referenceActionsBindingDeclaration?.node as any
+            ).specifiers
+            const referenceActionsBindingDeclarationSpecifier =
+              referenceActionsBindingDeclarationSpecifiers.filter(
+                (a: any) => a.local.name === k,
+              )[0]
+            if (
+              referenceActionsBindingDeclarationSpecifier.type ===
+              'ImportNamespaceSpecifier'
+            ) {
+              result.actionsDependencies.push({
+                isNamespace: true,
+                localName: k,
+                sourceValue,
+              })
+            } else {
+              const importedName =
+                referenceActionsBindingDeclarationSpecifier.imported.name
+              result.actionsDependencies.push({
+                localName: k,
+                importedName,
+                sourceValue,
+              })
+            }
+          })
+        const embeddedComponentResponse = findConnectedComponent(
           bindActionCreatorsReference,
-          result.localConnect,
+          result,
         )
-        result.actionsComponents = [
-          ...embeddedComponentResponse.actionsComponents,
-          ...(result.actionsComponents || []),
-        ]
+        result.actionsComponents = _.uniqWith(
+          [
+            ...embeddedComponentResponse.actionsComponents,
+            ...(result.actionsComponents || []),
+          ],
+          (a, b) =>
+            a.type === b.type &&
+            (a.name === b.name ||
+              (a.loc &&
+                b.loc &&
+                a.loc.start.line === b.loc.start.line &&
+                a.loc.end.line === b.loc.end.line)),
+        )
         result.warnings = [
           ...embeddedComponentResponse.warnings,
           ...(result.warnings || []),
@@ -204,18 +243,23 @@ export const findConnectActions = async (
   return result
 }
 
-const findEmbeddedComponent = (
+const findConnectedComponent = (
   bindActionCreatorsReference: NodePath<Node>,
-  localConnect: string,
+  result: { localConnect: string; localCompose: string },
 ) => {
+  const { localConnect, localCompose } = result || {}
   const actionsComponents: any = [] // 被注入 actions 的组件名数组
   const warnings: any = []
   if (!localConnect) {
     return { actionsComponents, warnings }
   }
+
   const bindActionCreatorsParentsPath = bindActionCreatorsReference.findParent(
     path => path.parentPath.node.type === 'Program',
   )
+
+  const programPath = bindActionCreatorsParentsPath.parentPath
+
   /*
     // 情形一：
     const mapDispatch = (dispatch: Dispatch) => ({
@@ -225,6 +269,7 @@ const findEmbeddedComponent = (
   // const localConnectBinding = bindActionCreatorsParentsPath.scope.getBinding(localConnect)
   // console.log('#220 localConnectBinding:', localConnectBinding)
   let wrappedConnectPath: NodePath<Node> | undefined
+  let wrappedComposePath: NodePath<Node> | undefined
   bindActionCreatorsParentsPath.traverse({
     enter: subPath => {
       if (
@@ -232,11 +277,54 @@ const findEmbeddedComponent = (
         (subPath.container as any)?.type === 'CallExpression'
       ) {
         wrappedConnectPath = subPath
-        subPath.stop()
-        return
+        if (wrappedComposePath && wrappedConnectPath) {
+          subPath.stop()
+        }
+      }
+      if (
+        (subPath.node as any).name === localCompose &&
+        (subPath.container as any)?.type === 'CallExpression'
+      ) {
+        wrappedComposePath = subPath
+        if (wrappedComposePath && wrappedConnectPath) {
+          subPath.stop()
+        }
       }
     },
   })
+  if (wrappedComposePath) {
+    // WangFan TODO 2023-05-22 21:36:26
+    // console.log('#297 bindActionCreatorsParentsPath', bindActionCreatorsParentsPath)
+    const parentCallExpressionPath = wrappedComposePath.findParent(
+      subPath =>
+        subPath.node.type === 'CallExpression' &&
+        subPath.parentPath.node.type !== 'CallExpression',
+    )
+    const composeArguments = (parentCallExpressionPath.node as any).arguments
+    console.log('#303 composeArguments', composeArguments)
+    if (composeArguments.length === 1) {
+      if (composeArguments[0].type === 'Identifier') {
+        actionsComponents.push({ type: 'Identifier', name: composeArguments[0].name })
+      } else {
+        warnings.push({
+          type: composeArguments[0].type,
+          loc: composeArguments[0].loc,
+        })
+      }
+    } else {
+      warnings.push(
+        '[Warning] #316 composeArguments.length !== 1 (start line: ' +
+          parentCallExpressionPath.node.loc?.start.line +
+          ', start column: ' +
+          parentCallExpressionPath.node.loc?.start.column +
+          ', end line: ' +
+          parentCallExpressionPath.node.loc?.end.line,
+        ', end column: ' + parentCallExpressionPath.node.loc?.end.column + ')',
+      )
+    }
+    return { actionsComponents, warnings }
+  }
+
   if (
     !wrappedConnectPath &&
     bindActionCreatorsParentsPath.node.type === 'VariableDeclaration'
@@ -259,20 +347,53 @@ const findEmbeddedComponent = (
 
       const lastArguments = (parentOfCallExpression.node as any).arguments
       if (lastArguments.length !== 1) {
-        warnings.push(
-          '[Warning] #230 lastArguments.length !== 1 (start line: ' +
-            parentOfCallExpression.node.loc?.start.line +
-            ', start column: ' +
-            parentOfCallExpression.node.loc?.start.column +
-            ', end line: ' +
-            parentOfCallExpression.node.loc?.end.line,
-          ', end column: ' + parentOfCallExpression.node.loc?.end.column + ')',
-        )
+        if (
+          parentOfCallExpression.node.type === 'CallExpression' &&
+          (parentOfCallExpression.node.callee as any).name === localCompose
+        ) {
+          const notImportIdentifiers = parentOfCallExpression.node.arguments
+            .filter(a => a.type === 'Identifier')
+            .map((a: any) => a.name)
+            .filter(identifier => {
+              const binding = programPath.scope.getBinding(identifier)
+              const bindingNode = (binding as any).path.node
+              return bindingNode.type !== 'ImportSpecifier'
+            })
+          // console.log('#289 compose identifier arguments:', identifiers)
+          if (notImportIdentifiers.length !== 1) {
+            console.log(
+              '#310 notImportIdentifiers.length !== 1 notImportIdentifiers:',
+              notImportIdentifiers,
+            )
+          } else {
+            actionsComponents.push({
+              type: 'Identifier',
+              name: notImportIdentifiers[0],
+            })
+          }
+        } else {
+          console.log(
+            '#291 parentOfCallExpression.node:',
+            parentOfCallExpression.node,
+            'localCompose:',
+            localCompose,
+          )
+          warnings.push(
+            '[Warning] #230 lastArguments.length !== 1 (start line: ' +
+              parentOfCallExpression.node.loc?.start.line +
+              ', start column: ' +
+              parentOfCallExpression.node.loc?.start.column +
+              ', end line: ' +
+              parentOfCallExpression.node.loc?.end.line,
+            ', end column: ' + parentOfCallExpression.node.loc?.end.column + ')',
+          )
+        }
       } else {
         const lastArgument = lastArguments[0]
         if (lastArgument.type === 'CallExpression') {
           if (lastArgument.arguments.length === 1) {
             if (lastArgument.arguments[0].type === 'Identifier') {
+              console.log('#280 actionsComponents.push')
               actionsComponents.push({
                 type: 'Identifier',
                 name: lastArgument.arguments[0].name,
@@ -301,6 +422,7 @@ const findEmbeddedComponent = (
           }
         } else {
           if (lastArgument.type === 'Identifier') {
+            console.log('#300 actionsComponents.push')
             actionsComponents.push({
               type: 'Identifier',
               name: lastArgument.name,
@@ -326,6 +448,7 @@ const findEmbeddedComponent = (
   ) {
     const wrappedConnectArgument =
       wrappedConnectPath.parentPath.parentPath.node.arguments[0]
+    console.log('#335 actionsComponents.push')
     if (wrappedConnectArgument.type === 'Identifier') {
       actionsComponents.push({
         type: 'Identifier',
@@ -337,13 +460,48 @@ const findEmbeddedComponent = (
         loc: wrappedConnectArgument.loc,
       })
     }
+  } else if (
+    bindActionCreatorsParentsPath.node.type === 'ExpressionStatement' &&
+    (bindActionCreatorsParentsPath.node as any)?.expression.type ===
+      'AssignmentExpression' &&
+    (bindActionCreatorsParentsPath.node as any)?.expression.right.type ===
+      'CallExpression'
+  ) {
+    if (
+      (bindActionCreatorsParentsPath.node.expression as any).right.arguments.length === 1
+    ) {
+      const theArgument = (bindActionCreatorsParentsPath.node.expression as any).right
+        .arguments[0]
+      console.log('#356 actionsComponents.push') // WangFan TODO 2023-05-22 21:17:09 to remove
+      if (theArgument.type === 'Identifier') {
+        actionsComponents.push({
+          type: 'Identifier',
+          name: theArgument.name,
+        })
+      } else {
+        actionsComponents.push({
+          type: theArgument.type,
+          loc: theArgument.loc,
+        })
+      }
+    } else {
+      warnings.push(
+        '[Warning] #352 bindActionCreatorsParentsPath.node.expression.right.arguments.length != 1 (start line: ' +
+          bindActionCreatorsParentsPath.node.loc?.start.line +
+          ', start column: ' +
+          bindActionCreatorsParentsPath.node.loc?.start.column +
+          ', end line: ' +
+          bindActionCreatorsParentsPath.node.loc?.end.line,
+        ', end column: ' + bindActionCreatorsParentsPath.node.loc?.end.column + ')',
+      )
+    }
   } else {
     console.log(
-      '#300 !wrappedConnectPath bindActionCreatorsParentsPath.node:',
+      '#363 bindActionCreatorsParentsPath.node:',
       bindActionCreatorsParentsPath.node,
     )
     warnings.push(
-      '[Warning] #300 actionsComponents not found (start line: ' +
+      '[Warning] #367 actionsComponents not found (start line: ' +
         bindActionCreatorsParentsPath.node.loc?.start.line +
         ', start column: ' +
         bindActionCreatorsParentsPath.node.loc?.start.column +
