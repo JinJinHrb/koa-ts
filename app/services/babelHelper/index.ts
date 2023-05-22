@@ -178,7 +178,18 @@ export const findConnectActions = async (
           }
         })
         // WangFan TODO 2023-05-18 22:24:49
-        findEmbeddedComponent(bindActionCreatorsReference)
+        const embeddedComponentResponse = findEmbeddedComponent(
+          bindActionCreatorsReference,
+          result.localConnect,
+        )
+        result.actionsComponents = [
+          ...embeddedComponentResponse.actionsComponents,
+          ...(result.actionsComponents || []),
+        ]
+        result.warnings = [
+          ...embeddedComponentResponse.warnings,
+          ...(result.warnings || []),
+        ]
       }
     },
   })
@@ -193,13 +204,17 @@ export const findConnectActions = async (
   return result
 }
 
-const findEmbeddedComponent = (bindActionCreatorsReference: NodePath<Node>) => {
+const findEmbeddedComponent = (
+  bindActionCreatorsReference: NodePath<Node>,
+  localConnect: string,
+) => {
+  const actionsComponents: any = [] // 被注入 actions 的组件名数组
+  const warnings: any = []
+  if (!localConnect) {
+    return { actionsComponents, warnings }
+  }
   const bindActionCreatorsParentsPath = bindActionCreatorsReference.findParent(
     path => path.parentPath.node.type === 'Program',
-  )
-  console.log(
-    '#184 bindActionCreatorsParentsPath.node',
-    bindActionCreatorsParentsPath.node,
   )
   /*
     // 情形一：
@@ -207,14 +222,137 @@ const findEmbeddedComponent = (bindActionCreatorsReference: NodePath<Node>) => {
       actions: bindActionCreators({ ...actions, change, push, touch }, dispatch),
     })
   */
-  if (bindActionCreatorsParentsPath.node.type === 'VariableDeclaration') {
+  // const localConnectBinding = bindActionCreatorsParentsPath.scope.getBinding(localConnect)
+  // console.log('#220 localConnectBinding:', localConnectBinding)
+  let wrappedConnectPath: NodePath<Node> | undefined
+  bindActionCreatorsParentsPath.traverse({
+    enter: subPath => {
+      if (
+        (subPath.node as any).name === localConnect &&
+        (subPath.container as any)?.type === 'CallExpression'
+      ) {
+        wrappedConnectPath = subPath
+        subPath.stop()
+        return
+      }
+    },
+  })
+  if (
+    !wrappedConnectPath &&
+    bindActionCreatorsParentsPath.node.type === 'VariableDeclaration'
+  ) {
     const variableDeclarator = bindActionCreatorsReference.findParent(
       path =>
         path.type === 'VariableDeclarator' &&
         path.parentPath.node.start === bindActionCreatorsParentsPath.node.start,
     )
-    console.log('#211 variableDeclarator:', variableDeclarator)
+    const varName = (variableDeclarator.node as any).id.name
+    const binding = variableDeclarator.scope.getBinding(varName)
+    const referencePaths = binding?.referencePaths || []
+    for (let i = 0; i < referencePaths.length; i++) {
+      const referencePath = referencePaths[i]
+      const parentOfCallExpression = referencePath.findParent(
+        path =>
+          path.node.type === 'CallExpression' &&
+          path.parentPath.node.type !== 'CallExpression',
+      )
+
+      const lastArguments = (parentOfCallExpression.node as any).arguments
+      if (lastArguments.length !== 1) {
+        warnings.push(
+          '[Warning] #230 lastArguments.length !== 1 (start line: ' +
+            parentOfCallExpression.node.loc?.start.line +
+            ', start column: ' +
+            parentOfCallExpression.node.loc?.start.column +
+            ', end line: ' +
+            parentOfCallExpression.node.loc?.end.line,
+          ', end column: ' + parentOfCallExpression.node.loc?.end.column + ')',
+        )
+      } else {
+        const lastArgument = lastArguments[0]
+        if (lastArgument.type === 'CallExpression') {
+          if (lastArgument.arguments.length === 1) {
+            if (lastArgument.arguments[0].type === 'Identifier') {
+              actionsComponents.push({
+                type: 'Identifier',
+                name: lastArgument.arguments[0].name,
+              })
+            } else {
+              warnings.push(
+                '[Warning] #239 lastArgument.arguments[0].type !== "Identifier" (start line: ' +
+                  parentOfCallExpression.node.loc?.start.line +
+                  ', start column: ' +
+                  parentOfCallExpression.node.loc?.start.column +
+                  ', end line: ' +
+                  parentOfCallExpression.node.loc?.end.line,
+                ', end column: ' + parentOfCallExpression.node.loc?.end.column + ')',
+              )
+            }
+          } else {
+            warnings.push(
+              '[Warning] #242 lastArgument.arguments.length !== 1 (start line: ' +
+                parentOfCallExpression.node.loc?.start.line +
+                ', start column: ' +
+                parentOfCallExpression.node.loc?.start.column +
+                ', end line: ' +
+                parentOfCallExpression.node.loc?.end.line,
+              ', end column: ' + parentOfCallExpression.node.loc?.end.column + ')',
+            )
+          }
+        } else {
+          if (lastArgument.type === 'Identifier') {
+            actionsComponents.push({
+              type: 'Identifier',
+              name: lastArgument.name,
+            })
+          } else {
+            warnings.push(
+              '[Warning] #249 lastArgument.type !== "Identifier" (start line: ' +
+                parentOfCallExpression.node.loc?.start.line +
+                ', start column: ' +
+                parentOfCallExpression.node.loc?.start.column +
+                ', end line: ' +
+                parentOfCallExpression.node.loc?.end.line,
+              ', end column: ' + parentOfCallExpression.node.loc?.end.column + ')',
+            )
+          }
+        }
+      }
+    }
+  } else if (
+    wrappedConnectPath &&
+    wrappedConnectPath.parentPath.parentPath.node.type === 'CallExpression' &&
+    wrappedConnectPath.parentPath.parentPath.node.arguments.length === 1
+  ) {
+    const wrappedConnectArgument =
+      wrappedConnectPath.parentPath.parentPath.node.arguments[0]
+    if (wrappedConnectArgument.type === 'Identifier') {
+      actionsComponents.push({
+        type: 'Identifier',
+        name: wrappedConnectArgument.name,
+      })
+    } else {
+      actionsComponents.push({
+        type: wrappedConnectArgument.type,
+        loc: wrappedConnectArgument.loc,
+      })
+    }
+  } else {
+    console.log(
+      '#300 !wrappedConnectPath bindActionCreatorsParentsPath.node:',
+      bindActionCreatorsParentsPath.node,
+    )
+    warnings.push(
+      '[Warning] #300 actionsComponents not found (start line: ' +
+        bindActionCreatorsParentsPath.node.loc?.start.line +
+        ', start column: ' +
+        bindActionCreatorsParentsPath.node.loc?.start.column +
+        ', end line: ' +
+        bindActionCreatorsParentsPath.node.loc?.end.line,
+      ', end column: ' + bindActionCreatorsParentsPath.node.loc?.end.column + ')',
+    )
   }
+  return { actionsComponents, warnings }
 }
 
 export const findQueryGeneral = (ast: ParseResult<File>) => {
