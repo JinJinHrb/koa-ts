@@ -270,6 +270,7 @@ const findConnectedComponent = (
   // console.log('#220 localConnectBinding:', localConnectBinding)
   let wrappedConnectPath: NodePath<Node> | undefined
   let wrappedComposePath: NodePath<Node> | undefined
+  let connectDecorator: NodePath<Node> | undefined
   bindActionCreatorsParentsPath.traverse({
     enter: subPath => {
       if (
@@ -292,9 +293,31 @@ const findConnectedComponent = (
       }
     },
   })
+  if (wrappedConnectPath) {
+    connectDecorator = wrappedConnectPath?.findParent(
+      subPath => subPath.parentPath.type === 'Decorator',
+    )
+  }
+  if (connectDecorator) {
+    const classDeclarationPath = connectDecorator.findParent(
+      subPath => subPath.node.type === 'ClassDeclaration',
+    )
+    if (!classDeclarationPath) {
+      warnings.push(
+        '[Warning] #306 ClassDeclaration not found (start line: ' +
+          connectDecorator.node.loc?.start.line +
+          ', start column: ' +
+          connectDecorator.node.loc?.start.column +
+          ', end line: ' +
+          connectDecorator.node.loc?.end.line,
+        ', end column: ' + connectDecorator.node.loc?.end.column + ')',
+      )
+    }
+    const bodyNode = (classDeclarationPath.node as any).body
+    actionsComponents.push({ type: bodyNode.type, loc: bodyNode.loc })
+    return { actionsComponents, warnings }
+  }
   if (wrappedComposePath) {
-    // WangFan TODO 2023-05-22 21:36:26
-    // console.log('#297 bindActionCreatorsParentsPath', bindActionCreatorsParentsPath)
     const parentCallExpressionPath = wrappedComposePath.findParent(
       subPath =>
         subPath.node.type === 'CallExpression' &&
@@ -306,7 +329,7 @@ const findConnectedComponent = (
       if (composeArguments[0].type === 'Identifier') {
         actionsComponents.push({ type: 'Identifier', name: composeArguments[0].name })
       } else {
-        warnings.push({
+        actionsComponents.push({
           type: composeArguments[0].type,
           loc: composeArguments[0].loc,
         })
@@ -500,6 +523,7 @@ const findConnectedComponent = (
       '#363 bindActionCreatorsParentsPath.node:',
       bindActionCreatorsParentsPath.node,
     )
+
     warnings.push(
       '[Warning] #367 actionsComponents not found (start line: ' +
         bindActionCreatorsParentsPath.node.loc?.start.line +
