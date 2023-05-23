@@ -63,8 +63,7 @@ export const findConnectActions = async (
   const result: any = {
     localConnect: '',
     localCompose: '',
-    actionsDependencies: [], // { key, value, sourceValue }
-    warnings: [],
+    groups: [],
   }
   traverse(ast, {
     ImportDeclaration(path) {
@@ -119,6 +118,7 @@ export const findConnectActions = async (
         path.stop()
         return
       }
+
       const bindActionCreators = bindings['bindActionCreators']
       let i = 0,
         bindActionCreatorsReference: NodePath<Node>
@@ -126,7 +126,13 @@ export const findConnectActions = async (
         !_.isEmpty(bindActionCreators.referencePaths) &&
         !_.isNil((bindActionCreatorsReference = bindActionCreators.referencePaths[i++]))
       ) {
-        // bindActionCreatorsContainer.scope.getBinding(result.localConnect)
+        // referencePaths Start
+        const group: any = {
+          actionsDependencies: [], // { key, value, sourceValue }
+          actionsComponents: [],
+          warnings: [],
+          unknownElements: {},
+        }
         const spreadElementNames: any = []
         const objectPropertyMap: any = {}
         const unknownElements: any = []
@@ -134,11 +140,6 @@ export const findConnectActions = async (
         const firstContainerArgument = (bindActionCreatorsReference.container as any)
           .arguments[0]
         if (firstContainerArgument.type === 'ObjectExpression') {
-          // console.log(
-          //   `(${i})`,
-          //   '#100 bindActionCreators.referencePaths[i].container.arguments[0].properties',
-          //   firstContainerArgument.properties,
-          // )
           firstContainerArgument.properties.forEach((el: any) => {
             if (el.type === 'SpreadElement') {
               spreadElementNames.push(el.argument.name)
@@ -161,18 +162,9 @@ export const findConnectActions = async (
         const objectPropertyNames = Object.keys(objectPropertyMap).map(
           a => objectPropertyMap[a],
         )
-        result.spreadElementNames = {
-          ...spreadElementNames,
-          ...result.spreadElementNames,
-        }
-        result.objectPropertyMap = {
-          ...objectPropertyMap,
-          ...result.objectPropertyMap,
-        }
-        result.unknownElements = {
-          ...unknownElements,
-          ...result.unknownElements,
-        }
+        group.spreadElementNames = spreadElementNames
+        group.objectPropertyMap = objectPropertyMap
+        group.unknownElements = unknownElements
         ;[...spreadElementNames, ...objectPropertyNames]
           .filter(a => a)
           .forEach(k => {
@@ -193,7 +185,7 @@ export const findConnectActions = async (
               referenceActionsBindingDeclarationSpecifier.type ===
               'ImportNamespaceSpecifier'
             ) {
-              result.actionsDependencies.push({
+              group.actionsDependencies.push({
                 isNamespace: true,
                 localName: k,
                 sourceValue,
@@ -201,7 +193,7 @@ export const findConnectActions = async (
             } else {
               const importedName =
                 referenceActionsBindingDeclarationSpecifier.imported.name
-              result.actionsDependencies.push({
+              group.actionsDependencies.push({
                 localName: k,
                 importedName,
                 sourceValue,
@@ -212,33 +204,22 @@ export const findConnectActions = async (
           bindActionCreatorsReference,
           result,
         )
-        result.actionsComponents = _.uniqWith(
-          [
-            ...embeddedComponentResponse.actionsComponents,
-            ...(result.actionsComponents || []),
-          ],
-          (a, b) =>
-            a.type === b.type &&
-            (a.name === b.name ||
-              (a.loc &&
-                b.loc &&
-                a.loc.start.line === b.loc.start.line &&
-                a.loc.end.line === b.loc.end.line)),
-        )
-        result.warnings = [
-          ...embeddedComponentResponse.warnings,
-          ...(result.warnings || []),
-        ]
+        group.actionsComponents = embeddedComponentResponse.actionsComponents
+        group.warnings = embeddedComponentResponse.warnings
+        result.groups.push(group)
+        // referencePaths End
       }
     },
   })
-  for (const ad of result.actionsDependencies) {
-    const sourceValue = ad.sourceValue
-    const dependencyPath = await babelService.getImportedFileByAlias(
-      filePath,
-      sourceValue,
-    )
-    ad.dependencyPath = dependencyPath
+  for (const group of result.groups) {
+    for (const ad of group.actionsDependencies) {
+      const sourceValue = ad.sourceValue
+      const dependencyPath = await babelService.getImportedFileByAlias(
+        filePath,
+        sourceValue,
+      )
+      ad.dependencyPath = dependencyPath
+    }
   }
   return result
 }
@@ -295,7 +276,7 @@ const findConnectedComponent = (
   })
   if (wrappedConnectPath) {
     connectDecorator = wrappedConnectPath?.findParent(
-      subPath => subPath.parentPath.type === 'Decorator',
+      subPath => subPath.parentPath?.type === 'Decorator',
     )
   }
   if (connectDecorator) {
@@ -324,7 +305,6 @@ const findConnectedComponent = (
         subPath.parentPath.node.type !== 'CallExpression',
     )
     const composeArguments = (parentCallExpressionPath.node as any).arguments
-    console.log('#303 composeArguments', composeArguments)
     if (composeArguments.length === 1) {
       if (composeArguments[0].type === 'Identifier') {
         actionsComponents.push({ type: 'Identifier', name: composeArguments[0].name })
