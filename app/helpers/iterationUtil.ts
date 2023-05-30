@@ -28,24 +28,24 @@ export const getParentPathSkipTSNonNullExpression = (
 }
 
 export const iterateObject4certainArray = function (
-  obj: object,
+  obj: any,
   keyName: string,
-  resultArr,
+  resultArr: any,
 ) {
   if (!_.isObject(obj)) {
     return
   }
   Object.keys(obj).forEach(function (key) {
-    const elem = obj[key]
+    const elem = (obj as any)[key]
     if (elem instanceof Array && key === keyName) {
       OUTTER: for (let i = 0; i < elem.length; i++) {
         const subElem = elem[i]
-        if (_.isObject(subElem) && subElem['id']) {
+        if (_.isObject(subElem) && (subElem as any)['id']) {
           for (let j = 0; j < resultArr.length; j++) {
             if (
               resultArr[j] &&
               resultArr[j]['id'] &&
-              resultArr[j]['id'] === subElem['id']
+              resultArr[j]['id'] === (subElem as any)['id']
             ) {
               continue OUTTER
             }
@@ -64,7 +64,7 @@ export const iterateObject4certainArray = function (
 }
 
 export const iterateObject4certainObject = (
-  obj: object,
+  obj: any,
   validateHandler: (key: string, elem: unknown) => boolean,
   resultArr: unknown[],
 ) => {
@@ -85,7 +85,7 @@ export const iterateObject4certainObject = (
   })
 }
 
-export const iterateObject4certainKeyVals = function ({ obj, keys, resultArr }) {
+export const iterateObject4certainKeyVals = function ({ obj, keys, resultArr }: any) {
   if (oType(obj) !== 'object') {
     return
   }
@@ -103,7 +103,11 @@ export const iterateObject4certainKeyVals = function ({ obj, keys, resultArr }) 
 /** @param converter e.g. {'http://www.baidu.com': 'https://www.google.com'}
  * if options.isReplace === 'Y', recur rawData all over and replace the key of converter with its corresponding value
  * */
-export const iterateObject2replaceCertainValue = (rawData, converter, options) => {
+export const iterateObject2replaceCertainValue = (
+  rawData: any,
+  converter: any,
+  options: any,
+) => {
   if (_.isEmpty(converter)) {
     return rawData
   }
@@ -117,7 +121,7 @@ export const iterateObject2replaceCertainValue = (rawData, converter, options) =
     data = rawData
   }
   const isReplace = _.trim(options.isReplace)
-  const recurHandler = function (elem, converter) {
+  const recurHandler = function (elem: any, converter: any) {
     if (oType(elem) !== 'object') {
       return
     }
@@ -147,10 +151,10 @@ export const iterateObject2replaceCertainValue = (rawData, converter, options) =
 
 /** 使用正则表达式递归替换对象的值 */
 export const iterateObject2replaceCertainValueByRegex = (
-  rawData,
-  regex,
-  certainValue,
-  options,
+  rawData: any,
+  regex: any,
+  certainValue: any,
+  options: any,
 ) => {
   if (!certainValue) {
     return rawData
@@ -174,9 +178,9 @@ export const iterateObject2replaceCertainValueByRegex = (
     const keys = Object.keys(elem)
     for (let i = 0; i < keys.length; i++) {
       const key = keys[i]
-      const val = elem[key]
+      const val = (elem as any)[key]
       if (oType(val) === 'string') {
-        elem[key] = val.replace(regex, certainValue)
+        ;(elem as any)[key] = val.replace(regex, certainValue)
       } else if (oType(val) === 'object') {
         recurHandler(val, regex, certainValue)
       }
@@ -191,7 +195,7 @@ export const iterateObject2replaceCertainValueByRegex = (
  * iterateObjectHandler(obj, handler)
  * */
 export const iterateObjectHandler = function itrObj(
-  obj: object,
+  obj: any,
   handler: (obj: object, paths: unknown[]) => unknown,
   paths: string[] = [],
 ) {
@@ -212,9 +216,9 @@ export const iterateObjectHandler = function itrObj(
 
 /** 比较两个对象的不同之处 */
 export const iterateObject4DiffHandler = function itrObj4Dif(
-  obj1: object,
-  obj2: object,
-  customizer: (obj1: object, obj2: object, paths: string[]) => unknown,
+  obj1: any,
+  obj2: any,
+  customizer: (obj1: any, obj2: any, paths: string[]) => unknown,
   paths: string[] = [],
 ) {
   if (!customizer || !(customizer instanceof Function)) {
@@ -250,13 +254,13 @@ export const iterateObject4DiffHandler = function itrObj4Dif(
  * 深度克隆；如果提供了转换方法，可以同时转换日期格式，并存入克隆对象
  * */
 export const deepClone = function fnDeepClone(
-  obj: object | string,
+  obj: any,
   options?: {
     oidHandler: undefined | ((k: string) => unknown)
     dateHandler: undefined | ((d: Date) => unknown)
     bufferHandler: undefined | ((k: Buffer) => unknown)
   },
-): string | object | string[] | object[] {
+): any {
   if (!_.isObject(obj)) {
     return obj
   }
@@ -268,32 +272,32 @@ export const deepClone = function fnDeepClone(
     }
   }
   const oidHandler = options.oidHandler
-  const result = typeof obj['splice'] === 'function' ? [] : {}
+  const result = (typeof (obj as any)['splice'] === 'function' ? [] : {}) as any
   let key
   if (obj && typeof obj === 'object' && !(obj instanceof RegExp)) {
     for (key in obj) {
-      if (obj[key] && obj[key] instanceof Date) {
+      if ((obj as any)[key] && (obj as any)[key] instanceof Date) {
         if (options.dateHandler && options.dateHandler instanceof Function) {
-          result[key] = options.dateHandler(obj[key])
+          result[key] = options.dateHandler((obj as any)[key])
         } else {
-          result[key] = new Date(obj[key])
+          result[key] = new Date((obj as any)[key])
         }
-      } else if (obj[key] && obj[key] instanceof Buffer) {
+      } else if ((obj as any)[key] && (obj as any)[key] instanceof Buffer) {
         if (options.bufferHandler && options.bufferHandler instanceof Function) {
-          result[key] = options.bufferHandler(obj[key])
+          result[key] = options.bufferHandler((obj as any)[key])
         } else {
-          result[key] = obj[key]
+          result[key] = (obj as any)[key]
         }
-      } else if (obj[key] && typeof obj[key] === 'object') {
-        result[key] = fnDeepClone(obj[key], options) //如果对象的属性值为object的时候，递归调用deepClone，即再把某个值对象复制一份到新的对象的对应值中
+      } else if ((obj as any)[key] && typeof (obj as any)[key] === 'object') {
+        result[key] = fnDeepClone((obj as any)[key], options) //如果对象的属性值为object的时候，递归调用deepClone，即再把某个值对象复制一份到新的对象的对应值中
       } else {
         if (key === '_id') {
           if (_.isFunction(oidHandler)) {
-            result[key] = oidHandler(obj[key])
+            result[key] = oidHandler((obj as any)[key])
             continue
           }
         }
-        result[key] = obj[key] //如果对象的属性值不为object的时候，直接复制参数对象的每一个键/值到新对象对应的键/值中
+        result[key] = (obj as any)[key] //如果对象的属性值不为object的时候，直接复制参数对象的每一个键/值到新对象对应的键/值中
       }
     }
     return result

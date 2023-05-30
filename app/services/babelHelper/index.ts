@@ -85,20 +85,26 @@ export const buildSingleActionsGraph = (
             if (
               (subPath.node as any)?.name === 'actions' &&
               _.endsWith(subPath.parentPath.node.type, 'MemberExpression') &&
-              _.endsWith(subPath.parentPath.parentPath.node.type, 'CallExpression')
+              _.endsWith(
+                getParentPathSkipTSNonNullExpression(subPath, 2).node.type,
+                'CallExpression',
+              )
             ) {
               memberExpressionPath = subPath.parentPath
-              callExpressionPath = subPath.parentPath.parentPath
+              callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
             } else if (
               (subPath.node as any)?.name === 'actions' &&
               (subPath.parentPath.node as any).object?.name === 'props' &&
-              _.endsWith(subPath.parentPath.parentPath.node.type, 'MemberExpression') &&
+              _.endsWith(
+                getParentPathSkipTSNonNullExpression(subPath, 2).node.type,
+                'MemberExpression',
+              ) &&
               _.endsWith(
                 getParentPathSkipTSNonNullExpression(subPath, 3).node.type,
                 'CallExpression',
               )
             ) {
-              memberExpressionPath = subPath.parentPath.parentPath
+              memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
               callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 3)
             } else if (
               (subPath.node as any)?.name === 'actions' &&
@@ -842,11 +848,14 @@ const findConnectedComponent = (
     }
   } else if (
     wrappedConnectPath &&
-    wrappedConnectPath.parentPath.parentPath.node.type === 'CallExpression' &&
-    wrappedConnectPath.parentPath.parentPath.node.arguments.length === 1
+    getParentPathSkipTSNonNullExpression(wrappedConnectPath, 2).node.type ===
+      'CallExpression' &&
+    (getParentPathSkipTSNonNullExpression(wrappedConnectPath, 2).node as any).arguments
+      .length === 1
   ) {
-    const wrappedConnectArgument =
-      wrappedConnectPath.parentPath.parentPath.node.arguments[0]
+    const wrappedConnectArgument = (
+      getParentPathSkipTSNonNullExpression(wrappedConnectPath, 2).node as any
+    ).arguments[0]
     console.log('#335 actionsComponents.push')
     if (wrappedConnectArgument.type === 'Identifier') {
       actionsComponents.push({
