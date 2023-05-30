@@ -69,6 +69,44 @@ export class BabelController {
     return { fileActions }
   }
 
+  @Post('/buildActionsGraph')
+  async buildActionsGraph(@Body() { tsconfigPath }: { tsconfigPath: string }) {
+    await this.babelService.setAlias(tsconfigPath)
+    /* const code = (await getFileData(filePath))?.toString()
+    const ast = await this.babelService.getAstByCode(code)
+    const result = buildSingleActionsGraphHandler(filePath, ast)
+    return { filePath, result } */
+    const nodes = graphNodes.graph.nodes
+    const fileActions = [],
+      warnings = []
+    let filePath = ''
+    try {
+      for (const node of nodes) {
+        filePath = node.key
+        if (
+          !filePath.endsWith('.ts') &&
+          !filePath.endsWith('.tsx') &&
+          !filePath.endsWith('.js') &&
+          !filePath.endsWith('.jsx')
+        ) {
+          continue
+        }
+        console.log('buildActionsGraph #95 filePath:', filePath)
+        const code = (await getFileData(filePath))?.toString()
+        const ast = await this.babelService.getAstByCode(code)
+        const result = await buildSingleActionsGraphHandler(filePath, ast)
+        if (!_.isEmpty(result?.groups)) {
+          fileActions.push(result)
+        } else {
+          warnings.push({ filePath, result })
+        }
+      }
+    } catch (e) {
+      console.error('buildActionsGraph #102 filePath:', filePath, '\nerror:', e)
+    }
+    return { fileActions, warnings }
+  }
+
   @Post('/buildSingleActionsGraph')
   async buildSingleActionsGraph(
     @Body() { tsconfigPath, filePath }: { tsconfigPath: string; filePath: string },

@@ -83,21 +83,19 @@ export const buildSingleActionsGraph = (
             let callExpressionPath, memberExpressionPath
             if (
               (subPath.node as any)?.name === 'actions' &&
-              (subPath.parentPath.node.type === 'OptionalMemberExpression' ||
-                subPath.parentPath.node.type === 'MemberExpression') &&
-              (subPath.parentPath.parentPath.node.type === 'CallExpression' ||
-                subPath.parentPath.parentPath.node.type === 'OptionalCallExpression')
+              _.endsWith(subPath.parentPath.node.type, 'MemberExpression') &&
+              _.endsWith(subPath.parentPath.parentPath.node.type, 'CallExpression')
             ) {
               memberExpressionPath = subPath.parentPath
               callExpressionPath = subPath.parentPath.parentPath
             } else if (
               (subPath.node as any)?.name === 'actions' &&
               (subPath.parentPath.node as any).object?.name === 'props' &&
-              (subPath.parentPath.parentPath.node.type === 'OptionalMemberExpression' ||
-                subPath.parentPath.parentPath.node.type === 'MemberExpression') &&
-              (subPath.parentPath.parentPath.parentPath.node.type === 'CallExpression' ||
-                subPath.parentPath.parentPath.parentPath.node.type ===
-                  'OptionalCallExpression')
+              _.endsWith(subPath.parentPath.parentPath.node.type, 'MemberExpression') &&
+              _.endsWith(
+                subPath.parentPath.parentPath.parentPath.node.type,
+                'CallExpression',
+              )
             ) {
               memberExpressionPath = subPath.parentPath.parentPath
               callExpressionPath = subPath.parentPath.parentPath.parentPath
