@@ -145,7 +145,20 @@ export const buildSingleActionsGraph = (
               //   '\npossibleMemberExpressionPath.node:',
               //   possibleMemberExpressionPath.node,
               // )
-            }
+            } /* else if ((subPath.node as any)?.name === 'actions') {
+              console.log(
+                '#150 getParentPathSkipTSNonNullExpression(subPath).node:',
+                getParentPathSkipTSNonNullExpression(subPath).node,
+              )
+              console.log(
+                '#154 getParentPathSkipTSNonNullExpression(subPath, 2).node:',
+                getParentPathSkipTSNonNullExpression(subPath, 2).node,
+              )
+              console.log(
+                '#158 getParentPathSkipTSNonNullExpression(subPath, 3).node:',
+                getParentPathSkipTSNonNullExpression(subPath, 3).node,
+              )
+            } */
             if (memberExpressionPath && callExpressionPath) {
               const theMethod: {
                 name: string
@@ -705,7 +718,7 @@ const findConnectedComponent = (
       )
     }
     const bodyNode = (classDeclarationPath.node as any).body
-    console.log('#560 actionsComponents.push')
+    console.log('#721 actionsComponents.push')
     actionsComponents.push({ type: bodyNode.type, loc: bodyNode.loc })
     return { actionsComponents, warnings }
   }
@@ -718,12 +731,14 @@ const findConnectedComponent = (
     const composeArguments = (parentCallExpressionPath.node as any).arguments
     if (composeArguments.length === 1) {
       if (composeArguments[0].type === 'Identifier') {
+        console.log('#734 actionsComponents.push')
         actionsComponents.push({
           type: 'Identifier',
           name: composeArguments[0].name,
           loc: composeArguments[0].loc,
         })
       } else {
+        console.log('#741 actionsComponents.push')
         actionsComponents.push({
           type: composeArguments[0].type,
           loc: composeArguments[0].loc,
@@ -792,10 +807,7 @@ const findConnectedComponent = (
               notImportIdentifiers,
             )
           } else {
-            console.log(
-              '#640 actionsComponents.push notImportIdentifiers:',
-              notImportIdentifiers,
-            )
+            console.log('#810 actionsComponents.push')
             actionsComponents.push({
               type: 'Identifier',
               name: notImportIdentifiers[0].name,
@@ -824,7 +836,7 @@ const findConnectedComponent = (
         if (lastArgument.type === 'CallExpression') {
           if (lastArgument.arguments.length === 1) {
             if (lastArgument.arguments[0].type === 'Identifier') {
-              console.log('#280 actionsComponents.push')
+              console.log('#839 actionsComponents.push')
               actionsComponents.push({
                 type: 'Identifier',
                 name: lastArgument.arguments[0].name,
@@ -854,7 +866,7 @@ const findConnectedComponent = (
           }
         } else {
           if (lastArgument.type === 'Identifier') {
-            console.log('#300 actionsComponents.push')
+            console.log('#869 actionsComponents.push')
             actionsComponents.push({
               type: 'Identifier',
               name: lastArgument.name,
@@ -884,14 +896,25 @@ const findConnectedComponent = (
     const wrappedConnectArgument = (
       getParentPathSkipTSNonNullExpression(wrappedConnectPath, 2).node as any
     ).arguments[0]
-    console.log('#335 actionsComponents.push')
     if (wrappedConnectArgument.type === 'Identifier') {
+      console.log('#900 actionsComponents.push')
       actionsComponents.push({
         type: 'Identifier',
         name: wrappedConnectArgument.name,
         loc: wrappedConnectArgument.loc,
       })
+    } else if (
+      wrappedConnectArgument.type === 'CallExpression' &&
+      wrappedConnectArgument.arguments[0].type === 'Identifier'
+    ) {
+      console.log('#910 actionsComponents.push')
+      actionsComponents.push({
+        type: 'Identifier',
+        name: wrappedConnectArgument.arguments[0].name,
+        loc: wrappedConnectArgument.arguments[0].loc,
+      })
     } else {
+      console.log('#917 actionsComponents.push')
       actionsComponents.push({
         type: wrappedConnectArgument.type,
         loc: wrappedConnectArgument.loc,
@@ -909,7 +932,7 @@ const findConnectedComponent = (
     ) {
       const theArgument = (bindActionCreatorsParentsPath.node.expression as any).right
         .arguments[0]
-      console.log('#356 actionsComponents.push') // WangFan TODO 2023-05-22 21:17:09 to remove
+      console.log('#924 actionsComponents.push') // WangFan TODO 2023-05-22 21:17:09 to remove
       if (theArgument.type === 'Identifier') {
         actionsComponents.push({
           type: 'Identifier',

@@ -18,7 +18,7 @@ export const getParentPathSkipTSNonNullExpression = (
     throw new Error('degree must be number and cannot be less than 1')
   }
   while (degree > 0) {
-    if (path.parentPath.node.type === 'TSNonNullExpression') {
+    if (path.parentPath?.node.type === 'TSNonNullExpression') {
       path = path.parentPath.parentPath
     } else {
       path = path.parentPath
