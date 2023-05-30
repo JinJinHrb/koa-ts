@@ -14,6 +14,7 @@ import {
 import generate from '@babel/generator'
 import _ from 'lodash'
 import fileActions from 'app/mock/fileActions'
+import { getParentPathSkipTSNonNullExpression } from 'app/helpers/iterationUtil'
 
 export type TLoc = {
   start: {
@@ -93,12 +94,12 @@ export const buildSingleActionsGraph = (
               (subPath.parentPath.node as any).object?.name === 'props' &&
               _.endsWith(subPath.parentPath.parentPath.node.type, 'MemberExpression') &&
               _.endsWith(
-                subPath.parentPath.parentPath.parentPath.node.type,
+                getParentPathSkipTSNonNullExpression(subPath, 3).node.type,
                 'CallExpression',
               )
             ) {
               memberExpressionPath = subPath.parentPath.parentPath
-              callExpressionPath = subPath.parentPath.parentPath.parentPath
+              callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 3)
             } else if (
               (subPath.node as any)?.name === 'actions' &&
               (subPath.parentPath.node as any).object?.type === 'MemberExpression' &&

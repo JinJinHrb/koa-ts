@@ -3,6 +3,29 @@
  */
 import _ from 'lodash'
 import { oType } from './stringUtil'
+import { Node, NodePath } from '@babel/traverse'
+
+// 跳过 "type": "TSNonNullExpression" 获取 parentPath
+export const getParentPathSkipTSNonNullExpression = (
+  path: NodePath<Node>,
+  degree = 1,
+) => {
+  if (!path) {
+    return path
+  }
+  if (!_.isNumber(degree) || degree < 1) {
+    throw new Error('degree must be number and cannot be less than 1')
+  }
+  while (degree > 0) {
+    if (path.parentPath.node.type === 'TSNonNullExpression') {
+      path = path.parentPath.parentPath
+    } else {
+      path = path.parentPath
+    }
+    degree--
+  }
+  return path
+}
 
 export const iterateObject4certainArray = function (
   obj: object,
