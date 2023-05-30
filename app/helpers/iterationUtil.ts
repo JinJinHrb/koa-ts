@@ -4,10 +4,11 @@
 import _ from 'lodash'
 import { oType } from './stringUtil'
 import { Node, NodePath } from '@babel/traverse'
+import { Identifier } from '@babel/types'
 
 // 跳过 "type": "TSNonNullExpression" 获取 parentPath
 export const getParentPathSkipTSNonNullExpression = (
-  path: NodePath<Node>,
+  path: NodePath<Node> | NodePath<Identifier>,
   degree = 1,
 ) => {
   if (!path) {

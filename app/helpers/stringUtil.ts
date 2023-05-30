@@ -32,7 +32,7 @@ export const getFolderByFilePath = (name: string) => {
  * 调整 mongodb 中的 UTC 时间为本地时间
  * 或者将本地时间调整为 UTC 时间
  * */
-export const utcOffset = function (date, offset) {
+export const utcOffset = function (date: any, offset: any) {
   if (!date || !(date instanceof Date) || isNaN(offset)) {
     return date
   }
@@ -61,24 +61,24 @@ export const filterNonNumString = function (str: string) {
 }
 
 /** 获取某年某月的总长度 */
-export const getDaysInOneMonth = function (year, month) {
+export const getDaysInOneMonth = function (year: any, month: any) {
   month = parseInt(month, 10)
   const d = new Date(year, month, 0)
   return d.getDate()
 }
 
-export const filterJson = function (data, map) {
+export const filterJson = function (data: any, map: any) {
   const json = {}
   for (let i = 0; i < map.length; i++) {
     const key = map[i]
-    if (data[key] !== undefined) json[key] = data[key]
-    else json[key] = ''
+    if (data[key] !== undefined) (json as any)[key] = data[key]
+    else (json as any)[key] = ''
   }
   return json
 }
 
 /** set initial capital for English String */
-export const setInitCap = function (str) {
+export const setInitCap = function (str: any) {
   const type = oType(str)
   if (type != 'string' || !str.length) {
     return str
@@ -97,7 +97,7 @@ export const setInitCap = function (str) {
 /** exclude element empty or filtered in an array
  * @param convert: convert format of element in array
  * */
-export const trimArray = function (arr, filter, convert) {
+export const trimArray = function (arr: any, filter: any, convert: any) {
   if (!(arr instanceof Array) || arr.length < 1) {
     return arr
   }
@@ -128,7 +128,7 @@ export const removeDuplicateInArray = function (passportArr: string[]) {
   const passportObj = {}
   passportArr.forEach(function (pptElem) {
     pptElem = _.trim(pptElem)
-    passportObj[pptElem] = true
+    ;(passportObj as any)[pptElem] = true
   })
   passportArr = Object.keys(passportObj)
   return passportArr
@@ -205,7 +205,7 @@ export const getAlphabetLength = (str: string) => {
   return chrlen
 }
 
-export const stringToInt = function (str, defaultVal) {
+export const stringToInt = function (str: any, defaultVal: any) {
   if (oType(defaultVal) !== 'number') {
     defaultVal = -1
   }
@@ -224,7 +224,7 @@ export const stringToInt = function (str, defaultVal) {
   return defaultVal
 }
 
-export const stringToFloat = function (str, defaultVal) {
+export const stringToFloat = function (str: any, defaultVal: any) {
   if (oType(defaultVal) !== 'number') {
     defaultVal = -1
   }
@@ -276,13 +276,18 @@ export const escapeWithCustomizer = (arr: string[], ch: string) => {
 /**
  * escapeWithCustomizer 逆方法
  * */
-export const unescapeCustomizer = function (str: string, ch: string) {
-  const splitEscapeCustomizer = function (str: string, ch: string, stage?: number) {
+export const unescapeCustomizer = function (this: any, str: string, ch: string) {
+  const splitEscapeCustomizer = function (
+    this: any,
+    str: string,
+    ch: string,
+    stage?: number,
+  ) {
     const escapeChars = ['^', '$']
     if (!str || oType(ch) !== 'string' || ch.length !== 1) {
       return []
     }
-    const pushSubArr = function (i, ch) {
+    const pushSubArr = function (this: any, i: any, ch: any) {
       while (this.length < i + 1) {
         this.push([])
       }
@@ -365,14 +370,14 @@ export const escape4RegExp = function (str: string) {
     '|': 1,
     '\\': 1,
     '/': 1,
-  }
+  } as any
 
   if (_.trim(str) === '') {
     return ''
   }
   const _len = str.length,
     _rtnStrArray: string[] = []
-  let _chr, _preChr
+  let _chr: any, _preChr: any
   _chr = _preChr = null
   for (let i = 0; i < _len; i++) {
     if (_chr) {
@@ -432,7 +437,7 @@ export const extractImgSrc = function (str: string) {
  * 获取字符串中中文字符的位置
  * @param startIdx optional
  * */
-export const indexOfChn = function (str, startIdx) {
+export const indexOfChn = function (str: any, startIdx: any) {
   const str2 = oType(startIdx) === 'number' && startIdx > 0 ? str.slice(startIdx) : str
   const matchResult = str2.match(/[\u4e00-\u9fa5]/)?.[0]
   const nextChnCharIdx = matchResult ? str.indexOf(matchResult, startIdx) : -1
@@ -522,7 +527,7 @@ export const parseJsonWithNumber2String = (str: string) => {
   return obj
 }
 
-export const stripHtmlTags = function (str) {
+export const stripHtmlTags = function (str: any) {
   if (oType(str) !== 'string') {
     return String(str)
   }
@@ -544,7 +549,7 @@ export const getHashCode = function (str: string) {
  * 将 ${var} 以外的部分分割为数组
  * varObj 替换 ${var} 中的内容
  */
-export const splitDollarVarTemplate = (template, varObj = {}) => {
+export const splitDollarVarTemplate = (template: any, varObj: any = {}) => {
   const shrinks: number[] = []
   for (let i = 0, head = -1, tail = -1; i < template.length; i++) {
     if (
@@ -659,7 +664,7 @@ export const removeHtmlComment = (html: string) => {
 
 /** 读取 cookie 中的 random_refund */
 export const parseCookies = (cookie: string) => {
-  return cookie.split(';').reduce(function (prev, curr) {
+  return cookie.split(';').reduce(function (prev: any, curr: any) {
     const m = / *([^=]+)=(.*)/.exec(curr)
     if (!m) {
       return prev
@@ -700,7 +705,7 @@ export const encodeUnicode = (str: string) => {
   return '\\u' + res.join('\\u')
 }
 
-export const decodeUnicode = str => {
+export const decodeUnicode = (str: any) => {
   str = str.replace(/\\/g, '%')
   return decodeURIComponent(str)
 }

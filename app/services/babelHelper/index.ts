@@ -79,22 +79,26 @@ export const buildSingleActionsGraph = (
         })
       }
       if (functionPath) {
-        functionPath!.parentPath.traverse({
+        getParentPathSkipTSNonNullExpression(functionPath).traverse({
           enter(subPath) {
             let callExpressionPath, memberExpressionPath
             if (
               (subPath.node as any)?.name === 'actions' &&
-              _.endsWith(subPath.parentPath.node.type, 'MemberExpression') &&
+              _.endsWith(
+                getParentPathSkipTSNonNullExpression(subPath).node.type,
+                'MemberExpression',
+              ) &&
               _.endsWith(
                 getParentPathSkipTSNonNullExpression(subPath, 2).node.type,
                 'CallExpression',
               )
             ) {
-              memberExpressionPath = subPath.parentPath
+              memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath)
               callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
             } else if (
               (subPath.node as any)?.name === 'actions' &&
-              (subPath.parentPath.node as any).object?.name === 'props' &&
+              (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.name ===
+                'props' &&
               _.endsWith(
                 getParentPathSkipTSNonNullExpression(subPath, 2).node.type,
                 'MemberExpression',
@@ -108,21 +112,33 @@ export const buildSingleActionsGraph = (
               callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 3)
             } else if (
               (subPath.node as any)?.name === 'actions' &&
-              (subPath.parentPath.node as any).object?.type === 'MemberExpression' &&
-              (subPath.parentPath.node as any).object?.object?.type ===
-                'ThisExpression' &&
-              (subPath.parentPath.node as any).object?.property?.name === 'props'
+              (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.type ===
+                'MemberExpression' &&
+              (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.object
+                ?.type === 'ThisExpression' &&
+              (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.property
+                ?.name === 'props'
             ) {
-              const startLine = subPath.parentPath.node.loc?.start.line ?? -1
-              const endLine = subPath.parentPath.node.loc?.end.line ?? -1
-              memberExpressionPath = subPath.parentPath.findParent(
+              const startLine =
+                getParentPathSkipTSNonNullExpression(subPath).node.loc?.start.line ?? -1
+              const endLine =
+                getParentPathSkipTSNonNullExpression(subPath).node.loc?.end.line ?? -1
+              memberExpressionPath = getParentPathSkipTSNonNullExpression(
+                subPath,
+              ).findParent(
                 subPath2 =>
                   _.endsWith(subPath2.node.type, 'MemberExpression') &&
-                  (subPath2.parentPath.node.loc?.start.line ?? -2) <= startLine &&
-                  (subPath2.parentPath.node.loc?.end.line ?? -2) >= endLine &&
-                  _.endsWith(subPath2.parentPath.node.type, 'CallExpression'),
+                  (getParentPathSkipTSNonNullExpression(subPath2).node.loc?.start.line ??
+                    -2) <= startLine &&
+                  (getParentPathSkipTSNonNullExpression(subPath2).node.loc?.end.line ??
+                    -2) >= endLine &&
+                  _.endsWith(
+                    getParentPathSkipTSNonNullExpression(subPath2).node.type,
+                    'CallExpression',
+                  ),
               )
-              callExpressionPath = memberExpressionPath?.parentPath
+              callExpressionPath =
+                getParentPathSkipTSNonNullExpression(memberExpressionPath)
               // console.log(
               //   '#121 possibleCallExpressionPath.node:',
               //   possibleCallExpressionPath.node,
@@ -142,11 +158,15 @@ export const buildSingleActionsGraph = (
                 Identifier(subPath2) {
                   if (
                     subPath2.node.name === 'usage' &&
-                    subPath2.parentPath.node.type === 'ObjectProperty'
+                    getParentPathSkipTSNonNullExpression(subPath2).node.type ===
+                      'ObjectProperty'
                   ) {
-                    const usageValue = (subPath2.parentPath.node as any)?.value
+                    const usageValue = (
+                      getParentPathSkipTSNonNullExpression(subPath2).node as any
+                    )?.value
                     if (
-                      subPath2.parentPath.node.type === 'ObjectProperty' &&
+                      getParentPathSkipTSNonNullExpression(subPath2).node.type ===
+                        'ObjectProperty' &&
                       usageValue.type === 'Identifier'
                     ) {
                       theMethod.usageVariable = usageValue.name
@@ -156,8 +176,8 @@ export const buildSingleActionsGraph = (
                       theMethod.usage = `${usageValue.object.name}.${usageValue.property.name}`
                     } else {
                       console.log(
-                        '#83 subPath2.parentPath.node:',
-                        subPath2.parentPath.node,
+                        '#83 getParentPathSkipTSNonNullExpression(subPath2).node:',
+                        getParentPathSkipTSNonNullExpression(subPath2).node,
                       )
                       theMethod.usage = '' // 空字符串说明有问题
                     }
@@ -170,19 +190,23 @@ export const buildSingleActionsGraph = (
 
             if (
               (subPath.node as any)?.name === 'actions' &&
-              subPath.parentPath.node.type === 'VariableDeclarator' &&
-              (subPath.parentPath.node as any)?.init.type === 'Identifier' &&
-              (subPath.parentPath.node as any)?.init.name === 'actions'
+              getParentPathSkipTSNonNullExpression(subPath).node.type ===
+                'VariableDeclarator' &&
+              (getParentPathSkipTSNonNullExpression(subPath).node as any)?.init.type ===
+                'Identifier' &&
+              (getParentPathSkipTSNonNullExpression(subPath).node as any)?.init.name ===
+                'actions'
             ) {
               const properties = (
-                (subPath.parentPath.node as any)?.id.properties || []
+                (getParentPathSkipTSNonNullExpression(subPath).node as any)?.id
+                  .properties || []
               ).filter((a: any) => a.type === 'ObjectProperty')
               const methodNameProperties = properties.map((a: any) => {
                 return { exportedName: a.key.name, localName: a.value.name }
               })
-              const bodyPath = subPath.findParent(
-                path => path.type === 'VariableDeclaration',
-              ).parentPath
+              const bodyPath = getParentPathSkipTSNonNullExpression(
+                subPath.findParent(path => path.type === 'VariableDeclaration'),
+              )
               for (const methodNameProperty of methodNameProperties) {
                 const theMethod: {
                   name: string
@@ -198,14 +222,17 @@ export const buildSingleActionsGraph = (
                     ) {
                       subPath.traverse({
                         enter(subPath2) {
-                          const usageValue = (subPath2.parentPath.node as any).value
+                          const usageValue = (
+                            getParentPathSkipTSNonNullExpression(subPath2).node as any
+                          ).value
                           if ((subPath2.node as any).name === 'usage') {
                             console.log(
-                              '#151 subPath2.parentPath.node:',
-                              subPath2.parentPath.node,
+                              '#151 getParentPathSkipTSNonNullExpression(subPath2).node:',
+                              getParentPathSkipTSNonNullExpression(subPath2).node,
                             )
                             if (
-                              subPath2.parentPath.node.type === 'ObjectProperty' &&
+                              getParentPathSkipTSNonNullExpression(subPath2).node.type ===
+                                'ObjectProperty' &&
                               usageValue.type === 'Identifier'
                             ) {
                               console.log(
@@ -224,8 +251,8 @@ export const buildSingleActionsGraph = (
                               theMethod.usage = `${usageValue.object.name}.${usageValue.property.name}`
                             } else {
                               console.log(
-                                '#176 subPath2.parentPath.node:',
-                                subPath2.parentPath.node,
+                                '#176 getParentPathSkipTSNonNullExpression(subPath2).node:',
+                                getParentPathSkipTSNonNullExpression(subPath2).node,
                               )
                               theMethod.usage = '' // 空字符串说明有问题
                             }
@@ -619,10 +646,10 @@ const findConnectedComponent = (
   }
 
   const bindActionCreatorsParentsPath = bindActionCreatorsReference.findParent(
-    path => path.parentPath.node.type === 'Program',
+    path => getParentPathSkipTSNonNullExpression(path).node.type === 'Program',
   )
 
-  const programPath = bindActionCreatorsParentsPath.parentPath
+  const programPath = getParentPathSkipTSNonNullExpression(bindActionCreatorsParentsPath)
 
   /*
     // 情形一：
@@ -659,7 +686,7 @@ const findConnectedComponent = (
   })
   if (wrappedConnectPath) {
     connectDecorator = wrappedConnectPath?.findParent(
-      subPath => subPath.parentPath?.type === 'Decorator',
+      subPath => getParentPathSkipTSNonNullExpression(subPath)?.type === 'Decorator',
     )
   }
   if (connectDecorator) {
@@ -686,7 +713,7 @@ const findConnectedComponent = (
     const parentCallExpressionPath = wrappedComposePath.findParent(
       subPath =>
         subPath.node.type === 'CallExpression' &&
-        subPath.parentPath.node.type !== 'CallExpression',
+        getParentPathSkipTSNonNullExpression(subPath).node.type !== 'CallExpression',
     )
     const composeArguments = (parentCallExpressionPath.node as any).arguments
     if (composeArguments.length === 1) {
@@ -723,7 +750,8 @@ const findConnectedComponent = (
     const variableDeclarator = bindActionCreatorsReference.findParent(
       path =>
         path.type === 'VariableDeclarator' &&
-        path.parentPath.node.start === bindActionCreatorsParentsPath.node.start,
+        getParentPathSkipTSNonNullExpression(path).node.start ===
+          bindActionCreatorsParentsPath.node.start,
     )
     const varName = (variableDeclarator.node as any).id.name
     const binding = variableDeclarator.scope.getBinding(varName)
@@ -733,7 +761,7 @@ const findConnectedComponent = (
       const parentOfCallExpression = referencePath.findParent(
         path =>
           path.node.type === 'CallExpression' &&
-          path.parentPath.node.type !== 'CallExpression',
+          getParentPathSkipTSNonNullExpression(path).node.type !== 'CallExpression',
       )
       if (!parentOfCallExpression) {
         continue
