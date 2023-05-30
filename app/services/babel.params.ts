@@ -2,7 +2,7 @@ import { IsNotEmpty } from 'class-validator'
 
 export class GetAstAndAlterCodeParams {
   @IsNotEmpty()
-  path!: string
+  filePath!: string
 
   @IsNotEmpty()
   tsconfigPath!: string

@@ -3,9 +3,290 @@ import { BabelService } from '../babel.service'
 import { isDirectory, isFile } from '../../helpers/fsUtils'
 import traverse, { Node, NodePath } from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
-import { File } from '@babel/types'
+import {
+  File,
+  ArgumentPlaceholder,
+  Expression,
+  JSXNamespacedName,
+  SpreadElement,
+} from '@babel/types'
+
 import generate from '@babel/generator'
 import _ from 'lodash'
+import fileActions from 'app/mock/fileActions'
+
+export type TLoc = {
+  start: {
+    line: number
+    column: number
+    index: number
+  }
+  end: {
+    line: number
+    column: number
+    index: number
+  }
+}
+
+export type TActionsComponent = {
+  type: string
+  name?: string
+  loc: TLoc
+}
+
+export const buildSingleActionsGraph = (
+  filePath: string,
+  ast: ParseResult<File>,
+): any => {
+  const record = _.cloneDeep(fileActions.filter(a => a.filePath === filePath)[0]) as any
+  if (!record || _.isEmpty(record.groups)) {
+    return null
+  }
+  for (const group of record.groups) {
+    const { actionsDependencies, actionsComponents } = group
+    for (const actionsComponent of actionsComponents) {
+      let functionPath: NodePath<any> | undefined
+      const { type, name, loc } = actionsComponent as TActionsComponent
+      const actionsMethods: {
+        name: string
+        usage?: string
+      }[] = []
+      if (type === 'Identifier') {
+        traverse(ast, {
+          Identifier(subPath) {
+            if (
+              name &&
+              name === (subPath.node as any)?.name &&
+              subPath.node.loc?.start.line !== loc.start.line
+            ) {
+              functionPath = subPath
+              subPath.stop()
+            }
+          },
+        })
+      } else {
+        traverse(ast, {
+          enter(subPath) {
+            if (
+              type === subPath.node.type &&
+              subPath.node.loc?.start.line === loc.start.line
+            ) {
+              functionPath = subPath
+              subPath.stop()
+            }
+          },
+        })
+      }
+      if (functionPath) {
+        functionPath!.parentPath.traverse({
+          enter(subPath) {
+            let callExpressionPath, memberExpressionPath
+            if (
+              (subPath.node as any)?.name === 'actions' &&
+              (subPath.parentPath.node.type === 'OptionalMemberExpression' ||
+                subPath.parentPath.node.type === 'MemberExpression') &&
+              (subPath.parentPath.parentPath.node.type === 'CallExpression' ||
+                subPath.parentPath.parentPath.node.type === 'OptionalCallExpression')
+            ) {
+              memberExpressionPath = subPath.parentPath
+              callExpressionPath = subPath.parentPath.parentPath
+            } else if (
+              (subPath.node as any)?.name === 'actions' &&
+              (subPath.parentPath.node as any).object?.name === 'props' &&
+              (subPath.parentPath.parentPath.node.type === 'OptionalMemberExpression' ||
+                subPath.parentPath.parentPath.node.type === 'MemberExpression') &&
+              (subPath.parentPath.parentPath.parentPath.node.type === 'CallExpression' ||
+                subPath.parentPath.parentPath.parentPath.node.type ===
+                  'OptionalCallExpression')
+            ) {
+              memberExpressionPath = subPath.parentPath.parentPath
+              callExpressionPath = subPath.parentPath.parentPath.parentPath
+            } else if (
+              (subPath.node as any)?.name === 'actions' &&
+              (subPath.parentPath.node as any).object?.type === 'MemberExpression' &&
+              (subPath.parentPath.node as any).object?.object?.type ===
+                'ThisExpression' &&
+              (subPath.parentPath.node as any).object?.property?.name === 'props'
+            ) {
+              const startLine = subPath.parentPath.node.loc?.start.line ?? -1
+              const endLine = subPath.parentPath.node.loc?.end.line ?? -1
+              memberExpressionPath = subPath.parentPath.findParent(
+                subPath2 =>
+                  _.endsWith(subPath2.node.type, 'MemberExpression') &&
+                  (subPath2.parentPath.node.loc?.start.line ?? -2) <= startLine &&
+                  (subPath2.parentPath.node.loc?.end.line ?? -2) >= endLine &&
+                  _.endsWith(subPath2.parentPath.node.type, 'CallExpression'),
+              )
+              callExpressionPath = memberExpressionPath?.parentPath
+              // console.log(
+              //   '#121 possibleCallExpressionPath.node:',
+              //   possibleCallExpressionPath.node,
+              //   '\npossibleMemberExpressionPath.node:',
+              //   possibleMemberExpressionPath.node,
+              // )
+            }
+            if (memberExpressionPath && callExpressionPath) {
+              const theMethod: {
+                name: string
+                usage?: string
+                usageVariable?: string
+              } = {
+                name: (memberExpressionPath.node as any).property.name,
+              }
+              callExpressionPath.traverse({
+                Identifier(subPath2) {
+                  if (
+                    subPath2.node.name === 'usage' &&
+                    subPath2.parentPath.node.type === 'ObjectProperty'
+                  ) {
+                    const usageValue = (subPath2.parentPath.node as any)?.value
+                    if (
+                      subPath2.parentPath.node.type === 'ObjectProperty' &&
+                      usageValue.type === 'Identifier'
+                    ) {
+                      theMethod.usageVariable = usageValue.name
+                    } else if (usageValue.type === 'StringLiteral') {
+                      theMethod.usage = usageValue.value
+                    } else if (usageValue.type === 'MemberExpression') {
+                      theMethod.usage = `${usageValue.object.name}.${usageValue.property.name}`
+                    } else {
+                      console.log(
+                        '#83 subPath2.parentPath.node:',
+                        subPath2.parentPath.node,
+                      )
+                      theMethod.usage = '' // 空字符串说明有问题
+                    }
+                    subPath2.stop()
+                  }
+                },
+              })
+              actionsMethods.push(theMethod)
+            }
+
+            if (
+              (subPath.node as any)?.name === 'actions' &&
+              subPath.parentPath.node.type === 'VariableDeclarator' &&
+              (subPath.parentPath.node as any)?.init.type === 'Identifier' &&
+              (subPath.parentPath.node as any)?.init.name === 'actions'
+            ) {
+              const properties = (
+                (subPath.parentPath.node as any)?.id.properties || []
+              ).filter((a: any) => a.type === 'ObjectProperty')
+              const methodNameProperties = properties.map((a: any) => {
+                return { exportedName: a.key.name, localName: a.value.name }
+              })
+              const bodyPath = subPath.findParent(
+                path => path.type === 'VariableDeclaration',
+              ).parentPath
+              for (const methodNameProperty of methodNameProperties) {
+                const theMethod: {
+                  name: string
+                  usage?: string
+                  usageVariable?: string
+                } = {
+                  name: methodNameProperty.exportedName,
+                }
+                bodyPath.traverse({
+                  CallExpression(subPath) {
+                    if (
+                      (subPath.node as any).callee?.name === methodNameProperty.localName
+                    ) {
+                      subPath.traverse({
+                        enter(subPath2) {
+                          const usageValue = (subPath2.parentPath.node as any).value
+                          if ((subPath2.node as any).name === 'usage') {
+                            console.log(
+                              '#151 subPath2.parentPath.node:',
+                              subPath2.parentPath.node,
+                            )
+                            if (
+                              subPath2.parentPath.node.type === 'ObjectProperty' &&
+                              usageValue.type === 'Identifier'
+                            ) {
+                              console.log(
+                                '#160 theMethod.usageVariable:',
+                                usageValue.name,
+                              )
+                              theMethod.usageVariable = usageValue.name
+                            } else if (usageValue.type === 'StringLiteral') {
+                              console.log('#167 theMethod.usage:', usageValue.name)
+                              theMethod.usage = usageValue.value
+                            } else if (usageValue.type === 'MemberExpression') {
+                              console.log(
+                                '#169 theMethod.usage:',
+                                `${usageValue.object.name}.${usageValue.property.name}`,
+                              )
+                              theMethod.usage = `${usageValue.object.name}.${usageValue.property.name}`
+                            } else {
+                              console.log(
+                                '#176 subPath2.parentPath.node:',
+                                subPath2.parentPath.node,
+                              )
+                              theMethod.usage = '' // 空字符串说明有问题
+                            }
+                          }
+                        },
+                      })
+                      subPath.stop()
+                    }
+                  },
+                })
+                actionsMethods.push(theMethod)
+              }
+            }
+          },
+        })
+        actionsComponent.actionsMethods = _.uniqWith(
+          actionsMethods,
+          (a, b) => a.name === b.name && a.usage === b.usage,
+        )
+        const usedActionsDependencies: {
+          localName: string
+          importedName: string
+          sourceValue: string
+          dependencyPath: string
+        }[] = []
+        actionsComponent.actionsMethods.forEach(({ name: k }: { name: string }) => {
+          OUTTER: for (const actionsDependency of actionsDependencies) {
+            if (actionsDependency.isNamespace) {
+              const exportNames = actionsDependency.exportNames || []
+              if (exportNames.includes(k)) {
+                const usedActionsDependency = {
+                  localName: k,
+                  importedName: k,
+                  sourceValue: actionsDependency.sourceValue,
+                  dependencyPath: actionsDependency.dependencyPath,
+                } as {
+                  localName: string
+                  importedName: string
+                  sourceValue: string
+                  dependencyPath: string
+                }
+                usedActionsDependencies.push(usedActionsDependency)
+                break OUTTER
+              }
+            } else if (actionsDependency.localName === k) {
+              usedActionsDependencies.push(_.clone(actionsDependency))
+              break OUTTER
+            }
+          }
+        })
+        actionsComponent.usedActionsDependencies = usedActionsDependencies
+        actionsComponent.nodeLoc = functionPath.node.loc
+      }
+
+      if (!actionsComponent.nodeLoc) {
+        if (_.isNil(group.warnings)) {
+          group.warnings = []
+        }
+        group.warnings.push(
+          '#73 no actionsComponent found, type: "' + type + '", name: "' + name + '"',
+        )
+      }
+    }
+  }
+  return record
+}
 
 export const dynamicImportExportHandler = function (
   this: BabelService,
@@ -23,6 +304,16 @@ export const dynamicImportExportHandler = function (
     aliasNpmMap: { [key: string]: string }
   },
 ) {
+  if (!value) {
+    console.warn('[Warning] #27 dynamicImportExportHandler !value', {
+      value,
+      dirname,
+      projectPath,
+      aliasFileMap,
+      aliasNpmMap,
+    })
+    return
+  }
   //保存所依赖的模块
   if (value.indexOf('.') === 0) {
     aliasFileMap[value] =
@@ -55,12 +346,52 @@ export const removeUnusedVars = (ast: ParseResult<File>, code: string) => {
   )
 }
 
+export type TConnectActionsResult = {
+  filePath: string
+  localConnect: string
+  localCompose: string
+  groups: TConnectActionsGroup[]
+}
+
+export type TConnectActionsGroup = {
+  actionsDependencies: any
+  actionsComponents: any
+  warnings: string[]
+  unknownElements: any
+}
+
+const isActionsFound = (
+  actionsKey: string,
+  bindActionCreatorsReference: NodePath<Node>,
+) => {
+  let functionExpresstionPath: NodePath<Node> = bindActionCreatorsReference
+  let actionsKeyPath: NodePath<Node> | undefined
+  while (true) {
+    functionExpresstionPath = functionExpresstionPath.findParent(
+      path => path.type === 'ArrowFunctionExpression',
+    )
+    if (!functionExpresstionPath) {
+      break
+    }
+    functionExpresstionPath.traverse({
+      Identifier(subPath: any) {
+        if (subPath.node.name === actionsKey) {
+          actionsKeyPath = subPath
+          subPath.stop()
+        }
+      },
+    })
+  }
+  return actionsKeyPath
+}
+
 export const findConnectActions = async (
   ast: ParseResult<File>,
   filePath: string,
   babelService: BabelService,
 ) => {
-  const result: any = {
+  const result: TConnectActionsResult = {
+    filePath,
     localConnect: '',
     localCompose: '',
     groups: [],
@@ -128,6 +459,7 @@ export const findConnectActions = async (
       ) {
         // referencePaths Start
         const group: any = {
+          actionsParamName: '', // 作为参数传入的 actions 名
           actionsDependencies: [], // { key, value, sourceValue }
           actionsComponents: [],
           warnings: [],
@@ -153,7 +485,7 @@ export const findConnectActions = async (
           const identifierName = firstContainerArgument.name
           spreadElementNames.push(identifierName)
         } else {
-          result.warnings.push(
+          group.warnings.push(
             '[warning] #152 firstContainerArgument.type unprocessed:',
             firstContainerArgument.type,
           )
@@ -174,30 +506,40 @@ export const findConnectActions = async (
               referenceActionsBinding?.path.findParent(path => path.isImportDeclaration())
             const sourceValue = (referenceActionsBindingDeclaration?.node as any)?.source
               .value
-            const referenceActionsBindingDeclarationSpecifiers = (
-              referenceActionsBindingDeclaration?.node as any
-            ).specifiers
-            const referenceActionsBindingDeclarationSpecifier =
-              referenceActionsBindingDeclarationSpecifiers.filter(
-                (a: any) => a.local.name === k,
-              )[0]
-            if (
-              referenceActionsBindingDeclarationSpecifier.type ===
-              'ImportNamespaceSpecifier'
-            ) {
-              group.actionsDependencies.push({
-                isNamespace: true,
-                localName: k,
-                sourceValue,
-              })
+            if (!referenceActionsBindingDeclaration?.node) {
+              const actionsKeyPath = isActionsFound(k, bindActionCreatorsReference)
+              if (actionsKeyPath) {
+                group.actionsParamName = k
+              } else {
+                group.warnings.push('#234 no actions key found: ' + k)
+              }
             } else {
-              const importedName =
-                referenceActionsBindingDeclarationSpecifier.imported.name
-              group.actionsDependencies.push({
-                localName: k,
-                importedName,
-                sourceValue,
-              })
+              const referenceActionsBindingDeclarationSpecifiers = (
+                referenceActionsBindingDeclaration?.node as any
+              ).specifiers
+              const referenceActionsBindingDeclarationSpecifier =
+                referenceActionsBindingDeclarationSpecifiers.filter(
+                  (a: any) => a.local.name === k,
+                )[0]
+              if (
+                referenceActionsBindingDeclarationSpecifier.type ===
+                'ImportNamespaceSpecifier'
+              ) {
+                group.actionsDependencies.push({
+                  isNamespace: true,
+                  localName: k,
+                  sourceValue,
+                })
+              } else {
+                const importedName =
+                  referenceActionsBindingDeclarationSpecifier.imported.name
+                group.actionsDependencies.push({
+                  isNamespace: false,
+                  localName: k,
+                  importedName,
+                  sourceValue,
+                })
+              }
             }
           })
         const embeddedComponentResponse = findConnectedComponent(
@@ -206,6 +548,12 @@ export const findConnectActions = async (
         )
         group.actionsComponents = embeddedComponentResponse.actionsComponents
         group.warnings = embeddedComponentResponse.warnings
+        if (_.isEmpty(group.warnings)) {
+          delete group.warnings
+        }
+        if (_.isEmpty(group.actionsParamName)) {
+          delete group.actionsParamName
+        }
         result.groups.push(group)
         // referencePaths End
       }
@@ -219,6 +567,36 @@ export const findConnectActions = async (
         sourceValue,
       )
       ad.dependencyPath = dependencyPath
+
+      if (ad.isNamespace) {
+        const dependencyAst = await babelService.getAst(dependencyPath)
+        let localCreateAction: string
+        traverse(dependencyAst, {
+          ImportDeclaration(subPath) {
+            const { node } = subPath
+            if (node.source.value !== 'redux-actions') {
+              return
+            }
+            const createActionSpecifier = node.specifiers.filter(
+              (a: any) => a.imported.name === 'createAction',
+            )[0]
+            if (!createActionSpecifier) {
+              return
+            }
+            localCreateAction = createActionSpecifier.local.name
+            const createActionBinding = subPath.scope.getBinding(localCreateAction)
+            const referencePaths = createActionBinding?.referencePaths || []
+            const exportNames = referencePaths.map(
+              a =>
+                (
+                  a.findParent(subPath => subPath.type === 'ExportNamedDeclaration')
+                    .node as any
+                ).declaration.declarations[0].id.name,
+            )
+            ad.exportNames = exportNames
+          },
+        })
+      }
     }
   }
   return result
@@ -295,6 +673,7 @@ const findConnectedComponent = (
       )
     }
     const bodyNode = (classDeclarationPath.node as any).body
+    console.log('#560 actionsComponents.push')
     actionsComponents.push({ type: bodyNode.type, loc: bodyNode.loc })
     return { actionsComponents, warnings }
   }
@@ -307,7 +686,11 @@ const findConnectedComponent = (
     const composeArguments = (parentCallExpressionPath.node as any).arguments
     if (composeArguments.length === 1) {
       if (composeArguments[0].type === 'Identifier') {
-        actionsComponents.push({ type: 'Identifier', name: composeArguments[0].name })
+        actionsComponents.push({
+          type: 'Identifier',
+          name: composeArguments[0].name,
+          loc: composeArguments[0].loc,
+        })
       } else {
         actionsComponents.push({
           type: composeArguments[0].type,
@@ -347,7 +730,9 @@ const findConnectedComponent = (
           path.node.type === 'CallExpression' &&
           path.parentPath.node.type !== 'CallExpression',
       )
-
+      if (!parentOfCallExpression) {
+        continue
+      }
       const lastArguments = (parentOfCallExpression.node as any).arguments
       if (lastArguments.length !== 1) {
         if (
@@ -356,9 +741,14 @@ const findConnectedComponent = (
         ) {
           const notImportIdentifiers = parentOfCallExpression.node.arguments
             .filter(a => a.type === 'Identifier')
-            .map((a: any) => a.name)
-            .filter(identifier => {
-              const binding = programPath.scope.getBinding(identifier)
+            .map((a: any) => {
+              return {
+                name: a.name,
+                loc: a.loc,
+              }
+            })
+            .filter(a => {
+              const binding = programPath.scope.getBinding(a.name)
               const bindingNode = (binding as any).path.node
               return bindingNode.type !== 'ImportSpecifier'
             })
@@ -369,9 +759,14 @@ const findConnectedComponent = (
               notImportIdentifiers,
             )
           } else {
+            console.log(
+              '#640 actionsComponents.push notImportIdentifiers:',
+              notImportIdentifiers,
+            )
             actionsComponents.push({
               type: 'Identifier',
-              name: notImportIdentifiers[0],
+              name: notImportIdentifiers[0].name,
+              loc: notImportIdentifiers[0].loc,
             })
           }
         } else {
@@ -400,6 +795,7 @@ const findConnectedComponent = (
               actionsComponents.push({
                 type: 'Identifier',
                 name: lastArgument.arguments[0].name,
+                loc: lastArgument.arguments[0].loc,
               })
             } else {
               warnings.push(
@@ -429,6 +825,7 @@ const findConnectedComponent = (
             actionsComponents.push({
               type: 'Identifier',
               name: lastArgument.name,
+              loc: lastArgument.loc,
             })
           } else {
             warnings.push(
@@ -456,6 +853,7 @@ const findConnectedComponent = (
       actionsComponents.push({
         type: 'Identifier',
         name: wrappedConnectArgument.name,
+        loc: wrappedConnectArgument.loc,
       })
     } else {
       actionsComponents.push({
@@ -480,6 +878,7 @@ const findConnectedComponent = (
         actionsComponents.push({
           type: 'Identifier',
           name: theArgument.name,
+          loc: theArgument.loc,
         })
       } else {
         actionsComponents.push({

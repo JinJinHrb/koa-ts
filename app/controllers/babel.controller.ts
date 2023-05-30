@@ -18,10 +18,18 @@ import graphNodes from 'app/mock/graphNodes'
 import fs from 'fs'
 import {
   findConnectActions,
+  buildSingleActionsGraph as buildSingleActionsGraphHandler,
   findQueryGeneral,
   findReduxConnect,
   removeUnusedVars,
 } from 'app/services/babelHelper'
+import isImage from 'is-image'
+
+/*
+ * (1) /getAstAndAlterCode
+ * (2) /traverseToGetGraph
+ * (2) /iterateGraphNodes
+ */
 
 @JsonController()
 @Service()
@@ -29,30 +37,73 @@ import {
 export class BabelController {
   constructor(private babelService: BabelService) {}
 
+  @Post('/iterateGraphNodes')
+  async iterateGraphNodes(@Body() { tsconfigPath }: { tsconfigPath: string }) {
+    await this.babelService.setAlias(tsconfigPath)
+    const nodes = graphNodes.graph.nodes
+    const fileActions = []
+    let filePath = ''
+    try {
+      for (const node of nodes) {
+        filePath = node.key
+        if (
+          !filePath.endsWith('.ts') &&
+          !filePath.endsWith('.tsx') &&
+          !filePath.endsWith('.js') &&
+          !filePath.endsWith('.jsx')
+        ) {
+          continue
+        }
+        console.log('iterateGraphNodes #50 filePath:', filePath)
+        const code = (await getFileData(filePath))?.toString()
+        const ast = await this.babelService.getAstByCode(code)
+        const result = await findConnectActions(ast, filePath, this.babelService)
+        if (!_.isEmpty(result.groups)) {
+          fileActions.push(result)
+        }
+      }
+    } catch (e) {
+      console.error('iterateGraphNodes #60 filePath:', filePath, '\nerror:', e)
+    }
+
+    return { fileActions }
+  }
+
+  @Post('/buildSingleActionsGraph')
+  async buildSingleActionsGraph(
+    @Body() { tsconfigPath, filePath }: { tsconfigPath: string; filePath: string },
+  ) {
+    await this.babelService.setAlias(tsconfigPath)
+    const code = (await getFileData(filePath))?.toString()
+    const ast = await this.babelService.getAstByCode(code)
+    const result = buildSingleActionsGraphHandler(filePath, ast)
+    return { filePath, result }
+  }
+
   @Post('/getAstAndAlterCode')
-  async getAstAndAlterCode(@Body() { path, tsconfigPath }: GetAstAndAlterCodeParams) {
+  async getAstAndAlterCode(@Body() { filePath, tsconfigPath }: GetAstAndAlterCodeParams) {
     if (this.babelService.tsconfigPath !== tsconfigPath) {
       await this.babelService.setAlias(tsconfigPath)
     }
     let ast: ParseResult<File> | ParseResult<File>[] | undefined, stats
     let result: any = {}
-    if (isDirectory(path)) {
-      stats = await listStatsPromise(path)
+    if (isDirectory(filePath)) {
+      stats = await listStatsPromise(filePath)
       const promises: Promise<ParseResult<File>>[] | undefined = stats
         ?.filter(a => a.fileFlag)
         .map(a => a.fname)
-        .map(a => this.babelService.getAst(pathUtil.resolve(path, a as string)))
+        .map(a => this.babelService.getAst(pathUtil.resolve(filePath, a as string)))
 
       ast = await Promise.all(promises as Promise<ParseResult<File>>[])
     } else {
-      stats = await getFsStatPromise(path)
-      const code = (await getFileData(path))?.toString()
+      stats = await getFsStatPromise(filePath)
+      const code = (await getFileData(filePath))?.toString()
       ast = await this.babelService.getAstByCode(code)
       // result = removeUnusedVars(ast, code)
       // result = findQueryGeneral(ast)
-      result = await findConnectActions(ast, path, this.babelService)
+      result = await findConnectActions(ast, filePath, this.babelService)
     }
-    return { path, result, ast, stats }
+    return { filePath, result, ast, stats }
   }
 
   @Post('/getPathByAlias')
@@ -63,6 +114,25 @@ export class BabelController {
       await this.babelService.setAlias(tsconfigPath)
     }
     return { filePath: this.babelService.getAlias(filePath as string) }
+  }
+
+  @Post('/getModuleFederationEntries')
+  async getModuleFederationEntries(
+    @Body()
+    {
+      federationConfigPath,
+      tsconfigPath,
+    }: {
+      federationConfigPath: string
+      tsconfigPath: string
+    },
+  ) {
+    await this.babelService.setAlias(tsconfigPath)
+    const { ast } = await this.babelService.getModuleFederationEntries(
+      federationConfigPath,
+    )
+    return { ast }
+    // /Users/alexwang/workspace/xTransfer/mfe-user-crm/webpack-config/federationConfig.js
   }
 
   @Post('/traverseToGetGraph')
@@ -76,6 +146,7 @@ export class BabelController {
     // tsconfigPath
     await this.babelService.setAlias(tsconfigPath)
 
+    const outerResult = await this.babelService.recurStepOne(filePath as string)
     const {
       filename,
       fileDependencies,
@@ -83,7 +154,8 @@ export class BabelController {
       // aliasFileMap,
       // aliasNpmMap,
       graph,
-    } = await this.babelService.recurStepOne(filePath as string)
+    } = outerResult
+    let npmDependencies = outerResult.npmDependencies
 
     if (noRecur !== true) {
       const notSourceFileDependencies: string[] = fileDependencies
@@ -95,17 +167,20 @@ export class BabelController {
           const {
             // filename,
             fileDependencies,
-            // npmDependencies,
+            npmDependencies: subNpmDependencies,
             // aliasFileMap,
             // aliasNpmMap,
             // graph,
           } = await this.babelService.recurStepOne(fd)
+          npmDependencies.push(...subNpmDependencies)
+          npmDependencies = _.uniq(npmDependencies.filter(a => a))
           fileDependencies.forEach(fd => {
             if (
               !fd.endsWith('.css') &&
               !fd.endsWith('.less') &&
               !fd.endsWith('.sass') &&
               !fd.endsWith('.svg') &&
+              !isImage(fd) &&
               !this.babelService.isGraphSource(fd)
             ) {
               notSourceFileDependencies.push(fd)
@@ -124,7 +199,7 @@ export class BabelController {
     return {
       filename,
       // fileDependencies,
-      // npmDependencies,
+      npmDependencies,
       // aliasFileMap,
       // aliasNpmMap,
       size: graph.directedSize,
@@ -132,16 +207,29 @@ export class BabelController {
     }
   }
 
-  @Post('/buildDirectedGraph')
-  async buildDirectedGraph() {
-    // tsconfigPath
-    this.babelService.buildDirectedGrpah('shanghai', 'beijing')
-    this.babelService.buildDirectedGrpah('beijing', 'tianjing')
-    this.babelService.buildDirectedGrpah('hangzhou', 'shanghai')
-    this.babelService.buildDirectedGrpah('shanghai', 'nanjing')
-    this.babelService.buildDirectedGrpah('nanjing', 'shanghai')
-    const graph = this.babelService.buildDirectedGrpah('nanjing', 'tianjing')
-    return graph.toJSON()
+  @Post('/findUnusedDependencies')
+  async findUnusedDependencies(@Body() { projectPath }: { projectPath: string }) {
+    const skipPrefixes = ['@types']
+    const packageJsonPath = pathUtil.resolve(projectPath, 'package.json')
+    const fileData = JSON.parse(String(await getFileData(packageJsonPath)))
+    const dependencies = Object.keys(fileData.dependencies)
+    const unusedDependencies = dependencies.filter(a => {
+      const aPrefix = a.split('/')[0]
+      let bool = true
+      for (const npmDep of graphNodes.npmDependencies) {
+        const npmDepPrefix = npmDep.split('/')[0]
+        if (skipPrefixes.includes(npmDepPrefix)) {
+          return true
+        }
+        if (aPrefix === npmDepPrefix) {
+          bool = false
+          break
+        }
+      }
+      return bool
+    })
+    console.log('#174 unusedDependencies:', unusedDependencies)
+    return unusedDependencies
   }
 
   @Post('/removeFilteredFilesDemo')
@@ -168,7 +256,7 @@ export class BabelController {
         !a.includes('/__test__/') &&
         !a.includes('/__tests__/') &&
         !a.includes('/constants/env/') &&
-        !graphNodes.map(a => a.key).includes(a),
+        !graphNodes.graph.nodes.map(a => a.key).includes(a),
     )
     toRemovePaths.forEach(path => {
       fs.unlink(path, function (err) {
@@ -188,5 +276,17 @@ export class BabelController {
     } catch (e) {
       console.error('findFilePathByCandidate #102 error:', e)
     }
+  }
+
+  @Post('/buildDirectedGraph')
+  async buildDirectedGraph() {
+    // tsconfigPath
+    this.babelService.buildDirectedGrpah('shanghai', 'beijing')
+    this.babelService.buildDirectedGrpah('beijing', 'tianjing')
+    this.babelService.buildDirectedGrpah('hangzhou', 'shanghai')
+    this.babelService.buildDirectedGrpah('shanghai', 'nanjing')
+    this.babelService.buildDirectedGrpah('nanjing', 'shanghai')
+    const graph = this.babelService.buildDirectedGrpah('nanjing', 'tianjing')
+    return graph.toJSON()
   }
 }

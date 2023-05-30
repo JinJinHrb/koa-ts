@@ -310,6 +310,24 @@ export class BabelService {
     return alias
   }
 
+  async getModuleFederationEntries(filePath: string) {
+    const ast = await this.getAst(filePath)
+    traverse(ast, {
+      Identifier(path) {
+        if (path.node.name === 'exposes') {
+          const parent = path.findParent(path => path.type === 'ObjectProperty')
+          const properties = (parent.node as any)?.value.properties
+            .filter((a: any) => a.type === 'ObjectProperty')
+            .map((a: any) => a.value.name)
+          console.log('#318 exposes properties:', properties)
+          path.stop()
+          return
+        }
+      },
+    })
+    return { ast }
+  }
+
   async traverseAST(filePath: string, ast: ParseResult<File>) {
     const dirname = pathUtil.dirname(filePath),
       aliasFileMap: { [key: string]: string } = {},
