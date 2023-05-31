@@ -46,7 +46,7 @@ export const buildSingleActionsGraph = (
     return null
   }
   for (const group of record.groups) {
-    const { actionsDependencies, actionsComponents } = group
+    const { actionsDependencies, actionsComponents, objectPropertyMap } = group
     for (const actionsComponent of actionsComponents) {
       let functionPath: NodePath<any> | undefined
       const { type, name, loc } = actionsComponent as TActionsComponent
@@ -106,15 +106,10 @@ export const buildSingleActionsGraph = (
         })
       }
       if (functionPath) {
-        console.log(
-          '#106 functionPath.node:',
-          functionPath.node,
-          '\ngetParentPathSkipTSNonNullExpression(functionPath).node',
-          getParentPathSkipTSNonNullExpression(functionPath).node,
-        )
         getParentPathSkipTSNonNullExpression(functionPath).traverse({
           enter(subPath) {
-            let callExpressionPath, memberExpressionPath
+            const callExpressionPaths: any = [],
+              actionsExportedNames = []
             if (
               (subPath.node as any)?.name === 'actions' &&
               _.endsWith(
@@ -127,8 +122,9 @@ export const buildSingleActionsGraph = (
               )
             ) {
               console.log('#98 buildSingleActionsGraph')
-              memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath)
-              callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
+              const memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath)
+              actionsExportedNames.push((memberExpressionPath.node as any).property.name)
+              callExpressionPaths.push(getParentPathSkipTSNonNullExpression(subPath, 2))
             } else if (
               (subPath.node as any)?.name === 'actions' &&
               (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.name ===
@@ -143,8 +139,12 @@ export const buildSingleActionsGraph = (
               )
             ) {
               console.log('#114 buildSingleActionsGraph')
-              memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
-              callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 3)
+              const memberExpressionPath = getParentPathSkipTSNonNullExpression(
+                subPath,
+                2,
+              )
+              actionsExportedNames.push((memberExpressionPath.node as any).property.name)
+              callExpressionPaths.push(getParentPathSkipTSNonNullExpression(subPath, 3))
             } else if (
               (subPath.node as any)?.name === 'actions' &&
               (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.type ===
@@ -159,7 +159,7 @@ export const buildSingleActionsGraph = (
                 getParentPathSkipTSNonNullExpression(subPath).node.loc?.start.line ?? -1
               const endLine =
                 getParentPathSkipTSNonNullExpression(subPath).node.loc?.end.line ?? -1
-              memberExpressionPath = getParentPathSkipTSNonNullExpression(
+              const memberExpressionPath = getParentPathSkipTSNonNullExpression(
                 subPath,
               ).findParent(
                 subPath2 =>
@@ -173,9 +173,35 @@ export const buildSingleActionsGraph = (
                     'CallExpression',
                   ),
               )
-              callExpressionPath =
-                getParentPathSkipTSNonNullExpression(memberExpressionPath)
-            } /* else if ((subPath.node as any)?.name === 'actions') {
+              actionsExportedNames.push((memberExpressionPath.node as any).property.name)
+              callExpressionPaths.push(
+                getParentPathSkipTSNonNullExpression(memberExpressionPath),
+              )
+            } else if (
+              getParentPathSkipTSNonNullExpression(subPath).node.type ===
+                'ObjectProperty' &&
+              (getParentPathSkipTSNonNullExpression(subPath).node as any).key.name ===
+                'actions'
+            ) {
+              console.log('#192 buildSingleActionsGraph')
+              for (const property of (
+                getParentPathSkipTSNonNullExpression(subPath).node as any
+              ).value.properties) {
+                const exportedName = property.key.name
+                const localName = property.value.name
+                const localBinding = subPath.scope.getBinding(localName)
+                const referencePaths = localBinding?.referencePaths ?? []
+                for (const referencePath of referencePaths) {
+                  const referenceParentPath =
+                    getParentPathSkipTSNonNullExpression(referencePath)
+                  if (referenceParentPath.node.type === 'CallExpression') {
+                    actionsExportedNames.push(exportedName)
+                    callExpressionPaths.push(referenceParentPath)
+                    break
+                  }
+                }
+              }
+            } else if ((subPath.node as any)?.name === 'actions') {
               console.log(
                 '#150 getParentPathSkipTSNonNullExpression(subPath).node:',
                 getParentPathSkipTSNonNullExpression(subPath).node,
@@ -188,47 +214,53 @@ export const buildSingleActionsGraph = (
                 '#158 getParentPathSkipTSNonNullExpression(subPath, 3).node:',
                 getParentPathSkipTSNonNullExpression(subPath, 3).node,
               )
-            } */
-            if (memberExpressionPath && callExpressionPath) {
-              const theMethod: {
-                name: string
-                usage?: string
-                usageVariable?: string
-              } = {
-                name: (memberExpressionPath.node as any).property.name,
-              }
-              callExpressionPath.traverse({
-                Identifier(subPath2) {
-                  if (
-                    subPath2.node.name === 'usage' &&
-                    getParentPathSkipTSNonNullExpression(subPath2).node.type ===
-                      'ObjectProperty'
-                  ) {
-                    const usageValue = (
-                      getParentPathSkipTSNonNullExpression(subPath2).node as any
-                    )?.value
+              const propsBinding = subPath.scope.getBinding('props')
+              console.log('#192 propsBinding:', propsBinding)
+            }
+            for (let i = 0; i < callExpressionPaths.length; i++) {
+              const callExpressionPath = callExpressionPaths[i]
+              const actionsExportedName = actionsExportedNames[i]
+              if (actionsExportedName && callExpressionPath) {
+                const theMethod: {
+                  name: string
+                  usage?: string
+                  usageVariable?: string
+                } = {
+                  name: actionsExportedName,
+                }
+                callExpressionPath.traverse({
+                  Identifier(subPath2: any) {
                     if (
+                      subPath2.node.name === 'usage' &&
                       getParentPathSkipTSNonNullExpression(subPath2).node.type ===
-                        'ObjectProperty' &&
-                      usageValue.type === 'Identifier'
+                        'ObjectProperty'
                     ) {
-                      theMethod.usageVariable = usageValue.name
-                    } else if (usageValue.type === 'StringLiteral') {
-                      theMethod.usage = usageValue.value
-                    } else if (usageValue.type === 'MemberExpression') {
-                      theMethod.usage = `${usageValue.object.name}.${usageValue.property.name}`
-                    } else {
-                      console.log(
-                        '#83 getParentPathSkipTSNonNullExpression(subPath2).node:',
-                        getParentPathSkipTSNonNullExpression(subPath2).node,
-                      )
-                      theMethod.usage = '' // 空字符串说明有问题
+                      const usageValue = (
+                        getParentPathSkipTSNonNullExpression(subPath2).node as any
+                      )?.value
+                      if (
+                        getParentPathSkipTSNonNullExpression(subPath2).node.type ===
+                          'ObjectProperty' &&
+                        usageValue.type === 'Identifier'
+                      ) {
+                        theMethod.usageVariable = usageValue.name
+                      } else if (usageValue.type === 'StringLiteral') {
+                        theMethod.usage = usageValue.value
+                      } else if (usageValue.type === 'MemberExpression') {
+                        theMethod.usage = `${usageValue.object.name}.${usageValue.property.name}`
+                      } else {
+                        console.log(
+                          '#83 getParentPathSkipTSNonNullExpression(subPath2).node:',
+                          getParentPathSkipTSNonNullExpression(subPath2).node,
+                        )
+                        theMethod.usage = '' // 空字符串说明有问题
+                      }
+                      subPath2.stop()
                     }
-                    subPath2.stop()
-                  }
-                },
-              })
-              actionsMethods.push(theMethod)
+                  },
+                })
+                actionsMethods.push(theMethod)
+              }
             }
 
             if (
@@ -321,7 +353,8 @@ export const buildSingleActionsGraph = (
           sourceValue: string
           dependencyPath: string
         }[] = []
-        actionsComponent.actionsMethods.forEach(({ name: k }: { name: string }) => {
+        actionsComponent.actionsMethods.forEach(({ name: v }: { name: string }) => {
+          const k = objectPropertyMap[v]
           OUTTER: for (const actionsDependency of actionsDependencies) {
             if (actionsDependency.isNamespace) {
               const exportNames = actionsDependency.exportNames || []
