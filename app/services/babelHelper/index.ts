@@ -39,7 +39,9 @@ export const buildSingleActionsGraph = (
   filePath: string,
   ast: ParseResult<File>,
 ): any => {
-  const record = _.cloneDeep(fileActions.filter(a => a.filePath === filePath)[0]) as any
+  const record = _.cloneDeep(
+    fileActions.data.filter(a => a.filePath === filePath)[0],
+  ) as any
   if (!record || _.isEmpty(record.groups)) {
     return null
   }
@@ -53,18 +55,43 @@ export const buildSingleActionsGraph = (
         usage?: string
       }[] = []
       if (type === 'Identifier') {
-        traverse(ast, {
-          Identifier(subPath) {
-            if (
-              name &&
-              name === (subPath.node as any)?.name &&
-              subPath.node.loc?.start.line !== loc.start.line
-            ) {
-              functionPath = subPath
-              subPath.stop()
-            }
-          },
-        })
+        let targetNotFound = true,
+          tmpName = name,
+          tmpLoc = _.cloneDeep(loc)
+        while (targetNotFound) {
+          traverse(ast, {
+            Identifier(subPath) {
+              if (
+                tmpName &&
+                tmpName === (subPath.node as any)?.name &&
+                subPath.node.loc?.start.line !== tmpLoc.start.line &&
+                !['TSInterfaceDeclaration', 'TSTypeAliasDeclaration'].includes(
+                  getParentPathSkipTSNonNullExpression(subPath).node.type,
+                )
+              ) {
+                functionPath = subPath
+                subPath.stop()
+              }
+            },
+          })
+          const parentPath2 = getParentPathSkipTSNonNullExpression(
+            functionPath as NodePath<any>,
+            2,
+          )
+          if (
+            parentPath2.node.type === 'VariableDeclaration' &&
+            (parentPath2.node as any)?.declarations.length === 1 &&
+            (parentPath2.node as any)?.declarations[0].init?.type === 'CallExpression' &&
+            ((parentPath2.node as any)?.declarations[0].init?.arguments?.length === 1 &&
+              (parentPath2.node as any)?.declarations[0].init?.arguments[0].type) ===
+              'Identifier'
+          ) {
+            tmpName = (parentPath2.node as any)?.declarations[0].init.arguments[0].name
+            tmpLoc = (parentPath2.node as any)?.declarations[0].init.arguments[0].loc
+          } else {
+            targetNotFound = false
+          }
+        }
       } else {
         traverse(ast, {
           enter(subPath) {
@@ -79,6 +106,12 @@ export const buildSingleActionsGraph = (
         })
       }
       if (functionPath) {
+        console.log(
+          '#106 functionPath.node:',
+          functionPath.node,
+          '\ngetParentPathSkipTSNonNullExpression(functionPath).node',
+          getParentPathSkipTSNonNullExpression(functionPath).node,
+        )
         getParentPathSkipTSNonNullExpression(functionPath).traverse({
           enter(subPath) {
             let callExpressionPath, memberExpressionPath
@@ -93,6 +126,7 @@ export const buildSingleActionsGraph = (
                 'CallExpression',
               )
             ) {
+              console.log('#98 buildSingleActionsGraph')
               memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath)
               callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
             } else if (
@@ -108,6 +142,7 @@ export const buildSingleActionsGraph = (
                 'CallExpression',
               )
             ) {
+              console.log('#114 buildSingleActionsGraph')
               memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
               callExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 3)
             } else if (
@@ -119,6 +154,7 @@ export const buildSingleActionsGraph = (
               (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.property
                 ?.name === 'props'
             ) {
+              console.log('#126 buildSingleActionsGraph')
               const startLine =
                 getParentPathSkipTSNonNullExpression(subPath).node.loc?.start.line ?? -1
               const endLine =
@@ -139,12 +175,6 @@ export const buildSingleActionsGraph = (
               )
               callExpressionPath =
                 getParentPathSkipTSNonNullExpression(memberExpressionPath)
-              // console.log(
-              //   '#121 possibleCallExpressionPath.node:',
-              //   possibleCallExpressionPath.node,
-              //   '\npossibleMemberExpressionPath.node:',
-              //   possibleMemberExpressionPath.node,
-              // )
             } /* else if ((subPath.node as any)?.name === 'actions') {
               console.log(
                 '#150 getParentPathSkipTSNonNullExpression(subPath).node:',

@@ -28,7 +28,8 @@ import isImage from 'is-image'
 /*
  * (1) /getAstAndAlterCode
  * (2) /traverseToGetGraph
- * (2) /iterateGraphNodes
+ * (3) /getFileActions 获取源码与actions的依赖关系
+ * (4) /buildActionsGraph 获取actions使用情况
  */
 
 @JsonController()
@@ -37,11 +38,11 @@ import isImage from 'is-image'
 export class BabelController {
   constructor(private babelService: BabelService) {}
 
-  @Post('/iterateGraphNodes')
-  async iterateGraphNodes(@Body() { tsconfigPath }: { tsconfigPath: string }) {
+  @Post('/getFileActions')
+  async getFileActions(@Body() { tsconfigPath }: { tsconfigPath: string }) {
     await this.babelService.setAlias(tsconfigPath)
     const nodes = graphNodes.graph.nodes
-    const fileActions = []
+    const data = []
     let filePath = ''
     try {
       for (const node of nodes) {
@@ -54,19 +55,19 @@ export class BabelController {
         ) {
           continue
         }
-        console.log('iterateGraphNodes #50 filePath:', filePath)
+        console.log('getFileActions #50 filePath:', filePath)
         const code = (await getFileData(filePath))?.toString()
         const ast = await this.babelService.getAstByCode(code)
         const result = await findConnectActions(ast, filePath, this.babelService)
         if (!_.isEmpty(result.groups)) {
-          fileActions.push(result)
+          data.push(result)
         }
       }
     } catch (e) {
-      console.error('iterateGraphNodes #60 filePath:', filePath, '\nerror:', e)
+      console.error('getFileActions #60 filePath:', filePath, '\nerror:', e)
     }
 
-    return { fileActions }
+    return { data }
   }
 
   @Post('/buildActionsGraph')
