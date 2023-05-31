@@ -3127,14 +3127,14 @@ export default {
               name: 'OrderIndex',
               loc: {
                 start: {
-                  line: 121,
+                  line: 120,
                   column: 3,
-                  index: 2951,
+                  index: 2908,
                 },
                 end: {
-                  line: 121,
+                  line: 120,
                   column: 13,
-                  index: 2961,
+                  index: 2918,
                 },
                 identifierName: 'OrderIndex',
               },
@@ -3204,7 +3204,7 @@ export default {
       filePath:
         '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx',
       localConnect: 'connect',
-      localCompose: '',
+      localCompose: 'compose',
       groups: [
         {
           actionsDependencies: [
@@ -3318,14 +3318,14 @@ export default {
               name: 'ActivityCreate',
               loc: {
                 start: {
-                  line: 1175,
-                  column: 46,
-                  index: 36355,
+                  line: 1171,
+                  column: 90,
+                  index: 36471,
                 },
                 end: {
-                  line: 1175,
-                  column: 60,
-                  index: 36369,
+                  line: 1171,
+                  column: 104,
+                  index: 36485,
                 },
                 identifierName: 'ActivityCreate',
               },
@@ -5628,7 +5628,7 @@ export default {
       filePath:
         '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/index.tsx',
       localConnect: 'connect',
-      localCompose: '',
+      localCompose: 'compose',
       groups: [
         {
           actionsDependencies: [
@@ -5647,13 +5647,13 @@ export default {
               loc: {
                 start: {
                   line: 204,
-                  column: 4,
-                  index: 6941,
+                  column: 28,
+                  index: 7053,
                 },
                 end: {
                   line: 204,
-                  column: 17,
-                  index: 6954,
+                  column: 41,
+                  index: 7066,
                 },
                 identifierName: 'TradeTaskMent',
               },

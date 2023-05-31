@@ -1172,6 +1172,13 @@
               "usedActionsDependencies": [
                 {
                   "isNamespace": false,
+                  "localName": "push",
+                  "importedName": "push",
+                  "sourceValue": "react-router-redux",
+                  "dependencyPath": "react-router-redux"
+                },
+                {
+                  "isNamespace": false,
                   "localName": "change",
                   "importedName": "change",
                   "sourceValue": "redux-form/es/immutable",
@@ -2706,6 +2713,13 @@
               ],
               "usedActionsDependencies": [
                 {
+                  "isNamespace": false,
+                  "localName": "touch",
+                  "importedName": "touch",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                },
+                {
                   "localName": "getProfileRequested",
                   "importedName": "getProfileRequested",
                   "sourceValue": "actions/me",
@@ -2916,7 +2930,15 @@
                   "name": "routerPush"
                 }
               ],
-              "usedActionsDependencies": [],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "push",
+                  "importedName": "push",
+                  "sourceValue": "react-router-redux",
+                  "dependencyPath": "react-router-redux"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 29,
@@ -4383,14 +4405,14 @@
               "name": "OrderIndex",
               "loc": {
                 "start": {
-                  "line": 121,
+                  "line": 120,
                   "column": 3,
-                  "index": 2951
+                  "index": 2908
                 },
                 "end": {
-                  "line": 121,
+                  "line": 120,
                   "column": 13,
-                  "index": 2961
+                  "index": 2918
                 },
                 "identifierName": "OrderIndex"
               },
@@ -4509,7 +4531,7 @@
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
       "localConnect": "connect",
-      "localCompose": "",
+      "localCompose": "compose",
       "groups": [
         {
           "actionsDependencies": [
@@ -4622,14 +4644,14 @@
               "name": "ActivityCreate",
               "loc": {
                 "start": {
-                  "line": 1175,
-                  "column": 46,
-                  "index": 36355
+                  "line": 1171,
+                  "column": 90,
+                  "index": 36471
                 },
                 "end": {
-                  "line": 1175,
-                  "column": 60,
-                  "index": 36369
+                  "line": 1171,
+                  "column": 104,
+                  "index": 36485
                 },
                 "identifierName": "ActivityCreate"
               },
@@ -4679,14 +4701,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 124,
+                  "line": 125,
                   "column": 6,
-                  "index": 4441
+                  "index": 4625
                 },
                 "end": {
-                  "line": 124,
+                  "line": 125,
                   "column": 20,
-                  "index": 4455
+                  "index": 4639
                 },
                 "identifierName": "ActivityCreate"
               }
@@ -6410,12 +6432,12 @@
                 "start": {
                   "line": 48,
                   "column": 6,
-                  "index": 1329
+                  "index": 1332
                 },
                 "end": {
                   "line": 48,
                   "column": 29,
-                  "index": 1352
+                  "index": 1355
                 },
                 "identifierName": "AgreementForm"
               }
@@ -6777,6 +6799,13 @@
               "usedActionsDependencies": [
                 {
                   "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                },
+                {
+                  "isNamespace": false,
                   "localName": "initialize",
                   "importedName": "initialize",
                   "sourceValue": "redux-form/es/immutable",
@@ -7098,6 +7127,13 @@
                   "importedName": "initialize",
                   "sourceValue": "redux-form/es/immutable",
                   "dependencyPath": "redux-form/es/immutable"
+                },
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
                 }
               ],
               "nodeLoc": {
@@ -7170,7 +7206,15 @@
                   "name": "setFormData"
                 }
               ],
-              "usedActionsDependencies": [],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "initialize",
+                  "importedName": "initialize",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 75,
@@ -7408,6 +7452,13 @@
                   "importedName": "initialize",
                   "sourceValue": "redux-form/es/immutable",
                   "dependencyPath": "redux-form/es/immutable"
+                },
+                {
+                  "isNamespace": false,
+                  "localName": "touch",
+                  "importedName": "touch",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
                 }
               ],
               "nodeLoc": {
@@ -7542,7 +7593,15 @@
                   "name": "formFieldTouch"
                 }
               ],
-              "usedActionsDependencies": [],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "touch",
+                  "importedName": "touch",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 70,
@@ -7655,6 +7714,13 @@
               ],
               "usedActionsDependencies": [
                 {
+                  "isNamespace": false,
+                  "localName": "push",
+                  "importedName": "push",
+                  "sourceValue": "react-router-redux",
+                  "dependencyPath": "react-router-redux"
+                },
+                {
                   "localName": "getWhiteListRequested",
                   "importedName": "getWhiteListRequested",
                   "sourceValue": "actions/user",
@@ -7729,7 +7795,15 @@
                   "name": "setFormData"
                 }
               ],
-              "usedActionsDependencies": [],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "initialize",
+                  "importedName": "initialize",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 70,
@@ -7847,7 +7921,7 @@
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/index.tsx",
       "localConnect": "connect",
-      "localCompose": "",
+      "localCompose": "compose",
       "groups": [
         {
           "actionsDependencies": [
@@ -7866,13 +7940,13 @@
               "loc": {
                 "start": {
                   "line": 204,
-                  "column": 4,
-                  "index": 6941
+                  "column": 28,
+                  "index": 7053
                 },
                 "end": {
                   "line": 204,
-                  "column": 17,
-                  "index": 6954
+                  "column": 41,
+                  "index": 7066
                 },
                 "identifierName": "TradeTaskMent"
               },
@@ -7882,12 +7956,12 @@
                 "start": {
                   "line": 43,
                   "column": 6,
-                  "index": 1991
+                  "index": 2079
                 },
                 "end": {
                   "line": 43,
                   "column": 37,
-                  "index": 2022
+                  "index": 2110
                 },
                 "identifierName": "TradeTaskMent"
               }
@@ -9493,8 +9567,20 @@
                 },
                 "identifierName": "QuotationAdvancedScreenContentForm"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 29,
@@ -9788,6 +9874,13 @@
               "usedActionsDependencies": [
                 {
                   "isNamespace": false,
+                  "localName": "push",
+                  "importedName": "push",
+                  "sourceValue": "react-router-redux",
+                  "dependencyPath": "react-router-redux"
+                },
+                {
+                  "isNamespace": false,
                   "localName": "initialize",
                   "importedName": "initialize",
                   "sourceValue": "redux-form/es/immutable",
@@ -9864,8 +9957,20 @@
                 },
                 "identifierName": "OrderAdvancedScreenContentForm"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 29,
@@ -10729,8 +10834,20 @@
                 },
                 "identifierName": "ResponsibleUser"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 20,
@@ -11338,8 +11455,20 @@
                 },
                 "identifierName": "TimePicker"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 27,
@@ -11464,8 +11593,20 @@
                 },
                 "identifierName": "CreatedTime"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 27,
@@ -11521,8 +11662,20 @@
                 },
                 "identifierName": "DrawerTitle"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "navigate"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "push",
+                  "importedName": "push",
+                  "sourceValue": "react-router-redux",
+                  "dependencyPath": "react-router-redux"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 40,
@@ -11839,8 +11992,20 @@
                 },
                 "identifierName": "DrawerTitle"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "navigate"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "push",
+                  "importedName": "push",
+                  "sourceValue": "react-router-redux",
+                  "dependencyPath": "react-router-redux"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 38,
@@ -12238,8 +12403,20 @@
                 },
                 "identifierName": "RangeDatePicker"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 42,
@@ -12295,8 +12472,20 @@
                 },
                 "identifierName": "FirmTitle"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 21,
@@ -12352,8 +12541,20 @@
                 },
                 "identifierName": "FirmTitle"
               },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
+              "actionsMethods": [
+                {
+                  "name": "setNormalFormField"
+                }
+              ],
+              "usedActionsDependencies": [
+                {
+                  "isNamespace": false,
+                  "localName": "change",
+                  "importedName": "change",
+                  "sourceValue": "redux-form/es/immutable",
+                  "dependencyPath": "redux-form/es/immutable"
+                }
+              ],
               "nodeLoc": {
                 "start": {
                   "line": 21,
