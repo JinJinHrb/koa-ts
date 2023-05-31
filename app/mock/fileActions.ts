@@ -4593,12 +4593,12 @@ export default {
                 start: {
                   line: 136,
                   column: 4,
-                  index: 3631,
+                  index: 3634,
                 },
                 end: {
                   line: 136,
                   column: 24,
-                  index: 3651,
+                  index: 3654,
                 },
                 identifierName: 'connectGlobalProfile',
               },
