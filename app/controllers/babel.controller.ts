@@ -24,6 +24,7 @@ import {
   removeUnusedVars,
 } from 'app/services/babelHelper'
 import isImage from 'is-image'
+import buildActionsGraph from 'app/mock/buildActionsGraph'
 
 /*
  * (1) /getAstAndAlterCode
@@ -106,6 +107,24 @@ export class BabelController {
       console.error('buildActionsGraph #102 filePath:', filePath, '\nerror:', e)
     }
     return { fileActions, warnings }
+  }
+
+  @Post('/getFilesWhoseActionsMethodsEmpty')
+  getFilesWhoseActionsMethodsEmpty() {
+    const files = buildActionsGraph.fileActions
+      .filter(({ groups }: any) => {
+        for (const group of groups) {
+          console.log('#117 group:', group)
+          for (const actionsComponent of group.actionsComponents) {
+            if (_.isEmpty(actionsComponent.actionsMethods)) {
+              return true
+            }
+          }
+        }
+        return false
+      })
+      .map(a => a.filePath)
+    return { files }
   }
 
   @Post('/buildSingleActionsGraph')
