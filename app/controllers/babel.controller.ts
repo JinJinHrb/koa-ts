@@ -1,4 +1,4 @@
-import { JsonController, Get, Controller, Post, Body } from 'routing-controllers'
+import { JsonController, Controller, Post, Body } from 'routing-controllers'
 import { BabelService } from '../services'
 import { Service } from 'typedi'
 import { ByRegExpParams, GetAstAndAlterCodeParams } from 'app/services/babel.params'
@@ -19,18 +19,17 @@ import fs from 'fs'
 import {
   findConnectActions,
   buildSingleActionsGraph as buildSingleActionsGraphHandler,
-  findQueryGeneral,
-  findReduxConnect,
-  removeUnusedVars,
+  buildSagaGraph as buildSagaGraphHandler,
 } from 'app/services/babelHelper'
-import isImage from 'is-image'
 import buildActionsGraph from 'app/mock/buildActionsGraph'
+import { TActionsMap } from 'app/services/babelHelper'
 
 /*
  * (1) /getAstAndAlterCode
  * (2) /traverseToGetGraph
  * (3) /getFileActions 获取源码与actions的依赖关系
  * (4) /buildActionsGraph 获取actions使用情况
+ * (5) /buildSagaGraph
  */
 
 @JsonController()
@@ -38,6 +37,36 @@ import buildActionsGraph from 'app/mock/buildActionsGraph'
 @Controller('/babel')
 export class BabelController {
   constructor(private babelService: BabelService) {}
+
+  @Post('/buildSagaGraph')
+  async buildSagaGraph(
+    @Body() { filePath, tsconfigPath }: { filePath: string; tsconfigPath: string },
+  ) {
+    const analyzedFiles = new Set<string>()
+    const actions2HandlerMap: TActionsMap = {},
+      handler2ActionsMap: TActionsMap = {}
+    const result = await buildSagaGraphHandler(
+      analyzedFiles,
+      actions2HandlerMap,
+      handler2ActionsMap,
+      tsconfigPath,
+      filePath,
+    )
+    const { warnings, ast } = result || {}
+    const response: any = {
+      // collectors,
+      actions2HandlerMap,
+      handler2ActionsMap,
+      // size: graph?.directedSize,
+      // graph: graph?.toJSON(),
+      // order: graph?.order,
+      warnings,
+    }
+    if (ast) {
+      response.ast = ast
+    }
+    return response
+  }
 
   @Post('/getFileActions')
   async getFileActions(@Body() { tsconfigPath }: { tsconfigPath: string }) {
@@ -171,7 +200,7 @@ export class BabelController {
     if (tsconfigPath) {
       await this.babelService.setAlias(tsconfigPath)
     }
-    return { filePath: this.babelService.getAlias(filePath as string) }
+    return { filePath: this.babelService.getRealPathByAlias(filePath as string) }
   }
 
   @Post('/getModuleFederationEntries')
@@ -203,57 +232,12 @@ export class BabelController {
 
     // tsconfigPath
     await this.babelService.setAlias(tsconfigPath)
-
-    const outerResult = await this.babelService.recurStepOne(filePath as string)
-    const {
-      filename,
-      fileDependencies,
-      // npmDependencies,
-      // aliasFileMap,
-      // aliasNpmMap,
-      graph,
-    } = outerResult
-    let npmDependencies = outerResult.npmDependencies
-
-    if (noRecur !== true) {
-      const notSourceFileDependencies: string[] = fileDependencies
-      while (!_.isEmpty(notSourceFileDependencies) || !_.isEmpty(filePaths)) {
-        const fd = !_.isEmpty(notSourceFileDependencies)
-          ? (notSourceFileDependencies.shift() as string)
-          : (filePaths?.shift() as string)
-        try {
-          const {
-            // filename,
-            fileDependencies,
-            npmDependencies: subNpmDependencies,
-            // aliasFileMap,
-            // aliasNpmMap,
-            // graph,
-          } = await this.babelService.recurStepOne(fd)
-          npmDependencies.push(...subNpmDependencies)
-          npmDependencies = _.uniq(npmDependencies.filter(a => a))
-          fileDependencies.forEach(fd => {
-            if (
-              !fd.endsWith('.css') &&
-              !fd.endsWith('.less') &&
-              !fd.endsWith('.sass') &&
-              !fd.endsWith('.svg') &&
-              !isImage(fd) &&
-              !this.babelService.isGraphSource(fd)
-            ) {
-              notSourceFileDependencies.push(fd)
-            }
-          })
-        } catch (e) {
-          console.error('traverseToGetGraph #83 error:', e, '\ndependency path:', fd)
-        }
-      }
-      console.log(
-        'traverseToGetGraph #86',
-        'tempFileDependencies:',
-        notSourceFileDependencies,
-      )
-    }
+    const { filename, npmDependencies, graph } =
+      await this.babelService.traverseToGetGraph({
+        filePath,
+        filePaths,
+        noRecur,
+      })
     return {
       filename,
       // fileDependencies,

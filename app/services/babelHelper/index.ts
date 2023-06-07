@@ -1,39 +1,117 @@
+/*
+ * 与 CRM 业务代码耦合度较高的分析代码
+ */
+
 import pathUtil from 'path'
 import { BabelService } from '../babel.service'
-import { isDirectory, isFile } from '../../helpers/fsUtils'
+import { isDirectory, getFileData, isFile } from '../../helpers/fsUtils'
 import traverse, { Node, NodePath } from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
-import {
-  File,
-  ArgumentPlaceholder,
-  Expression,
-  JSXNamespacedName,
-  SpreadElement,
-} from '@babel/types'
-
+import { File, SourceLocation } from '@babel/types'
 import generate from '@babel/generator'
 import _ from 'lodash'
 import fileActions from 'app/mock/fileActions'
 import { getParentPathSkipTSNonNullExpression } from 'app/helpers/iterationUtil'
-import { addCallExpressionPaths } from './innerHelper'
+import { addCallExpressionPaths, sagaFileHandler } from './innerHelper'
+import { DirectedGraph } from 'graphology'
 
-export type TLoc = {
-  start: {
-    line: number
-    column: number
-    index: number
+export type TFileCollectorElement = {
+  actionsSource: string
+  actionsPropertyName: string
+  handlerName: string
+  handlerSource: string
+}
+export type TFileCollector = TFileCollectorElement[]
+export type TUnfilteredCollectors = { [key: string]: TFileCollector }
+export type TActionsMap = { [key: string]: any }
+
+export const buildSagaGraph = async (
+  analyzedFiles: Set<string>,
+  actions2HandlerMap: TActionsMap = {},
+  handler2ActionsMap: TActionsMap = {},
+  tsconfigPath: string,
+  filePath: string,
+) => {
+  const code = (await getFileData(filePath as string))?.toString()
+  const babelService = new BabelService()
+  await babelService.setAlias(tsconfigPath)
+  const ast = await babelService.getAstByCode(code)
+  const warnings: string[] = []
+  let isRootSaga = false
+  traverse(ast, {
+    ExportDefaultDeclaration(path) {
+      const name = (path.node.declaration as any)?.id.name
+      if (name === 'rootSaga') {
+        isRootSaga = true
+      }
+      path.stop()
+    },
+  })
+
+  // const sagaGraph = new DirectedGraph()
+
+  const { filename, graph } = await babelService.traverseToGetGraph({
+    filePath,
+    noRecur: true,
+  })
+
+  const nonAnalyzedFiles = graph.nodes().filter(a => !analyzedFiles.has(a))
+
+  const actionsMap: TActionsMap = {}
+  for (const nonAnalyzedFile of nonAnalyzedFiles) {
+    const fileAst = await babelService.getAst(nonAnalyzedFile)
+    let isSagaFile = false
+    const sagaEffectsFuns: TActionsMap = {}
+    traverse(fileAst, {
+      ImportDeclaration(path: NodePath<any>) {
+        const { node } = path
+        if (node.source.value === 'redux-saga/effects') {
+          const specifiers = node.specifiers.filter(
+            (a: any) => a.type === 'ImportSpecifier',
+          )
+          specifiers.forEach((k: any) => {
+            const importedName = k.imported.name
+            const localName = k.local.name
+            sagaEffectsFuns[importedName] = localName
+          })
+          isSagaFile = true
+          path.stop()
+        }
+      },
+    })
+    if (isSagaFile) {
+      sagaFileHandler({
+        babelService,
+        actions2HandlerMap,
+        nonAnalyzedFile,
+        warnings,
+        fileAst,
+        actionsMap,
+      })
+      // console.log(
+      //   '#224 isSagaFile:',
+      //   nonAnalyzedFile,
+      //   '\nsagaEffectsFuns:',
+      //   sagaEffectsFuns,
+      // )
+    }
+    // ExportDefaultDeclaration
+    analyzedFiles.add(nonAnalyzedFile)
   }
-  end: {
-    line: number
-    column: number
-    index: number
+
+  return {
+    warnings,
+    filename,
+    graph,
+    ast: null,
+    isRootSaga,
   }
 }
 
 export type TActionsComponent = {
   type: string
   name?: string
-  loc: TLoc
+  loc: SourceLocation
 }
 
 export const buildSingleActionsGraph = (
@@ -111,6 +189,7 @@ export const buildSingleActionsGraph = (
           enter(subPath) {
             const callExpressionPaths: any = [],
               actionsExportedNames: any = []
+            // 处理 actions 调用的各种情况
             addCallExpressionPaths(subPath, actionsExportedNames, callExpressionPaths)
             for (let i = 0; i < callExpressionPaths.length; i++) {
               const callExpressionPath = callExpressionPaths[i]
@@ -323,7 +402,7 @@ export const dynamicImportExportHandler = function (
       this.findFilePathByCandidate(pathUtil.resolve(dirname, value)) ??
       pathUtil.resolve(dirname, value)
   } else {
-    const tempAlias = this.getAlias(value)
+    const tempAlias = this.getRealPathByAlias(value)
     if (tempAlias) {
       aliasFileMap[value] = tempAlias
     } else if (isDirectory(pathUtil.resolve(projectPath, 'node_modules', value))) {
@@ -1073,3 +1152,7 @@ export const findReduxConnect = (ast: ParseResult<File>) => {
   })
   return result
 }
+
+export const loc2String = (loc: SourceLocation) =>
+  `start.line: ${loc.start.line}, start.column: ${loc.start.column}, ` +
+  `start.line: ${loc.end.line}, start.column: ${loc.end.column}`

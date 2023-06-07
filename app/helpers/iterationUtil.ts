@@ -197,7 +197,33 @@ export const iterateObject2replaceCertainValueByRegex = (
  * */
 export const iterateObjectHandler = function itrObj(
   obj: any,
-  handler: (obj: object, paths: unknown[]) => unknown,
+  handler: (obj: any, paths: unknown[]) => unknown,
+  paths: string[] = [],
+) {
+  if (oType(handler) !== 'function') {
+    return
+  }
+  if (['object'].indexOf(oType(obj)) > -1 && !(obj instanceof Date)) {
+    handler(obj, paths)
+  } else if (['object'].indexOf(oType(obj)) < 0 || obj instanceof Date) {
+    return
+  }
+  const keys = Object.keys(obj)
+  for (const key of keys) {
+    const copypaths = deepClone(paths) as string[]
+    copypaths.push(key)
+    obj[key] = itrObj(obj[key], handler, copypaths)
+  }
+  return obj
+}
+
+/**
+ * 遍历对象，供处理函数修改
+ * iterateObjectHandler(obj, handler)
+ * */
+export const iterateObjectHandler2 = function itrObj(
+  obj: any,
+  handler: (obj: any, paths: unknown[]) => unknown,
   paths: string[] = [],
 ) {
   if (oType(handler) !== 'function') {

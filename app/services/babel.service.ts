@@ -9,6 +9,7 @@ import _ from 'lodash'
 import { DirectedGraph } from 'graphology'
 import { IStringLiteral } from './types'
 import { dynamicImportExportHandler as originDynamicImportExportHandler } from './babelHelper'
+import isImage from 'is-image'
 
 @Service()
 export class BabelService {
@@ -114,6 +115,74 @@ export class BabelService {
     return result
   }
 
+  async traverseToGetGraph({
+    filePath,
+    filePaths,
+    noRecur,
+  }: {
+    filePath?: string
+    filePaths?: string[]
+    noRecur?: boolean
+  }) {
+    if (_.isEmpty(filePath) && !_.isEmpty(filePaths)) {
+      filePath = filePaths?.shift() ?? ''
+    }
+
+    const outerResult = await this.recurStepOne(filePath as string)
+    const {
+      filename,
+      fileDependencies,
+      // npmDependencies,
+      // aliasFileMap,
+      // aliasNpmMap,
+      graph,
+    } = outerResult
+    let npmDependencies = outerResult.npmDependencies
+
+    if (noRecur !== true) {
+      const notSourceFileDependencies: string[] = fileDependencies
+      while (!_.isEmpty(notSourceFileDependencies) || !_.isEmpty(filePaths)) {
+        const fd = !_.isEmpty(notSourceFileDependencies)
+          ? (notSourceFileDependencies.shift() as string)
+          : (filePaths?.shift() as string)
+        try {
+          const {
+            // filename,
+            fileDependencies,
+            npmDependencies: subNpmDependencies,
+            // aliasFileMap,
+            // aliasNpmMap,
+            // graph,
+          } = await this.recurStepOne(fd)
+          npmDependencies.push(...subNpmDependencies)
+          npmDependencies = _.uniq(npmDependencies.filter(a => a))
+          fileDependencies.forEach(fd => {
+            if (
+              !fd.endsWith('.css') &&
+              !fd.endsWith('.less') &&
+              !fd.endsWith('.sass') &&
+              !fd.endsWith('.svg') &&
+              !isImage(fd) &&
+              !this.isGraphSource(fd)
+            ) {
+              notSourceFileDependencies.push(fd)
+            }
+          })
+        } catch (e) {
+          console.error('traverseToGetGraph #83 error:', e, '\ndependency path:', fd)
+        }
+      }
+    }
+    return {
+      filename,
+      fileDependencies,
+      npmDependencies,
+      // aliasFileMap,
+      // aliasNpmMap,
+      graph,
+    }
+  }
+
   // webpack 广度深度算法 START
   // 参考：https://juejin.cn/post/6850418113901985805
   async setAlias(tsconfigPath: string) {
@@ -177,30 +246,39 @@ export class BabelService {
     return undefined
   }
 
-  getAlias(alias: string) {
-    const matchKeys = Object.keys(this.compilerOptionsPaths)
+  getRealPathByAlias(alias: string, currentFilePath?: string) {
+    let currentDir = ''
+    if (currentFilePath && isFile(currentFilePath)) {
+      currentDir = pathUtil.dirname(currentFilePath)
+    }
     const candidates: string[] = []
-    for (const matchKey of matchKeys) {
-      if (wildcard(matchKey, alias)) {
-        const matchArray = (this.compilerOptionsPaths[matchKey] ?? []) as string[]
-        if (!_.isArray(matchArray)) {
-          continue
-        }
-        for (const matchVal of matchArray) {
-          if (_.endsWith(matchKey, '*') && _.endsWith(matchVal, '*')) {
-            const matchKeyPrefix = matchKey.slice(0, -1)
-            const pathPrefix = matchVal.slice(0, -1)
-            const aliasPostfix = alias.replace(matchKeyPrefix, '')
-            candidates.push(pathUtil.join(this.projectPath, pathPrefix, aliasPostfix))
-          } else if (!matchKey.includes('*') && !matchVal.includes('*')) {
-            const aliasPostfix = alias.replace(matchKey, '')
-            candidates.push(pathUtil.join(this.projectPath, matchVal, aliasPostfix))
-          } else {
-            console.warn('getAlias #92 unprocessed alias:', alias)
+    if (alias.indexOf('.') === 0 && currentFilePath) {
+      candidates.push(pathUtil.resolve(currentDir, alias))
+    } else {
+      const matchKeys = Object.keys(this.compilerOptionsPaths)
+      for (const matchKey of matchKeys) {
+        if (wildcard(matchKey, alias)) {
+          const matchArray = (this.compilerOptionsPaths[matchKey] ?? []) as string[]
+          if (!_.isArray(matchArray)) {
+            continue
+          }
+          for (const matchVal of matchArray) {
+            if (_.endsWith(matchKey, '*') && _.endsWith(matchVal, '*')) {
+              const matchKeyPrefix = matchKey.slice(0, -1)
+              const pathPrefix = matchVal.slice(0, -1)
+              const aliasPostfix = alias.replace(matchKeyPrefix, '')
+              candidates.push(pathUtil.join(this.projectPath, pathPrefix, aliasPostfix))
+            } else if (!matchKey.includes('*') && !matchVal.includes('*')) {
+              const aliasPostfix = alias.replace(matchKey, '')
+              candidates.push(pathUtil.join(this.projectPath, matchVal, aliasPostfix))
+            } else {
+              console.warn('getAlias #92 unprocessed alias:', alias)
+            }
           }
         }
       }
     }
+
     const fPaths = _.uniq(candidates)
     for (const fPath of fPaths) {
       const realPath = this.findFilePathByCandidate(fPath)
@@ -294,7 +372,7 @@ export class BabelService {
         this.findFilePathByCandidate(pathUtil.resolve(dirname, sourceValue)) ??
         pathUtil.resolve(dirname, sourceValue)
     } else {
-      const tempAlias = this.getAlias(sourceValue)
+      const tempAlias = this.getRealPathByAlias(sourceValue)
       if (tempAlias) {
         alias = tempAlias
       } else if (
@@ -334,7 +412,7 @@ export class BabelService {
       aliasNpmMap: { [key: string]: string } = {},
       fileDependencies: string[] = [],
       npmDependencies: string[] = [],
-      getAlias = this.getAlias.bind(this),
+      getAlias = this.getRealPathByAlias.bind(this),
       findFilePathByCandidate = this.findFilePathByCandidate.bind(this),
       dynamicImportExportHandler = originDynamicImportExportHandler.bind(this),
       projectPath = this.projectPath
@@ -442,7 +520,7 @@ export class BabelService {
         console.log(
           'BabelService #219',
           key + ' = ' + value,
-          'hasReferenceVariableSpecifierMap:',
+          '\nhasReferenceVariableSpecifierMap:',
           hasReferenceVariableSpecifierMap.get(key),
         )
         toDelKeys.push(key)
