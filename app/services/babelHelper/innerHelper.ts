@@ -7,32 +7,241 @@ import {
   getParentPathSkipTSNonNullExpression,
   iterateObjectHandler,
 } from '../../helpers/iterationUtil'
-import { TActionsMap, TFileCollector, TUnfilteredCollectors, loc2String } from '.'
+import { TActionsMap, TFileCollector, loc2String } from '.'
 import { DirectedGraph } from 'graphology'
 import { BabelService } from '../babel.service'
 
-export const sagaFileHandler = ({
+export const fillInHandler2ActionsMap = async ({
   babelService,
-  // sagaEffectsFuns, // call: 'call', fork: 'fork', put: 'put'
-  // unfilteredCollectors,
+  handler2ActionsMap,
+  handlerCollector,
+  warnings,
+  nonAnalyzedFile,
+  fileAst,
+  sagaEffectsFuns,
+}: {
+  babelService: BabelService
+  handler2ActionsMap: TActionsMap
+  handlerCollector: TFileCollector
+  warnings: string[]
+  nonAnalyzedFile: string
+  fileAst: ParseResult<File>
+  sagaEffectsFuns: TActionsMap
+}) => {
+  const { call: localCall, fork: localFork, put: localPut } = sagaEffectsFuns
+  for (const collector of handlerCollector) {
+    const actionsMap: TActionsMap = {}
+    const { actionsSource, actionsPropertyName, handlerName, handlerSource } = collector
+    const usages: string[] = []
+    let ast = fileAst
+    if (handlerSource !== nonAnalyzedFile) {
+      if (!handlerSource) {
+        throw new Error(
+          `#40 !handlerSource analyzedFile: ${nonAnalyzedFile}, ` +
+            `\nactionsSource: ${actionsSource}, \nactionsSource: ${actionsPropertyName}, ` +
+            `\nactionsSource: ${handlerName}, \nactionsSource: ${handlerSource}`,
+        )
+      }
+      ast = await babelService.getAst(handlerSource)
+    }
+    traverse(ast, {
+      enter(path) {
+        const handlerBinding = path.scope.getBinding(handlerName)
+        const handlerBindingPath = handlerBinding?.path
+        const handlerBindingNode = handlerBindingPath?.node
+        if (handlerBindingNode?.type !== 'FunctionDeclaration') {
+          console.log(
+            `#140 handlerName: ${handlerName}\nhandlerBindingNode:`,
+            handlerBindingNode,
+          )
+          warnings.push(
+            `#146 handlerBindingNode?.type !== 'FunctionDeclaration': handlerName: ${handlerName}, loc: ${
+              handlerBindingNode?.loc
+                ? loc2String(handlerBindingNode?.loc as SourceLocation)
+                : ''
+            }`,
+          )
+        } else {
+          handlerBindingPath!.traverse({
+            IfStatement(subPath) {
+              if (subPath.node.test.type === 'BinaryExpression') {
+                const leftAndRight = [subPath.node.test.left, subPath.node.test.right]
+                for (let i = 0; i < 2; i++) {
+                  const leftOrRight = leftAndRight[i]
+                  if (leftOrRight.type === 'Identifier' && leftOrRight.name === 'usage') {
+                    const j = (i + 1) % 2
+                    const memberExpression = leftAndRight[j] as any
+                    if (memberExpression.type === 'MemberExpression') {
+                      usages.push(
+                        memberExpression.object.name +
+                          '.' +
+                          memberExpression.property.name,
+                      )
+                    }
+                    break
+                  }
+                }
+              }
+            },
+            // 处理 redux-saga put
+            CallExpression(subPath) {
+              const { node: subNode } = subPath
+              if (
+                subNode.callee.type === 'Identifier' &&
+                subNode.callee.name === localPut
+              ) {
+                const firstArgument = subNode.arguments[0]
+                // console.log('#170 firstArgument:', firstArgument)
+                const parseFirstArgument = (value: any, key?: any) => {
+                  if (
+                    !_.endsWith(value?.callee?.type, 'MemberExpression') ||
+                    !value.callee.object.name ||
+                    !value.callee.property.name
+                  ) {
+                    return false
+                  }
+                  // console.log('#167 MemberExpression:', value)
+                  const actionsSourceValue = findLocalActions({
+                    nonAnalyzedFile,
+                    node: subNode,
+                    actionsMap,
+                    actionsName: value.callee.object.name,
+                    path: subPath,
+                    warnings,
+                  })
+                  if (actionsSourceValue) {
+                    const actionsPropertyName2 = value.callee.property.name
+                    const theArgument = value.arguments[0]
+                    let usageName = ''
+                    const getUsageName = (value: any, key?: string) => {
+                      if (
+                        value.type == 'ObjectProperty' &&
+                        value.key.name === 'usage' &&
+                        _.endsWith(value.value.type, 'MemberExpression')
+                      ) {
+                        usageName = `${value.value.object.name}.${value.value.property.name}`
+                        return true
+                      }
+                      return false
+                    }
+
+                    const flag = theArgument ? getUsageName(theArgument) : true
+                    if (!flag) {
+                      iterateObjectHandler(theArgument, (value: any, key: any) =>
+                        getUsageName(value),
+                      )
+                    }
+                    addHandler2ActionsMap(handler2ActionsMap, {
+                      actionsSource,
+                      actionsPropertyName,
+                      handlerName,
+                      handlerSource,
+                      actionsSource2: babelService.getRealPathByAlias(
+                        actionsSourceValue,
+                        nonAnalyzedFile,
+                      ),
+                      actionsPropertyName2,
+                      usageName,
+                    })
+                  } else {
+                    if (!['Date'].includes(value.callee?.object?.name)) {
+                      warnings.push(
+                        `#201 actions not found by , ${value.callee.object.name}, loc: ${
+                          subPath.node.loc ? loc2String(subPath.node.loc) : ''
+                        }`,
+                      )
+                    }
+                  }
+                  return true
+                }
+                const flag = parseFirstArgument(firstArgument)
+                if (!flag) {
+                  iterateObjectHandler(firstArgument, parseFirstArgument)
+                }
+              }
+            },
+          })
+          // console.log(`#182 handlerName: "${handlerName}" usages:`, usages)
+        }
+        path.stop()
+      },
+    })
+  }
+}
+
+const addHandler2ActionsMap = (
+  handler2ActionsMap: TActionsMap,
+  {
+    actionsSource,
+    actionsPropertyName,
+    handlerName,
+    handlerSource,
+    actionsSource2,
+    actionsPropertyName2,
+    usageName,
+  }: {
+    actionsSource: string
+    actionsPropertyName: string
+    handlerName: string
+    handlerSource: string
+    actionsSource2: string
+    actionsPropertyName2: string
+    usageName: string
+  },
+) => {
+  const key = `${handlerSource},${handlerName}`
+  if (!handler2ActionsMap[key]) {
+    handler2ActionsMap[key] = []
+  }
+  const actions2HandlerKey = `${actionsSource},${actionsPropertyName}`
+  let existed = handler2ActionsMap[key].filter(
+    (a: any) =>
+      a.actions2HandlerKey === actions2HandlerKey &&
+      a.actionsSource2 === actionsSource2 &&
+      a.actionsPropertyName2 === actionsPropertyName2,
+  )[0]
+  if (!existed) {
+    existed = {
+      actions2HandlerKey,
+      actionsSource2,
+      actionsPropertyName2,
+    }
+    handler2ActionsMap[key].push(existed)
+  }
+  if (usageName) {
+    if (!_.isArray(existed.usageNames)) {
+      existed.usageNames = [usageName]
+    } else {
+      existed.usageNames = _.uniq([...existed.usageNames, usageName].filter(a => a))
+    }
+  }
+}
+
+export const fillInActions2HandlerMap = ({
+  babelService,
   actions2HandlerMap,
   nonAnalyzedFile,
   warnings,
   fileAst,
-  actionsMap,
+  sagaEffectsFuns,
+  toAnalyzeFiles,
 }: {
   babelService: BabelService
   actions2HandlerMap: TActionsMap
-  // sagaEffectsFuns: TActionsMap
-  // unfilteredCollectors: TUnfilteredCollectors
   nonAnalyzedFile: string
   warnings: string[]
   fileAst: ParseResult<File>
-  actionsMap: TActionsMap
+  sagaEffectsFuns: TActionsMap
+  toAnalyzeFiles: string[]
 }) => {
-  // const { call: localCall, fork: localFork, put: localPut } = sagaEffectsFuns
-  const unfilteredCollectors: TUnfilteredCollectors = {}
-  const fileCollector = (unfilteredCollectors[nonAnalyzedFile] = [] as TFileCollector)
+  const {
+    call: localCall,
+    fork: localFork,
+    put: localPut,
+    all: localAll,
+  } = sagaEffectsFuns
+  const handlerCollector: TFileCollector = []
+  const actionsMap: TActionsMap = {}
   traverse(fileAst, {
     // CRM 项目中所有 saga 文件入口都是 default
     ExportDefaultDeclaration(path: NodePath<any>) {
@@ -51,11 +260,93 @@ export const sagaFileHandler = ({
             )
             return
           }
-          const argument = expression.argument
-          const calleeArguments = argument.arguments
-          if (calleeArguments.length !== 2) {
+          const yieldArgument = expression.argument
+          const calleeArguments = yieldArgument.arguments
+          const calleeName =
+            yieldArgument.type === 'CallExpression' ? yieldArgument.callee?.name : ''
+          if (calleeName === localAll) {
+            console.log('#272 calleeArguments:', calleeArguments)
+            if (
+              calleeArguments.length !== 1 ||
+              calleeArguments[0].type !== 'Identifier'
+            ) {
+              warnings.push(
+                `#281 calleeArguments.length !== 1 || calleeArguments[0].type !== 'Identifier': ${nonAnalyzedFile}, loc: ${loc2String(
+                  expression.loc,
+                )}`,
+              )
+            }
+            const sagas = calleeArguments[0].name
+            const sagasBinding = path.scope.getBinding(sagas)
+            const sagasBindingNode = sagasBinding?.path.node
+            if (
+              sagasBindingNode?.type !== 'VariableDeclarator' ||
+              sagasBindingNode?.init?.type !== 'ObjectExpression'
+            ) {
+              warnings.push(
+                `#281 sagasBindingNode?.type !== 'VariableDeclarator': ${nonAnalyzedFile}, loc: ${loc2String(
+                  expression.loc,
+                )}`,
+              )
+              return
+            }
+
+            const sagaNames: string[] = []
+            sagasBinding!.path.traverse({
+              SpreadElement(subPath) {
+                const { node: subNode } = subPath as any
+                if (
+                  subNode.type === 'SpreadElement' &&
+                  subNode.argument.type === 'Identifier'
+                ) {
+                  sagaNames.push(subNode.argument.name)
+                }
+              },
+              CallExpression(subPath) {
+                const { node: subNode } = subPath as any
+                if (
+                  subNode.type === 'CallExpression' &&
+                  subNode.callee?.name === localFork &&
+                  subNode.arguments.length === 1 &&
+                  subNode.arguments[0].type === 'Identifier'
+                ) {
+                  sagaNames.push(subNode.arguments[0].name)
+                }
+              },
+            })
+            // console.log('#327 nonAnalyzedFile:', nonAnalyzedFile, 'sagaNames:', sagaNames)
+            for (const sagaName of sagaNames) {
+              const sagaBinding = path.scope.getBinding(sagaName)
+              const sagaBindingNode = sagaBinding?.path.node
+              if (sagaBindingNode?.type === 'ImportDefaultSpecifier') {
+                const importDeclaration = sagaBinding!.path.findParent(
+                  subPath => subPath.node.type === 'ImportDeclaration',
+                )
+                const alias = (importDeclaration.node as any).source.value
+                const absPath = babelService.getRealPathByAlias(alias, nonAnalyzedFile)
+                toAnalyzeFiles.push(absPath)
+              } else if (sagaBindingNode?.type === 'ImportSpecifier') {
+                const importDeclaration = sagaBinding!.path.findParent(
+                  subPath => subPath.node.type === 'ImportDeclaration',
+                )
+                const alias = (importDeclaration.node as any).source.value
+                const absPath = babelService.getRealPathByAlias(alias, nonAnalyzedFile)
+                toAnalyzeFiles.push(absPath)
+              }
+            }
+            return
+          } else if (!calleeName.includes('take')) {
+            console.log('#282 expression:', expression)
             warnings.push(
-              `#103 calleeArguments.length !== 2: ${nonAnalyzedFile}, loc: ${loc2String(
+              `#281 !calleeName.includes('take'): ${nonAnalyzedFile}, loc: ${loc2String(
+                expression.loc,
+              )}`,
+            )
+            return
+          } else if (calleeArguments.length !== 2) {
+            console.log('#290 expression:', expression)
+            warnings.push(
+              `#292 calleeArguments.length !== 2: ${nonAnalyzedFile}, loc: ${loc2String(
                 expression.loc,
               )}`,
             )
@@ -63,7 +354,7 @@ export const sagaFileHandler = ({
           }
           if (calleeArguments[0].type !== 'CallExpression') {
             warnings.push(
-              `#103 calleeArguments[0].type !== 'CallExpression': ${nonAnalyzedFile}, loc: ${loc2String(
+              `#300 calleeArguments[0].type !== 'CallExpression': ${nonAnalyzedFile}, loc: ${loc2String(
                 expression.loc,
               )}`,
             )
@@ -71,7 +362,7 @@ export const sagaFileHandler = ({
           }
           if (calleeArguments[1].type !== 'Identifier') {
             warnings.push(
-              `#111 calleeArguments[1].type !== 'Identifier': ${nonAnalyzedFile}, loc: ${loc2String(
+              `#307 calleeArguments[1].type !== 'Identifier': ${nonAnalyzedFile}, loc: ${loc2String(
                 expression.loc,
               )}`,
             )
@@ -85,7 +376,7 @@ export const sagaFileHandler = ({
             firstArgument.arguments[0].type !== 'MemberExpression'
           ) {
             warnings.push(
-              `#111 firstArgument.arguments[0].type !== 'MemberExpression': ${nonAnalyzedFile}, loc: ${loc2String(
+              `#311 firstArgument.arguments[0].type !== 'MemberExpression': ${nonAnalyzedFile}, loc: ${loc2String(
                 expression.loc,
               )}`,
             )
@@ -93,7 +384,7 @@ export const sagaFileHandler = ({
           }
           if (secondArgument.type !== 'Identifier') {
             warnings.push(
-              `#111 secondArgument.type !== 'Identifier': ${nonAnalyzedFile}, loc: ${loc2String(
+              `#319 secondArgument.type !== 'Identifier': ${nonAnalyzedFile}, loc: ${loc2String(
                 expression.loc,
               )}`,
             )
@@ -101,9 +392,6 @@ export const sagaFileHandler = ({
           }
           let actionsName: string | undefined, actionsPropertyName: string | undefined
           iterateObjectHandler(firstArgument, (value: any, key) => {
-            if (actionsName && actionsPropertyName) {
-              return
-            }
             if (
               value &&
               value.type === 'MemberExpression' &&
@@ -111,20 +399,24 @@ export const sagaFileHandler = ({
             ) {
               actionsName = value.object.name
               actionsPropertyName = value.property.name
+              return true
             }
+            return false
           })
           let handlerSource = ''
           const localHandlerName = secondArgument.name
           let importedHandlerName = localHandlerName
           if (!actionsName || !actionsPropertyName || !localHandlerName) {
             warnings.push(
-              `#187 critical property is missing! actionsName: "${actionsName}", ` +
+              `#344 critical property is missing! actionsName: "${actionsName}", ` +
                 `actionsPropertyName: "${actionsPropertyName}", handlerName: "${localHandlerName}".` +
                 ` loc: ${loc2String(path.node.loc)}`,
             )
             return
           }
           findLocalActions({
+            nonAnalyzedFile,
+            node: expressionStatementPath.node,
             actionsMap,
             actionsName,
             path,
@@ -146,15 +438,14 @@ export const sagaFileHandler = ({
               relativePath,
               nonAnalyzedFile,
             )
-            console.log('#146 handlerBindingNode:', handlerBindingNode)
             handlerSource = sourceValue
           } else if (handlerBindingNode?.type !== 'FunctionDeclaration') {
             console.log(
-              `#140 localHandlerName: ${localHandlerName}\nhandlerBindingNode:`,
+              `#375 localHandlerName: ${localHandlerName}\nhandlerBindingNode:`,
               handlerBindingNode,
             )
             warnings.push(
-              `#146 handlerBindingNode?.type !== 'FunctionDeclaration': localHandlerName: ${localHandlerName}, loc: ${
+              `#379 handlerBindingNode?.type !== 'FunctionDeclaration': localHandlerName: ${localHandlerName}, loc: ${
                 handlerBindingNode?.loc
                   ? loc2String(handlerBindingNode?.loc as SourceLocation)
                   : ''
@@ -164,128 +455,6 @@ export const sagaFileHandler = ({
             handlerSource = nonAnalyzedFile
           }
 
-          // WangFan TODO 2023-06-07 10:04:47 迁移到 handler2Map
-          // const handlerBinding = path.scope.getBinding(handlerName)
-          // const handlerBindingPath = handlerBinding?.path
-          // const handlerBindingNode = handlerBindingPath?.node
-          // if (handlerBindingNode?.type !== 'FunctionDeclaration') {
-          //   console.log(
-          //     `#140 handlerName: ${handlerName}\nhandlerBindingNode:`,
-          //     handlerBindingNode,
-          //   )
-          //   warnings.push(
-          //     `#146 handlerBindingNode?.type !== 'FunctionDeclaration': handlerName: ${handlerName}, loc: ${
-          //       handlerBindingNode?.loc
-          //         ? loc2String(handlerBindingNode?.loc as SourceLocation)
-          //         : ''
-          //     }`,
-          //   )
-          // } else {
-          //   handlerBindingPath!.traverse({
-          //     IfStatement(subPath) {
-          //       if (subPath.node.test.type === 'BinaryExpression') {
-          //         const leftAndRight = [subPath.node.test.left, subPath.node.test.right]
-          //         for (let i = 0; i < 2; i++) {
-          //           const leftOrRight = leftAndRight[i]
-          //           if (
-          //             leftOrRight.type === 'Identifier' &&
-          //             leftOrRight.name === 'usage'
-          //           ) {
-          //             const j = (i + 1) % 2
-          //             const memberExpression = leftAndRight[j] as any
-          //             if (memberExpression.type === 'MemberExpression') {
-          //               usages.push(
-          //                 memberExpression.object.name +
-          //                   '.' +
-          //                   memberExpression.property.name,
-          //               )
-          //             }
-          //             break
-          //           }
-          //         }
-          //       }
-          //     },
-          //     // 处理 redux-saga put
-          //     CallExpression(subPath) {
-          //       const { node: subNode } = subPath
-          //       if (
-          //         subNode.callee.type === 'Identifier' &&
-          //         subNode.callee.name === localPut
-          //       ) {
-          //         const firstArgument = subNode.arguments[0]
-          //         // console.log('#170 firstArgument:', firstArgument)
-
-          //         const parseFirstArgument = (value: any, key?: any) => {
-          //           if (
-          //             !_.endsWith(value?.callee?.type, 'MemberExpression') ||
-          //             !value.callee.object.name ||
-          //             !value.callee.property.name
-          //           ) {
-          //             return false
-          //           }
-          //           // console.log('#167 MemberExpression:', value)
-          //           const actionsSourceValue = findLocalActions({
-          //             actionsMap,
-          //             actionsName: value.callee.object.name,
-          //             path: subPath,
-          //             warnings,
-          //           })
-          //           if (actionsSourceValue) {
-          //             const actionsName2 = value.callee.object.name
-          //             const actionsPropertyName2 = value.callee.property.name
-          //             const theArgument = value.arguments[0]
-
-          //             let usageName2 = ''
-          //             const getUsageName2 = (value: any, key?: string) => {
-          //               if (
-          //                 value.type == 'ObjectProperty' &&
-          //                 value.key.name === 'usage' &&
-          //                 _.endsWith(value.value.type, 'MemberExpression')
-          //               ) {
-          //                 usageName2 = `${value.value.object.name}.${value.value.property.name}`
-          //                 return true
-          //               }
-          //               return false
-          //             }
-          //             const flag = getUsageName2(theArgument)
-          //             if (!flag) {
-          //               iterateObjectHandler(theArgument, (value: any, key: any) => {
-          //                 getUsageName2(value)
-          //               })
-          //             }
-          //             const toPrintArray = [
-          //               '#191 actionsName2:',
-          //               actionsName2,
-          //               'actionsPropertyName2:',
-          //               actionsPropertyName2,
-          //             ]
-          //             if (usageName2) {
-          //               toPrintArray.push('usageName2:', usageName2)
-          //             }
-          //             console.log.apply(this, toPrintArray)
-          //           } else {
-          //             warnings.push(
-          //               `#201 actions not found by , ${value.callee.object.name}, loc: ${
-          //                 subPath.node.loc ? loc2String(subPath.node.loc) : ''
-          //               }`,
-          //             )
-          //           }
-          //           return true
-          //         }
-
-          //         const flag = parseFirstArgument(firstArgument)
-
-          //         if (!flag) {
-          //           iterateObjectHandler(firstArgument, parseFirstArgument)
-          //         }
-          //       }
-          //     },
-          //   })
-          //   // console.log(`#182 handlerName: "${handlerName}" usages:`, usages)
-          // }
-          // actions2HandlerMap[[actionsMap[actionsName]]: {
-
-          // }]
           const actionsSource = actionsMap[actionsName]
             ? babelService.getRealPathByAlias(actionsMap[actionsName], nonAnalyzedFile)
             : ''
@@ -295,18 +464,21 @@ export const sagaFileHandler = ({
             actionsPropertyName,
             handlerName: importedHandlerName,
             handlerSource,
-            // usages,
+            // usages, WangFan TODO 2023-06-09 19:46:56
+            //
           }
-          fileCollector.push(result) // 之后用于得到 handlerActionsMap
-          addActionsMap(actions2HandlerMap, result) // 之后用于生成依赖图
+          handlerCollector.push(result) // 之后用于得到 handlerActionsMap
+          addActions2HandlerMap(actions2HandlerMap, result) // 之后用于生成依赖图
           // buildDirectedGrpah()
         },
       })
     },
   })
+
+  return handlerCollector
 }
 
-const addActionsMap = (
+const addActions2HandlerMap = (
   map: TActionsMap,
   {
     actionsSource,
@@ -328,14 +500,14 @@ const addActionsMap = (
   if (!map[key]) {
     map[key] = []
   }
+  const handler2ActionsKey = `${handlerSource},${handlerName}`
   const mapValue = map[key]
   const record = map[key].filter(
-    (a: any) => a.handlerName === handlerName && a.handlerSource === handlerSource,
+    (a: any) => a.handler2ActionsKey === handler2ActionsKey,
   )[0]
   if (_.isEmpty(record)) {
     mapValue.push({
-      handlerName,
-      handlerSource,
+      handler2ActionsKey,
       // usages,
     })
   } /*  else {
@@ -344,6 +516,7 @@ const addActionsMap = (
       record.usages = recordUsages
     }
   } */
+  // console.log('#535 map keys.length', Object.keys(map).length)
 }
 
 const buildDirectedGrpah = (directedGraph: DirectedGraph, a: string, b: string) => {
@@ -362,11 +535,15 @@ const buildDirectedGrpah = (directedGraph: DirectedGraph, a: string, b: string) 
 }
 
 const findLocalActions = ({
+  nonAnalyzedFile,
+  node: subNode,
   actionsMap,
   actionsName,
   path,
   warnings,
 }: {
+  nonAnalyzedFile: string
+  node: Node
   actionsMap: TActionsMap
   actionsName: string
   warnings: string[]
@@ -377,6 +554,20 @@ const findLocalActions = ({
     const actionsBindingPath = actionsBinding?.path as NodePath<any>
     const actionsBindingParentPath =
       getParentPathSkipTSNonNullExpression(actionsBindingPath)
+    if (!actionsBindingPath) {
+      if (!['Date'].includes(actionsName)) {
+        console.log(
+          `#563 !actionsBindingPath nonAnalyzedFile: ${nonAnalyzedFile} actionsName: ${actionsName}`,
+          'subNode:',
+          subNode,
+        )
+        warnings.push(
+          `#563 !actionsBindingPath nonAnalyzedFile: ${nonAnalyzedFile}, actionsName: ${actionsName}, ` +
+            `loc: ${loc2String(path.node.loc)}`,
+        )
+      }
+      return null
+    }
     const bindingType = actionsBindingPath.node.type // 'ImportNamespaceSpecifier'
     const bindingParentType = actionsBindingParentPath.node.type // 'ImportDeclaration'
     if (
@@ -388,6 +579,10 @@ const findLocalActions = ({
           loc2String(actionsBindingPath.node.loc),
       )
     } else {
+      /* actionsMap[actionsName] = babelService.getRealPathByAlias(
+        (actionsBindingParentPath?.node as any)?.source?.value,
+        nonAnalyzedFile,
+      ) */
       actionsMap[actionsName] = (actionsBindingParentPath?.node as any)?.source?.value
     }
   }

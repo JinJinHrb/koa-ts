@@ -12,8 +12,12 @@ import generate from '@babel/generator'
 import _ from 'lodash'
 import fileActions from 'app/mock/fileActions'
 import { getParentPathSkipTSNonNullExpression } from 'app/helpers/iterationUtil'
-import { addCallExpressionPaths, sagaFileHandler } from './innerHelper'
-import { DirectedGraph } from 'graphology'
+import {
+  addCallExpressionPaths,
+  fillInActions2HandlerMap,
+  fillInHandler2ActionsMap,
+} from './innerHelper'
+// import { DirectedGraph } from 'graphology'
 
 export type TFileCollectorElement = {
   actionsSource: string
@@ -25,18 +29,29 @@ export type TFileCollector = TFileCollectorElement[]
 export type TUnfilteredCollectors = { [key: string]: TFileCollector }
 export type TActionsMap = { [key: string]: any }
 
-export const buildSagaGraph = async (
-  analyzedFiles: Set<string>,
-  actions2HandlerMap: TActionsMap = {},
-  handler2ActionsMap: TActionsMap = {},
-  tsconfigPath: string,
-  filePath: string,
-) => {
+export const buildSagaGraph = async function myBuildSagaGrah({
+  analyzedFiles,
+  actions2HandlerMap,
+  handler2ActionsMap,
+  tsconfigPath,
+  filePath,
+  nonAnalyzedFiles = [],
+  warnings = [],
+  noRecur,
+}: {
+  analyzedFiles: Set<string>
+  actions2HandlerMap: TActionsMap
+  handler2ActionsMap: TActionsMap
+  tsconfigPath: string
+  filePath: string
+  nonAnalyzedFiles?: string[]
+  warnings?: string[]
+  noRecur?: boolean
+}) {
   const code = (await getFileData(filePath as string))?.toString()
   const babelService = new BabelService()
   await babelService.setAlias(tsconfigPath)
   const ast = await babelService.getAstByCode(code)
-  const warnings: string[] = []
   let isRootSaga = false
   traverse(ast, {
     ExportDefaultDeclaration(path) {
@@ -55,10 +70,8 @@ export const buildSagaGraph = async (
     noRecur: true,
   })
 
-  const nonAnalyzedFiles = graph.nodes().filter(a => !analyzedFiles.has(a))
-
-  const actionsMap: TActionsMap = {}
-  for (const nonAnalyzedFile of nonAnalyzedFiles) {
+  const derivativeNonAnalyzedFiles = graph.nodes().filter(a => !analyzedFiles.has(a))
+  for (const nonAnalyzedFile of derivativeNonAnalyzedFiles) {
     const fileAst = await babelService.getAst(nonAnalyzedFile)
     let isSagaFile = false
     const sagaEffectsFuns: TActionsMap = {}
@@ -80,30 +93,60 @@ export const buildSagaGraph = async (
       },
     })
     if (isSagaFile) {
-      sagaFileHandler({
+      const toAnalyzeFiles: string[] = []
+      const handlerCollector = fillInActions2HandlerMap({
         babelService,
         actions2HandlerMap,
         nonAnalyzedFile,
         warnings,
         fileAst,
-        actionsMap,
+        sagaEffectsFuns,
+        toAnalyzeFiles,
       })
-      // console.log(
-      //   '#224 isSagaFile:',
-      //   nonAnalyzedFile,
-      //   '\nsagaEffectsFuns:',
-      //   sagaEffectsFuns,
-      // )
+      nonAnalyzedFiles.push(...toAnalyzeFiles)
+      console.log('#96 toAnalyzeFiles:', toAnalyzeFiles)
+      /* console.log(
+        '#224 isSagaFile:',
+        nonAnalyzedFile,
+        '\nsagaEffectsFuns:',
+        sagaEffectsFuns,
+        '\nhandlerCollector:',
+        handlerCollector,
+      ) */
+      await fillInHandler2ActionsMap({
+        babelService,
+        handler2ActionsMap,
+        handlerCollector,
+        warnings,
+        nonAnalyzedFile,
+        fileAst,
+        sagaEffectsFuns,
+      })
     }
     // ExportDefaultDeclaration
     analyzedFiles.add(nonAnalyzedFile)
+  }
+
+  const nonAnalyzedFiles2 = nonAnalyzedFiles.filter(a => !analyzedFiles.has(a))
+  console.log('#131 nonAnalyzedFiles2:', nonAnalyzedFiles2)
+  if (!noRecur && nonAnalyzedFiles2.length > 0) {
+    await myBuildSagaGrah({
+      analyzedFiles,
+      actions2HandlerMap,
+      handler2ActionsMap,
+      tsconfigPath,
+      filePath: nonAnalyzedFiles2.shift() as string,
+      nonAnalyzedFiles: nonAnalyzedFiles2,
+      warnings,
+      noRecur,
+    })
   }
 
   return {
     warnings,
     filename,
     graph,
-    ast: null,
+    ast: noRecur ? ast : null,
     isRootSaga,
   }
 }

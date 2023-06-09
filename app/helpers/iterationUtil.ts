@@ -193,18 +193,22 @@ export const iterateObject2replaceCertainValueByRegex = (
 
 /**
  * 遍历对象，供处理函数修改
- * iterateObjectHandler(obj, handler)
+ * handler 返回 true，代表可以从递归中退出
+ *
  * */
 export const iterateObjectHandler = function itrObj(
   obj: any,
-  handler: (obj: any, paths: unknown[]) => unknown,
+  handler: (obj: any, paths: string[]) => boolean,
   paths: string[] = [],
 ) {
   if (oType(handler) !== 'function') {
     return
   }
   if (['object'].indexOf(oType(obj)) > -1 && !(obj instanceof Date)) {
-    handler(obj, paths)
+    const flag = handler(obj, paths)
+    if (flag) {
+      return
+    }
   } else if (['object'].indexOf(oType(obj)) < 0 || obj instanceof Date) {
     return
   }

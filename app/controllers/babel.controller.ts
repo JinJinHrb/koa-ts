@@ -40,18 +40,28 @@ export class BabelController {
 
   @Post('/buildSagaGraph')
   async buildSagaGraph(
-    @Body() { filePath, tsconfigPath }: { filePath: string; tsconfigPath: string },
+    @Body()
+    {
+      filePath,
+      tsconfigPath,
+      noRecur,
+    }: {
+      filePath: string
+      tsconfigPath: string
+      noRecur?: boolean
+    },
   ) {
     const analyzedFiles = new Set<string>()
     const actions2HandlerMap: TActionsMap = {},
       handler2ActionsMap: TActionsMap = {}
-    const result = await buildSagaGraphHandler(
+    const result = await buildSagaGraphHandler({
+      noRecur,
       analyzedFiles,
       actions2HandlerMap,
       handler2ActionsMap,
       tsconfigPath,
       filePath,
-    )
+    })
     const { warnings, ast } = result || {}
     const response: any = {
       // collectors,
