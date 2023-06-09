@@ -193,18 +193,17 @@ const addHandler2ActionsMap = (
   if (!handler2ActionsMap[key]) {
     handler2ActionsMap[key] = []
   }
-  const actions2HandlerKey = `${actionsSource},${actionsPropertyName}`
+  const actions2HandlerKey = `${actionsSource},${actionsPropertyName}` // 指向这个 handler的 action
+  const actions2HandlerKey2 = `${actionsSource2},${actionsPropertyName2}` // 这个 handler 触发的 action
   let existed = handler2ActionsMap[key].filter(
     (a: any) =>
       a.actions2HandlerKey === actions2HandlerKey &&
-      a.actionsSource2 === actionsSource2 &&
-      a.actionsPropertyName2 === actionsPropertyName2,
+      a.actions2HandlerKey2 === actions2HandlerKey2,
   )[0]
   if (!existed) {
     existed = {
       actions2HandlerKey,
-      actionsSource2,
-      actionsPropertyName2,
+      actions2HandlerKey2,
     }
     handler2ActionsMap[key].push(existed)
   }
