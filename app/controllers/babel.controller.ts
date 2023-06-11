@@ -20,8 +20,11 @@ import {
   findConnectActions,
   buildSingleActionsGraph as buildSingleActionsGraphHandler,
   buildSagaGraph as buildSagaGraphHandler,
+  getHandlerGraph,
+  findReferencedNodes,
 } from 'app/services/babelHelper'
 import buildActionsGraph from 'app/mock/buildActionsGraph'
+import buildSagaGraph from 'app/mock/buildSagaGraph'
 import { TActionsMap } from 'app/services/babelHelper'
 
 /*
@@ -37,6 +40,48 @@ import { TActionsMap } from 'app/services/babelHelper'
 @Controller('/babel')
 export class BabelController {
   constructor(private babelService: BabelService) {}
+
+  @Post('/findUnusedSaga')
+  async findUnusedSaga() {
+    const warnings: string[] = []
+    const { fileActions } = buildActionsGraph
+    const actions2HandlerMap = buildSagaGraph.actions2HandlerMap as any
+    const handler2ActionsMap = buildSagaGraph.handler2ActionsMap as any
+    const flattenArray = function recur(array: any, keys: string[]): any {
+      // console.log(`#56 keys.length: ${keys.length} array:`, array)
+      const key = keys.shift()
+      if (!key) {
+        return array
+      }
+      const rtn: string[] = []
+      for (const elem of array) {
+        if (_.isArray(elem[key])) {
+          elem[key].forEach((subElem: any) => {
+            rtn.push(subElem)
+          })
+        } else {
+          rtn.push(elem[key])
+        }
+      }
+      return recur(rtn, keys)
+    }
+    const actionKeys = flattenArray(fileActions, [
+      'groups',
+      'actionsComponents',
+      'usedActionsDependencies',
+    ])
+      .filter((a: any) => a)
+      .map((a: any) => `${a.dependencyPath},${a.importedName}`)
+      .filter((a: any) => a.charAt(0) === '/')
+
+    const graph = getHandlerGraph(handler2ActionsMap)
+    const referencedNodes = findReferencedNodes(_.clone(actionKeys), graph)
+    const all = [...actionKeys, ...referencedNodes]
+    const unusedNodes = graph.nodes().filter(a => !all.includes(a))
+    const unusedActions = unusedNodes.filter(a => a.includes('/actions/'))
+    const unusedHandlers = unusedNodes.filter(a => !a.includes('/actions/'))
+    return { actionKeys, warnings, referencedNodes, unusedActions, unusedHandlers }
+  }
 
   @Post('/buildSagaGraph')
   async buildSagaGraph(
@@ -63,6 +108,14 @@ export class BabelController {
       filePath,
     })
     const { warnings, ast } = result || {}
+
+    Object.keys(actions2HandlerMap).forEach(k => {
+      const arr = actions2HandlerMap[k]
+      arr.forEach((elem: any) => {
+        delete elem.rawUsages
+      })
+    })
+
     const response: any = {
       // collectors,
       actions2HandlerMap,

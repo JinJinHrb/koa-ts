@@ -17,7 +17,66 @@ import {
   fillInActions2HandlerMap,
   fillInHandler2ActionsMap,
 } from './innerHelper'
-// import { DirectedGraph } from 'graphology'
+import { DirectedGraph } from 'graphology'
+
+export const findReferencedNodes = function recurFindNodes(
+  actionKeys: string[],
+  graph: DirectedGraph,
+  result: string[] = [],
+): any {
+  let toCheckSource: string | undefined = ''
+  toCheckSource = actionKeys.shift()
+  if (_.isNil(toCheckSource)) {
+    return result
+  }
+  const edgeEntries = graph.edgeEntries()
+  let filterTargets: string[] = []
+  for (const edgeEntry of edgeEntries) {
+    if (edgeEntry.source === toCheckSource) {
+      filterTargets.push(edgeEntry.target)
+    }
+  }
+  filterTargets = filterTargets.filter(a => !result.includes(a))
+  if (!_.isEmpty(filterTargets)) {
+    actionKeys.push(...filterTargets)
+    actionKeys = _.uniq(actionKeys)
+    result.push(...filterTargets)
+    result = _.uniq(result)
+  }
+
+  return recurFindNodes(actionKeys, graph, result)
+}
+
+export const getHandlerGraph = (handler2ActionsMap: any) => {
+  const graph = new DirectedGraph()
+  const keys = Object.keys(handler2ActionsMap)
+  for (const key of keys) {
+    const arr = handler2ActionsMap[key]
+    for (const elem of arr) {
+      const { actions2HandlerKey, actions2HandlerKey2 } = elem
+      buildDirectedGrpah(graph, actions2HandlerKey, key)
+      if (actions2HandlerKey2) {
+        buildDirectedGrpah(graph, key, actions2HandlerKey2)
+      }
+    }
+  }
+  return graph
+}
+
+const buildDirectedGrpah = (directedGraph: DirectedGraph, a: string, b: string) => {
+  // eslint-disable-next-line @typescript-eslint/no-extra-semi
+  if (!directedGraph.hasNode(a)) {
+    directedGraph.addNode(a)
+  }
+  if (!directedGraph.hasNode(b)) {
+    directedGraph.addNode(b)
+  }
+  const edge = directedGraph.edge(a, b)
+  if (!directedGraph.hasEdge(edge)) {
+    directedGraph.addDirectedEdge(a, b)
+  }
+  return directedGraph
+}
 
 export type TFileCollectorElement = {
   actionsSource: string
@@ -25,8 +84,7 @@ export type TFileCollectorElement = {
   handlerName: string
   handlerSource: string
 }
-export type TFileCollector = TFileCollectorElement[]
-export type TUnfilteredCollectors = { [key: string]: TFileCollector }
+export type TUnfilteredCollectors = { [key: string]: TFileCollectorElement[] }
 export type TActionsMap = { [key: string]: any }
 
 export const buildSagaGraph = async function myBuildSagaGrah({
@@ -94,7 +152,7 @@ export const buildSagaGraph = async function myBuildSagaGrah({
     })
     if (isSagaFile) {
       const toAnalyzeFiles: string[] = []
-      const handlerCollector = fillInActions2HandlerMap({
+      const handlerCollector = await fillInActions2HandlerMap({
         babelService,
         actions2HandlerMap,
         nonAnalyzedFile,
@@ -104,15 +162,6 @@ export const buildSagaGraph = async function myBuildSagaGrah({
         toAnalyzeFiles,
       })
       nonAnalyzedFiles.push(...toAnalyzeFiles)
-      console.log('#96 toAnalyzeFiles:', toAnalyzeFiles)
-      /* console.log(
-        '#224 isSagaFile:',
-        nonAnalyzedFile,
-        '\nsagaEffectsFuns:',
-        sagaEffectsFuns,
-        '\nhandlerCollector:',
-        handlerCollector,
-      ) */
       await fillInHandler2ActionsMap({
         babelService,
         handler2ActionsMap,

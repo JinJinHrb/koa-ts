@@ -39,3 +39,23 @@ export interface Extra {
   rawValue: string
   raw: string
 }
+
+// 复杂类型
+type A = {
+  aa: string
+  Bb: string
+  cc_Dd: string
+}
+/*
+// 目标：
+type B = {
+  aa: string
+  bb: string
+  ccDd: string
+}
+*/
+type Camel<Obj> = {
+  [Key in keyof Obj]: Obj[Key]
+}
+
+type res = Camel<A>

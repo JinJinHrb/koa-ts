@@ -7,7 +7,7 @@ import {
   getParentPathSkipTSNonNullExpression,
   iterateObjectHandler,
 } from '../../helpers/iterationUtil'
-import { TActionsMap, TFileCollector, loc2String } from '.'
+import { TActionsMap, TFileCollectorElement, loc2String } from '.'
 import { DirectedGraph } from 'graphology'
 import { BabelService } from '../babel.service'
 
@@ -22,7 +22,7 @@ export const fillInHandler2ActionsMap = async ({
 }: {
   babelService: BabelService
   handler2ActionsMap: TActionsMap
-  handlerCollector: TFileCollector
+  handlerCollector: TFileCollectorElement[]
   warnings: string[]
   nonAnalyzedFile: string
   fileAst: ParseResult<File>
@@ -32,7 +32,7 @@ export const fillInHandler2ActionsMap = async ({
   for (const collector of handlerCollector) {
     const actionsMap: TActionsMap = {}
     const { actionsSource, actionsPropertyName, handlerName, handlerSource } = collector
-    const usages: string[] = []
+    // const usages: string[] = []
     let ast = fileAst
     if (handlerSource !== nonAnalyzedFile) {
       if (!handlerSource) {
@@ -63,7 +63,8 @@ export const fillInHandler2ActionsMap = async ({
           )
         } else {
           handlerBindingPath!.traverse({
-            IfStatement(subPath) {
+            // fillInHandler2ActionsMap 方法中不需要搜集所有的 usage 分支
+            /* IfStatement(subPath) {
               if (subPath.node.test.type === 'BinaryExpression') {
                 const leftAndRight = [subPath.node.test.left, subPath.node.test.right]
                 for (let i = 0; i < 2; i++) {
@@ -82,7 +83,7 @@ export const fillInHandler2ActionsMap = async ({
                   }
                 }
               }
-            },
+            }, */
             // 处理 redux-saga put
             CallExpression(subPath) {
               const { node: subNode } = subPath
@@ -216,7 +217,7 @@ const addHandler2ActionsMap = (
   }
 }
 
-export const fillInActions2HandlerMap = ({
+export const fillInActions2HandlerMap = async ({
   babelService,
   actions2HandlerMap,
   nonAnalyzedFile,
@@ -239,7 +240,7 @@ export const fillInActions2HandlerMap = ({
     put: localPut,
     all: localAll,
   } = sagaEffectsFuns
-  const handlerCollector: TFileCollector = []
+  const handlerCollector: TFileCollectorElement[] = []
   const actionsMap: TActionsMap = {}
   traverse(fileAst, {
     // CRM 项目中所有 saga 文件入口都是 default
@@ -454,6 +455,17 @@ export const fillInActions2HandlerMap = ({
             handlerSource = nonAnalyzedFile
           }
 
+          // WangFan TODO 2023-06-07 10:04:47 迁移到 fillInHandler2ActionsMap
+          /* const usages = await findUsages({
+            nonAnalyzedFile,
+            handlerSource,
+            importedHandlerName,
+            ast: fileAst,
+            tsconfigPath: babelService.tsconfigPath,
+            warnings,
+          }) */
+          const rawUsages = { handlerSource, importedHandlerName }
+
           const actionsSource = actionsMap[actionsName]
             ? babelService.getRealPathByAlias(actionsMap[actionsName], nonAnalyzedFile)
             : ''
@@ -463,8 +475,8 @@ export const fillInActions2HandlerMap = ({
             actionsPropertyName,
             handlerName: importedHandlerName,
             handlerSource,
-            // usages, WangFan TODO 2023-06-09 19:46:56
-            //
+            // usages,
+            rawUsages,
           }
           handlerCollector.push(result) // 之后用于得到 handlerActionsMap
           addActions2HandlerMap(actions2HandlerMap, result) // 之后用于生成依赖图
@@ -474,7 +486,104 @@ export const fillInActions2HandlerMap = ({
     },
   })
 
+  const promises: Promise<any>[] = []
+  Object.keys(actions2HandlerMap).forEach(k => {
+    const arr = actions2HandlerMap[k]
+    arr
+      .map(
+        (elem: any) =>
+          new Promise((rsv, rej) => {
+            const { handlerSource, importedHandlerName } = elem.rawUsages
+            findUsages({
+              nonAnalyzedFile,
+              handlerSource,
+              importedHandlerName,
+              ast: fileAst,
+              tsconfigPath: babelService.tsconfigPath,
+              warnings,
+            }).then(usages => {
+              if (!_.isEmpty(usages)) {
+                elem.usages = usages
+              }
+              rsv(elem)
+            })
+          }),
+      )
+      .forEach((a: any) => promises.push(a))
+  })
+
+  await Promise.all(promises)
   return handlerCollector
+}
+
+/** 找到一个方法中所有的 usage 分支 */
+const findUsages = async ({
+  nonAnalyzedFile,
+  handlerSource,
+  importedHandlerName,
+  ast,
+  tsconfigPath,
+  warnings,
+}: {
+  importedHandlerName: string
+  nonAnalyzedFile: string
+  handlerSource: string
+  ast: ParseResult<File>
+  tsconfigPath: string
+  warnings: string[]
+}) => {
+  let fileAst = ast
+  if (nonAnalyzedFile !== handlerSource) {
+    const babelService = new BabelService()
+    await babelService.setAlias(tsconfigPath)
+    fileAst = await babelService.getAst(handlerSource)
+  }
+  const usages: string[] = []
+  traverse(fileAst, {
+    enter(path) {
+      const handlerBinding = path.scope.getBinding(importedHandlerName)
+      const handlerBindingPath = handlerBinding?.path
+      const handlerBindingNode = handlerBindingPath?.node
+      if (handlerBindingNode?.type !== 'FunctionDeclaration') {
+        console.log(
+          `#140 importedHandlerName: ${importedHandlerName}\nhandlerBindingNode:`,
+          handlerBindingNode,
+        )
+        warnings.push(
+          `#146 handlerBindingNode?.type !== 'FunctionDeclaration': importedHandlerName: ${importedHandlerName}, loc: ${
+            handlerBindingNode?.loc
+              ? loc2String(handlerBindingNode?.loc as SourceLocation)
+              : ''
+          }`,
+        )
+      } else {
+        handlerBindingPath!.traverse({
+          IfStatement(subPath) {
+            if (subPath.node.test.type === 'BinaryExpression') {
+              const leftAndRight = [subPath.node.test.left, subPath.node.test.right]
+              for (let i = 0; i < 2; i++) {
+                const leftOrRight = leftAndRight[i]
+                if (leftOrRight.type === 'Identifier' && leftOrRight.name === 'usage') {
+                  const j = (i + 1) % 2
+                  const memberExpression = leftAndRight[j] as any
+                  if (memberExpression.type === 'MemberExpression') {
+                    usages.push(
+                      memberExpression.object.name + '.' + memberExpression.property.name,
+                    )
+                  }
+                  break
+                }
+              }
+            }
+          },
+        })
+        // console.log(`#182 handlerName: "${handlerName}" usages:`, usages)
+      }
+      path.stop()
+    },
+  })
+
+  return usages
 }
 
 const addActions2HandlerMap = (
@@ -485,6 +594,7 @@ const addActions2HandlerMap = (
     actionsPropertyName,
     handlerName,
     handlerSource,
+    rawUsages,
   }: // usages,
   {
     actionsSource: string
@@ -492,6 +602,7 @@ const addActions2HandlerMap = (
     actionsPropertyName: string
     handlerName: string
     handlerSource: string
+    rawUsages: { handlerSource: string; importedHandlerName: string }
     // usages: string[]
   },
 ) => {
@@ -507,14 +618,18 @@ const addActions2HandlerMap = (
   if (_.isEmpty(record)) {
     mapValue.push({
       handler2ActionsKey,
+      rawUsages,
       // usages,
     })
-  } /*  else {
-    const recordUsages = _.uniq([...record.usages, ...usages].filter(a => a))
-    if (!_.isEmpty(recordUsages)) {
-      record.usages = recordUsages
+  } else {
+    const recordRawUsages = _.uniqBy(
+      [...record.rawUsages, rawUsages],
+      a => a.handlerSource + a.importedHandlerName,
+    )
+    if (!_.isEmpty(recordRawUsages)) {
+      record.rawUsages = recordRawUsages
     }
-  } */
+  }
   // console.log('#535 map keys.length', Object.keys(map).length)
 }
 
