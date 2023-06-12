@@ -389,21 +389,54 @@ export class BabelService {
   }
 
   async getModuleFederationEntries(filePath: string) {
+    const componentAbsPaths: string[] = []
+    const warnings: string[] = []
     const ast = await this.getAst(filePath)
+    const getRealPathByAlias = this.getRealPathByAlias.bind(this)
     traverse(ast, {
       Identifier(path) {
         if (path.node.name === 'exposes') {
           const parent = path.findParent(path => path.type === 'ObjectProperty')
           const properties = (parent.node as any)?.value.properties
             .filter((a: any) => a.type === 'ObjectProperty')
-            .map((a: any) => a.value.name)
-          console.log('#318 exposes properties:', properties)
+            .map((a: any) => a.value.name) as string[]
+          const bindings = properties.map(a => path.scope.getBinding(a))
+          const nodes = bindings.map(binding => binding?.path.node)
+          const appSharedCache: any = { appShared: 'sharedComponent' }
+          for (let i = 0; i < nodes.length; i++) {
+            const node = nodes[i]
+            const appSharedNode = (node as any)?.init?.arguments[0]
+            const sourceValueNode = (node as any)?.init?.arguments[1]
+            if (
+              appSharedNode.type !== 'Identifier' ||
+              sourceValueNode.type !== 'StringLiteral'
+            ) {
+              warnings.push(
+                `#417 appSharedNode.type !== 'Identifier' || ` +
+                  `sourceValueNode.type !== 'StringLiteral' ` +
+                  `properties[${i}]:`,
+                properties[i],
+              )
+            }
+            const appSharedName = appSharedNode.name
+            const sourceValue = sourceValueNode.value
+            const appSharedSourceValue = appSharedCache[appSharedName]
+            if (!appSharedSourceValue) {
+              warnings.push(
+                `#417 !appSharedSourceValue ` + `properties[${i}]:`,
+                properties[i],
+              )
+            }
+            const componentPath = pathUtil.join(appSharedSourceValue, sourceValue)
+            const componentAbsPath = getRealPathByAlias(componentPath, filePath)
+            componentAbsPaths.push(componentAbsPath)
+          }
           path.stop()
           return
         }
       },
     })
-    return { ast }
+    return { componentAbsPaths, warnings, ast }
   }
 
   async traverseAST(filePath: string, ast: ParseResult<File>) {

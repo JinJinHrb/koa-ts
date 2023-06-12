@@ -10,6 +10,9 @@ import {
 import { TActionsMap, TFileCollectorElement, loc2String } from '.'
 import { DirectedGraph } from 'graphology'
 import { BabelService } from '../babel.service'
+import { getFileData } from 'app/helpers/fsUtils'
+import { RootObject as RootObject4GraphNodes } from 'app/mock/graphNodes/graphNodes.json.d'
+import { RootObject as RootObject4FileActions } from 'app/mock/actionsGraph/fileActions.json.d'
 
 export const fillInHandler2ActionsMap = async ({
   babelService,
@@ -29,6 +32,7 @@ export const fillInHandler2ActionsMap = async ({
   sagaEffectsFuns: TActionsMap
 }) => {
   const { call: localCall, fork: localFork, put: localPut } = sagaEffectsFuns
+  const noPutHandlers: string[] = []
   for (const collector of handlerCollector) {
     const actionsMap: TActionsMap = {}
     const { actionsSource, actionsPropertyName, handlerName, handlerSource } = collector
@@ -44,6 +48,7 @@ export const fillInHandler2ActionsMap = async ({
       }
       ast = await babelService.getAst(handlerSource)
     }
+    let hasLocalPut = false
     traverse(ast, {
       enter(path) {
         const handlerBinding = path.scope.getBinding(handlerName)
@@ -91,6 +96,7 @@ export const fillInHandler2ActionsMap = async ({
                 subNode.callee.type === 'Identifier' &&
                 subNode.callee.name === localPut
               ) {
+                hasLocalPut = true
                 const firstArgument = subNode.arguments[0]
                 // console.log('#170 firstArgument:', firstArgument)
                 const parseFirstArgument = (value: any, key?: any) => {
@@ -162,12 +168,15 @@ export const fillInHandler2ActionsMap = async ({
               }
             },
           })
-          // console.log(`#182 handlerName: "${handlerName}" usages:`, usages)
+          if (!hasLocalPut) {
+            noPutHandlers.push(`${handlerSource},${handlerName}`)
+          }
         }
         path.stop()
       },
     })
   }
+  console.log('#176 noPutHandlers:', noPutHandlers)
 }
 
 const addHandler2ActionsMap = (
@@ -455,17 +464,7 @@ export const fillInActions2HandlerMap = async ({
             handlerSource = nonAnalyzedFile
           }
 
-          // WangFan TODO 2023-06-07 10:04:47 迁移到 fillInHandler2ActionsMap
-          /* const usages = await findUsages({
-            nonAnalyzedFile,
-            handlerSource,
-            importedHandlerName,
-            ast: fileAst,
-            tsconfigPath: babelService.tsconfigPath,
-            warnings,
-          }) */
           const rawUsages = { handlerSource, importedHandlerName }
-
           const actionsSource = actionsMap[actionsName]
             ? babelService.getRealPathByAlias(actionsMap[actionsName], nonAnalyzedFile)
             : ''
@@ -824,3 +823,29 @@ export const addCallExpressionPaths = (
     )
   } */
 }
+
+// app/mock/actionsGraph/fileActions.ts
+
+export const getFileActions = async () =>
+  JSON.parse(
+    (
+      await getFileData(
+        pathUtil.resolve(
+          __dirname.slice(0, __dirname.indexOf('app')),
+          './app/mock/actionsGraph/fileActions.json',
+        ),
+      )
+    )?.toString(),
+  ) as RootObject4FileActions
+
+export const getGraphNodes = async () =>
+  JSON.parse(
+    (
+      await getFileData(
+        pathUtil.resolve(
+          __dirname.slice(0, __dirname.indexOf('app')),
+          './app/mock/graphNodes/graphNodes.json',
+        ),
+      )
+    )?.toString(),
+  ) as RootObject4GraphNodes

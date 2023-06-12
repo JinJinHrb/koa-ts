@@ -14,7 +14,6 @@ import {
   listStatsPromise,
 } from 'app/helpers/fsUtils'
 import _ from 'lodash'
-import graphNodes from 'app/mock/graphNodes'
 import fs from 'fs'
 import {
   findConnectActions,
@@ -23,9 +22,10 @@ import {
   getHandlerGraph,
   findReferencedNodes,
 } from 'app/services/babelHelper'
-import buildActionsGraph from 'app/mock/buildActionsGraph'
-import buildSagaGraph from 'app/mock/buildSagaGraph'
+import buildActionsGraph from 'app/mock/actionsGraph/buildActionsGraph'
+import buildSagaGraph from 'app/mock/sagaGraph/buildSagaGraph'
 import { TActionsMap } from 'app/services/babelHelper'
+import { getGraphNodes } from 'app/services/babelHelper/innerHelper'
 
 /*
  * (1) /getAstAndAlterCode
@@ -133,6 +133,7 @@ export class BabelController {
 
   @Post('/getFileActions')
   async getFileActions(@Body() { tsconfigPath }: { tsconfigPath: string }) {
+    const graphNodes = await getGraphNodes()
     await this.babelService.setAlias(tsconfigPath)
     const nodes = graphNodes.graph.nodes
     const data = []
@@ -165,6 +166,7 @@ export class BabelController {
 
   @Post('/buildActionsGraph')
   async buildActionsGraph(@Body() { tsconfigPath }: { tsconfigPath: string }) {
+    const graphNodes = await getGraphNodes()
     await this.babelService.setAlias(tsconfigPath)
     /* const code = (await getFileData(filePath))?.toString()
     const ast = await this.babelService.getAstByCode(code)
@@ -226,7 +228,7 @@ export class BabelController {
     await this.babelService.setAlias(tsconfigPath)
     const code = (await getFileData(filePath))?.toString()
     const ast = await this.babelService.getAstByCode(code)
-    const result = buildSingleActionsGraphHandler(filePath, ast)
+    const result = await buildSingleActionsGraphHandler(filePath, ast)
     return { filePath, result }
   }
 
@@ -278,10 +280,7 @@ export class BabelController {
     },
   ) {
     await this.babelService.setAlias(tsconfigPath)
-    const { ast } = await this.babelService.getModuleFederationEntries(
-      federationConfigPath,
-    )
-    return { ast }
+    return await this.babelService.getModuleFederationEntries(federationConfigPath)
     // /Users/alexwang/workspace/xTransfer/mfe-user-crm/webpack-config/federationConfig.js
   }
 
@@ -314,6 +313,7 @@ export class BabelController {
 
   @Post('/findUnusedDependencies')
   async findUnusedDependencies(@Body() { projectPath }: { projectPath: string }) {
+    const graphNodes = await getGraphNodes()
     const skipPrefixes = ['@types']
     const packageJsonPath = pathUtil.resolve(projectPath, 'package.json')
     const fileData = JSON.parse(String(await getFileData(packageJsonPath)))
@@ -342,6 +342,7 @@ export class BabelController {
     @Body()
     { folderPath, isRecur: pIsRecur }: { folderPath: string; isRecur?: boolean | string },
   ) {
+    const graphNodes = await getGraphNodes()
     const isRecur = _.isString(pIsRecur) ? pIsRecur === 'Y' : Boolean(pIsRecur)
     const candidates = (await listFilteredFilesPromise({
       filterHandler: a => a.fileFlag ?? false,

@@ -10,12 +10,12 @@ import { ParseResult } from '@babel/parser'
 import { File, SourceLocation } from '@babel/types'
 import generate from '@babel/generator'
 import _ from 'lodash'
-import fileActions from 'app/mock/fileActions'
 import { getParentPathSkipTSNonNullExpression } from 'app/helpers/iterationUtil'
 import {
   addCallExpressionPaths,
   fillInActions2HandlerMap,
   fillInHandler2ActionsMap,
+  getFileActions,
 } from './innerHelper'
 import { DirectedGraph } from 'graphology'
 
@@ -206,10 +206,11 @@ export type TActionsComponent = {
   loc: SourceLocation
 }
 
-export const buildSingleActionsGraph = (
+export const buildSingleActionsGraph = async (
   filePath: string,
   ast: ParseResult<File>,
-): any => {
+) => {
+  const fileActions = await getFileActions()
   const record = _.cloneDeep(
     fileActions.data.filter(a => a.filePath === filePath)[0],
   ) as any
