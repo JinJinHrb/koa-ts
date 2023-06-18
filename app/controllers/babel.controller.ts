@@ -326,7 +326,7 @@ export class BabelController {
         if (skipPrefixes.includes(npmDepPrefix)) {
           return true
         }
-        if (aPrefix === npmDepPrefix) {
+        if (aPrefix === npmDepPrefix || `@${aPrefix}` === npmDepPrefix) {
           bool = false
           break
         }
@@ -334,7 +334,7 @@ export class BabelController {
       return bool
     })
     console.log('#174 unusedDependencies:', unusedDependencies)
-    return unusedDependencies
+    return { unusedDependencies }
   }
 
   @Post('/removeFilteredFilesDemo')
@@ -369,7 +369,7 @@ export class BabelController {
         if (err) return console.error(`delete file "${path}" error:`, err)
       })
     })
-    return toRemovePaths
+    return { toRemovePaths }
   }
 
   @Post('/parsePackageJsonDemo')
