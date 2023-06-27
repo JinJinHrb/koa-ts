@@ -830,8 +830,6 @@ export const addCallExpressionPaths = (
   } */
 }
 
-// app/mock/fileActions/fileActions.ts
-
 export const getGraphNodes = async () =>
   JSON.parse(
     (
@@ -867,7 +865,6 @@ export const getActionsMap = async () =>
       )
     )?.toString(),
   ) as RootActionsMap
-// app/mock/actionsMap/actionsMap.json
 
 export const getSagaMap = async () =>
   JSON.parse(

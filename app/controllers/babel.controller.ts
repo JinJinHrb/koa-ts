@@ -21,6 +21,7 @@ import {
   buildSagaMap as buildSagaMapHandler,
   getHandlerGraph,
   findReferencedNodes,
+  buildSagaGraphHandler,
 } from 'app/services/babelHelper'
 // import buildActionsMap from 'app/mock/actionsMap/buildActionsMap'
 import { TActionsMap } from 'app/services/babelHelper'
@@ -30,6 +31,7 @@ import {
   getGraphNodes,
   getSagaMap,
 } from 'app/services/babelHelper/innerHelper'
+import { DirectedGraph } from 'graphology'
 
 /*
  * (0) /getAstAndAlterCode
@@ -37,6 +39,7 @@ import {
  * (2) /getFileActions 获取源码与actions的依赖关系
  * (3) /buildActionsMap 获取actions使用情况
  * (4) /buildSagaMap
+ * (5) /findUnusedSaga
  */
 
 @JsonController()
@@ -87,6 +90,12 @@ export class BabelController {
     const unusedActions = unusedNodes.filter(a => a.includes('/actions/'))
     const unusedHandlers = unusedNodes.filter(a => !a.includes('/actions/'))
     return { actionKeys, warnings, referencedNodes, unusedActions, unusedHandlers }
+  }
+
+  @Post('/buildSagaGraph')
+  async buildSagaGraph() {
+    const graph = await buildSagaGraphHandler()
+    return { graph }
   }
 
   @Post('/buildSagaMap')

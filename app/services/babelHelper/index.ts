@@ -15,9 +15,32 @@ import {
   addCallExpressionPaths,
   fillInActions2HandlerMap,
   fillInHandler2ActionsMap,
+  getActionsMap,
   getFileActions,
 } from './innerHelper'
 import { DirectedGraph } from 'graphology'
+
+// 先不处理 usage
+export const buildSagaGraphHandler = async () => {
+  const graph = new DirectedGraph()
+  const { fileActions } = await getActionsMap()
+  for (const { filePath, groups } of fileActions) {
+    for (const { actionsComponents } of groups) {
+      for (const { usedActionsDependencies } of actionsComponents) {
+        for (const {
+          localName,
+          importedName,
+          sourceValue,
+          dependencyPath,
+        } of usedActionsDependencies) {
+          // console.log('#36 filePath:', filePath, 'dependencyPath:', dependencyPath)
+          buildDirectedGrpah(graph, filePath, dependencyPath)
+        }
+      }
+    }
+  }
+  return graph
+}
 
 export const findReferencedNodes = function recurFindNodes(
   actionKeys: string[],
@@ -120,8 +143,6 @@ export const buildSagaMap = async function myBuildSagaGrah({
       path.stop()
     },
   })
-
-  // const sagaGraph = new DirectedGraph()
 
   const { filename, graph } = await babelService.traverseToGetGraph({
     filePath,
