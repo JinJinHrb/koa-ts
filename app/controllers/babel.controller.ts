@@ -17,22 +17,26 @@ import _ from 'lodash'
 import fs from 'fs'
 import {
   findConnectActions,
-  buildSingleActionsGraph as buildSingleActionsGraphHandler,
-  buildSagaGraph as buildSagaGraphHandler,
+  buildSingleActionsMap as buildSingleActionsMapHandler,
+  buildSagaMap as buildSagaMapHandler,
   getHandlerGraph,
   findReferencedNodes,
 } from 'app/services/babelHelper'
-import buildActionsGraph from 'app/mock/actionsGraph/buildActionsGraph'
-import buildSagaGraph from 'app/mock/sagaGraph/buildSagaGraph'
+// import buildActionsMap from 'app/mock/actionsMap/buildActionsMap'
 import { TActionsMap } from 'app/services/babelHelper'
-import { getGraphNodes } from 'app/services/babelHelper/innerHelper'
+import {
+  getActionsMap,
+  getFileActions,
+  getGraphNodes,
+  getSagaMap,
+} from 'app/services/babelHelper/innerHelper'
 
 /*
- * (1) /getAstAndAlterCode
- * (2) /traverseToGetGraph
- * (3) /getFileActions 获取源码与actions的依赖关系
- * (4) /buildActionsGraph 获取actions使用情况
- * (5) /buildSagaGraph
+ * (0) /getAstAndAlterCode
+ * (1) /traverseToGetGraph
+ * (2) /getFileActions 获取源码与actions的依赖关系
+ * (3) /buildActionsMap 获取actions使用情况
+ * (4) /buildSagaMap
  */
 
 @JsonController()
@@ -43,10 +47,12 @@ export class BabelController {
 
   @Post('/findUnusedSaga')
   async findUnusedSaga() {
+    const buildSagaMap = await getSagaMap()
+    const { fileActions } = await getActionsMap()
     const warnings: string[] = []
-    const { fileActions } = buildActionsGraph
-    const actions2HandlerMap = buildSagaGraph.actions2HandlerMap as any
-    const handler2ActionsMap = buildSagaGraph.handler2ActionsMap as any
+    // const { fileActions } = buildActionsMap
+    const actions2HandlerMap = buildSagaMap.actions2HandlerMap as any
+    const handler2ActionsMap = buildSagaMap.handler2ActionsMap as any
     const flattenArray = function recur(array: any, keys: string[]): any {
       // console.log(`#56 keys.length: ${keys.length} array:`, array)
       const key = keys.shift()
@@ -83,8 +89,8 @@ export class BabelController {
     return { actionKeys, warnings, referencedNodes, unusedActions, unusedHandlers }
   }
 
-  @Post('/buildSagaGraph')
-  async buildSagaGraph(
+  @Post('/buildSagaMap')
+  async buildSagaMap(
     @Body()
     {
       filePath,
@@ -99,7 +105,7 @@ export class BabelController {
     const analyzedFiles = new Set<string>()
     const actions2HandlerMap: TActionsMap = {},
       handler2ActionsMap: TActionsMap = {}
-    const result = await buildSagaGraphHandler({
+    const result = await buildSagaMapHandler({
       noRecur,
       analyzedFiles,
       actions2HandlerMap,
@@ -164,13 +170,13 @@ export class BabelController {
     return { data }
   }
 
-  @Post('/buildActionsGraph')
-  async buildActionsGraph(@Body() { tsconfigPath }: { tsconfigPath: string }) {
+  @Post('/buildActionsMap')
+  async buildActionsMap(@Body() { tsconfigPath }: { tsconfigPath: string }) {
     const graphNodes = await getGraphNodes()
     await this.babelService.setAlias(tsconfigPath)
     /* const code = (await getFileData(filePath))?.toString()
     const ast = await this.babelService.getAstByCode(code)
-    const result = buildSingleActionsGraphHandler(filePath, ast)
+    const result = buildSingleActionsMapHandler(filePath, ast)
     return { filePath, result } */
     const nodes = graphNodes.graph.nodes
     const fileActions = [],
@@ -187,10 +193,10 @@ export class BabelController {
         ) {
           continue
         }
-        console.log('buildActionsGraph #95 filePath:', filePath)
+        console.log('buildActionsMap #95 filePath:', filePath)
         const code = (await getFileData(filePath))?.toString()
         const ast = await this.babelService.getAstByCode(code)
-        const result = await buildSingleActionsGraphHandler(filePath, ast)
+        const result = await buildSingleActionsMapHandler(filePath, ast)
         if (!_.isEmpty(result?.groups)) {
           fileActions.push(result)
         } else {
@@ -198,14 +204,16 @@ export class BabelController {
         }
       }
     } catch (e) {
-      console.error('buildActionsGraph #102 filePath:', filePath, '\nerror:', e)
+      console.error('buildActionsMap #102 filePath:', filePath, '\nerror:', e)
     }
     return { fileActions, warnings }
   }
 
   @Post('/getFilesWhoseActionsMethodsEmpty')
-  getFilesWhoseActionsMethodsEmpty() {
-    const files = buildActionsGraph.fileActions
+  async getFilesWhoseActionsMethodsEmpty() {
+    const { data: fileActions } = await getFileActions()
+    // const files = buildActionsMap.fileActions
+    const files = fileActions
       .filter(({ groups }: any) => {
         for (const group of groups) {
           console.log('#117 group:', group)
@@ -221,14 +229,14 @@ export class BabelController {
     return { files }
   }
 
-  @Post('/buildSingleActionsGraph')
-  async buildSingleActionsGraph(
+  @Post('/buildSingleActionsMap')
+  async buildSingleActionsMap(
     @Body() { tsconfigPath, filePath }: { tsconfigPath: string; filePath: string },
   ) {
     await this.babelService.setAlias(tsconfigPath)
     const code = (await getFileData(filePath))?.toString()
     const ast = await this.babelService.getAstByCode(code)
-    const result = await buildSingleActionsGraphHandler(filePath, ast)
+    const result = await buildSingleActionsMapHandler(filePath, ast)
     return { filePath, result }
   }
 

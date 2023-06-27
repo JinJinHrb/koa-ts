@@ -87,7 +87,7 @@ export type TFileCollectorElement = {
 export type TUnfilteredCollectors = { [key: string]: TFileCollectorElement[] }
 export type TActionsMap = { [key: string]: any }
 
-export const buildSagaGraph = async function myBuildSagaGrah({
+export const buildSagaMap = async function myBuildSagaGrah({
   analyzedFiles,
   actions2HandlerMap,
   handler2ActionsMap,
@@ -177,7 +177,7 @@ export const buildSagaGraph = async function myBuildSagaGrah({
   }
 
   const nonAnalyzedFiles2 = nonAnalyzedFiles.filter(a => !analyzedFiles.has(a))
-  console.log('#131 nonAnalyzedFiles2:', nonAnalyzedFiles2)
+  console.log('#131 nonAnalyzedFiles2.length:', nonAnalyzedFiles2.length)
   if (!noRecur && nonAnalyzedFiles2.length > 0) {
     await myBuildSagaGrah({
       analyzedFiles,
@@ -206,10 +206,7 @@ export type TActionsComponent = {
   loc: SourceLocation
 }
 
-export const buildSingleActionsGraph = async (
-  filePath: string,
-  ast: ParseResult<File>,
-) => {
+export const buildSingleActionsMap = async (filePath: string, ast: ParseResult<File>) => {
   const fileActions = await getFileActions()
   const record = _.cloneDeep(
     fileActions.data.filter(a => a.filePath === filePath)[0],

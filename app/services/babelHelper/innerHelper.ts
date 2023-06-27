@@ -12,7 +12,11 @@ import { DirectedGraph } from 'graphology'
 import { BabelService } from '../babel.service'
 import { getFileData } from 'app/helpers/fsUtils'
 import { RootObject as RootObject4GraphNodes } from 'app/mock/graphNodes/graphNodes.json.d'
-import { RootObject as RootObject4FileActions } from 'app/mock/actionsGraph/fileActions.json.d'
+import { RootObject as RootObject4FileActions } from 'app/mock/fileActions/fileActions.json.d'
+import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
+import type { RootActionsMap } from 'app/mock/actionsMap/actionsMap.json.d'
+
+// app/mock/actionsMap/actionsMap.json
 
 export const fillInHandler2ActionsMap = async ({
   babelService,
@@ -176,7 +180,9 @@ export const fillInHandler2ActionsMap = async ({
       },
     })
   }
-  console.log('#176 noPutHandlers:', noPutHandlers)
+  if (!_.isEmpty(noPutHandlers)) {
+    console.log('#176 noPutHandlers:', noPutHandlers)
+  }
 }
 
 const addHandler2ActionsMap = (
@@ -721,7 +727,7 @@ export const addCallExpressionPaths = (
       'CallExpression',
     )
   ) {
-    console.log('#98 buildSingleActionsGraph')
+    console.log('#98 buildSingleActionsMap')
     const memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath)
     actionsExportedNames.push((memberExpressionPath.node as any).property.name)
     callExpressionPaths.push(getParentPathSkipTSNonNullExpression(subPath, 2))
@@ -741,7 +747,7 @@ export const addCallExpressionPaths = (
       'CallExpression',
     )
   ) {
-    console.log('#114 buildSingleActionsGraph')
+    console.log('#114 buildSingleActionsMap')
     const memberExpressionPath = getParentPathSkipTSNonNullExpression(subPath, 2)
     actionsExportedNames.push((memberExpressionPath.node as any).property.name)
     callExpressionPaths.push(getParentPathSkipTSNonNullExpression(subPath, 3))
@@ -757,7 +763,7 @@ export const addCallExpressionPaths = (
     (getParentPathSkipTSNonNullExpression(subPath).node as any).object?.property?.name ===
       'props'
   ) {
-    console.log('#126 buildSingleActionsGraph')
+    console.log('#126 buildSingleActionsMap')
     const startLine =
       getParentPathSkipTSNonNullExpression(subPath).node.loc?.start.line ?? -1
     const endLine = getParentPathSkipTSNonNullExpression(subPath).node.loc?.end.line ?? -1
@@ -789,7 +795,7 @@ export const addCallExpressionPaths = (
       (getParentPathSkipTSNonNullExpression(subPath).node as any).value.properties,
     )
   ) {
-    console.log('#192 buildSingleActionsGraph')
+    console.log('#192 buildSingleActionsMap')
     for (const property of (getParentPathSkipTSNonNullExpression(subPath).node as any)
       .value.properties) {
       const exportedName = property.key.name
@@ -824,19 +830,7 @@ export const addCallExpressionPaths = (
   } */
 }
 
-// app/mock/actionsGraph/fileActions.ts
-
-export const getFileActions = async () =>
-  JSON.parse(
-    (
-      await getFileData(
-        pathUtil.resolve(
-          __dirname.slice(0, __dirname.indexOf('app')),
-          './app/mock/actionsGraph/fileActions.json',
-        ),
-      )
-    )?.toString(),
-  ) as RootObject4FileActions
+// app/mock/fileActions/fileActions.ts
 
 export const getGraphNodes = async () =>
   JSON.parse(
@@ -849,3 +843,40 @@ export const getGraphNodes = async () =>
       )
     )?.toString(),
   ) as RootObject4GraphNodes
+
+export const getFileActions = async () =>
+  JSON.parse(
+    (
+      await getFileData(
+        pathUtil.resolve(
+          __dirname.slice(0, __dirname.indexOf('app')),
+          './app/mock/fileActions/fileActions.json',
+        ),
+      )
+    )?.toString(),
+  ) as RootObject4FileActions
+
+export const getActionsMap = async () =>
+  JSON.parse(
+    (
+      await getFileData(
+        pathUtil.resolve(
+          __dirname.slice(0, __dirname.indexOf('app')),
+          './app/mock/actionsMap/actionsMap.json',
+        ),
+      )
+    )?.toString(),
+  ) as RootActionsMap
+// app/mock/actionsMap/actionsMap.json
+
+export const getSagaMap = async () =>
+  JSON.parse(
+    (
+      await getFileData(
+        pathUtil.resolve(
+          __dirname.slice(0, __dirname.indexOf('app')),
+          './app/mock/sagaMap/buildSagaMap.json',
+        ),
+      )
+    )?.toString(),
+  ) as RootBuildSagaMap
