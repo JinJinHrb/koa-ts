@@ -155,8 +155,7 @@
                   "localName": "fetchMetaRequested",
                   "importedName": "fetchMetaRequested",
                   "sourceValue": "actions/meta",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts",
-                  "usage": "EMMetaUsages.LaterProtocolVersion"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts"
                 },
                 {
                   "localName": "setMFAVisible",
@@ -174,8 +173,7 @@
                   "localName": "checkABVType",
                   "importedName": "checkABVType",
                   "sourceValue": "actions/security",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts",
-                  "usageVariable": "MFAOrigin"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts"
                 },
                 {
                   "localName": "sendMfaMessageRequested",
@@ -603,8 +601,7 @@
                   "localName": "verifyMfaRequested",
                   "importedName": "verifyMfaRequested",
                   "sourceValue": "actions/user",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
-                  "usageVariable": "MFAOrigin"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts"
                 },
                 {
                   "localName": "setMFAVisible",
@@ -762,8 +759,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.SetLoginPasswordModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 },
                 {
                   "localName": "pubKeyRequested",
@@ -775,8 +771,7 @@
                   "localName": "getUserFlowId",
                   "importedName": "getUserFlowId",
                   "sourceValue": "actions/user",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
-                  "usage": "EMGetUserFlowIdUsages.InitPwd"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts"
                 }
               ],
               "nodeLoc": {
@@ -906,8 +901,7 @@
                   "localName": "fetchMetaRequested",
                   "importedName": "fetchMetaRequested",
                   "sourceValue": "actions/meta",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts",
-                  "usage": "EMMetaUsages.Announcement"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts"
                 }
               ],
               "nodeLoc": {
@@ -1710,8 +1704,7 @@
                   "localName": "fetchMetaRequested",
                   "importedName": "fetchMetaRequested",
                   "sourceValue": "actions/meta",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts",
-                  "usage": "EMMetaUsages.MallOrderRecord"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts"
                 }
               ],
               "nodeLoc": {
@@ -1791,8 +1784,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradePaymentModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 }
               ],
               "nodeLoc": {
@@ -2326,15 +2318,13 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradeCancelActionModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 },
                 {
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradeBaseInfoOperateModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 }
               ],
               "nodeLoc": {
@@ -2861,15 +2851,13 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.SideFunctions"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 },
                 {
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradeEmailDetailModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 },
                 {
                   "localName": "getWhiteListRequested",
@@ -3343,8 +3331,7 @@
                   "localName": "getCustomerConfigRequest",
                   "importedName": "getCustomerConfigRequest",
                   "sourceValue": "foreignTradePlatform/actions/customer",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/customer.ts",
-                  "usageVariable": "CUSTOMER_SOURCE"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/customer.ts"
                 },
                 {
                   "localName": "trashRecordClearAll",
@@ -3805,8 +3792,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.SideFunctions"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 }
               ],
               "nodeLoc": {
@@ -4036,8 +4022,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradePaymentModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 }
               ],
               "nodeLoc": {
@@ -4248,8 +4233,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradePaymentModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 },
                 {
                   "localName": "getWhiteListRequested",
@@ -4355,8 +4339,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradePaymentModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 },
                 {
                   "isNamespace": false,
@@ -5288,8 +5271,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.TradeCancelActionModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 },
                 {
                   "isNamespace": false,
@@ -5758,15 +5740,13 @@
                   "localName": "queryGeneral",
                   "importedName": "queryGeneral",
                   "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMQueryUsage.Folder"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
                 },
                 {
                   "localName": "queryGeneral",
                   "importedName": "queryGeneral",
                   "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMQueryUsage.MyLabels"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
                 },
                 {
                   "isNamespace": false,
@@ -6081,15 +6061,13 @@
                   "localName": "getUserFlowId",
                   "importedName": "getUserFlowId",
                   "sourceValue": "actions/user",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
-                  "usageVariable": "type"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts"
                 },
                 {
                   "localName": "checkABVType",
                   "importedName": "checkABVType",
                   "sourceValue": "actions/security",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts",
-                  "usageVariable": "type"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts"
                 },
                 {
                   "localName": "sendVcodeMessage",
@@ -6238,8 +6216,7 @@
                   "localName": "getUserFlowId",
                   "importedName": "getUserFlowId",
                   "sourceValue": "actions/user",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
-                  "usage": "EFirstBindTypes.Mobile"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts"
                 },
                 {
                   "localName": "stopVcodeCountDown",
@@ -6251,8 +6228,7 @@
                   "localName": "hideBindError",
                   "importedName": "hideBindError",
                   "sourceValue": "actions/bind",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/bind.ts",
-                  "usage": "EFirstBindTypes.Mobile"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/bind.ts"
                 }
               ],
               "nodeLoc": {
@@ -6372,8 +6348,7 @@
                   "localName": "checkABVType",
                   "importedName": "checkABVType",
                   "sourceValue": "actions/security",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts",
-                  "usageVariable": "type"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts"
                 },
                 {
                   "localName": "sendVcodeMessage",
@@ -8360,8 +8335,7 @@
                   "localName": "setModal",
                   "importedName": "setModal",
                   "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMModalUsage.EmailBind"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
                 }
               ],
               "nodeLoc": {
@@ -8720,8 +8694,7 @@
                   "localName": "toggleModalStatus",
                   "importedName": "toggleModalStatus",
                   "sourceValue": "actions/modal",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts",
-                  "usage": "EMModalUsages.SetLoginPasswordModal"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts"
                 }
               ],
               "nodeLoc": {
@@ -9353,8 +9326,7 @@
                   "localName": "fetchMetaRequested",
                   "importedName": "fetchMetaRequested",
                   "sourceValue": "actions/meta",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts",
-                  "usage": "EMMetaUsages.BeneficaryAddressCountry"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts"
                 },
                 {
                   "isNamespace": false,
@@ -9367,8 +9339,7 @@
                   "localName": "toggleEntityStatus",
                   "importedName": "toggleEntityStatus",
                   "sourceValue": "actions/status",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/status.ts",
-                  "usageVariable": "usage"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/status.ts"
                 }
               ],
               "nodeLoc": {
@@ -9904,8 +9875,7 @@
                   "localName": "setModal",
                   "importedName": "setModal",
                   "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMModalUsage.EmailBind"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
                 }
               ],
               "nodeLoc": {
@@ -10244,8 +10214,7 @@
                   "localName": "queryGeneral",
                   "importedName": "queryGeneral",
                   "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMQueryUsage.AccountDetail"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
                 },
                 {
                   "isNamespace": false,
@@ -10278,8 +10247,7 @@
                   "localName": "queryGeneral",
                   "importedName": "queryGeneral",
                   "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMQueryUsage.Host"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
                 }
               ],
               "nodeLoc": {
@@ -10715,8 +10683,7 @@
                   "localName": "setModal",
                   "importedName": "setModal",
                   "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMModalUsage.EmailBind"
+                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
                 }
               ],
               "nodeLoc": {

@@ -438,32 +438,46 @@ export const buildSingleActionsMap = async (filePath: string, ast: ParseResult<F
           sourceValue: string
           dependencyPath: string
         }[] = []
-        actionsComponent.actionsMethods.forEach(({ name: v }: { name: string }) => {
-          const k = objectPropertyMap[v] ?? v
-          OUTTER: for (const actionsDependency of actionsDependencies) {
-            if (actionsDependency.isNamespace) {
-              const exportNames = actionsDependency.exportNames || []
-              if (exportNames.includes(k)) {
-                const usedActionsDependency = {
-                  localName: k,
-                  importedName: k,
-                  sourceValue: actionsDependency.sourceValue,
-                  dependencyPath: actionsDependency.dependencyPath,
-                } as {
-                  localName: string
-                  importedName: string
-                  sourceValue: string
-                  dependencyPath: string
+        actionsComponent.actionsMethods.forEach(
+          ({
+            name: v,
+            usage,
+            usageVariable,
+          }: {
+            name: string
+            usage?: string
+            usageVariable?: string
+          }) => {
+            const k = objectPropertyMap[v] ?? v
+            OUTTER: for (const actionsDependency of actionsDependencies) {
+              if (actionsDependency.isNamespace) {
+                const exportNames = actionsDependency.exportNames || []
+                if (exportNames.includes(k)) {
+                  const usedActionsDependency = {
+                    localName: k,
+                    importedName: k,
+                    sourceValue: actionsDependency.sourceValue,
+                    dependencyPath: actionsDependency.dependencyPath,
+                    usage,
+                    usageVariable,
+                  } as {
+                    localName: string
+                    importedName: string
+                    sourceValue: string
+                    dependencyPath: string
+                    usage?: string
+                    usageVariable?: string
+                  }
+                  usedActionsDependencies.push(usedActionsDependency)
+                  break OUTTER
                 }
-                usedActionsDependencies.push(usedActionsDependency)
+              } else if (actionsDependency.localName === k) {
+                usedActionsDependencies.push(_.clone(actionsDependency))
                 break OUTTER
               }
-            } else if (actionsDependency.localName === k) {
-              usedActionsDependencies.push(_.clone(actionsDependency))
-              break OUTTER
             }
-          }
-        })
+          },
+        )
         actionsComponent.usedActionsDependencies = usedActionsDependencies
         actionsComponent.nodeLoc = functionPath.node.loc
       }
