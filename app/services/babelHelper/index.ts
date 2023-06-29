@@ -19,6 +19,7 @@ import {
   getFileActions,
 } from './innerHelper'
 import { DirectedGraph } from 'graphology'
+import { getSagaEffects } from './sagaHelper'
 
 // 先不处理 usage
 export const buildSagaGraphHandler = async () => {
@@ -32,9 +33,29 @@ export const buildSagaGraphHandler = async () => {
           importedName,
           sourceValue,
           dependencyPath,
+          usage,
+          usageVariable,
         } of usedActionsDependencies) {
           // console.log('#36 filePath:', filePath, 'dependencyPath:', dependencyPath)
-          buildDirectedGrpah(graph, filePath, dependencyPath)
+          const nodeSource = filePath
+          const nodeTarget = `${dependencyPath},${importedName}`
+          buildDirectedGrpah(graph, nodeSource, nodeTarget)
+          const theEdge = graph.findEdge(
+            (_edge, _attributes, source, target) =>
+              source === nodeSource && target === nodeTarget,
+          )
+          if (theEdge) {
+            if (usage) {
+              const usages = graph.getEdgeAttribute(theEdge, 'usages') ?? ([] as any)
+              usages.push(usage)
+              graph.setEdgeAttribute(theEdge, 'usages', usages)
+            } else if (usageVariable) {
+              const usageVariables =
+                graph.getEdgeAttribute(theEdge, 'usageVariable') ?? ([] as any)
+              usageVariables.push(usageVariable)
+              graph.setEdgeAttribute(theEdge, 'usageVariables', usageVariables)
+            }
+          }
         }
       }
     }
@@ -110,6 +131,8 @@ export type TFileCollectorElement = {
 export type TUnfilteredCollectors = { [key: string]: TFileCollectorElement[] }
 export type TActionsMap = { [key: string]: any }
 
+let logLimit = 10
+
 export const buildSagaMap = async function myBuildSagaGrah({
   analyzedFiles,
   actions2HandlerMap,
@@ -152,7 +175,7 @@ export const buildSagaMap = async function myBuildSagaGrah({
   const derivativeNonAnalyzedFiles = graph.nodes().filter(a => !analyzedFiles.has(a))
   for (const nonAnalyzedFile of derivativeNonAnalyzedFiles) {
     const fileAst = await babelService.getAst(nonAnalyzedFile)
-    let isSagaFile = false
+    /* let isSagaFile = false
     const sagaEffectsFuns: TActionsMap = {}
     traverse(fileAst, {
       ImportDeclaration(path: NodePath<any>) {
@@ -170,7 +193,8 @@ export const buildSagaMap = async function myBuildSagaGrah({
           path.stop()
         }
       },
-    })
+    }) */
+    const { sagaEffectsFuns, isSagaFile } = await getSagaEffects(fileAst)
     if (isSagaFile) {
       const toAnalyzeFiles: string[] = []
       const handlerCollector = await fillInActions2HandlerMap({
@@ -183,6 +207,14 @@ export const buildSagaMap = async function myBuildSagaGrah({
         toAnalyzeFiles,
       })
       nonAnalyzedFiles.push(...toAnalyzeFiles)
+      if (logLimit > -1) {
+        logLimit--
+        console.log('babelHelper #206', {
+          handler2ActionsMap,
+          handlerCollector,
+          sagaEffectsFuns,
+        })
+      }
       await fillInHandler2ActionsMap({
         babelService,
         handler2ActionsMap,

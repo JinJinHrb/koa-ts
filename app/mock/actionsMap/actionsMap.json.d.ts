@@ -33,6 +33,8 @@ export interface UsedActionsDependency {
   importedName: string
   sourceValue: string
   dependencyPath: string
+  usage?: string
+  usageVariable?: string
 }
 
 export interface Start {

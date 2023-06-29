@@ -15,8 +15,7 @@ import { RootObject as RootObject4GraphNodes } from 'app/mock/graphNodes/graphNo
 import { RootObject as RootObject4FileActions } from 'app/mock/fileActions/fileActions.json.d'
 import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
 import type { RootActionsMap } from 'app/mock/actionsMap/actionsMap.json.d'
-
-// app/mock/actionsMap/actionsMap.json
+import type { RootSagaGraph } from 'app/mock/sagaGraph/sagaGraph.d'
 
 export const fillInHandler2ActionsMap = async ({
   babelService,
@@ -185,7 +184,7 @@ export const fillInHandler2ActionsMap = async ({
   }
 }
 
-const addHandler2ActionsMap = (
+export const addHandler2ActionsMap = (
   handler2ActionsMap: TActionsMap,
   {
     actionsSource,
@@ -653,7 +652,7 @@ const buildDirectedGrpah = (directedGraph: DirectedGraph, a: string, b: string) 
   return directedGraph
 }
 
-const findLocalActions = ({
+export const findLocalActions = ({
   nonAnalyzedFile,
   node: subNode,
   actionsMap,
@@ -877,3 +876,15 @@ export const getSagaMap = async () =>
       )
     )?.toString(),
   ) as RootBuildSagaMap
+
+export const getSagaGraph = async () =>
+  JSON.parse(
+    (
+      await getFileData(
+        pathUtil.resolve(
+          __dirname.slice(0, __dirname.indexOf('app')),
+          './app/mock/sagaGraph/sagaGraph.json',
+        ),
+      )
+    )?.toString(),
+  ) as RootSagaGraph

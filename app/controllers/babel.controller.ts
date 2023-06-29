@@ -26,18 +26,19 @@ import {
 // import buildActionsMap from 'app/mock/actionsMap/buildActionsMap'
 import { TActionsMap } from 'app/services/babelHelper'
 import {
+  fillInHandler2ActionsMap,
   getActionsMap,
   getFileActions,
   getGraphNodes,
   getSagaMap,
 } from 'app/services/babelHelper/innerHelper'
-import { DirectedGraph } from 'graphology'
+import { getHandlerActions, getSagaEffects } from 'app/services/babelHelper/sagaHelper'
 
 /*
  * (0) /getAstAndAlterCode
  * (1) /traverseToGetGraph
- * (2) /getFileActions 获取源码与actions的依赖关系
- * (3) /buildActionsMap 获取actions使用情况
+ * (2) /getFileActions 获取 js及jsx 与 actions 的依赖关系
+ * (3) /buildActionsMap 获取 actions 使用情况
  * (4) /buildSagaMap
  * (5) /findUnusedSaga
  */
@@ -144,6 +145,62 @@ export class BabelController {
       response.ast = ast
     }
     return response
+  }
+
+  @Post('/parseSingleSagaHandler')
+  async parseSingleSagaHandler(
+    @Body()
+    {
+      filePath,
+      tsconfigPath,
+      handlerName,
+      graph: pGraph,
+    }: {
+      filePath: string
+      tsconfigPath: string
+      handlerName: string
+      graph: any
+    },
+  ) {
+    const code = (await getFileData(filePath as string))?.toString()
+    const babelService = new BabelService()
+    await babelService.setAlias(tsconfigPath)
+    const ast = await babelService.getAstByCode(code)
+    let graph = pGraph
+    if (!graph) {
+      const traverseResult = await babelService.traverseToGetGraph({
+        filePath,
+        noRecur: true,
+      })
+      graph = traverseResult.graph
+    }
+    const { sagaEffectsFuns, isSagaFile } = await getSagaEffects(ast)
+
+    const warnings: string[] = []
+    // await fillInHandler2ActionsMap({
+    //   babelService,
+    //   handler2ActionsMap,
+    //   handlerCollector,
+    //   warnings,
+    //   nonAnalyzedFile,
+    //   fileAst,
+    //   sagaEffectsFuns,
+    // })
+    const handlerActions2Array = getHandlerActions({
+      ast,
+      babelService,
+      handlerName,
+      sagaEffectsFuns,
+      warnings,
+      filePath,
+    })
+
+    return {
+      handlerActions2Array,
+      sagaEffectsFuns,
+      isSagaFile,
+      graph,
+    }
   }
 
   @Post('/getFileActions')
