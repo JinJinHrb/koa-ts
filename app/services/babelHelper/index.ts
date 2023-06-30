@@ -131,8 +131,6 @@ export type TFileCollectorElement = {
 export type TUnfilteredCollectors = { [key: string]: TFileCollectorElement[] }
 export type TActionsMap = { [key: string]: any }
 
-let logLimit = 10
-
 export const buildSagaMap = async function myBuildSagaGrah({
   analyzedFiles,
   actions2HandlerMap,
@@ -173,6 +171,10 @@ export const buildSagaMap = async function myBuildSagaGrah({
   })
 
   const derivativeNonAnalyzedFiles = graph.nodes().filter(a => !analyzedFiles.has(a))
+  // 测试单独文件
+  // const derivativeNonAnalyzedFiles = [
+  //   '/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/index.ts',
+  // ]
   for (const nonAnalyzedFile of derivativeNonAnalyzedFiles) {
     const fileAst = await babelService.getAst(nonAnalyzedFile)
     /* let isSagaFile = false
@@ -207,14 +209,6 @@ export const buildSagaMap = async function myBuildSagaGrah({
         toAnalyzeFiles,
       })
       nonAnalyzedFiles.push(...toAnalyzeFiles)
-      if (logLimit > -1) {
-        logLimit--
-        console.log('babelHelper #206', {
-          handler2ActionsMap,
-          handlerCollector,
-          sagaEffectsFuns,
-        })
-      }
       await fillInHandler2ActionsMap({
         babelService,
         handler2ActionsMap,
@@ -1126,7 +1120,6 @@ const findConnectedComponent = (
     ) {
       const theArgument = (bindActionCreatorsParentsPath.node.expression as any).right
         .arguments[0]
-      console.log('#924 actionsComponents.push') // WangFan TODO 2023-05-22 21:17:09 to remove
       if (theArgument.type === 'Identifier') {
         actionsComponents.push({
           type: 'Identifier',

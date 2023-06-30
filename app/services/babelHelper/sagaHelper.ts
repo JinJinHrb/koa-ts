@@ -2,10 +2,43 @@ import { TActionsMap, loc2String } from './index'
 import traverse, { Node, NodePath } from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
 import { File, SourceLocation } from '@babel/types'
-import { addHandler2ActionsMap, findLocalActions } from './innerHelper'
+import { findLocalActions } from './innerHelper'
 import _ from 'lodash'
 import { iterateObjectHandler } from '../../helpers/iterationUtil'
 import { BabelService } from '../babel.service'
+
+export type GetSagaFileParams = {
+  babelService: BabelService
+  filePath: string
+  localSagaName: string
+  path: NodePath<any>
+}
+
+export const getSagaFilesByLocalSagaName = ({
+  babelService,
+  filePath,
+  localSagaName,
+  path,
+}: GetSagaFileParams) => {
+  let toAnalyzeFile = ''
+  const sagaBinding = path.scope.getBinding(localSagaName)
+  const sagaBindingNode = sagaBinding?.path.node
+  if (sagaBindingNode?.type === 'ImportDefaultSpecifier') {
+    const importDeclaration = sagaBinding!.path.findParent(
+      subPath => subPath.node.type === 'ImportDeclaration',
+    )
+    const alias = (importDeclaration.node as any).source.value
+    toAnalyzeFile = babelService.getRealPathByAlias(alias, filePath)
+  } else if (sagaBindingNode?.type === 'ImportSpecifier') {
+    const importDeclaration = sagaBinding!.path.findParent(
+      subPath => subPath.node.type === 'ImportDeclaration',
+    )
+    const alias = (importDeclaration.node as any).source.value
+    const absPath = babelService.getRealPathByAlias(alias, filePath)
+    toAnalyzeFile = absPath
+  }
+  return toAnalyzeFile
+}
 
 export type HandlerActions2Type = {
   actionsSource2: string

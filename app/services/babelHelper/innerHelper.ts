@@ -16,6 +16,7 @@ import { RootObject as RootObject4FileActions } from 'app/mock/fileActions/fileA
 import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
 import type { RootActionsMap } from 'app/mock/actionsMap/actionsMap.json.d'
 import type { RootSagaGraph } from 'app/mock/sagaGraph/sagaGraph.d'
+import { getSagaFilesByLocalSagaName } from './sagaHelper'
 
 export const fillInHandler2ActionsMap = async ({
   babelService,
@@ -260,6 +261,36 @@ export const fillInActions2HandlerMap = async ({
     // CRM 项目中所有 saga 文件入口都是 default
     ExportDefaultDeclaration(path: NodePath<any>) {
       path.traverse({
+        ObjectExpression(objectExpressionPath: NodePath<any>) {
+          objectExpressionPath.traverse({
+            CallExpression(callExpressionPath) {
+              const callExpressionNode = callExpressionPath.node
+              if (localFork === (callExpressionNode.callee as any)?.name) {
+                if (callExpressionNode.arguments.length !== 1) {
+                  warnings.push(
+                    `fillInActions2HandlerMap #270 callExpressionNode.arguments.length !== 1 nonAnalyzedFile: ${nonAnalyzedFile}`,
+                  )
+                  path.stop()
+                  return
+                } else if (callExpressionNode.arguments[0].type !== 'Identifier') {
+                  warnings.push(
+                    `fillInActions2HandlerMap #277 callExpressionNode.arguments[0].type !== 'Identifier' nonAnalyzedFile: ${nonAnalyzedFile}`,
+                  )
+                  path.stop()
+                  return
+                }
+                const localSagaName = callExpressionNode.arguments[0].name
+                const toAnalyzeFile = getSagaFilesByLocalSagaName({
+                  babelService,
+                  filePath: nonAnalyzedFile,
+                  localSagaName,
+                  path,
+                })
+                toAnalyzeFiles.push(toAnalyzeFile)
+              }
+            },
+          })
+        },
         ExpressionStatement(expressionStatementPath: NodePath<any>) {
           // const usages: string[] = []
           const expression = expressionStatementPath.node.expression
@@ -366,14 +397,21 @@ export const fillInActions2HandlerMap = async ({
             )
             return
           }
-          if (calleeArguments[0].type !== 'CallExpression') {
+
+          const isActionsStringWrapped =
+            calleeArguments[0].type === 'CallExpression' &&
+            calleeArguments[0].callee.name === 'String'
+          /* if (
+            calleeArguments[0].type === 'CallExpression' &&
+            calleeArguments[0].callee.name === 'String'
+          ) {
             warnings.push(
               `#300 calleeArguments[0].type !== 'CallExpression': ${nonAnalyzedFile}, loc: ${loc2String(
                 expression.loc,
               )}`,
             )
             return
-          }
+          } */
           if (calleeArguments[1].type !== 'Identifier') {
             warnings.push(
               `#307 calleeArguments[1].type !== 'Identifier': ${nonAnalyzedFile}, loc: ${loc2String(
@@ -385,9 +423,10 @@ export const fillInActions2HandlerMap = async ({
           const firstArgument = calleeArguments[0]
           const secondArgument = calleeArguments[1]
           if (
-            firstArgument.type !== 'CallExpression' ||
-            firstArgument.arguments.length !== 1 ||
-            firstArgument.arguments[0].type !== 'MemberExpression'
+            isActionsStringWrapped &&
+            (firstArgument.type !== 'CallExpression' ||
+              firstArgument.arguments.length !== 1 ||
+              firstArgument.arguments[0].type !== 'MemberExpression')
           ) {
             warnings.push(
               `#311 firstArgument.arguments[0].type !== 'MemberExpression': ${nonAnalyzedFile}, loc: ${loc2String(
