@@ -13,7 +13,11 @@
               "localName": "routerActions",
               "sourceValue": "actions/router",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/router.ts",
-              "exportNames": ["locationInit", "matchPublicRouter", "matchPrivateRouter"]
+              "exportNames": [
+                "locationInit",
+                "matchPublicRouter",
+                "matchPrivateRouter"
+              ]
             },
             {
               "isNamespace": true,
@@ -45,7 +49,9 @@
               "localName": "intlActions",
               "sourceValue": "actions/intl",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/intl.ts",
-              "exportNames": ["setLocale"]
+              "exportNames": [
+                "setLocale"
+              ]
             },
             {
               "isNamespace": true,
@@ -314,7 +320,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["securityActions"],
+          "spreadElementNames": [
+            "securityActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -916,7 +924,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions", "userActions"],
+          "spreadElementNames": [
+            "modalActions",
+            "userActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -960,7 +971,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions"],
+          "spreadElementNames": [
+            "modalActions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -1027,7 +1040,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions", "meActions"],
+          "spreadElementNames": [
+            "metaActions",
+            "meActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -1139,7 +1155,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions", "userActions", "utilActions"],
+          "spreadElementNames": [
+            "modalActions",
+            "userActions",
+            "utilActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -1198,7 +1218,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["firmActions"],
+          "spreadElementNames": [
+            "firmActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -1356,7 +1378,10 @@
               "localName": "appActions",
               "sourceValue": "actions/app",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/app.ts",
-              "exportNames": ["userCheckFuncs", "userConfirmNewFuncOrChange"]
+              "exportNames": [
+                "userCheckFuncs",
+                "userConfirmNewFuncOrChange"
+              ]
             },
             {
               "isNamespace": false,
@@ -1469,7 +1494,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["meActions"],
+          "spreadElementNames": [
+            "meActions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -1635,7 +1662,10 @@
               "localName": "appActions",
               "sourceValue": "actions/app",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/app.ts",
-              "exportNames": ["userCheckFuncs", "userConfirmNewFuncOrChange"]
+              "exportNames": [
+                "userCheckFuncs",
+                "userConfirmNewFuncOrChange"
+              ]
             },
             {
               "isNamespace": true,
@@ -1855,7 +1885,9 @@
               "localName": "statusActions",
               "sourceValue": "actions/status",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/status.ts",
-              "exportNames": ["toggleEntityStatus"]
+              "exportNames": [
+                "toggleEntityStatus"
+              ]
             },
             {
               "isNamespace": true,
@@ -2028,7 +2060,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "statusActions", "withdrawActions"],
+          "spreadElementNames": [
+            "actions",
+            "statusActions",
+            "withdrawActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -2169,7 +2205,11 @@
               "localName": "downloadActions",
               "sourceValue": "actions/download",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/download.ts",
-              "exportNames": ["downloadRequested", "downloadSucceed", "downloadFailed"]
+              "exportNames": [
+                "downloadRequested",
+                "downloadSucceed",
+                "downloadFailed"
+              ]
             },
             {
               "isNamespace": true,
@@ -2411,7 +2451,11 @@
               "localName": "downloadActions",
               "sourceValue": "actions/download",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/download.ts",
-              "exportNames": ["downloadRequested", "downloadSucceed", "downloadFailed"]
+              "exportNames": [
+                "downloadRequested",
+                "downloadSucceed",
+                "downloadFailed"
+              ]
             },
             {
               "isNamespace": true,
@@ -2817,7 +2861,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction", "annexAction", "metaActions"],
+          "spreadElementNames": [
+            "refundAction",
+            "annexAction",
+            "metaActions"
+          ],
           "objectPropertyMap": {
             "change": "change",
             "initialize": "initialize"
@@ -2906,7 +2954,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction", "annexAction"],
+          "spreadElementNames": [
+            "refundAction",
+            "annexAction"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -3001,7 +3052,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -3096,7 +3149,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -3191,7 +3246,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -3286,7 +3343,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -3376,7 +3435,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -3464,7 +3525,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -3552,7 +3615,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -3686,7 +3751,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "protocolActions", "submitActions"],
+          "spreadElementNames": [
+            "actions",
+            "protocolActions",
+            "submitActions"
+          ],
           "objectPropertyMap": {
             "goBack": "goBack",
             "replace": "replace"
@@ -3787,7 +3856,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "setFixRateQueryType": "setFixRateQueryType"
           }
@@ -3887,7 +3958,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "goBack": "goBack"
           }
@@ -3957,7 +4030,11 @@
           ],
           "actionsComponents": [],
           "unknownElements": [],
-          "spreadElementNames": ["restActions", "previewActions", "collectionActions"],
+          "spreadElementNames": [
+            "restActions",
+            "previewActions",
+            "collectionActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -4027,7 +4104,11 @@
           ],
           "actionsComponents": [],
           "unknownElements": [],
-          "spreadElementNames": ["restActions", "previewActions", "collectionActions"],
+          "spreadElementNames": [
+            "restActions",
+            "previewActions",
+            "collectionActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -4875,7 +4956,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions"],
+          "spreadElementNames": [
+            "withdrawActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -5075,7 +5158,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions", "metaActions", "modalActions"],
+          "spreadElementNames": [
+            "withdrawActions",
+            "metaActions",
+            "modalActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -5282,7 +5369,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["fileActions", "withdrawActions"],
+          "spreadElementNames": [
+            "fileActions",
+            "withdrawActions"
+          ],
           "objectPropertyMap": {
             "reset": "reset"
           }
@@ -6063,7 +6153,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "reset": "reset"
           }
@@ -6284,7 +6376,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "userActions"],
+          "spreadElementNames": [
+            "actions",
+            "userActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -6348,7 +6443,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["statementActions"],
+          "spreadElementNames": [
+            "statementActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -6412,7 +6509,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["statementActions"],
+          "spreadElementNames": [
+            "statementActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -6456,7 +6555,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -6515,7 +6616,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["meAction"],
+          "spreadElementNames": [
+            "meAction"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -6645,7 +6748,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["statementActions", "refundActions", "meAction"],
+          "spreadElementNames": [
+            "statementActions",
+            "refundActions",
+            "meAction"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -6706,7 +6813,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["meAction"],
+          "spreadElementNames": [
+            "meAction"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -6787,7 +6896,9 @@
               "localName": "errorActions",
               "sourceValue": "actions/error",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/error.ts",
-              "exportNames": ["specificSpotError"]
+              "exportNames": [
+                "specificSpotError"
+              ]
             },
             {
               "isNamespace": false,
@@ -6815,7 +6926,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["statementActions", "refundActions", "errorActions"],
+          "spreadElementNames": [
+            "statementActions",
+            "refundActions",
+            "errorActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -6859,7 +6974,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -6918,7 +7035,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -7223,7 +7342,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "withDrawActions"],
+          "spreadElementNames": [
+            "actions",
+            "withDrawActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -7472,7 +7594,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "withDrawActions"],
+          "spreadElementNames": [
+            "actions",
+            "withDrawActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -7610,7 +7735,9 @@
             ", end column: 1)"
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions"],
+          "spreadElementNames": [
+            "metaActions"
+          ],
           "objectPropertyMap": {
             "change": "change",
             "initialize": "initialize"
@@ -7721,7 +7848,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "couponActions"],
+          "spreadElementNames": [
+            "actions",
+            "couponActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -7814,7 +7944,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "firmActions"],
+          "spreadElementNames": [
+            "actions",
+            "firmActions"
+          ],
           "objectPropertyMap": {
             "push": "push",
             "destroy": "destroy"
@@ -7868,7 +8001,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "reset": "reset"
           }
@@ -7947,7 +8082,10 @@
             ", end column: 62)"
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "modalActions"],
+          "spreadElementNames": [
+            "actions",
+            "modalActions"
+          ],
           "objectPropertyMap": {
             "change": "change",
             "touch": "touch"
@@ -8215,7 +8353,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "withdrawActions"],
+          "spreadElementNames": [
+            "actions",
+            "withdrawActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -8361,7 +8502,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "fileActions"],
+          "spreadElementNames": [
+            "actions",
+            "fileActions"
+          ],
           "objectPropertyMap": {
             "reset": "reset"
           }
@@ -9331,7 +9475,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["messageActions"],
+          "spreadElementNames": [
+            "messageActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -9482,7 +9628,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -9635,7 +9783,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "meActions"],
+          "spreadElementNames": [
+            "actions",
+            "meActions"
+          ],
           "objectPropertyMap": {
             "destroy": "destroy",
             "push": "push"
@@ -9749,7 +9900,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -9860,7 +10013,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xtPartnerActions"],
+          "spreadElementNames": [
+            "xtPartnerActions"
+          ],
           "objectPropertyMap": {
             "destroy": "destroy"
           }
@@ -9936,7 +10091,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xtPartnerActions"],
+          "spreadElementNames": [
+            "xtPartnerActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -10051,7 +10208,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xtPartnerActions", "xpTransferActions"],
+          "spreadElementNames": [
+            "xtPartnerActions",
+            "xpTransferActions"
+          ],
           "objectPropertyMap": {
             "goBack": "goBack"
           }
@@ -10496,7 +10656,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xpTransferActions"],
+          "spreadElementNames": [
+            "xpTransferActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -10561,7 +10723,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xpTransferActions"],
+          "spreadElementNames": [
+            "xpTransferActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -10675,7 +10839,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xtPartnerActions"],
+          "spreadElementNames": [
+            "xtPartnerActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -10747,7 +10913,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xpTransferActions"],
+          "spreadElementNames": [
+            "xpTransferActions"
+          ],
           "objectPropertyMap": {
             "goBack": "goBack"
           }
@@ -10809,7 +10977,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xpReceiveActions"],
+          "spreadElementNames": [
+            "xpReceiveActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -10876,7 +11046,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xpReceiveActions"],
+          "spreadElementNames": [
+            "xpReceiveActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -11007,7 +11179,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["xpReceiveActions", "fundActions"],
+          "spreadElementNames": [
+            "xpReceiveActions",
+            "fundActions"
+          ],
           "objectPropertyMap": {
             "destroy": "destroy"
           }
@@ -11083,7 +11258,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -11163,7 +11340,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions"],
+          "spreadElementNames": [
+            "modalActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -11214,7 +11393,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions"],
+          "spreadElementNames": [
+            "metaActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -11290,7 +11471,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions", "submitActions", "metaActions"],
+          "spreadElementNames": [
+            "modalActions",
+            "submitActions",
+            "metaActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -11355,7 +11540,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions", "submitActions"],
+          "spreadElementNames": [
+            "metaActions",
+            "submitActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -11401,7 +11589,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions"],
+          "spreadElementNames": [
+            "metaActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -11445,7 +11635,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions"],
+          "spreadElementNames": [
+            "metaActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -11702,7 +11894,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawalsActions", "securityActions", "userActions"],
+          "spreadElementNames": [
+            "withdrawalsActions",
+            "securityActions",
+            "userActions"
+          ],
           "objectPropertyMap": {
             "reset": "reset",
             "touch": "touch",
@@ -12353,7 +12549,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["userActions", "securityActions"],
+          "spreadElementNames": [
+            "userActions",
+            "securityActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -12445,7 +12644,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["userActions", "securityActions"],
+          "spreadElementNames": [
+            "userActions",
+            "securityActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -12500,7 +12702,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["fileActions"],
+          "spreadElementNames": [
+            "fileActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -12710,7 +12914,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["userActions", "passwordActions"],
+          "spreadElementNames": [
+            "userActions",
+            "passwordActions"
+          ],
           "objectPropertyMap": {
             "initialize": "initialize"
           }
@@ -12859,7 +13066,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions", "faqActions"],
+          "spreadElementNames": [
+            "modalActions",
+            "faqActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -13196,7 +13406,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["meActions"],
+          "spreadElementNames": [
+            "meActions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -13278,7 +13490,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["meActions", "xshieldActions"],
+          "spreadElementNames": [
+            "meActions",
+            "xshieldActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -13306,14 +13521,19 @@
               "localName": "appActions",
               "sourceValue": "actions/app",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/app.ts",
-              "exportNames": ["userCheckFuncs", "userConfirmNewFuncOrChange"]
+              "exportNames": [
+                "userCheckFuncs",
+                "userConfirmNewFuncOrChange"
+              ]
             },
             {
               "isNamespace": true,
               "localName": "statusActions",
               "sourceValue": "actions/status",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/status.ts",
-              "exportNames": ["toggleEntityStatus"]
+              "exportNames": [
+                "toggleEntityStatus"
+              ]
             },
             {
               "isNamespace": false,
@@ -13348,7 +13568,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["uiActions", "appActions", "statusActions"],
+          "spreadElementNames": [
+            "uiActions",
+            "appActions",
+            "statusActions"
+          ],
           "objectPropertyMap": {
             "push": "push",
             "getWhiteListRequested": "getWhiteListRequested"
@@ -13420,7 +13644,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions", "modalActions", "submitActions"],
+          "spreadElementNames": [
+            "metaActions",
+            "modalActions",
+            "submitActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -13505,7 +13733,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions", "userActions"],
+          "spreadElementNames": [
+            "modalActions",
+            "userActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -13545,7 +13776,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions"],
+          "spreadElementNames": [
+            "modalActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -13705,7 +13938,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["swapActions"],
+          "spreadElementNames": [
+            "swapActions"
+          ],
           "objectPropertyMap": {
             "change": "change"
           }
@@ -13766,7 +14001,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["tipActions"],
+          "spreadElementNames": [
+            "tipActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -13801,7 +14038,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["action"],
+          "spreadElementNames": [
+            "action"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -13914,7 +14153,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -14042,7 +14283,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaAction", "withdrawalsAction"],
+          "spreadElementNames": [
+            "metaAction",
+            "withdrawalsAction"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -14088,7 +14332,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions"],
+          "spreadElementNames": [
+            "metaActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -14177,7 +14423,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -14272,7 +14520,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["earnExchangeActions"],
+          "spreadElementNames": [
+            "earnExchangeActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -14625,7 +14875,9 @@
               "localName": "statusActions",
               "sourceValue": "actions/status",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/status.ts",
-              "exportNames": ["toggleEntityStatus"]
+              "exportNames": [
+                "toggleEntityStatus"
+              ]
             },
             {
               "isNamespace": true,
@@ -14915,7 +15167,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction"],
+          "spreadElementNames": [
+            "refundAction"
+          ],
           "objectPropertyMap": {
             "push": "push",
             "reset": "reset",
@@ -15001,7 +15255,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction", "metaActions"],
+          "spreadElementNames": [
+            "refundAction",
+            "metaActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -15099,7 +15356,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "change": "change"
           }
@@ -15203,7 +15462,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["queryActions", "fixRateActions"],
+          "spreadElementNames": [
+            "queryActions",
+            "fixRateActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -16335,7 +16597,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions", "withdrawalsActions"],
+          "spreadElementNames": [
+            "withdrawActions",
+            "withdrawalsActions"
+          ],
           "objectPropertyMap": {
             "reset": "reset",
             "change": "change",
@@ -16539,7 +16804,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "fileActions"],
+          "spreadElementNames": [
+            "actions",
+            "fileActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -16828,7 +17096,11 @@
               "localName": "idsActions",
               "sourceValue": "actions/ids",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/ids.ts",
-              "exportNames": ["setIds", "setCurIds", "resetIds"]
+              "exportNames": [
+                "setIds",
+                "setCurIds",
+                "resetIds"
+              ]
             },
             {
               "isNamespace": false,
@@ -17074,7 +17346,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions"],
+          "spreadElementNames": [
+            "withdrawActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -17236,7 +17510,11 @@
               "localName": "downloadActions",
               "sourceValue": "actions/download",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/download.ts",
-              "exportNames": ["downloadRequested", "downloadSucceed", "downloadFailed"]
+              "exportNames": [
+                "downloadRequested",
+                "downloadSucceed",
+                "downloadFailed"
+              ]
             }
           ],
           "actionsComponents": [
@@ -17257,7 +17535,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "downloadActions"],
+          "spreadElementNames": [
+            "actions",
+            "downloadActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -17321,7 +17602,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["statementActions"],
+          "spreadElementNames": [
+            "statementActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -17418,7 +17701,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["statementActions", "vaActions"],
+          "spreadElementNames": [
+            "statementActions",
+            "vaActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -17515,7 +17801,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["statementActions", "vaActions"],
+          "spreadElementNames": [
+            "statementActions",
+            "vaActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -17532,7 +17821,9 @@
               "localName": "stepActions",
               "sourceValue": "actions/step",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/step.ts",
-              "exportNames": ["setStep"]
+              "exportNames": [
+                "setStep"
+              ]
             },
             {
               "isNamespace": false,
@@ -17560,7 +17851,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["stepActions"],
+          "spreadElementNames": [
+            "stepActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -17659,7 +17952,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -17844,7 +18139,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -17907,7 +18204,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["meActions"],
+          "spreadElementNames": [
+            "meActions"
+          ],
           "objectPropertyMap": {}
         },
         {
@@ -18439,7 +18738,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -18502,7 +18803,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -18560,7 +18863,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["basicSetActions"],
+          "spreadElementNames": [
+            "basicSetActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -18664,7 +18969,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "staffActions"],
+          "spreadElementNames": [
+            "actions",
+            "staffActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -19111,7 +19419,12 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "fileActions", "utilActions", "metaActions"],
+          "spreadElementNames": [
+            "actions",
+            "fileActions",
+            "utilActions",
+            "metaActions"
+          ],
           "objectPropertyMap": {
             "initialize": "initialize",
             "reset": "reset",
@@ -19563,7 +19876,12 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "fileActions", "utilActions", "metaActions"],
+          "spreadElementNames": [
+            "actions",
+            "fileActions",
+            "utilActions",
+            "metaActions"
+          ],
           "objectPropertyMap": {
             "touch": "touch",
             "change": "change",
@@ -19880,7 +20198,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["userActions", "vcodeActions", "securityActions"],
+          "spreadElementNames": [
+            "userActions",
+            "vcodeActions",
+            "securityActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -19968,7 +20290,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "messageActions"],
+          "spreadElementNames": [
+            "actions",
+            "messageActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -20224,7 +20549,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["fundSwapActions", "withdrawActions"],
+          "spreadElementNames": [
+            "fundSwapActions",
+            "withdrawActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -20335,7 +20663,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -20453,7 +20783,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["fundSwapActions"],
+          "spreadElementNames": [
+            "fundSwapActions"
+          ],
           "objectPropertyMap": {
             "change": "change"
           }
@@ -20600,7 +20932,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "trendActions"],
+          "spreadElementNames": [
+            "actions",
+            "trendActions"
+          ],
           "objectPropertyMap": {
             "queryRestrictionList": "queryRestrictionList",
             "change": "change",
@@ -20701,7 +21036,11 @@
               "localName": "countdownActions",
               "sourceValue": "actions/countdown",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/countdown.ts",
-              "exportNames": ["setCountDown", "setSeconds", "stopSeconds"]
+              "exportNames": [
+                "setCountDown",
+                "setSeconds",
+                "stopSeconds"
+              ]
             },
             {
               "isNamespace": false,
@@ -20729,7 +21068,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "countdownActions"],
+          "spreadElementNames": [
+            "actions",
+            "countdownActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -20907,7 +21249,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions"],
+          "spreadElementNames": [
+            "withdrawActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -21133,7 +21477,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions", "userActions"],
+          "spreadElementNames": [
+            "withdrawActions",
+            "userActions"
+          ],
           "objectPropertyMap": {
             "change": "change"
           }
@@ -21375,7 +21722,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions", "userActions"],
+          "spreadElementNames": [
+            "withdrawActions",
+            "userActions"
+          ],
           "objectPropertyMap": {
             "push": "push",
             "change": "change",
@@ -22183,7 +22533,9 @@
               "localName": "errorActions",
               "sourceValue": "actions/error",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/error.ts",
-              "exportNames": ["specificSpotError"]
+              "exportNames": [
+                "specificSpotError"
+              ]
             }
           ],
           "actionsComponents": [
@@ -22204,7 +22556,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["authActions", "userActions", "errorActions"],
+          "spreadElementNames": [
+            "authActions",
+            "userActions",
+            "errorActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -22328,7 +22684,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["authActions", "userActions", "securityActions"],
+          "spreadElementNames": [
+            "authActions",
+            "userActions",
+            "securityActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -22363,7 +22723,10 @@
               "localName": "pwStrengthActions",
               "sourceValue": "actions/pwStrength",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/pwStrength.ts",
-              "exportNames": ["setPwStrength", "resetPwStrength"]
+              "exportNames": [
+                "setPwStrength",
+                "resetPwStrength"
+              ]
             },
             {
               "isNamespace": true,
@@ -22427,7 +22790,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions", "pwStrengthActions", "userActions"],
+          "spreadElementNames": [
+            "actions",
+            "pwStrengthActions",
+            "userActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23087,7 +23454,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["securityActions", "userActions", "vcodeActions"],
+          "spreadElementNames": [
+            "securityActions",
+            "userActions",
+            "vcodeActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23195,7 +23566,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions"],
+          "spreadElementNames": [
+            "modalActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23239,7 +23612,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions"],
+          "spreadElementNames": [
+            "modalActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23287,7 +23662,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["contentActions"],
+          "spreadElementNames": [
+            "contentActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23339,7 +23716,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["uploadActions"],
+          "spreadElementNames": [
+            "uploadActions"
+          ],
           "objectPropertyMap": {
             "initialize": "initialize"
           }
@@ -23410,7 +23789,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction"],
+          "spreadElementNames": [
+            "refundAction"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23493,7 +23874,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction"],
+          "spreadElementNames": [
+            "refundAction"
+          ],
           "objectPropertyMap": {
             "push": "push",
             "change": "change"
@@ -23551,7 +23934,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["fileActions"],
+          "spreadElementNames": [
+            "fileActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23617,7 +24002,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["addrLocsActions"],
+          "spreadElementNames": [
+            "addrLocsActions"
+          ],
           "objectPropertyMap": {
             "change": "change"
           }
@@ -23663,7 +24050,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["modalActions"],
+          "spreadElementNames": [
+            "modalActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23841,7 +24230,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["withdrawActions"],
+          "spreadElementNames": [
+            "withdrawActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23898,7 +24289,11 @@
               "localName": "idsActions",
               "sourceValue": "actions/ids",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/ids.ts",
-              "exportNames": ["setIds", "setCurIds", "resetIds"]
+              "exportNames": [
+                "setIds",
+                "setCurIds",
+                "resetIds"
+              ]
             }
           ],
           "actionsComponents": [
@@ -23921,7 +24316,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["idsActions"],
+          "spreadElementNames": [
+            "idsActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -23938,7 +24335,11 @@
               "localName": "countdownAction",
               "sourceValue": "actions/countdown",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/countdown.ts",
-              "exportNames": ["setCountDown", "setSeconds", "stopSeconds"]
+              "exportNames": [
+                "setCountDown",
+                "setSeconds",
+                "stopSeconds"
+              ]
             },
             {
               "isNamespace": true,
@@ -24039,7 +24440,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["countdownAction", "spotAction"],
+          "spreadElementNames": [
+            "countdownAction",
+            "spotAction"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -24094,7 +24498,11 @@
               "localName": "countdownAction",
               "sourceValue": "actions/countdown",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/countdown.ts",
-              "exportNames": ["setCountDown", "setSeconds", "stopSeconds"]
+              "exportNames": [
+                "setCountDown",
+                "setSeconds",
+                "stopSeconds"
+              ]
             },
             {
               "isNamespace": true,
@@ -24181,7 +24589,9 @@
               "localName": "stepActions",
               "sourceValue": "actions/step",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/step.ts",
-              "exportNames": ["setStep"]
+              "exportNames": [
+                "setStep"
+              ]
             }
           ],
           "actionsComponents": [
@@ -24993,7 +25403,9 @@
               "localName": "statusActions",
               "sourceValue": "actions/status",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/status.ts",
-              "exportNames": ["toggleEntityStatus"]
+              "exportNames": [
+                "toggleEntityStatus"
+              ]
             },
             {
               "isNamespace": false,
@@ -25021,7 +25433,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["metaActions", "statusActions"],
+          "spreadElementNames": [
+            "metaActions",
+            "statusActions"
+          ],
           "objectPropertyMap": {
             "change": "change"
           }
@@ -25238,7 +25653,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["actions"],
+          "spreadElementNames": [
+            "actions"
+          ],
           "objectPropertyMap": {
             "initialize": "initialize"
           }
@@ -25334,7 +25751,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["ticketActions"],
+          "spreadElementNames": [
+            "ticketActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -25437,7 +25856,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["securityActions", "userActions"],
+          "spreadElementNames": [
+            "securityActions",
+            "userActions"
+          ],
           "objectPropertyMap": {
             "initialize": "initialize",
             "change": "change"
@@ -25495,7 +25917,11 @@
               "localName": "countdownAction",
               "sourceValue": "actions/countdown",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/countdown.ts",
-              "exportNames": ["setCountDown", "setSeconds", "stopSeconds"]
+              "exportNames": [
+                "setCountDown",
+                "setSeconds",
+                "stopSeconds"
+              ]
             }
           ],
           "actionsComponents": [
@@ -25516,7 +25942,10 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction", "countdownAction"],
+          "spreadElementNames": [
+            "refundAction",
+            "countdownAction"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -25571,7 +26000,11 @@
               "localName": "countdownAction",
               "sourceValue": "actions/countdown",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/countdown.ts",
-              "exportNames": ["setCountDown", "setSeconds", "stopSeconds"]
+              "exportNames": [
+                "setCountDown",
+                "setSeconds",
+                "stopSeconds"
+              ]
             },
             {
               "isNamespace": true,
@@ -25672,7 +26105,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["refundAction", "countdownAction", "fundSwapActions"],
+          "spreadElementNames": [
+            "refundAction",
+            "countdownAction",
+            "fundSwapActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -25725,7 +26162,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["basicSetActions"],
+          "spreadElementNames": [
+            "basicSetActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -25780,7 +26219,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["fileActions"],
+          "spreadElementNames": [
+            "fileActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -25881,7 +26322,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["authActions", "uiActions", "wechatActions"],
+          "spreadElementNames": [
+            "authActions",
+            "uiActions",
+            "wechatActions"
+          ],
           "objectPropertyMap": {
             "push": "push"
           }
@@ -25900,7 +26345,11 @@
               "localName": "idsActions",
               "sourceValue": "actions/ids",
               "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/ids.ts",
-              "exportNames": ["setIds", "setCurIds", "resetIds"]
+              "exportNames": [
+                "setIds",
+                "setCurIds",
+                "resetIds"
+              ]
             }
           ],
           "actionsComponents": [
@@ -25921,7 +26370,9 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["idsActions"],
+          "spreadElementNames": [
+            "idsActions"
+          ],
           "objectPropertyMap": {}
         }
       ]
@@ -26119,7 +26570,11 @@
             }
           ],
           "unknownElements": [],
-          "spreadElementNames": ["userActions", "vcodeActions", "securityActions"],
+          "spreadElementNames": [
+            "userActions",
+            "vcodeActions",
+            "securityActions"
+          ],
           "objectPropertyMap": {}
         }
       ]

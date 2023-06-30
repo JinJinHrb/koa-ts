@@ -1,0 +1,1180 @@
+{
+  "message": "ok",
+  "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/bridgeConnection/sagas.ts",
+  "result": {
+    "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/bridgeConnection/sagas.ts",
+    "localConnect": "",
+    "localCompose": "",
+    "groups": []
+  },
+  "ast": {
+    "type": "File",
+    "start": 0,
+    "end": 356,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0,
+        "index": 0
+      },
+      "end": {
+        "line": 21,
+        "column": 0,
+        "index": 356
+      }
+    },
+    "errors": [],
+    "program": {
+      "type": "Program",
+      "start": 0,
+      "end": 356,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0,
+          "index": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 0,
+          "index": 356
+        }
+      },
+      "sourceType": "module",
+      "interpreter": null,
+      "body": [
+        {
+          "type": "ImportDeclaration",
+          "start": 16,
+          "end": 56,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "index": 16
+            },
+            "end": {
+              "line": 3,
+              "column": 40,
+              "index": 56
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 25,
+              "end": 28,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9,
+                  "index": 25
+                },
+                "end": {
+                  "line": 3,
+                  "column": 12,
+                  "index": 28
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 25,
+                "end": 28,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 9,
+                    "index": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 12,
+                    "index": 28
+                  },
+                  "identifierName": "all"
+                },
+                "name": "all"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 25,
+                "end": 28,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 9,
+                    "index": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 12,
+                    "index": 28
+                  },
+                  "identifierName": "all"
+                },
+                "name": "all"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 36,
+            "end": 56,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 20,
+                "index": 36
+              },
+              "end": {
+                "line": 3,
+                "column": 40,
+                "index": 56
+              }
+            },
+            "extra": {
+              "rawValue": "redux-saga/effects",
+              "raw": "'redux-saga/effects'"
+            },
+            "value": "redux-saga/effects"
+          },
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "* @format ",
+              "start": 0,
+              "end": 14,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "index": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 14,
+                  "index": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "ImportDeclaration",
+          "start": 57,
+          "end": 92,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "index": 57
+            },
+            "end": {
+              "line": 4,
+              "column": 35,
+              "index": 92
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 66,
+              "end": 69,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 9,
+                  "index": 66
+                },
+                "end": {
+                  "line": 4,
+                  "column": 12,
+                  "index": 69
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 66,
+                "end": 69,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 9,
+                    "index": 66
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 12,
+                    "index": 69
+                  },
+                  "identifierName": "ENV"
+                },
+                "name": "ENV"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 66,
+                "end": 69,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 9,
+                    "index": 66
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 12,
+                    "index": 69
+                  },
+                  "identifierName": "ENV"
+                },
+                "name": "ENV"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 77,
+            "end": 92,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 20,
+                "index": 77
+              },
+              "end": {
+                "line": 4,
+                "column": 35,
+                "index": 92
+              }
+            },
+            "extra": {
+              "rawValue": "constants/env",
+              "raw": "'constants/env'"
+            },
+            "value": "constants/env"
+          }
+        },
+        {
+          "type": "ImportDeclaration",
+          "start": 93,
+          "end": 133,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0,
+              "index": 93
+            },
+            "end": {
+              "line": 5,
+              "column": 40,
+              "index": 133
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 102,
+              "end": 118,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 9,
+                  "index": 102
+                },
+                "end": {
+                  "line": 5,
+                  "column": 25,
+                  "index": 118
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 102,
+                "end": 107,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 9,
+                    "index": 102
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 14,
+                    "index": 107
+                  },
+                  "identifierName": "sagas"
+                },
+                "name": "sagas"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 111,
+                "end": 118,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 18,
+                    "index": 111
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 25,
+                    "index": 118
+                  },
+                  "identifierName": "xtSagas"
+                },
+                "name": "xtSagas"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 126,
+            "end": 133,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 33,
+                "index": 126
+              },
+              "end": {
+                "line": 5,
+                "column": 40,
+                "index": 133
+              }
+            },
+            "extra": {
+              "rawValue": "sagas",
+              "raw": "'sagas'"
+            },
+            "value": "sagas"
+          }
+        },
+        {
+          "type": "VariableDeclaration",
+          "start": 135,
+          "end": 192,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 0,
+              "index": 135
+            },
+            "end": {
+              "line": 11,
+              "column": 1,
+              "index": 192
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 141,
+              "end": 192,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 6,
+                  "index": 141
+                },
+                "end": {
+                  "line": 11,
+                  "column": 1,
+                  "index": 192
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 141,
+                "end": 146,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 6,
+                    "index": 141
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 11,
+                    "index": 146
+                  },
+                  "identifierName": "sagas"
+                },
+                "name": "sagas"
+              },
+              "init": {
+                "type": "TSAsExpression",
+                "start": 149,
+                "end": 192,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 14,
+                    "index": 149
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 1,
+                    "index": 192
+                  }
+                },
+                "expression": {
+                  "type": "ObjectExpression",
+                  "start": 149,
+                  "end": 165,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 14,
+                      "index": 149
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 1,
+                      "index": 165
+                    }
+                  },
+                  "properties": [
+                    {
+                      "type": "SpreadElement",
+                      "start": 152,
+                      "end": 162,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 1,
+                          "index": 152
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 11,
+                          "index": 162
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 155,
+                        "end": 162,
+                        "loc": {
+                          "start": {
+                            "line": 8,
+                            "column": 4,
+                            "index": 155
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 11,
+                            "index": 162
+                          },
+                          "identifierName": "xtSagas"
+                        },
+                        "name": "xtSagas"
+                      }
+                    }
+                  ],
+                  "extra": {
+                    "trailingComma": 162
+                  }
+                },
+                "typeAnnotation": {
+                  "type": "TSTypeLiteral",
+                  "start": 169,
+                  "end": 192,
+                  "loc": {
+                    "start": {
+                      "line": 9,
+                      "column": 5,
+                      "index": 169
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 1,
+                      "index": 192
+                    }
+                  },
+                  "members": [
+                    {
+                      "type": "TSIndexSignature",
+                      "start": 172,
+                      "end": 190,
+                      "loc": {
+                        "start": {
+                          "line": 10,
+                          "column": 1,
+                          "index": 172
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 19,
+                          "index": 190
+                        }
+                      },
+                      "parameters": [
+                        {
+                          "type": "Identifier",
+                          "start": 173,
+                          "end": 184,
+                          "loc": {
+                            "start": {
+                              "line": 10,
+                              "column": 2,
+                              "index": 173
+                            },
+                            "end": {
+                              "line": 10,
+                              "column": 13,
+                              "index": 184
+                            },
+                            "identifierName": "key"
+                          },
+                          "name": "key",
+                          "typeAnnotation": {
+                            "type": "TSTypeAnnotation",
+                            "start": 176,
+                            "end": 184,
+                            "loc": {
+                              "start": {
+                                "line": 10,
+                                "column": 5,
+                                "index": 176
+                              },
+                              "end": {
+                                "line": 10,
+                                "column": 13,
+                                "index": 184
+                              }
+                            },
+                            "typeAnnotation": {
+                              "type": "TSStringKeyword",
+                              "start": 178,
+                              "end": 184,
+                              "loc": {
+                                "start": {
+                                  "line": 10,
+                                  "column": 7,
+                                  "index": 178
+                                },
+                                "end": {
+                                  "line": 10,
+                                  "column": 13,
+                                  "index": 184
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "typeAnnotation": {
+                        "type": "TSTypeAnnotation",
+                        "start": 185,
+                        "end": 190,
+                        "loc": {
+                          "start": {
+                            "line": 10,
+                            "column": 14,
+                            "index": 185
+                          },
+                          "end": {
+                            "line": 10,
+                            "column": 19,
+                            "index": 190
+                          }
+                        },
+                        "typeAnnotation": {
+                          "type": "TSAnyKeyword",
+                          "start": 187,
+                          "end": 190,
+                          "loc": {
+                            "start": {
+                              "line": 10,
+                              "column": 16,
+                              "index": 187
+                            },
+                            "end": {
+                              "line": 10,
+                              "column": 19,
+                              "index": 190
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "kind": "const",
+          "trailingComments": [
+            {
+              "type": "CommentLine",
+              "value": " delete sagas.loggerSaga",
+              "start": 194,
+              "end": 220,
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 0,
+                  "index": 194
+                },
+                "end": {
+                  "line": 13,
+                  "column": 26,
+                  "index": 220
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "IfStatement",
+          "start": 221,
+          "end": 296,
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 0,
+              "index": 221
+            },
+            "end": {
+              "line": 16,
+              "column": 1,
+              "index": 296
+            }
+          },
+          "test": {
+            "type": "UnaryExpression",
+            "start": 225,
+            "end": 266,
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 4,
+                "index": 225
+              },
+              "end": {
+                "line": 14,
+                "column": 45,
+                "index": 266
+              }
+            },
+            "operator": "!",
+            "prefix": true,
+            "argument": {
+              "type": "CallExpression",
+              "start": 226,
+              "end": 266,
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 5,
+                  "index": 226
+                },
+                "end": {
+                  "line": 14,
+                  "column": 45,
+                  "index": 266
+                }
+              },
+              "callee": {
+                "type": "MemberExpression",
+                "start": 226,
+                "end": 261,
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 5,
+                    "index": 226
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 40,
+                    "index": 261
+                  }
+                },
+                "object": {
+                  "type": "ArrayExpression",
+                  "start": 226,
+                  "end": 252,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 5,
+                      "index": 226
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 31,
+                      "index": 252
+                    }
+                  },
+                  "elements": [
+                    {
+                      "type": "StringLiteral",
+                      "start": 227,
+                      "end": 240,
+                      "loc": {
+                        "start": {
+                          "line": 14,
+                          "column": 6,
+                          "index": 227
+                        },
+                        "end": {
+                          "line": 14,
+                          "column": 19,
+                          "index": 240
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "development",
+                        "raw": "'development'"
+                      },
+                      "value": "development"
+                    },
+                    {
+                      "type": "StringLiteral",
+                      "start": 242,
+                      "end": 251,
+                      "loc": {
+                        "start": {
+                          "line": 14,
+                          "column": 21,
+                          "index": 242
+                        },
+                        "end": {
+                          "line": 14,
+                          "column": 30,
+                          "index": 251
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "staging",
+                        "raw": "'staging'"
+                      },
+                      "value": "staging"
+                    }
+                  ]
+                },
+                "computed": false,
+                "property": {
+                  "type": "Identifier",
+                  "start": 253,
+                  "end": 261,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 32,
+                      "index": 253
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 40,
+                      "index": 261
+                    },
+                    "identifierName": "includes"
+                  },
+                  "name": "includes"
+                }
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "start": 262,
+                  "end": 265,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 41,
+                      "index": 262
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 44,
+                      "index": 265
+                    },
+                    "identifierName": "ENV"
+                  },
+                  "name": "ENV"
+                }
+              ]
+            }
+          },
+          "consequent": {
+            "type": "BlockStatement",
+            "start": 268,
+            "end": 296,
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 47,
+                "index": 268
+              },
+              "end": {
+                "line": 16,
+                "column": 1,
+                "index": 296
+              }
+            },
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "start": 271,
+                "end": 294,
+                "loc": {
+                  "start": {
+                    "line": 15,
+                    "column": 1,
+                    "index": 271
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 24,
+                    "index": 294
+                  }
+                },
+                "expression": {
+                  "type": "UnaryExpression",
+                  "start": 271,
+                  "end": 294,
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 1,
+                      "index": 271
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 24,
+                      "index": 294
+                    }
+                  },
+                  "operator": "delete",
+                  "prefix": true,
+                  "argument": {
+                    "type": "MemberExpression",
+                    "start": 278,
+                    "end": 294,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 8,
+                        "index": 278
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 24,
+                        "index": 294
+                      }
+                    },
+                    "object": {
+                      "type": "Identifier",
+                      "start": 278,
+                      "end": 283,
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 8,
+                          "index": 278
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 13,
+                          "index": 283
+                        },
+                        "identifierName": "sagas"
+                      },
+                      "name": "sagas"
+                    },
+                    "computed": false,
+                    "property": {
+                      "type": "Identifier",
+                      "start": 284,
+                      "end": 294,
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 14,
+                          "index": 284
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 24,
+                          "index": 294
+                        },
+                        "identifierName": "loggerSaga"
+                      },
+                      "name": "loggerSaga"
+                    }
+                  }
+                }
+              }
+            ],
+            "directives": []
+          },
+          "alternate": null,
+          "leadingComments": [
+            {
+              "type": "CommentLine",
+              "value": " delete sagas.loggerSaga",
+              "start": 194,
+              "end": 220,
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 0,
+                  "index": 194
+                },
+                "end": {
+                  "line": 13,
+                  "column": 26,
+                  "index": 220
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "ExportDefaultDeclaration",
+          "start": 298,
+          "end": 355,
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 0,
+              "index": 298
+            },
+            "end": {
+              "line": 20,
+              "column": 1,
+              "index": 355
+            }
+          },
+          "exportKind": "value",
+          "declaration": {
+            "type": "FunctionDeclaration",
+            "start": 313,
+            "end": 355,
+            "loc": {
+              "start": {
+                "line": 18,
+                "column": 15,
+                "index": 313
+              },
+              "end": {
+                "line": 20,
+                "column": 1,
+                "index": 355
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 323,
+              "end": 331,
+              "loc": {
+                "start": {
+                  "line": 18,
+                  "column": 25,
+                  "index": 323
+                },
+                "end": {
+                  "line": 18,
+                  "column": 33,
+                  "index": 331
+                },
+                "identifierName": "rootSaga"
+              },
+              "name": "rootSaga"
+            },
+            "generator": true,
+            "async": false,
+            "params": [],
+            "body": {
+              "type": "BlockStatement",
+              "start": 334,
+              "end": 355,
+              "loc": {
+                "start": {
+                  "line": 18,
+                  "column": 36,
+                  "index": 334
+                },
+                "end": {
+                  "line": 20,
+                  "column": 1,
+                  "index": 355
+                }
+              },
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "start": 337,
+                  "end": 353,
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 1,
+                      "index": 337
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 17,
+                      "index": 353
+                    }
+                  },
+                  "expression": {
+                    "type": "YieldExpression",
+                    "start": 337,
+                    "end": 353,
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 1,
+                        "index": 337
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 17,
+                        "index": 353
+                      }
+                    },
+                    "delegate": false,
+                    "argument": {
+                      "type": "CallExpression",
+                      "start": 343,
+                      "end": 353,
+                      "loc": {
+                        "start": {
+                          "line": 19,
+                          "column": 7,
+                          "index": 343
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 17,
+                          "index": 353
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 343,
+                        "end": 346,
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 7,
+                            "index": 343
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 10,
+                            "index": 346
+                          },
+                          "identifierName": "all"
+                        },
+                        "name": "all"
+                      },
+                      "arguments": [
+                        {
+                          "type": "Identifier",
+                          "start": 347,
+                          "end": 352,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 11,
+                              "index": 347
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 16,
+                              "index": 352
+                            },
+                            "identifierName": "sagas"
+                          },
+                          "name": "sagas"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "directives": []
+            }
+          }
+        }
+      ],
+      "directives": []
+    },
+    "comments": [
+      {
+        "type": "CommentBlock",
+        "value": "* @format ",
+        "start": 0,
+        "end": 14,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0,
+            "index": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "index": 14
+          }
+        }
+      },
+      {
+        "type": "CommentLine",
+        "value": " delete sagas.loggerSaga",
+        "start": 194,
+        "end": 220,
+        "loc": {
+          "start": {
+            "line": 13,
+            "column": 0,
+            "index": 194
+          },
+          "end": {
+            "line": 13,
+            "column": 26,
+            "index": 220
+          }
+        }
+      }
+    ]
+  },
+  "stats": {
+    "dev": 16777220,
+    "mode": 33188,
+    "nlink": 1,
+    "uid": 501,
+    "gid": 20,
+    "rdev": 0,
+    "blksize": 4096,
+    "ino": 79589523,
+    "size": 356,
+    "blocks": 8,
+    "atimeMs": 1676913137040.1138,
+    "mtimeMs": 1676618900998.3167,
+    "ctimeMs": 1676618900998.3167,
+    "birthtimeMs": 1676618900998.145,
+    "atime": "2023-02-20T17:12:17.040Z",
+    "mtime": "2023-02-17T07:28:20.998Z",
+    "ctime": "2023-02-17T07:28:20.998Z",
+    "birthtime": "2023-02-17T07:28:20.998Z",
+    "life": 11527561253,
+    "lifeInDay": 133,
+    "fname": "sagas.ts",
+    "fileFlag": true,
+    "directoryFlag": false,
+    "symbolicLinkFlag": false
+  }
+}

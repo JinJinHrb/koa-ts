@@ -310,7 +310,6 @@ export const fillInActions2HandlerMap = async ({
           const calleeName =
             yieldArgument.type === 'CallExpression' ? yieldArgument.callee?.name : ''
           if (calleeName === localAll) {
-            console.log('#272 calleeArguments:', calleeArguments)
             if (
               calleeArguments.length !== 1 ||
               calleeArguments[0].type !== 'Identifier'
@@ -326,7 +325,9 @@ export const fillInActions2HandlerMap = async ({
             const sagasBindingNode = sagasBinding?.path.node
             if (
               sagasBindingNode?.type !== 'VariableDeclarator' ||
-              sagasBindingNode?.init?.type !== 'ObjectExpression'
+              !['ObjectExpression', 'TSAsExpression'].includes(
+                sagasBindingNode?.init?.type ?? '',
+              )
             ) {
               warnings.push(
                 `#281 sagasBindingNode?.type !== 'VariableDeclarator': ${nonAnalyzedFile}, loc: ${loc2String(
