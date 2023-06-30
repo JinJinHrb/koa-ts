@@ -22,7 +22,7 @@ import { DirectedGraph } from 'graphology'
 import { getSagaEffects } from './sagaHelper'
 
 // 先不处理 usage
-export const buildSagaGraphHandler = async () => {
+export const buildSagaGraphByActionsMap = async () => {
   const graph = new DirectedGraph()
   const { fileActions } = await getActionsMap()
   for (const { filePath, groups } of fileActions) {
