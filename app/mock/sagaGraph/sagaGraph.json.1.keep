@@ -857,7 +857,7 @@
     ],
     "edges": [
       {
-        "key": "geid_91_0",
+        "key": "geid_254_0",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/index.js",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested",
         "attributes": {
@@ -865,7 +865,7 @@
         }
       },
       {
-        "key": "geid_91_1",
+        "key": "geid_254_1",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/index.js",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFAVisible",
         "attributes": {
@@ -873,7 +873,7 @@
         }
       },
       {
-        "key": "geid_91_2",
+        "key": "geid_254_2",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/index.js",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFAParam",
         "attributes": {
@@ -881,7 +881,7 @@
         }
       },
       {
-        "key": "geid_91_3",
+        "key": "geid_254_3",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/index.js",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,checkABVType",
         "attributes": {
@@ -889,7 +889,7 @@
         }
       },
       {
-        "key": "geid_91_4",
+        "key": "geid_254_4",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/index.js",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,sendMfaMessageRequested",
         "attributes": {
@@ -897,7 +897,7 @@
         }
       },
       {
-        "key": "geid_91_5",
+        "key": "geid_254_5",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/MFAPanel/index.jsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,initVerifyMfa",
         "attributes": {
@@ -905,7 +905,7 @@
         }
       },
       {
-        "key": "geid_91_6",
+        "key": "geid_254_6",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/MFAPanel/index.jsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,verifyMfaRequested",
         "attributes": {
@@ -913,7 +913,7 @@
         }
       },
       {
-        "key": "geid_91_7",
+        "key": "geid_254_7",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/MFAPanel/index.jsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFAVisible",
         "attributes": {
@@ -921,7 +921,7 @@
         }
       },
       {
-        "key": "geid_91_8",
+        "key": "geid_254_8",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SetLoginPasswordModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -929,7 +929,7 @@
         }
       },
       {
-        "key": "geid_91_9",
+        "key": "geid_254_9",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SetLoginPasswordModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,pubKeyRequested",
         "attributes": {
@@ -937,7 +937,7 @@
         }
       },
       {
-        "key": "geid_91_10",
+        "key": "geid_254_10",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SetLoginPasswordModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowId",
         "attributes": {
@@ -945,7 +945,7 @@
         }
       },
       {
-        "key": "geid_91_11",
+        "key": "geid_254_11",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested",
         "attributes": {
@@ -953,7 +953,7 @@
         }
       },
       {
-        "key": "geid_91_12",
+        "key": "geid_254_12",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/Dashboard/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryCountriesIfNeeded",
         "attributes": {
@@ -961,7 +961,7 @@
         }
       },
       {
-        "key": "geid_91_13",
+        "key": "geid_254_13",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/Dashboard/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFATip",
         "attributes": {
@@ -969,7 +969,7 @@
         }
       },
       {
-        "key": "geid_91_14",
+        "key": "geid_254_14",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AgendaHome/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -977,7 +977,7 @@
         }
       },
       {
-        "key": "geid_91_15",
+        "key": "geid_254_15",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessEditor/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -985,7 +985,7 @@
         }
       },
       {
-        "key": "geid_91_16",
+        "key": "geid_254_16",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessEditor/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -993,7 +993,7 @@
         }
       },
       {
-        "key": "geid_91_17",
+        "key": "geid_254_17",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessUpdate/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1001,7 +1001,7 @@
         }
       },
       {
-        "key": "geid_91_18",
+        "key": "geid_254_18",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseHome/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,queryProduct",
         "attributes": {
@@ -1009,7 +1009,7 @@
         }
       },
       {
-        "key": "geid_91_19",
+        "key": "geid_254_19",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseHome/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentEdmProduct",
         "attributes": {
@@ -1017,7 +1017,7 @@
         }
       },
       {
-        "key": "geid_91_20",
+        "key": "geid_254_20",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseHome/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListRequested",
         "attributes": {
@@ -1025,7 +1025,7 @@
         }
       },
       {
-        "key": "geid_91_21",
+        "key": "geid_254_21",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseHome/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1033,7 +1033,7 @@
         }
       },
       {
-        "key": "geid_91_22",
+        "key": "geid_254_22",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseFlow/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentEdmProduct",
         "attributes": {
@@ -1041,7 +1041,7 @@
         }
       },
       {
-        "key": "geid_91_23",
+        "key": "geid_254_23",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseFlow/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListRequested",
         "attributes": {
@@ -1049,7 +1049,7 @@
         }
       },
       {
-        "key": "geid_91_24",
+        "key": "geid_254_24",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/Ticket/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1057,7 +1057,7 @@
         }
       },
       {
-        "key": "geid_91_25",
+        "key": "geid_254_25",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/Order/List/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested",
         "attributes": {
@@ -1065,7 +1065,7 @@
         }
       },
       {
-        "key": "geid_91_26",
+        "key": "geid_254_26",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/Order/Detail/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1073,7 +1073,7 @@
         }
       },
       {
-        "key": "geid_91_27",
+        "key": "geid_254_27",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/sentry.ts,setSentryData",
         "attributes": {
@@ -1081,7 +1081,7 @@
         }
       },
       {
-        "key": "geid_91_28",
+        "key": "geid_254_28",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Customer/HomePage/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/sentry.ts,setSentryData",
         "attributes": {
@@ -1089,7 +1089,7 @@
         }
       },
       {
-        "key": "geid_91_29",
+        "key": "geid_254_29",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/index.tsx",
         "target": "react-router-redux,goBack",
         "attributes": {
@@ -1097,7 +1097,7 @@
         }
       },
       {
-        "key": "geid_91_30",
+        "key": "geid_254_30",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Template/UpdatePage/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/sentry.ts,setSentryData",
         "attributes": {
@@ -1105,7 +1105,7 @@
         }
       },
       {
-        "key": "geid_91_31",
+        "key": "geid_254_31",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/SetPasswordForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,initLoginPasswordRequested",
         "attributes": {
@@ -1113,7 +1113,7 @@
         }
       },
       {
-        "key": "geid_91_32",
+        "key": "geid_254_32",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/SearchTable/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1121,7 +1121,7 @@
         }
       },
       {
-        "key": "geid_91_33",
+        "key": "geid_254_33",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/FormBottomBtnGroup/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1132,7 +1132,7 @@
         }
       },
       {
-        "key": "geid_91_34",
+        "key": "geid_254_34",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1140,7 +1140,7 @@
         }
       },
       {
-        "key": "geid_91_35",
+        "key": "geid_254_35",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/BottomBtnGroup/index.tsx",
         "target": "react-router-redux,goBack",
         "attributes": {
@@ -1148,7 +1148,7 @@
         }
       },
       {
-        "key": "geid_91_36",
+        "key": "geid_254_36",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/RenewTips/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1156,7 +1156,7 @@
         }
       },
       {
-        "key": "geid_91_37",
+        "key": "geid_254_37",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/index.tsx",
         "target": "redux-form/es/immutable,touch",
         "attributes": {
@@ -1164,7 +1164,7 @@
         }
       },
       {
-        "key": "geid_91_38",
+        "key": "geid_254_38",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/me.ts,getProfileRequested",
         "attributes": {
@@ -1172,7 +1172,7 @@
         }
       },
       {
-        "key": "geid_91_39",
+        "key": "geid_254_39",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/me.ts,setXtMethod",
         "attributes": {
@@ -1180,7 +1180,7 @@
         }
       },
       {
-        "key": "geid_91_40",
+        "key": "geid_254_40",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1188,7 +1188,7 @@
         }
       },
       {
-        "key": "geid_91_41",
+        "key": "geid_254_41",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListRequested",
         "attributes": {
@@ -1196,7 +1196,7 @@
         }
       },
       {
-        "key": "geid_91_42",
+        "key": "geid_254_42",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/ProductDetail/components/TopInfoBlock/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1204,7 +1204,7 @@
         }
       },
       {
-        "key": "geid_91_43",
+        "key": "geid_254_43",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AgendaTable/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts,updateFilterCondition",
         "attributes": {
@@ -1212,7 +1212,7 @@
         }
       },
       {
-        "key": "geid_91_44",
+        "key": "geid_254_44",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts,updateFilterCondition",
         "attributes": {
@@ -1220,7 +1220,7 @@
         }
       },
       {
-        "key": "geid_91_45",
+        "key": "geid_254_45",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/quotation/index.ts,updateQuotationList",
         "attributes": {
@@ -1228,7 +1228,7 @@
         }
       },
       {
-        "key": "geid_91_46",
+        "key": "geid_254_46",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Trash/TrashAll/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/customer.ts,getCustomerConfigRequest",
         "attributes": {
@@ -1236,7 +1236,7 @@
         }
       },
       {
-        "key": "geid_91_47",
+        "key": "geid_254_47",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Trash/TrashAll/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordClearAll",
         "attributes": {
@@ -1244,7 +1244,7 @@
         }
       },
       {
-        "key": "geid_91_48",
+        "key": "geid_254_48",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Trash/TrashAll/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordClear",
         "attributes": {
@@ -1252,7 +1252,7 @@
         }
       },
       {
-        "key": "geid_91_49",
+        "key": "geid_254_49",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Trash/TrashAll/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRestore",
         "attributes": {
@@ -1260,7 +1260,7 @@
         }
       },
       {
-        "key": "geid_91_50",
+        "key": "geid_254_50",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Trash/TrashAll/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashTypeChange",
         "attributes": {
@@ -1268,7 +1268,7 @@
         }
       },
       {
-        "key": "geid_91_51",
+        "key": "geid_254_51",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Trash/TrashAll/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashPaginationChange",
         "attributes": {
@@ -1276,7 +1276,7 @@
         }
       },
       {
-        "key": "geid_91_52",
+        "key": "geid_254_52",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Trash/TrashAll/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequest",
         "attributes": {
@@ -1284,7 +1284,7 @@
         }
       },
       {
-        "key": "geid_91_53",
+        "key": "geid_254_53",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountUpdate/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1292,7 +1292,7 @@
         }
       },
       {
-        "key": "geid_91_54",
+        "key": "geid_254_54",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountCreate/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1300,7 +1300,7 @@
         }
       },
       {
-        "key": "geid_91_55",
+        "key": "geid_254_55",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/FirmSetting/pubInfo/Home/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1308,7 +1308,7 @@
         }
       },
       {
-        "key": "geid_91_56",
+        "key": "geid_254_56",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/NavPanel/index.js",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1316,7 +1316,7 @@
         }
       },
       {
-        "key": "geid_91_57",
+        "key": "geid_254_57",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/NavPanel/index.js",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1324,7 +1324,7 @@
         }
       },
       {
-        "key": "geid_91_58",
+        "key": "geid_254_58",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseFlow/components/StepOne/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1332,7 +1332,7 @@
         }
       },
       {
-        "key": "geid_91_59",
+        "key": "geid_254_59",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/Renew/OrderDetail/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1340,7 +1340,7 @@
         }
       },
       {
-        "key": "geid_91_60",
+        "key": "geid_254_60",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/Renew/OrderDetail/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1348,7 +1348,7 @@
         }
       },
       {
-        "key": "geid_91_61",
+        "key": "geid_254_61",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/components/Payment/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1356,7 +1356,7 @@
         }
       },
       {
-        "key": "geid_91_62",
+        "key": "geid_254_62",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/components/Payment/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1364,7 +1364,7 @@
         }
       },
       {
-        "key": "geid_91_63",
+        "key": "geid_254_63",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/components/Payment/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListRequested",
         "attributes": {
@@ -1372,7 +1372,7 @@
         }
       },
       {
-        "key": "geid_91_64",
+        "key": "geid_254_64",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseFlow/components/StepTwo/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1380,7 +1380,7 @@
         }
       },
       {
-        "key": "geid_91_65",
+        "key": "geid_254_65",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseFlow/components/StepTwo/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1388,7 +1388,7 @@
         }
       },
       {
-        "key": "geid_91_66",
+        "key": "geid_254_66",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseFlow/components/StepTwo/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1396,7 +1396,7 @@
         }
       },
       {
-        "key": "geid_91_67",
+        "key": "geid_254_67",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts,updateFilterCondition",
         "attributes": {
@@ -1404,7 +1404,7 @@
         }
       },
       {
-        "key": "geid_91_68",
+        "key": "geid_254_68",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/order/index.ts,updateOrderList",
         "attributes": {
@@ -1412,7 +1412,7 @@
         }
       },
       {
-        "key": "geid_91_69",
+        "key": "geid_254_69",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
         "target": "redux-form/es/immutable,destroy",
         "attributes": {
@@ -1420,7 +1420,7 @@
         }
       },
       {
-        "key": "geid_91_70",
+        "key": "geid_254_70",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1428,7 +1428,7 @@
         }
       },
       {
-        "key": "geid_91_71",
+        "key": "geid_254_71",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1436,7 +1436,7 @@
         }
       },
       {
-        "key": "geid_91_72",
+        "key": "geid_254_72",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
         "target": "redux-form/es/immutable,touch",
         "attributes": {
@@ -1444,7 +1444,7 @@
         }
       },
       {
-        "key": "geid_91_73",
+        "key": "geid_254_73",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Payment/Balance/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1452,7 +1452,7 @@
         }
       },
       {
-        "key": "geid_91_74",
+        "key": "geid_254_74",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Payment/Wechat/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1460,7 +1460,7 @@
         }
       },
       {
-        "key": "geid_91_75",
+        "key": "geid_254_75",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/ConfirmCancelModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1468,7 +1468,7 @@
         }
       },
       {
-        "key": "geid_91_76",
+        "key": "geid_254_76",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/ConfirmCancelModal/index.tsx",
         "target": "react-router-redux,goBack",
         "attributes": {
@@ -1476,7 +1476,7 @@
         }
       },
       {
-        "key": "geid_91_77",
+        "key": "geid_254_77",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/Exchange/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1484,7 +1484,7 @@
         }
       },
       {
-        "key": "geid_91_78",
+        "key": "geid_254_78",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/Exchange/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1492,7 +1492,7 @@
         }
       },
       {
-        "key": "geid_91_79",
+        "key": "geid_254_79",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/MemberExchange/EdmFissionExchange/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1500,7 +1500,7 @@
         }
       },
       {
-        "key": "geid_91_80",
+        "key": "geid_254_80",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
         "attributes": {
@@ -1508,7 +1508,7 @@
         }
       },
       {
-        "key": "geid_91_81",
+        "key": "geid_254_81",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1516,7 +1516,7 @@
         }
       },
       {
-        "key": "geid_91_82",
+        "key": "geid_254_82",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MarketingModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentProduct",
         "attributes": {
@@ -1524,7 +1524,7 @@
         }
       },
       {
-        "key": "geid_91_83",
+        "key": "geid_254_83",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MarketingModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,queryProduct",
         "attributes": {
@@ -1532,7 +1532,7 @@
         }
       },
       {
-        "key": "geid_91_84",
+        "key": "geid_254_84",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MarketingModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentEdmProduct",
         "attributes": {
@@ -1540,7 +1540,7 @@
         }
       },
       {
-        "key": "geid_91_85",
+        "key": "geid_254_85",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/SubAccountPassword.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,pubKeyRequested",
         "attributes": {
@@ -1548,7 +1548,7 @@
         }
       },
       {
-        "key": "geid_91_86",
+        "key": "geid_254_86",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/SubAccountPassword.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowId",
         "attributes": {
@@ -1556,7 +1556,7 @@
         }
       },
       {
-        "key": "geid_91_87",
+        "key": "geid_254_87",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/SubAccountPassword.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,checkABVType",
         "attributes": {
@@ -1564,7 +1564,7 @@
         }
       },
       {
-        "key": "geid_91_88",
+        "key": "geid_254_88",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SubAccountModal/SubAccountPassword.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessage",
         "attributes": {
@@ -1572,7 +1572,7 @@
         }
       },
       {
-        "key": "geid_91_89",
+        "key": "geid_254_89",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/components/BindPhoneForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowId",
         "attributes": {
@@ -1580,7 +1580,7 @@
         }
       },
       {
-        "key": "geid_91_90",
+        "key": "geid_254_90",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/components/BindPhoneForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,stopVcodeCountDown",
         "attributes": {
@@ -1588,7 +1588,7 @@
         }
       },
       {
-        "key": "geid_91_91",
+        "key": "geid_254_91",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/components/BindPhoneForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/bind.ts,hideBindError",
         "attributes": {
@@ -1596,7 +1596,7 @@
         }
       },
       {
-        "key": "geid_91_92",
+        "key": "geid_254_92",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/FirstRegisterModal/components/BindContactForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,checkABVType",
         "attributes": {
@@ -1604,7 +1604,7 @@
         }
       },
       {
-        "key": "geid_91_93",
+        "key": "geid_254_93",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/FirstRegisterModal/components/BindContactForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessage",
         "attributes": {
@@ -1612,7 +1612,7 @@
         }
       },
       {
-        "key": "geid_91_94",
+        "key": "geid_254_94",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MainAccountFirstStep/components/AdditionalForm/AgreementForm/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1620,7 +1620,7 @@
         }
       },
       {
-        "key": "geid_91_95",
+        "key": "geid_254_95",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1628,7 +1628,7 @@
         }
       },
       {
-        "key": "geid_91_96",
+        "key": "geid_254_96",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1636,7 +1636,7 @@
         }
       },
       {
-        "key": "geid_91_97",
+        "key": "geid_254_97",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/List/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts,updateFilterCondition",
         "attributes": {
@@ -1644,7 +1644,7 @@
         }
       },
       {
-        "key": "geid_91_98",
+        "key": "geid_254_98",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessDetail/components/TopBlock/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1652,7 +1652,7 @@
         }
       },
       {
-        "key": "geid_91_99",
+        "key": "geid_254_99",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1660,7 +1660,7 @@
         }
       },
       {
-        "key": "geid_91_100",
+        "key": "geid_254_100",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1668,7 +1668,7 @@
         }
       },
       {
-        "key": "geid_91_101",
+        "key": "geid_254_101",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/Content/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1676,7 +1676,7 @@
         }
       },
       {
-        "key": "geid_91_102",
+        "key": "geid_254_102",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts,updateFilterCondition",
         "attributes": {
@@ -1684,7 +1684,7 @@
         }
       },
       {
-        "key": "geid_91_103",
+        "key": "geid_254_103",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/quotation/index.ts,updateQuotationList",
         "attributes": {
@@ -1692,7 +1692,7 @@
         }
       },
       {
-        "key": "geid_91_104",
+        "key": "geid_254_104",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/FirmSetting/FirmTitle/FirmInfoBlock/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1700,7 +1700,7 @@
         }
       },
       {
-        "key": "geid_91_105",
+        "key": "geid_254_105",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/FirmSetting/FirmTitle/FirmInfoBlock/index.tsx",
         "target": "redux-form/es/immutable,touch",
         "attributes": {
@@ -1708,7 +1708,7 @@
         }
       },
       {
-        "key": "geid_91_106",
+        "key": "geid_254_106",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/FirmSetting/pubInfo/components/pubCard/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1716,7 +1716,7 @@
         }
       },
       {
-        "key": "geid_91_107",
+        "key": "geid_254_107",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/pubFormModal/index.tsx",
         "target": "redux-form/es/immutable,touch",
         "attributes": {
@@ -1724,7 +1724,7 @@
         }
       },
       {
-        "key": "geid_91_108",
+        "key": "geid_254_108",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/UserCenter/component/BasicInfo/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1732,7 +1732,7 @@
         }
       },
       {
-        "key": "geid_91_109",
+        "key": "geid_254_109",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/UserCenter/component/BasicInfo/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListRequested",
         "attributes": {
@@ -1740,7 +1740,7 @@
         }
       },
       {
-        "key": "geid_91_110",
+        "key": "geid_254_110",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1748,7 +1748,7 @@
         }
       },
       {
-        "key": "geid_91_111",
+        "key": "geid_254_111",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts,updateFilterCondition",
         "attributes": {
@@ -1756,7 +1756,7 @@
         }
       },
       {
-        "key": "geid_91_112",
+        "key": "geid_254_112",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/order/index.ts,updateOrderList",
         "attributes": {
@@ -1764,7 +1764,7 @@
         }
       },
       {
-        "key": "geid_91_113",
+        "key": "geid_254_113",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepTwo/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1772,7 +1772,7 @@
         }
       },
       {
-        "key": "geid_91_114",
+        "key": "geid_254_114",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1780,7 +1780,7 @@
         }
       },
       {
-        "key": "geid_91_115",
+        "key": "geid_254_115",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/index.tsx",
         "target": "redux-form/es/immutable,destroy",
         "attributes": {
@@ -1788,7 +1788,7 @@
         }
       },
       {
-        "key": "geid_91_116",
+        "key": "geid_254_116",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
         "attributes": {
@@ -1796,7 +1796,7 @@
         }
       },
       {
-        "key": "geid_91_117",
+        "key": "geid_254_117",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/SetPasswordOperate/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "attributes": {
@@ -1804,7 +1804,7 @@
         }
       },
       {
-        "key": "geid_91_118",
+        "key": "geid_254_118",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/HelpPanel/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/faq.ts,getTagFaqRequested",
         "attributes": {
@@ -1812,7 +1812,7 @@
         }
       },
       {
-        "key": "geid_91_119",
+        "key": "geid_254_119",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/AdviseModal/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1820,7 +1820,7 @@
         }
       },
       {
-        "key": "geid_91_120",
+        "key": "geid_254_120",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/modals/LossOrderReasonModal.tsx",
         "target": "redux-form/es/immutable,touch",
         "attributes": {
@@ -1828,7 +1828,7 @@
         }
       },
       {
-        "key": "geid_91_121",
+        "key": "geid_254_121",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ModuleRelatedInfo/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1836,7 +1836,7 @@
         }
       },
       {
-        "key": "geid_91_122",
+        "key": "geid_254_122",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1844,7 +1844,7 @@
         }
       },
       {
-        "key": "geid_91_123",
+        "key": "geid_254_123",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested",
         "attributes": {
@@ -1852,7 +1852,7 @@
         }
       },
       {
-        "key": "geid_91_124",
+        "key": "geid_254_124",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1860,7 +1860,7 @@
         }
       },
       {
-        "key": "geid_91_125",
+        "key": "geid_254_125",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/status.ts,toggleEntityStatus",
         "attributes": {
@@ -1868,7 +1868,7 @@
         }
       },
       {
-        "key": "geid_91_126",
+        "key": "geid_254_126",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hoc/withAddress.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,touchAndChangeAddressFields",
         "attributes": {
@@ -1876,7 +1876,7 @@
         }
       },
       {
-        "key": "geid_91_127",
+        "key": "geid_254_127",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/hoc/withAddress.tsx",
         "target": "redux-form/es/immutable,destroy",
         "attributes": {
@@ -1884,7 +1884,7 @@
         }
       },
       {
-        "key": "geid_91_128",
+        "key": "geid_254_128",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/TopBlock/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1892,7 +1892,7 @@
         }
       },
       {
-        "key": "geid_91_129",
+        "key": "geid_254_129",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Setting/Account/AccountDetail/components/TopBlock/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1900,7 +1900,7 @@
         }
       },
       {
-        "key": "geid_91_130",
+        "key": "geid_254_130",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1908,7 +1908,7 @@
         }
       },
       {
-        "key": "geid_91_131",
+        "key": "geid_254_131",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/DataTable/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -1916,7 +1916,7 @@
         }
       },
       {
-        "key": "geid_91_132",
+        "key": "geid_254_132",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1924,7 +1924,7 @@
         }
       },
       {
-        "key": "geid_91_133",
+        "key": "geid_254_133",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1932,7 +1932,7 @@
         }
       },
       {
-        "key": "geid_91_134",
+        "key": "geid_254_134",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
         "attributes": {
@@ -1940,7 +1940,7 @@
         }
       },
       {
-        "key": "geid_91_135",
+        "key": "geid_254_135",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/TimeModal/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1948,7 +1948,7 @@
         }
       },
       {
-        "key": "geid_91_136",
+        "key": "geid_254_136",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/TimeModal/index.tsx",
         "target": "redux-form/es/immutable,touch",
         "attributes": {
@@ -1956,7 +1956,7 @@
         }
       },
       {
-        "key": "geid_91_137",
+        "key": "geid_254_137",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
         "attributes": {
@@ -1964,7 +1964,7 @@
         }
       },
       {
-        "key": "geid_91_138",
+        "key": "geid_254_138",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -1972,7 +1972,7 @@
         }
       },
       {
-        "key": "geid_91_139",
+        "key": "geid_254_139",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -1980,7 +1980,7 @@
         }
       },
       {
-        "key": "geid_91_140",
+        "key": "geid_254_140",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
         "target": "redux-form/es/immutable,touch",
         "attributes": {
@@ -1988,7 +1988,7 @@
         }
       },
       {
-        "key": "geid_91_141",
+        "key": "geid_254_141",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
         "attributes": {
@@ -1996,7 +1996,7 @@
         }
       },
       {
-        "key": "geid_91_142",
+        "key": "geid_254_142",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/Certification/Certification.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -2004,7 +2004,7 @@
         }
       },
       {
-        "key": "geid_91_143",
+        "key": "geid_254_143",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/ResponsibleUser/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2012,7 +2012,7 @@
         }
       },
       {
-        "key": "geid_91_144",
+        "key": "geid_254_144",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
         "attributes": {
@@ -2020,7 +2020,7 @@
         }
       },
       {
-        "key": "geid_91_145",
+        "key": "geid_254_145",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/filter.ts,updateFilterCondition",
         "attributes": {
@@ -2028,7 +2028,7 @@
         }
       },
       {
-        "key": "geid_91_146",
+        "key": "geid_254_146",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/components/CustomerInfoDrawer/index.tsx",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/sentry.ts,setSentryData",
         "attributes": {
@@ -2036,7 +2036,7 @@
         }
       },
       {
-        "key": "geid_91_147",
+        "key": "geid_254_147",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/CreateAgenda/components/AgendaForm/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -2044,7 +2044,7 @@
         }
       },
       {
-        "key": "geid_91_148",
+        "key": "geid_254_148",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/DetailPage/components/DynamicInfo/CreateAgenda/components/AgendaForm/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2052,7 +2052,7 @@
         }
       },
       {
-        "key": "geid_91_149",
+        "key": "geid_254_149",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/ReferenceType.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2060,7 +2060,7 @@
         }
       },
       {
-        "key": "geid_91_150",
+        "key": "geid_254_150",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Agenda/AdvancedScreen/Content/Form/items/TimerPicker.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2068,7 +2068,7 @@
         }
       },
       {
-        "key": "geid_91_151",
+        "key": "geid_254_151",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/BusinessHome/components/Board/components/BusinessItem/index.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -2076,7 +2076,7 @@
         }
       },
       {
-        "key": "geid_91_152",
+        "key": "geid_254_152",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/AdvancedScreen/Content/Form/items/CreatedTime.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2084,7 +2084,7 @@
         }
       },
       {
-        "key": "geid_91_153",
+        "key": "geid_254_153",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/components/SideDrawBriefInfo/DrawerTitle.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -2092,7 +2092,7 @@
         }
       },
       {
-        "key": "geid_91_154",
+        "key": "geid_254_154",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/index.js",
         "target": "react-router-redux,goBack",
         "attributes": {
@@ -2100,7 +2100,7 @@
         }
       },
       {
-        "key": "geid_91_155",
+        "key": "geid_254_155",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/components/SideDrawBriefInfo/DrawerTitle.tsx",
         "target": "react-router-redux,push",
         "attributes": {
@@ -2108,7 +2108,7 @@
         }
       },
       {
-        "key": "geid_91_156",
+        "key": "geid_254_156",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/ContactFormModal/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -2116,7 +2116,7 @@
         }
       },
       {
-        "key": "geid_91_157",
+        "key": "geid_254_157",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/AddCustomer/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -2124,7 +2124,7 @@
         }
       },
       {
-        "key": "geid_91_158",
+        "key": "geid_254_158",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/AddContact/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -2132,7 +2132,7 @@
         }
       },
       {
-        "key": "geid_91_159",
+        "key": "geid_254_159",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/components/AgendaForm/index.tsx",
         "target": "redux-form/es/immutable,initialize",
         "attributes": {
@@ -2140,7 +2140,7 @@
         }
       },
       {
-        "key": "geid_91_160",
+        "key": "geid_254_160",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/CustomerDetail/components/DynamicInfo/CreateAgenda/components/AgendaForm/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2148,7 +2148,7 @@
         }
       },
       {
-        "key": "geid_91_161",
+        "key": "geid_254_161",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/AdvancedScreenForm/RangeDatePicker/index.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2156,7 +2156,7 @@
         }
       },
       {
-        "key": "geid_91_162",
+        "key": "geid_254_162",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Quotation/AdvancedScreen/Content/Form/items/FirmTitle.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2164,7 +2164,7 @@
         }
       },
       {
-        "key": "geid_91_163",
+        "key": "geid_254_163",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/FirmTitle.tsx",
         "target": "redux-form/es/immutable,change",
         "attributes": {
@@ -2172,914 +2172,829 @@
         }
       },
       {
-        "key": "geid_91_164",
+        "key": "geid_254_164",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect"
       },
       {
-        "key": "geid_91_165",
+        "key": "geid_254_165",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setConnectLoading"
       },
       {
-        "key": "geid_91_166",
+        "key": "geid_254_166",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "attributes": {
-          "usages": [
-            "EMQueryUsage.AccountUpdate",
-            "EMQueryUsage.AccountList",
-            "EMQueryUsage.StaffAccountList"
-          ]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral"
       },
       {
-        "key": "geid_91_167",
+        "key": "geid_254_167",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setEmailQueryParams",
-        "attributes": {
-          "usages": ["EMQueryUsage.Bind"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setEmailQueryParams"
       },
       {
-        "key": "geid_91_168",
+        "key": "geid_254_168",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
-        "attributes": {
-          "usages": ["EMModalUsage.EmailBind"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal"
       },
       {
-        "key": "geid_91_169",
+        "key": "geid_254_169",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
       },
       {
-        "key": "geid_91_170",
+        "key": "geid_254_170",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setConnectLoading"
       },
       {
-        "key": "geid_91_171",
+        "key": "geid_254_171",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetGeneral",
-        "attributes": {
-          "usages": ["EMQueryUsage.Bind"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetGeneral"
       },
       {
-        "key": "geid_91_172",
+        "key": "geid_254_172",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearCache",
-        "attributes": {
-          "usages": [
-            "EMCacheType.Order",
-            "EMCacheType.Quotation",
-            "EMCacheType.Production",
-            "EMCacheType.TemplateImage"
-          ]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearCache"
       },
       {
-        "key": "geid_91_173",
+        "key": "geid_254_173",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearImage",
-        "attributes": {
-          "usages": ["EMCacheType.SignatureImage", "EMCacheType.TemplateImage"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearImage"
       },
       {
-        "key": "geid_91_174",
+        "key": "geid_254_174",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral"
       },
       {
-        "key": "geid_91_175",
+        "key": "geid_254_175",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess"
       },
       {
-        "key": "geid_91_176",
+        "key": "geid_254_176",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed"
       },
       {
-        "key": "geid_91_177",
+        "key": "geid_254_177",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
       },
       {
-        "key": "geid_91_178",
+        "key": "geid_254_178",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "attributes": {
-          "usages": ["EMQueryUsage.AccountList"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral"
       },
       {
-        "key": "geid_91_179",
+        "key": "geid_254_179",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,filterOpenPage"
       },
       {
-        "key": "geid_91_180",
+        "key": "geid_254_180",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess"
       },
       {
-        "key": "geid_91_181",
+        "key": "geid_254_181",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "attributes": {
-          "usages": [
-            "EMQueryUsage.PreviewAnnex",
-            "EMQueryUsage.GetAttachment",
-            "EMQueryUsage.Folder",
-            "EMQueryUsage.GetGeneralSetting"
-          ]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral"
       },
       {
-        "key": "geid_91_182",
+        "key": "geid_254_182",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,modifyMailListFlag"
       },
       {
-        "key": "geid_91_183",
+        "key": "geid_254_183",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,modifyMailDetailFlag"
       },
       {
-        "key": "geid_91_184",
+        "key": "geid_254_184",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setEmailDomain"
       },
       {
-        "key": "geid_91_185",
+        "key": "geid_254_185",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearMailCache",
-        "attributes": {
-          "usages": ["EMMailCacheTYpe.SelectedMails", "EMMailCacheTYpe.MailsDetail"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearMailCache"
       },
       {
-        "key": "geid_91_186",
+        "key": "geid_254_186",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess",
-        "attributes": {
-          "usages": ["EMAnnexType.Annex", "EMAnnexType.InsertImage"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess"
       },
       {
-        "key": "geid_91_187",
+        "key": "geid_254_187",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addMailCache",
-        "attributes": {
-          "usages": ["EMMailCacheTYpe.MailsDetail"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addMailCache"
       },
       {
-        "key": "geid_91_188",
+        "key": "geid_254_188",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModalWithCallback",
-        "attributes": {
-          "usages": ["EMModalUsage.Confirm"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModalWithCallback"
       },
       {
-        "key": "geid_91_189",
+        "key": "geid_254_189",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
-        "attributes": {
-          "usages": ["EMAnnexType.Annex"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex"
       },
       {
-        "key": "geid_91_190",
+        "key": "geid_254_190",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setAlert",
-        "attributes": {
-          "usages": ["EMAlertUsage.LoginWarning"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setAlert"
       },
       {
-        "key": "geid_91_191",
+        "key": "geid_254_191",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex"
       },
       {
-        "key": "geid_91_192",
+        "key": "geid_254_192",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
-        "attributes": {
-          "usages": ["EMCacheType.TempAnnex"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache"
       },
       {
-        "key": "geid_91_193",
+        "key": "geid_254_193",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess"
       },
       {
-        "key": "geid_91_194",
+        "key": "geid_254_194",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeCache",
-        "attributes": {
-          "usages": ["EMCacheType.TempAnnex"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeCache"
       },
       {
-        "key": "geid_91_195",
+        "key": "geid_254_195",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexFailed"
       },
       {
-        "key": "geid_91_196",
+        "key": "geid_254_196",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setCacheError",
-        "attributes": {
-          "usages": ["EMCacheType.TempAnnex"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setCacheError"
       },
       {
-        "key": "geid_91_197",
+        "key": "geid_254_197",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess"
       },
       {
-        "key": "geid_91_198",
+        "key": "geid_254_198",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
-        "attributes": {
-          "usages": ["EMCacheType.InsertImage"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache"
       },
       {
-        "key": "geid_91_199",
+        "key": "geid_254_199",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,touchAndChangeAddressFields",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/util.ts,touchAndChangeAddressFields"
       },
       {
-        "key": "geid_91_200",
+        "key": "geid_254_200",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/status.ts,toggleEntityStatus",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/status.ts,toggleEntityStatus"
       },
       {
-        "key": "geid_91_201",
+        "key": "geid_254_201",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/faq.ts,getTagFaqRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/faq.ts,getTagFaq"
       },
       {
-        "key": "geid_91_202",
+        "key": "geid_254_202",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/faq.ts,getTagFaq",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/faq.ts,getTagFaqSucceed"
       },
       {
-        "key": "geid_91_203",
+        "key": "geid_254_203",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/faq.ts,getTagFaq",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/faq.ts,getTagFaqFailed"
       },
       {
-        "key": "geid_91_204",
+        "key": "geid_254_204",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessage",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessage"
       },
       {
-        "key": "geid_91_205",
+        "key": "geid_254_205",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessage",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessageSucceed"
       },
       {
-        "key": "geid_91_206",
+        "key": "geid_254_206",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessage",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessageFailed"
       },
       {
-        "key": "geid_91_207",
+        "key": "geid_254_207",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessageFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessageFailed"
       },
       {
-        "key": "geid_91_208",
+        "key": "geid_254_208",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessageFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/forgotPw.ts,setValidPhoneModal"
       },
       {
-        "key": "geid_91_209",
+        "key": "geid_254_209",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessageFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,hideVcodeTip"
       },
       {
-        "key": "geid_91_210",
+        "key": "geid_254_210",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessageSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessageSucceed"
       },
       {
-        "key": "geid_91_211",
+        "key": "geid_254_211",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessageSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/forgotPw.ts,setValidPhoneModal"
       },
       {
-        "key": "geid_91_212",
+        "key": "geid_254_212",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessageSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/forgotPw.ts,setUsername"
       },
       {
-        "key": "geid_91_213",
+        "key": "geid_254_213",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/vcode.ts,sendVcodeMessageSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,hideVcodeTip"
       },
       {
-        "key": "geid_91_214",
+        "key": "geid_254_214",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,getCurrentProduct"
       },
       {
-        "key": "geid_91_215",
+        "key": "geid_254_215",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,getCurrentProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentProductSucceed"
       },
       {
-        "key": "geid_91_216",
+        "key": "geid_254_216",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,getCurrentProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentProductFailed"
       },
       {
-        "key": "geid_91_217",
+        "key": "geid_254_217",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/order/index.ts,updateOrderList",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/order/index.ts,fetchOrderList"
       },
       {
-        "key": "geid_91_218",
+        "key": "geid_254_218",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/order/index.ts,fetchOrderList",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/order/index.ts,updateOrderListSuccess"
       },
       {
-        "key": "geid_91_219",
+        "key": "geid_254_219",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/order/index.ts,fetchOrderList",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/order/index.ts,updateOrderListError"
       },
       {
-        "key": "geid_91_220",
+        "key": "geid_254_220",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequest",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordRequest"
       },
       {
-        "key": "geid_91_221",
+        "key": "geid_254_221",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordRequest",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequestSuccess"
       },
       {
-        "key": "geid_91_222",
+        "key": "geid_254_222",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordRequest",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequestError"
       },
       {
-        "key": "geid_91_223",
+        "key": "geid_254_223",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRestore",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordRestore"
       },
       {
-        "key": "geid_91_224",
+        "key": "geid_254_224",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordRestore",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequest"
       },
       {
-        "key": "geid_91_225",
+        "key": "geid_254_225",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordRestore",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequestError"
       },
       {
-        "key": "geid_91_226",
+        "key": "geid_254_226",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordClear",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordClear"
       },
       {
-        "key": "geid_91_227",
+        "key": "geid_254_227",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordClear",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequest"
       },
       {
-        "key": "geid_91_228",
+        "key": "geid_254_228",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordClear",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequestError"
       },
       {
-        "key": "geid_91_229",
+        "key": "geid_254_229",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordClearAll",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordClearAll"
       },
       {
-        "key": "geid_91_230",
+        "key": "geid_254_230",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordClearAll",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequest"
       },
       {
-        "key": "geid_91_231",
+        "key": "geid_254_231",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/trash.ts,trashRecordClearAll",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/trash.ts,trashRecordRequestError"
       },
       {
-        "key": "geid_91_232",
+        "key": "geid_254_232",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/customer.ts,getCustomerConfigRequest",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/customer.ts,getCustomerConfigRequest"
       },
       {
-        "key": "geid_91_233",
+        "key": "geid_254_233",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/customer.ts,getCustomerConfigRequest",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/customer.ts,getCustomerConfigSucceed"
       },
       {
-        "key": "geid_91_234",
+        "key": "geid_254_234",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/customer.ts,getCustomerConfigRequest",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/customer.ts,getCustomerConfigFailed"
       },
       {
-        "key": "geid_91_235",
+        "key": "geid_254_235",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/quotation/index.ts,updateQuotationList",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/quotation/index.ts,fetchQuotationList"
       },
       {
-        "key": "geid_91_236",
+        "key": "geid_254_236",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/quotation/index.ts,fetchQuotationList",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/quotation/index.ts,updateQuotationListSuccess"
       },
       {
-        "key": "geid_91_237",
+        "key": "geid_254_237",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/quotation/index.ts,fetchQuotationList",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/quotation/index.ts,updateQuotationListError"
       },
       {
-        "key": "geid_91_238",
+        "key": "geid_254_238",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/me.ts,getProfileRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/me.ts,getProfile"
       },
       {
-        "key": "geid_91_239",
+        "key": "geid_254_239",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/me.ts,getProfile",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/me.ts,getProfileSucceed"
       },
       {
-        "key": "geid_91_240",
+        "key": "geid_254_240",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/me.ts,getProfile",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/me.ts,getProfileFailed"
       },
       {
-        "key": "geid_91_241",
+        "key": "geid_254_241",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/me.ts,getProfileSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/me.ts,getProfileSucceed"
       },
       {
-        "key": "geid_91_242",
+        "key": "geid_254_242",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,initLoginPasswordRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,initLoginPassword"
       },
       {
-        "key": "geid_91_243",
+        "key": "geid_254_243",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,initLoginPassword",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,initLoginPasswordSucceed"
       },
       {
-        "key": "geid_91_244",
+        "key": "geid_254_244",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,initLoginPassword",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,initLoginPasswordFailed"
       },
       {
-        "key": "geid_91_245",
+        "key": "geid_254_245",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,initLoginPasswordFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,initLoginPasswordFailed"
       },
       {
-        "key": "geid_91_246",
+        "key": "geid_254_246",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,initLoginPasswordFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFAVisible"
       },
       {
-        "key": "geid_91_247",
+        "key": "geid_254_247",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFAVisible",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,setMFAVisible"
       },
       {
-        "key": "geid_91_248",
+        "key": "geid_254_248",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,setMFAVisible",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,setAuthId"
       },
       {
-        "key": "geid_91_249",
+        "key": "geid_254_249",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,initLoginPasswordSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,initLoginPasswordSucceed"
       },
       {
-        "key": "geid_91_250",
+        "key": "geid_254_250",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,initLoginPasswordSucceed",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
-        "attributes": {
-          "usages": ["EMModalUsages.SetLoginPasswordModal"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus"
       },
       {
-        "key": "geid_91_251",
+        "key": "geid_254_251",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/modal.ts,toggleModalStatus"
       },
       {
-        "key": "geid_91_252",
+        "key": "geid_254_252",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/modal.ts,toggleModalStatus",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus"
       },
       {
-        "key": "geid_91_253",
+        "key": "geid_254_253",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/modal.ts,toggleModalStatus",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/modalBelong.ts,changeModalBelong"
       },
       {
-        "key": "geid_91_254",
+        "key": "geid_254_254",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getWhiteListRequested"
       },
       {
-        "key": "geid_91_255",
+        "key": "geid_254_255",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getWhiteListRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListSucceed"
       },
       {
-        "key": "geid_91_256",
+        "key": "geid_254_256",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getWhiteListRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListFailed"
       },
       {
-        "key": "geid_91_257",
+        "key": "geid_254_257",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getWhiteListFailed"
       },
       {
-        "key": "geid_91_258",
+        "key": "geid_254_258",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getWhiteListSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getWhiteListSucceed"
       },
       {
-        "key": "geid_91_259",
+        "key": "geid_254_259",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentEdmProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,getCurrentEdmProduct"
       },
       {
-        "key": "geid_91_260",
+        "key": "geid_254_260",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,getCurrentEdmProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentEdmProductSucceed"
       },
       {
-        "key": "geid_91_261",
+        "key": "geid_254_261",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,getCurrentEdmProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,getCurrentEdmProductFailed"
       },
       {
-        "key": "geid_91_262",
+        "key": "geid_254_262",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,queryProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,queryProduct"
       },
       {
-        "key": "geid_91_263",
+        "key": "geid_254_263",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,queryProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,queryProductSucceed"
       },
       {
-        "key": "geid_91_264",
+        "key": "geid_254_264",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/mall.ts,queryProduct",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/mall.ts,queryProductFailed"
       },
       {
-        "key": "geid_91_265",
+        "key": "geid_254_265",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryCountriesIfNeeded",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryCountriesIfNeeded"
       },
       {
-        "key": "geid_91_266",
+        "key": "geid_254_266",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryCountriesIfNeeded",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryFullCountriesRequested"
       },
       {
-        "key": "geid_91_267",
+        "key": "geid_254_267",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryCountriesIfNeeded",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryEurCountriesRequested"
       },
       {
-        "key": "geid_91_268",
+        "key": "geid_254_268",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryEurCountriesRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesRequested"
       },
       {
-        "key": "geid_91_269",
+        "key": "geid_254_269",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryEurCountriesSucceed"
       },
       {
-        "key": "geid_91_270",
+        "key": "geid_254_270",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryEurCountriesFailed"
       },
       {
-        "key": "geid_91_271",
+        "key": "geid_254_271",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryEurCountriesFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesFailed"
       },
       {
-        "key": "geid_91_272",
+        "key": "geid_254_272",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryEurCountriesSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesSucceeded"
       },
       {
-        "key": "geid_91_273",
+        "key": "geid_254_273",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryFullCountriesRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryAllCountriesRequested"
       },
       {
-        "key": "geid_91_274",
+        "key": "geid_254_274",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryAllCountriesRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryFullCountriesSucceed"
       },
       {
-        "key": "geid_91_275",
+        "key": "geid_254_275",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryAllCountriesRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryFullCountriesFailed"
       },
       {
-        "key": "geid_91_276",
+        "key": "geid_254_276",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryFullCountriesFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryAllCountriesFailed"
       },
       {
-        "key": "geid_91_277",
+        "key": "geid_254_277",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryFullCountriesSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryAllCountriesSucceeded"
       },
       {
-        "key": "geid_91_278",
+        "key": "geid_254_278",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowId",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserFlowId"
       },
       {
-        "key": "geid_91_279",
+        "key": "geid_254_279",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserFlowId",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowIdSucceed"
       },
       {
-        "key": "geid_91_280",
+        "key": "geid_254_280",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserFlowId",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowIdFailed"
       },
       {
-        "key": "geid_91_281",
+        "key": "geid_254_281",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowIdFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserFlowIdFailed"
       },
       {
-        "key": "geid_91_282",
+        "key": "geid_254_282",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowIdSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserFlowIdSucceed"
       },
       {
-        "key": "geid_91_283",
+        "key": "geid_254_283",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,pubKeyRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/util.ts,fetchPubKey"
       },
       {
-        "key": "geid_91_284",
+        "key": "geid_254_284",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/util.ts,fetchPubKey",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,pubKeySucceed"
       },
       {
-        "key": "geid_91_285",
+        "key": "geid_254_285",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/util.ts,fetchPubKey",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,pubKeyFailed"
       },
       {
-        "key": "geid_91_286",
+        "key": "geid_254_286",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,verifyMfaRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,verifyMfaRequested"
       },
       {
-        "key": "geid_91_287",
+        "key": "geid_254_287",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,verifyMfaRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,verifyMfaSucceed"
       },
       {
-        "key": "geid_91_288",
+        "key": "geid_254_288",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,verifyMfaRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,verifyMfaFailed"
       },
       {
-        "key": "geid_91_289",
+        "key": "geid_254_289",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,verifyMfaFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,verifyMfaFailed"
       },
       {
-        "key": "geid_91_290",
+        "key": "geid_254_290",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,verifyMfaFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFAVisible"
       },
       {
-        "key": "geid_91_291",
+        "key": "geid_254_291",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,verifyMfaSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,verifyMfaSucceed"
       },
       {
-        "key": "geid_91_292",
+        "key": "geid_254_292",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,verifyMfaSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,executeAuthIdCallBackRequested"
       },
       {
-        "key": "geid_91_293",
+        "key": "geid_254_293",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,executeAuthIdCallBackRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,executeAuthIdCallBack"
       },
       {
-        "key": "geid_91_294",
+        "key": "geid_254_294",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,executeAuthIdCallBack",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,executeAuthIdCallBackSucceed"
       },
       {
-        "key": "geid_91_295",
+        "key": "geid_254_295",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,executeAuthIdCallBack",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,executeAuthIdCallBackFailed"
       },
       {
-        "key": "geid_91_296",
+        "key": "geid_254_296",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,executeAuthIdCallBackFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,executeAuthIdCallBackFailed"
       },
       {
-        "key": "geid_91_297",
+        "key": "geid_254_297",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,executeAuthIdCallBackSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,executeAuthIdCallBackSucceed"
       },
       {
-        "key": "geid_91_298",
+        "key": "geid_254_298",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,executeAuthIdCallBackSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,resetAuthId"
       },
       {
-        "key": "geid_91_299",
+        "key": "geid_254_299",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,executeAuthIdCallBackSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,initVerifyMfa"
       },
       {
-        "key": "geid_91_300",
+        "key": "geid_254_300",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,sendMfaMessageRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,sendMfaMessage"
       },
       {
-        "key": "geid_91_301",
+        "key": "geid_254_301",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,sendMfaMessage",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessageSucceed"
       },
       {
-        "key": "geid_91_302",
+        "key": "geid_254_302",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,sendMfaMessage",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/vcode.ts,sendVcodeMessageFailed"
       },
       {
-        "key": "geid_91_303",
+        "key": "geid_254_303",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,checkABVType",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/security.ts,checkABVType"
       },
       {
-        "key": "geid_91_304",
+        "key": "geid_254_304",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/security.ts,checkABVType",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getMfaCaptchaRequested"
       },
       {
-        "key": "geid_91_305",
+        "key": "geid_254_305",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/security.ts,checkABVType",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserCaptcha"
       },
       {
-        "key": "geid_91_306",
+        "key": "geid_254_306",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/security.ts,checkABVType",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,openABVPanel"
       },
       {
-        "key": "geid_91_307",
+        "key": "geid_254_307",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserCaptcha"
       },
       {
-        "key": "geid_91_308",
+        "key": "geid_254_308",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,setABVVeriType"
       },
       {
-        "key": "geid_91_309",
+        "key": "geid_254_309",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserCaptchaSucceed"
       },
       {
-        "key": "geid_91_310",
+        "key": "geid_254_310",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserCaptchaFailed"
       },
       {
-        "key": "geid_91_311",
+        "key": "geid_254_311",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/auth.ts,setWechatSignInSliderData"
       },
       {
-        "key": "geid_91_312",
+        "key": "geid_254_312",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserCaptchaFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserCaptchaFailed"
       },
       {
-        "key": "geid_91_313",
+        "key": "geid_254_313",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserCaptchaFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,closeABVPanel"
       },
       {
-        "key": "geid_91_314",
+        "key": "geid_254_314",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getMfaCaptchaRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getMfaCaptcha"
       },
       {
-        "key": "geid_91_315",
+        "key": "geid_254_315",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getMfaCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,setABVVeriType"
       },
       {
-        "key": "geid_91_316",
+        "key": "geid_254_316",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getMfaCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getMfaCaptchaSucceed"
       },
       {
-        "key": "geid_91_317",
+        "key": "geid_254_317",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getMfaCaptcha",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getMfaCaptchaFailed"
       },
       {
-        "key": "geid_91_318",
+        "key": "geid_254_318",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getMfaCaptchaFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getMfaCaptchaFailed"
       },
       {
-        "key": "geid_91_319",
+        "key": "geid_254_319",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getMfaCaptchaFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts,closeABVPanel"
       },
       {
-        "key": "geid_91_320",
+        "key": "geid_254_320",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMeta"
       },
       {
-        "key": "geid_91_321",
+        "key": "geid_254_321",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMeta",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaSucceed"
       },
       {
-        "key": "geid_91_322",
+        "key": "geid_254_322",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMeta",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaFailed"
       },
       {
-        "key": "geid_91_323",
+        "key": "geid_254_323",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaFailed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMetaFailed"
       },
       {
-        "key": "geid_91_324",
+        "key": "geid_254_324",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMetaSucceed"
       },
       {
-        "key": "geid_91_325",
+        "key": "geid_254_325",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMetaSucceed",
         "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/withdraw.ts,getFXCanRelatedOrderSucceed"
       },
       {
-        "key": "geid_91_326",
+        "key": "geid_254_326",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMetaSucceed",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/search.ts,setSearchParams",
-        "attributes": {
-          "usages": ["ESearchOptionUsages.WithdrawOrder"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/search.ts,setSearchParams"
       },
       {
-        "key": "geid_91_327",
+        "key": "geid_254_327",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMetaSucceed",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus",
-        "attributes": {
-          "usages": [
-            "EMModalUsages.SearchWithdrawOrderModal",
-            "EMModalUsages.PolicyProtocolUpdate",
-            "EMModalUsages.TermsProtocolUpdate",
-            "EMModalUsages.TradeEnterpriseCertificationModal"
-          ]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/modal.ts,toggleModalStatus"
       },
       {
-        "key": "geid_91_328",
+        "key": "geid_254_328",
         "source": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/meta.ts,fetchMetaSucceed",
-        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested",
-        "attributes": {
-          "usages": ["EMMetaUsages.SignProtocolVersion"]
-        }
+        "target": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested"
       }
     ]
   }

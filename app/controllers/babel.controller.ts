@@ -21,7 +21,8 @@ import {
   buildSagaMap as buildSagaMapHandler,
   getHandlerGraph,
   findReferencedNodes,
-  buildSagaGraphHandler,
+  buildSagaGraphByActionsMap,
+  recurBuildSagaGraph,
 } from 'app/services/babelHelper'
 // import buildActionsMap from 'app/mock/actionsMap/buildActionsMap'
 import { TActionsMap } from 'app/services/babelHelper'
@@ -41,7 +42,7 @@ import { getHandlerActions, getSagaEffects } from 'app/services/babelHelper/saga
  * (3) /buildActionsMap 获取 actions 使用情况
  * (4) /buildSagaMap
  * 辅助：parseSingleSagaHandler
- * (5) /findUnusedSaga
+ * (5) /buildSagaGraph
  */
 
 @JsonController()
@@ -96,7 +97,12 @@ export class BabelController {
 
   @Post('/buildSagaGraph')
   async buildSagaGraph() {
-    const graph = await buildSagaGraphHandler()
+    // const { actions2HandlerMap, handler2ActionsMap } = await getSagaMap()
+    const graph = await buildSagaGraphByActionsMap()
+    const graphJson = graph.toJSON()
+    const actionsKeys = graphJson.nodes.filter(a => a.key.includes(',')).map(a => a.key)
+    const sagaMap = await getSagaMap()
+    recurBuildSagaGraph({ actionsKeys: _.clone(actionsKeys), graph, sagaMap })
     return { graph }
   }
 

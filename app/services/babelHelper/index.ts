@@ -17,9 +17,125 @@ import {
   fillInHandler2ActionsMap,
   getActionsMap,
   getFileActions,
+  getSagaMap,
 } from './innerHelper'
 import { DirectedGraph } from 'graphology'
 import { getSagaEffects } from './sagaHelper'
+import type {
+  RootBuildSagaMap,
+  key2Path4HandlerMap1,
+  key2Path4HandlerMap2,
+} from 'app/mock/sagaMap/buildSagaMap.json.d'
+
+export type BuildSagaGraphParams = {
+  actionsKeys: string[]
+  checkedActionsKeys?: Set<string>
+  checkedHandlerKeys?: Set<string>
+  graph: DirectedGraph
+  sagaMap: RootBuildSagaMap
+}
+
+export const recurBuildSagaGraph = function recurBuildSagaGraphHandler({
+  actionsKeys,
+  checkedActionsKeys = new Set<string>(),
+  checkedHandlerKeys = new Set<string>(),
+  graph,
+  sagaMap,
+}: BuildSagaGraphParams) {
+  const { actions2HandlerMap, handler2ActionsMap } = sagaMap
+  const actionsKey = actionsKeys.pop()
+  if (!actionsKey) {
+    return
+  }
+  if (!checkedActionsKeys.has(actionsKey)) {
+    checkedActionsKeys.add(actionsKey)
+    if (!actions2HandlerMap[actionsKey]) {
+      console.log(
+        '#52 !actions2HandlerMap[actionsKey] actionsKey:',
+        actionsKey,
+        'actions2HandlerMap[actionsKey]:',
+        actions2HandlerMap[actionsKey],
+      )
+    }
+    const handler2ActionsKeys =
+      actions2HandlerMap[actionsKey]?.map(a => a.handler2ActionsKey) ?? []
+    for (const handler2ActionsKey of handler2ActionsKeys) {
+      console.log(
+        `recurBuildSagaGraph #55 buildDirectedGrpah actionsKey: ${actionsKey} => handler2ActionsKey: ${handler2ActionsKey}`,
+      )
+      buildDirectedGrpah(graph, actionsKey, handler2ActionsKey)
+      if (!checkedHandlerKeys.has(handler2ActionsKey)) {
+        checkedHandlerKeys.add(handler2ActionsKey)
+        const handler2ActionsArray = handler2ActionsMap[handler2ActionsKey] ?? []
+        for (const handler2Actions of handler2ActionsArray) {
+          const { actions2HandlerKey2, usageNames } =
+            handler2Actions as key2Path4HandlerMap1 & key2Path4HandlerMap2
+          if (!actions2HandlerKey2) {
+            continue
+          }
+          console.log(
+            `recurBuildSagaGraph #69 buildDirectedGrpah handler2ActionsKey: ${handler2ActionsKey} => actions2HandlerKey2: ${actions2HandlerKey2}`,
+          )
+          buildDirectedGrpah(graph, handler2ActionsKey, actions2HandlerKey2)
+          if (!checkedActionsKeys.has(actions2HandlerKey2)) {
+            actionsKeys.push(actions2HandlerKey2)
+          }
+          ;(usageNames ?? []).forEach(usage => {
+            addEdgeAttributes4Usages({
+              graph,
+              nodeSource: handler2ActionsKey,
+              nodeTarget: actions2HandlerKey2,
+              usage,
+            })
+          })
+        }
+      }
+    }
+  }
+  recurBuildSagaGraphHandler({
+    actionsKeys,
+    checkedActionsKeys,
+    checkedHandlerKeys,
+    graph,
+    sagaMap,
+  })
+}
+
+export type AddEdgeAttributes4UsagesParams = {
+  graph: DirectedGraph
+  nodeSource: string
+  nodeTarget: string
+  usage?: string
+  usageVariable?: string
+}
+
+export const addEdgeAttributes4Usages = ({
+  graph,
+  nodeSource,
+  nodeTarget,
+  usage,
+  usageVariable,
+}: AddEdgeAttributes4UsagesParams) => {
+  const theEdge = graph.findEdge(
+    (_edge, _attributes, source, target) =>
+      source === nodeSource && target === nodeTarget,
+  )
+  if (theEdge) {
+    const existedUsages = graph.getEdgeAttribute(theEdge, 'usages') ?? ([] as any)
+    if (usage) {
+      existedUsages.push(usage)
+      graph.setEdgeAttribute(theEdge, 'usages', existedUsages)
+    } else if (usageVariable) {
+      const usageVariables =
+        graph.getEdgeAttribute(theEdge, 'usageVariable') ?? ([] as any)
+      usageVariables.push(usageVariable)
+      graph.setEdgeAttribute(theEdge, 'usageVariables', usageVariables)
+    } else if (!existedUsages.includes('__BLANK__')) {
+      existedUsages.push('__BLANK__')
+      graph.setEdgeAttribute(theEdge, 'usages', existedUsages)
+    }
+  }
+}
 
 // 先不处理 usage
 export const buildSagaGraphByActionsMap = async () => {
@@ -29,9 +145,9 @@ export const buildSagaGraphByActionsMap = async () => {
     for (const { actionsComponents } of groups) {
       for (const { usedActionsDependencies } of actionsComponents) {
         for (const {
-          localName,
+          // localName,
           importedName,
-          sourceValue,
+          // sourceValue,
           dependencyPath,
           usage,
           usageVariable,
@@ -40,22 +156,32 @@ export const buildSagaGraphByActionsMap = async () => {
           const nodeSource = filePath
           const nodeTarget = `${dependencyPath},${importedName}`
           buildDirectedGrpah(graph, nodeSource, nodeTarget)
-          const theEdge = graph.findEdge(
+          addEdgeAttributes4Usages({
+            graph,
+            nodeSource,
+            nodeTarget,
+            usage,
+            usageVariable,
+          })
+          /* const theEdge = graph.findEdge(
             (_edge, _attributes, source, target) =>
               source === nodeSource && target === nodeTarget,
           )
           if (theEdge) {
+            const existedUsages = graph.getEdgeAttribute(theEdge, 'usages') ?? ([] as any)
             if (usage) {
-              const usages = graph.getEdgeAttribute(theEdge, 'usages') ?? ([] as any)
-              usages.push(usage)
-              graph.setEdgeAttribute(theEdge, 'usages', usages)
+              existedUsages.push(usage)
+              graph.setEdgeAttribute(theEdge, 'usages', existedUsages)
             } else if (usageVariable) {
               const usageVariables =
                 graph.getEdgeAttribute(theEdge, 'usageVariable') ?? ([] as any)
               usageVariables.push(usageVariable)
               graph.setEdgeAttribute(theEdge, 'usageVariables', usageVariables)
+            } else if (!existedUsages.includes('__BLANK__')) {
+              existedUsages.push('__BLANK__')
+              graph.setEdgeAttribute(theEdge, 'usages', existedUsages)
             }
-          }
+          } */
         }
       }
     }
