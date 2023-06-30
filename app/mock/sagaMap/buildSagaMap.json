@@ -1,6 +1,41 @@
 {
   "message": "ok",
   "actions2HandlerMap": {
+    ",@@redux-form/CHANGE": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onChange"
+      }
+    ],
+    ",@@redux-form/BLUR": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onBlur"
+      }
+    ],
+    ",@@redux-form/UNREGISTER_FIELD": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,unregisterField"
+      }
+    ],
+    ",@@redux-form/FOCUS": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onFocus"
+      }
+    ],
+    ",@@redux-form/SET_SUBMIT_FAILED": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onSubmitFailed"
+      }
+    ],
+    ",@@redux-form/TOUCH": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onTouch"
+      }
+    ],
+    ",@@redux-form/START_ASYNC_VALIDATION": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onAsyncValidate"
+      }
+    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral"
@@ -875,6 +910,62 @@
     ]
   },
   "handler2ActionsMap": {
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onChange": [
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileFailed"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/withdrawals.ts,setBeneficiaryNameError"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/pwStrength.ts,setPwStrength"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,resetAddressFieldsThenSetCountry"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,resetFile"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fixRate.ts,getFixRateMarginFeeRequested"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fixRate.ts,resetMarginFee"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fixRate.ts,getContractDeadlineRequested"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/withdraw.ts,resetGetFXWithdrawFee"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/CHANGE",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/withdraw.ts,getFXWithdrawFeeRequested"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onBlur": [
+      {
+        "actions2HandlerKey": ",@@redux-form/BLUR",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/firm.ts,firmRegistedIdExistRequested"
+      },
+      {
+        "actions2HandlerKey": ",@@redux-form/BLUR",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/firm.ts,checkEngNameExistRequested"
+      }
+    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral": [
       {
         "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
@@ -2086,13 +2177,6 @@
     ]
   },
   "warnings": [
-    "#344 critical property is missing! actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"onChange\". loc: start.line: 1230, start.column: 0, start.line: 1239, start.column: 1",
-    "#344 critical property is missing! actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"onBlur\". loc: start.line: 1230, start.column: 0, start.line: 1239, start.column: 1",
-    "#344 critical property is missing! actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"unregisterField\". loc: start.line: 1230, start.column: 0, start.line: 1239, start.column: 1",
-    "#344 critical property is missing! actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"onFocus\". loc: start.line: 1230, start.column: 0, start.line: 1239, start.column: 1",
-    "#344 critical property is missing! actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"onSubmitFailed\". loc: start.line: 1230, start.column: 0, start.line: 1239, start.column: 1",
-    "#344 critical property is missing! actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"onTouch\". loc: start.line: 1230, start.column: 0, start.line: 1239, start.column: 1",
-    "#344 critical property is missing! actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"onAsyncValidate\". loc: start.line: 1230, start.column: 0, start.line: 1239, start.column: 1",
     "#74 nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/logger.ts, loc: start.line: 14, start.column: 2, start.line: 14, start.column: 63",
     "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/logger.ts, actionsName: action, loc: start.line: 12, start.column: 0, start.line: 21, start.column: 1",
     "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/error.ts, actionsName: action, loc: start.line: 69, start.column: 0, start.line: 72, start.column: 1"

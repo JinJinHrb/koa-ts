@@ -443,38 +443,49 @@ export const fillInActions2HandlerMap = async ({
             )
             return
           }
-          let actionsName: string | undefined, actionsPropertyName: string | undefined
-          iterateObjectHandler(firstArgument, (value: any, key) => {
-            if (
-              value &&
-              value.type === 'MemberExpression' &&
-              value.object?.type === 'Identifier'
-            ) {
-              actionsName = value.object.name
-              actionsPropertyName = value.property.name
-              return true
-            }
-            return false
-          })
+          let stringLiteralActions: string | undefined,
+            actionsName: string | undefined,
+            actionsPropertyName: string | undefined
+          if (firstArgument.type === 'StringLiteral') {
+            stringLiteralActions = actionsName = actionsPropertyName = firstArgument.value
+          } else {
+            iterateObjectHandler(firstArgument, (value: any, key) => {
+              if (
+                value &&
+                value.type === 'MemberExpression' &&
+                value.object?.type === 'Identifier'
+              ) {
+                actionsName = value.object.name
+                actionsPropertyName = value.property.name
+                return true
+              }
+              return false
+            })
+          }
+
           let handlerSource = ''
           const localHandlerName = secondArgument.name
           let importedHandlerName = localHandlerName
           if (!actionsName || !actionsPropertyName || !localHandlerName) {
             warnings.push(
-              `#344 critical property is missing! actionsName: "${actionsName}", ` +
+              `#344 critical property is missing! nonAnalyzedFile: ${nonAnalyzedFile} actionsName: "${actionsName}", ` +
                 `actionsPropertyName: "${actionsPropertyName}", handlerName: "${localHandlerName}".` +
                 ` loc: ${loc2String(path.node.loc)}`,
             )
             return
           }
-          findLocalActions({
-            nonAnalyzedFile,
-            node: expressionStatementPath.node,
-            actionsMap,
-            actionsName,
-            path,
-            warnings,
-          })
+          if (!stringLiteralActions) {
+            findLocalActions({
+              nonAnalyzedFile,
+              node: expressionStatementPath.node,
+              actionsMap,
+              actionsName,
+              path,
+              warnings,
+            })
+          } else {
+            actionsMap[stringLiteralActions] = stringLiteralActions
+          }
 
           const handlerBinding = path.scope.getBinding(localHandlerName)
           const handlerBindingPath = handlerBinding?.path
