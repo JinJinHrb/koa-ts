@@ -6,6 +6,176 @@ import { findLocalActions } from './innerHelper'
 import _ from 'lodash'
 import { iterateObjectHandler } from '../../helpers/iterationUtil'
 import { BabelService } from '../babel.service'
+import { DirectedGraph } from 'graphology'
+
+export type TraversePredicate = [
+  key: string,
+  attributes: { [key: string]: any },
+  source: string,
+  target: string,
+  sourceAttributes: { [key: string]: any },
+  targetAttributes: { [key: string]: any },
+  undirected: boolean,
+]
+
+export type EdgeDetail = {
+  key: string
+  attributes: {
+    [key: string]: any
+  }
+  source: string
+  target: string
+}
+
+export type TraverseSagaGraphParams = {
+  directedGraph: DirectedGraph
+  edgeDetail: EdgeDetail
+  associatedSagaTakers: Set<string>
+  visitedEdgeSet?: Set<string>
+}
+
+export const traverseSagaGraph = function traverseSagaGraphHandler({
+  directedGraph,
+  edgeDetail,
+  associatedSagaTakers,
+  visitedEdgeSet = new Set<string>(),
+}: TraverseSagaGraphParams) {
+  const {
+    key: key1,
+    attributes: attributes1,
+    source: source1,
+    target: target1,
+  } = edgeDetail
+  if (visitedEdgeSet.has(key1)) {
+    return
+  }
+  visitedEdgeSet.add(key1)
+
+  if (
+    target1.includes(',') &&
+    !target1.includes('/actions/') &&
+    target1.indexOf('react') !== 0 &&
+    target1.indexOf('redux-form') !== 0
+  ) {
+    associatedSagaTakers.add(target1)
+  }
+  const matchEdges = directedGraph
+    .mapEdges((...params: TraversePredicate) => {
+      const [
+        key,
+        attributes,
+        source,
+        target,
+        sourceAttributes,
+        targetAttributes,
+        undirected,
+      ] = params
+      return source === target1
+        ? {
+            key,
+            attributes,
+            source,
+            target,
+          }
+        : undefined
+    })
+    .filter(a => a) as unknown as EdgeDetail[]
+
+  if (_.isEmpty(matchEdges)) {
+    return
+  }
+
+  for (const edgeDetail2 of matchEdges) {
+    const {
+      key: key2,
+      attributes: attributes2,
+      source: source2,
+      target: target2,
+    } = edgeDetail2
+    traverseSagaGraphHandler({
+      directedGraph,
+      edgeDetail: edgeDetail2,
+      associatedSagaTakers,
+      visitedEdgeSet,
+    })
+  }
+}
+
+// export const traverseSagaGraph = function traverseSagaGraphHandler({
+//   directedGraph,
+//   edgeDetail,
+//   visitedEdgeSet,
+//   associatedNodes,
+//   associatedComponents,
+// }: TraverseSagaGraphParams) {
+//   const {
+//     key: key1,
+//     attributes: attributes1,
+//     source: source1,
+//     target: target1,
+//   } = edgeDetail
+//   if (visitedEdgeSet.has(key1)) {
+//     return
+//   }
+//   visitedEdgeSet.add(key1)
+
+//   if (!source1.includes(',')) {
+//     // console.log(`#55 !source1.includes(',') source1:`, source1)
+//     associatedComponents.add(source1)
+//   } /*  else {
+//     // console.log(`#58 source1.includes(',') source1:`, source1)
+//     associatedNodes.add(source1)
+//   } */
+//   if (!target1.includes(',')) {
+//     console.log(`#61 target1.includes(',') target1:`, target1)
+//     // associatedComponents.add(target1)
+//   } else {
+//     // console.log(`#64 target1.includes(',') target1:`, target1)
+//     associatedNodes.add(source1)
+//   }
+
+//   const matchEdges = directedGraph
+//     .mapEdges((...params: TraversePredicate) => {
+//       const [
+//         key,
+//         attributes,
+//         source,
+//         target,
+//         sourceAttributes,
+//         targetAttributes,
+//         undirected,
+//       ] = params
+//       return source === target1
+//         ? {
+//             key,
+//             attributes,
+//             source,
+//             target,
+//           }
+//         : undefined
+//     })
+//     .filter(a => a) as unknown as EdgeDetail[]
+
+//   if (_.isEmpty(matchEdges)) {
+//     return
+//   }
+
+//   for (const edgeDetail2 of matchEdges) {
+//     const {
+//       key: key2,
+//       attributes: attributes2,
+//       source: source2,
+//       target: target2,
+//     } = edgeDetail2
+//     traverseSagaGraphHandler({
+//       directedGraph,
+//       edgeDetail: edgeDetail2,
+//       visitedEdgeSet,
+//       associatedNodes,
+//       associatedComponents,
+//     })
+//   }
+// }
 
 export type GetSagaFileParams = {
   babelService: BabelService

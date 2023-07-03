@@ -31,18 +31,26 @@ import {
   getActionsMap,
   getFileActions,
   getGraphNodes,
+  getSagaGraph,
   getSagaMap,
 } from 'app/services/babelHelper/innerHelper'
-import { getHandlerActions, getSagaEffects } from 'app/services/babelHelper/sagaHelper'
+import {
+  TraversePredicate,
+  getHandlerActions,
+  getSagaEffects,
+  traverseSagaGraph,
+} from 'app/services/babelHelper/sagaHelper'
+import { DirectedGraph } from 'graphology'
 
 /*
  * (0) /getAstAndAlterCode
  * (1) /traverseToGetGraph
  * (2) /getFileActions 获取 js及jsx 与 actions 的依赖关系
- * (3) /buildActionsMap 获取 actions 使用情况
+ * (3) /buildActionsMap 完善 fileActions
  * (4) /buildSagaMap
  * 辅助：parseSingleSagaHandler
  * (5) /buildSagaGraph
+ * (6) /buildComponentRelation
  */
 
 @JsonController()
@@ -51,6 +59,7 @@ import { getHandlerActions, getSagaEffects } from 'app/services/babelHelper/saga
 export class BabelController {
   constructor(private babelService: BabelService) {}
 
+  // WangFan TODO 2023-08-03 14:44:47
   @Post('/findUnusedSaga')
   async findUnusedSaga() {
     const buildSagaMap = await getSagaMap()
@@ -93,6 +102,117 @@ export class BabelController {
     const unusedActions = unusedNodes.filter(a => a.includes('/actions/'))
     const unusedHandlers = unusedNodes.filter(a => !a.includes('/actions/'))
     return { actionKeys, warnings, referencedNodes, unusedActions, unusedHandlers }
+  }
+
+  @Post('/buildComponentRelation')
+  async buildAppConnections() {
+    const {
+      graph: { nodes, edges },
+    } = await getSagaGraph()
+    const directedGraph = new DirectedGraph()
+    directedGraph.import({ nodes, edges })
+    const associatedCollections: {
+      componentFilePath: string
+      associatedSagaTakers: Set<string>
+      associatedComponents?: string[]
+      associatedComponentsMap?: { [key: string]: string[] }
+    }[] = []
+
+    for (const edgeDetail of edges) {
+      if (edgeDetail.source.includes(',')) {
+        continue
+      }
+      const componentFilePath = edgeDetail.source
+      const associatedSagaTakers = new Set<string>()
+      traverseSagaGraph({
+        directedGraph,
+        edgeDetail,
+        associatedSagaTakers,
+      })
+      associatedCollections.push({ componentFilePath, associatedSagaTakers })
+    }
+    for (let i = 0; i < associatedCollections.length; i++) {
+      const associatedCollection = associatedCollections[i]
+      const {
+        componentFilePath: componentFilePath1,
+        associatedSagaTakers: associatedSagaTakers1,
+      } = associatedCollection
+      const associatedSagaTakers1Array = [...associatedSagaTakers1]
+      const associatedComponents: string[] = []
+      const associatedComponentsMap: { [key: string]: string[] } = {}
+      for (let j = 0; j < associatedCollections.length; j++) {
+        if (i === j) {
+          continue
+        }
+        const {
+          componentFilePath: componentFilePath2,
+          associatedSagaTakers: associatedSagaTakers2,
+        } = associatedCollections[j]
+        let hasAssociatedComponent = false
+        for (const associatedSagaTakers1Element of associatedSagaTakers1Array) {
+          if (associatedSagaTakers2.has(associatedSagaTakers1Element)) {
+            hasAssociatedComponent = true
+            if (!associatedComponentsMap[componentFilePath2]) {
+              associatedComponentsMap[componentFilePath2] = []
+            }
+            if (
+              !associatedComponentsMap[componentFilePath2].includes(
+                associatedSagaTakers1Element,
+              )
+            ) {
+              associatedComponentsMap[componentFilePath2].push(
+                associatedSagaTakers1Element,
+              )
+            }
+          }
+        }
+        if (
+          hasAssociatedComponent &&
+          !associatedComponents.includes(componentFilePath2)
+        ) {
+          associatedComponents.push(componentFilePath2)
+        }
+        if (_.isEmpty(associatedComponentsMap)) {
+          associatedCollection.associatedComponentsMap = associatedComponentsMap
+        }
+      }
+      if (!_.isEmpty(associatedComponents)) {
+        associatedCollection.associatedComponents = associatedComponents
+      }
+    }
+    const result = associatedCollections.map(a => {
+      const { componentFilePath, associatedSagaTakers, associatedComponents, ...rest } = a
+      associatedComponents?.sort()
+      return {
+        componentFilePath,
+        associatedComponentsCount: associatedComponents?.length ?? 0,
+        associatedComponents,
+        associatedSagaTakers: [...associatedSagaTakers],
+        ...rest,
+      }
+    })
+
+    ;(result as any).sort((a: any, b: any) => {
+      const {
+        associatedSagaTakers: associatedSagaTakers1,
+        associatedComponents: associatedComponents1,
+      } = a
+
+      const {
+        associatedSagaTakers: associatedSagaTakers2,
+        associatedComponents: associatedComponents2,
+      } = b
+
+      if ((associatedComponents2 ?? [].length) !== (associatedComponents1 ?? [].length)) {
+        return (associatedComponents2 ?? []).length - (associatedComponents1 ?? []).length
+      }
+
+      if ((associatedSagaTakers2 ?? [].length) !== (associatedSagaTakers1 ?? [].length)) {
+        return (associatedSagaTakers2 ?? []).length - (associatedSagaTakers1 ?? []).length
+      }
+      return 0
+    })
+    return { associatedCollections: result }
   }
 
   @Post('/buildSagaGraph')
