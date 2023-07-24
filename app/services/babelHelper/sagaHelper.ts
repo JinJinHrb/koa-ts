@@ -242,12 +242,8 @@ export const getHandlerActions = ({
       const handlerBindingPath = handlerBinding?.path
       const handlerBindingNode = handlerBindingPath?.node
       if (handlerBindingNode?.type !== 'FunctionDeclaration') {
-        console.log(
-          `#140 handlerName: ${handlerName}\nhandlerBindingNode:`,
-          handlerBindingNode,
-        )
         warnings.push(
-          `#146 handlerBindingNode?.type !== 'FunctionDeclaration': handlerName: ${handlerName}, loc: ${
+          `#250 filePath: ${filePath} handlerBindingNode?.type !== 'FunctionDeclaration': filePath: ${filePath} handlerName: ${handlerName}, loc: ${
             handlerBindingNode?.loc
               ? loc2String(handlerBindingNode?.loc as SourceLocation)
               : ''

@@ -17,6 +17,7 @@ import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
 import type { RootActionsMap } from 'app/mock/actionsMap/actionsMap.json.d'
 import type { RootSagaGraph } from 'app/mock/sagaGraph/sagaGraph.d'
 import { getSagaFilesByLocalSagaName } from './sagaHelper'
+import { parseCreateNetworkingSagas } from './createNetworkingSagasHelper'
 
 export const fillInHandler2ActionsMap = async ({
   babelService,
@@ -59,12 +60,8 @@ export const fillInHandler2ActionsMap = async ({
         const handlerBindingPath = handlerBinding?.path
         const handlerBindingNode = handlerBindingPath?.node
         if (handlerBindingNode?.type !== 'FunctionDeclaration') {
-          console.log(
-            `#140 handlerName: ${handlerName}\nhandlerBindingNode:`,
-            handlerBindingNode,
-          )
           warnings.push(
-            `#146 handlerBindingNode?.type !== 'FunctionDeclaration': handlerName: ${handlerName}, loc: ${
+            `#68 handlerBindingNode?.type !== 'FunctionDeclaration': nonAnalyzedFile: ${nonAnalyzedFile} handlerName: ${handlerName}, loc: ${
               handlerBindingNode?.loc
                 ? loc2String(handlerBindingNode?.loc as SourceLocation)
                 : ''
@@ -382,12 +379,30 @@ export const fillInActions2HandlerMap = async ({
             }
             return
           } else if (!calleeName.includes('take')) {
-            console.log('#282 expression:', expression)
-            warnings.push(
-              `#281 !calleeName.includes('take'): ${nonAnalyzedFile}, loc: ${loc2String(
-                expression.loc,
-              )}`,
-            )
+            const handlerBinding = path.scope.getBinding(calleeName)
+            const handlerBindingNode = handlerBinding?.path.node as any
+            const initCalleeName = handlerBindingNode?.init?.callee?.name
+            if (initCalleeName === 'createNetworkingSagas') {
+              parseCreateNetworkingSagas({
+                actions2HandlerMap,
+                calleeName,
+                handlerCollector,
+                expressionNode: expressionStatementPath.node,
+                path: handlerBinding?.path,
+                nonAnalyzedFile,
+                actionsMap,
+                warnings,
+                babelService,
+              })
+              // WangFan TODO 2023-07-17 01:53:11
+            } else {
+              console.log('#282 expression:', expression)
+              warnings.push(
+                `#281 !calleeName.includes('take'): ${nonAnalyzedFile}, loc: ${loc2String(
+                  expression.loc,
+                )}, calleeName: ${calleeName}`,
+              )
+            }
             return
           } else if (calleeArguments.length !== 2) {
             console.log('#290 expression:', expression)
@@ -505,12 +520,8 @@ export const fillInActions2HandlerMap = async ({
             )
             handlerSource = sourceValue
           } else if (handlerBindingNode?.type !== 'FunctionDeclaration') {
-            console.log(
-              `#375 localHandlerName: ${localHandlerName}\nhandlerBindingNode:`,
-              handlerBindingNode,
-            )
             warnings.push(
-              `#379 handlerBindingNode?.type !== 'FunctionDeclaration': localHandlerName: ${localHandlerName}, loc: ${
+              `#379 handlerBindingNode?.type !== 'FunctionDeclaration': nonAnalyzedFile: ${nonAnalyzedFile} localHandlerName: ${localHandlerName}, loc: ${
                 handlerBindingNode?.loc
                   ? loc2String(handlerBindingNode?.loc as SourceLocation)
                   : ''
@@ -598,19 +609,28 @@ const findUsages = async ({
     enter(path) {
       const handlerBinding = path.scope.getBinding(importedHandlerName)
       const handlerBindingPath = handlerBinding?.path
-      const handlerBindingNode = handlerBindingPath?.node
+      const handlerBindingNode = handlerBindingPath?.node as any
       if (handlerBindingNode?.type !== 'FunctionDeclaration') {
-        console.log(
-          `#140 importedHandlerName: ${importedHandlerName}\nhandlerBindingNode:`,
-          handlerBindingNode,
-        )
-        warnings.push(
-          `#146 handlerBindingNode?.type !== 'FunctionDeclaration': importedHandlerName: ${importedHandlerName}, loc: ${
-            handlerBindingNode?.loc
-              ? loc2String(handlerBindingNode?.loc as SourceLocation)
-              : ''
-          }`,
-        )
+        if (
+          handlerBindingNode?.init.type === 'CallExpression' &&
+          handlerBindingNode?.init.callee.name === 'createNetworkingSagas'
+        ) {
+          console.log(
+            `#619 handlerBindingNode?.init.callee.name === 'createNetworkingSagas': nonAnalyzedFile: ${nonAnalyzedFile} importedHandlerName: ${importedHandlerName}, loc: ${
+              handlerBindingNode?.loc
+                ? loc2String(handlerBindingNode?.loc as SourceLocation)
+                : ''
+            }`,
+          )
+        } else {
+          warnings.push(
+            `#627 handlerBindingNode?.type !== 'FunctionDeclaration': nonAnalyzedFile: ${nonAnalyzedFile} importedHandlerName: ${importedHandlerName}, loc: ${
+              handlerBindingNode?.loc
+                ? loc2String(handlerBindingNode?.loc as SourceLocation)
+                : ''
+            }`,
+          )
+        }
       } else {
         handlerBindingPath!.traverse({
           IfStatement(subPath) {
@@ -641,7 +661,7 @@ const findUsages = async ({
   return usages
 }
 
-const addActions2HandlerMap = (
+export const addActions2HandlerMap = (
   map: TActionsMap,
   {
     actionsSource,
@@ -744,8 +764,9 @@ export const findLocalActions = ({
       bindingParentType !== 'ImportDeclaration'
     ) {
       warnings.push(
-        '#187 bindingType or bindingParentType unhandled:' +
-          loc2String(actionsBindingPath.node.loc),
+        `#187 bindingType or bindingParentType unhandled nonAnalyzedFile: ${nonAnalyzedFile} loc: ${loc2String(
+          actionsBindingPath.node.loc,
+        )}`,
       )
     } else {
       /* actionsMap[actionsName] = babelService.getRealPathByAlias(
