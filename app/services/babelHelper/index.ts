@@ -296,11 +296,11 @@ export const buildSagaMap = async function myBuildSagaGrah({
     noRecur: true,
   })
 
-  // const derivativeNonAnalyzedFiles = graph.nodes().filter(a => !analyzedFiles.has(a))
+  const derivativeNonAnalyzedFiles = graph.nodes().filter(a => !analyzedFiles.has(a))
   // 测试单独文件
-  const derivativeNonAnalyzedFiles = [
-    '/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts',
-  ]
+  // const derivativeNonAnalyzedFiles = [
+  //   '/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts',
+  // ]
   for (const nonAnalyzedFile of derivativeNonAnalyzedFiles) {
     const fileAst = await babelService.getAst(nonAnalyzedFile)
     /* let isSagaFile = false

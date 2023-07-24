@@ -58,8 +58,21 @@ export const fillInHandler2ActionsMap = async ({
       enter(path) {
         const handlerBinding = path.scope.getBinding(handlerName)
         const handlerBindingPath = handlerBinding?.path
-        const handlerBindingNode = handlerBindingPath?.node
-        if (handlerBindingNode?.type !== 'FunctionDeclaration') {
+        const handlerBindingNode = handlerBindingPath?.node as any
+
+        let isCreateNetworkingSagas = false
+        if (
+          handlerBindingNode?.type === 'VariableDeclarator' &&
+          handlerBindingNode?.init?.type === 'CallExpression' &&
+          handlerBindingNode?.init?.callee?.name === 'createNetworkingSagas'
+        ) {
+          isCreateNetworkingSagas = true
+        }
+
+        if (
+          handlerBindingNode?.type !== 'FunctionDeclaration' &&
+          !isCreateNetworkingSagas
+        ) {
           warnings.push(
             `#68 handlerBindingNode?.type !== 'FunctionDeclaration': nonAnalyzedFile: ${nonAnalyzedFile} handlerName: ${handlerName}, loc: ${
               handlerBindingNode?.loc
@@ -394,7 +407,6 @@ export const fillInActions2HandlerMap = async ({
                 warnings,
                 babelService,
               })
-              // WangFan TODO 2023-07-17 01:53:11
             } else {
               console.log('#282 expression:', expression)
               warnings.push(

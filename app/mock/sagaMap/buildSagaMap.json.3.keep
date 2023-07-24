@@ -76,21 +76,6 @@
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts,exchangeStaffListFailed"
       }
     ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,passwdConfirmRequest": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts,passwdConfirmSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,faceVerifyChallenge": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts,faceVerifyChallengeSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,isFaceverified": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts,isFaceverifiedSaga"
-      }
-    ],
     ",@@redux-form/CHANGE": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/form.ts,onChange"
@@ -511,86 +496,6 @@
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/order.ts,initialAnnexs4CRM"
       }
     ],
-    ",": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/order.ts,pledgeContractSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/fund.ts,fundPledgeOrderSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,initialProdSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,grantFirmInfoSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,grantCompleteSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,infoConfirmSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,applySubmitSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,agreementBrowseUserAuthSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,agreementBrowseFactoringContractSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,applyCreditInfoSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,applyRuleSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,mobileConfirmSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,legalMobileResetSubmitSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,mobileResetInitSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,mobileResetVerifiedSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,onCreditSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,creditIsVerifiedSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,creditReChallengeSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,mobileReChallengeSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts,applyRecord"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts,repaymentRecord"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts,loanDetailSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts,repaymentQuerySaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts,repaymentAccountSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts,repaymentPledgesSaga"
-      },
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts,payResultSaga"
-      }
-    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/withdraw.ts,withdrawListRequested": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdraw.ts,withdrawList"
@@ -894,11 +799,6 @@
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/withdraw.ts,getAbRequested": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdraw.ts,getAbRequested"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/withdraw.ts,querySupplierCardList": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdraw.ts,querySupplierCardList"
       }
     ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/password.ts,modifyTradePasswordRequested": [
@@ -1513,11 +1413,6 @@
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/firm.ts,presetCountriesRequested": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/firm.ts,presetCountries"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/firm.ts,GET_AGREEMENT_BROWSE_ACCOUNT_OPENING": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/firm.ts,agreementBrowseAccountOpening"
       }
     ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/fundSwap.ts,getRateRequested": [
@@ -3423,51 +3318,6 @@
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,stepTwoCheckedToogle"
       }
     ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,quota": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,onboardRequiredSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,bankAccountQuery": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,bankAccountQuerySaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,applyConfirm": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,applyConfirmSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,contractQuery": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,contractQuerySaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,productInfo": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,productInfoSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,pledgeRate": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,pledgeRateSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,withdrawResult": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,withdrawResultSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,loanAgmt": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,loanAgmtSaga"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,loanAgmtDtl": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,loanAgmtDtlSaga"
-      }
-    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/addressLocations.ts,addressLocationsRequested": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/addressLocations.ts,addressLocationsRequested"
@@ -3729,27 +3579,6 @@
       {
         "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,exchangeStaffListRequest",
         "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,exchangeStaffListFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts,passwdConfirmSaga": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,passwdConfirmRequest",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/xshield.ts,setMFAVisible"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,passwdConfirmRequest",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,passwdConfirmCb"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts,faceVerifyChallengeSaga": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,faceVerifyChallenge",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/user.ts,setAuthId",
-        "usageNames": ["EGetAuthIdUsages.GrantFxWithdraw"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,faceVerifyChallenge",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/exchange.ts,setExchangeStaffQRCodeTime"
       }
     ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/form.ts,onChange": [
@@ -7971,44 +7800,6 @@
         "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/modal.ts,toggleModalStatus"
       }
     ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,infoConfirmSaga": [
-      {
-        "actions2HandlerKey": ",",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/user.ts,setAuthId",
-        "usageNames": ["EGetAuthIdUsages.CreditLoanApply"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,mobileConfirmSaga": [
-      {
-        "actions2HandlerKey": ",",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/user.ts,setAuthId",
-        "usageNames": ["EGetAuthIdUsages.ResetLegalRepMobile"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,creditReChallengeSaga": [
-      {
-        "actions2HandlerKey": ",",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/user.ts,setAuthId",
-        "usageNames": ["EGetAuthIdUsages.CreditLoanApply"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts,mobileReChallengeSaga": [
-      {
-        "actions2HandlerKey": ",",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/user.ts,setAuthId",
-        "usageNames": ["EGetAuthIdUsages.ResetLegalRepMobile"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts,applyConfirmSaga": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,applyConfirm",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/xshield.ts,setMFAVisible"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,applyConfirm",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/actions/loanWithdraw.ts,setWithdrawCb"
-      }
-    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/addressLocations.ts,addressLocationsRequested": [
       {
         "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/addressLocations.ts,addressLocationsRequested",
@@ -8087,56 +7878,68 @@
     ]
   },
   "warnings": [
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts, loc: start.line: 120, start.column: 1, start.line: 120, start.column: 27",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts, loc: start.line: 121, start.column: 1, start.line: 121, start.column: 33",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/exchange.ts, loc: start.line: 122, start.column: 1, start.line: 122, start.column: 28",
     "#344 critical property is missing! nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/router.ts actionsName: \"undefined\", actionsPropertyName: \"undefined\", handlerName: \"locationChange\". loc: start.line: 28, start.column: 0, start.line: 31, start.column: 1",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/order.ts, actionsName: , loc: start.line: 388, start.column: 6, start.line: 394, start.column: 2",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/order.ts loc: start.line: 25, start.column: 9, start.line: 25, start.column: 22",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/order.ts, loc: start.line: 406, start.column: 1, start.line: 406, start.column: 28",
+    "#187 bindingType or bindingParentType unhandled:start.line: 25, start.column: 9, start.line: 25, start.column: 22",
     "#201 actions not found by , contractQuery, loc: start.line: 217, start.column: 10, start.line: 217, start.column: 42",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/fund.ts, actionsName: , loc: start.line: 98, start.column: 6, start.line: 104, start.column: 2",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdraw.ts, loc: start.line: 789, start.column: 1, start.line: 789, start.column: 31",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/firm.ts, loc: start.line: 819, start.column: 1, start.line: 819, start.column: 39",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/fund.ts, loc: start.line: 120, start.column: 1, start.line: 120, start.column: 29",
     "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/error.ts, actionsName: action, loc: start.line: 65, start.column: 0, start.line: 68, start.column: 1",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts loc: start.line: 15, start.column: 1, start.line: 15, start.column: 17",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 70, start.column: 6, start.line: 76, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 78, start.column: 6, start.line: 84, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 129, start.column: 6, start.line: 135, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 86, start.column: 6, start.line: 104, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 137, start.column: 6, start.line: 156, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 167, start.column: 6, start.line: 173, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 175, start.column: 6, start.line: 181, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 183, start.column: 6, start.line: 205, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 207, start.column: 6, start.line: 219, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 229, start.column: 6, start.line: 250, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 275, start.column: 6, start.line: 294, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 221, start.column: 6, start.line: 227, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 308, start.column: 6, start.line: 318, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 320, start.column: 6, start.line: 326, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 296, start.column: 6, start.line: 306, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 106, start.column: 6, start.line: 127, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, actionsName: , loc: start.line: 252, start.column: 6, start.line: 273, start.column: 2",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts loc: start.line: 13, start.column: 1, start.line: 13, start.column: 12",
+    "#187 bindingType or bindingParentType unhandled:start.line: 15, start.column: 1, start.line: 15, start.column: 17",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 330, start.column: 1, start.line: 330, start.column: 25",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 331, start.column: 1, start.line: 331, start.column: 27",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 332, start.column: 1, start.line: 332, start.column: 27",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 333, start.column: 1, start.line: 333, start.column: 25",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 334, start.column: 1, start.line: 334, start.column: 25",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 335, start.column: 1, start.line: 335, start.column: 37",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 336, start.column: 1, start.line: 336, start.column: 46",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 337, start.column: 1, start.line: 337, start.column: 29",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 338, start.column: 1, start.line: 338, start.column: 23",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 339, start.column: 1, start.line: 339, start.column: 27",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 340, start.column: 1, start.line: 340, start.column: 36",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 341, start.column: 1, start.line: 341, start.column: 29",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 342, start.column: 1, start.line: 342, start.column: 33",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 343, start.column: 1, start.line: 343, start.column: 22",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 344, start.column: 1, start.line: 344, start.column: 30",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 345, start.column: 1, start.line: 345, start.column: 31",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/orderLoan.ts, loc: start.line: 346, start.column: 1, start.line: 346, start.column: 31",
+    "#187 bindingType or bindingParentType unhandled:start.line: 13, start.column: 1, start.line: 13, start.column: 12",
     "#201 actions not found by , applySubmit, loc: start.line: 163, start.column: 8, start.line: 163, start.column: 71",
     "#307 calleeArguments[1].type !== 'Identifier': /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 173, start.column: 1, start.line: 180, start.column: 3",
-    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 177, start.column: 4, start.line: 177, start.column: 29, calleeName: put",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts, actionsName: , loc: start.line: 26, start.column: 6, start.line: 32, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts, actionsName: , loc: start.line: 34, start.column: 6, start.line: 40, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts, actionsName: , loc: start.line: 95, start.column: 6, start.line: 101, start.column: 2",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts loc: start.line: 14, start.column: 1, start.line: 14, start.column: 20",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts loc: start.line: 15, start.column: 1, start.line: 15, start.column: 11",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts loc: start.line: 16, start.column: 1, start.line: 16, start.column: 13",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts loc: start.line: 17, start.column: 1, start.line: 17, start.column: 15",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts loc: start.line: 12, start.column: 1, start.line: 12, start.column: 34",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 177, start.column: 4, start.line: 177, start.column: 29",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 182, start.column: 1, start.line: 182, start.column: 29",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 183, start.column: 1, start.line: 183, start.column: 30",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 184, start.column: 1, start.line: 184, start.column: 26",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 185, start.column: 1, start.line: 185, start.column: 27",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 186, start.column: 1, start.line: 186, start.column: 25",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 187, start.column: 1, start.line: 187, start.column: 24",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 188, start.column: 1, start.line: 188, start.column: 28",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 189, start.column: 1, start.line: 189, start.column: 22",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/loanWithdraw.ts, loc: start.line: 190, start.column: 1, start.line: 190, start.column: 25",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts, loc: start.line: 104, start.column: 1, start.line: 104, start.column: 21",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts, loc: start.line: 105, start.column: 1, start.line: 105, start.column: 25",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts, loc: start.line: 106, start.column: 1, start.line: 106, start.column: 24",
+    "#187 bindingType or bindingParentType unhandled:start.line: 14, start.column: 1, start.line: 14, start.column: 20",
+    "#187 bindingType or bindingParentType unhandled:start.line: 15, start.column: 1, start.line: 15, start.column: 11",
+    "#187 bindingType or bindingParentType unhandled:start.line: 16, start.column: 1, start.line: 16, start.column: 13",
+    "#187 bindingType or bindingParentType unhandled:start.line: 17, start.column: 1, start.line: 17, start.column: 15",
+    "#187 bindingType or bindingParentType unhandled:start.line: 12, start.column: 1, start.line: 12, start.column: 34",
     "#201 actions not found by , applyRecordActions, loc: start.line: 54, start.column: 8, start.line: 54, start.column: 49",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts loc: start.line: 13, start.column: 1, start.line: 13, start.column: 42",
+    "#187 bindingType or bindingParentType unhandled:start.line: 13, start.column: 1, start.line: 13, start.column: 42",
     "#201 actions not found by , repaymentRecordActions, loc: start.line: 63, start.column: 8, start.line: 63, start.column: 53",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/myLoans.ts loc: start.line: 13, start.column: 1, start.line: 13, start.column: 42",
+    "#187 bindingType or bindingParentType unhandled:start.line: 13, start.column: 1, start.line: 13, start.column: 42",
     "#201 actions not found by , repaymentRecordActions, loc: start.line: 72, start.column: 8, start.line: 72, start.column: 53",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, actionsName: , loc: start.line: 42, start.column: 6, start.line: 55, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, actionsName: , loc: start.line: 57, start.column: 6, start.line: 63, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, actionsName: , loc: start.line: 65, start.column: 6, start.line: 76, start.column: 2",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, actionsName: , loc: start.line: 234, start.column: 6, start.line: 246, start.column: 2",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts loc: start.line: 19, start.column: 1, start.line: 19, start.column: 11",
-    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, loc: start.line: 293, start.column: 1, start.line: 293, start.column: 33, calleeName: fork",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts loc: start.line: 14, start.column: 1, start.line: 14, start.column: 10",
-    "#201 actions not found by , payResult, loc: start.line: 52, start.column: 9, start.line: 52, start.column: 48",
-    "#187 bindingType or bindingParentType unhandled nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts loc: start.line: 14, start.column: 1, start.line: 14, start.column: 10",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, loc: start.line: 285, start.column: 1, start.line: 285, start.column: 28",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, loc: start.line: 286, start.column: 1, start.line: 286, start.column: 30",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, loc: start.line: 287, start.column: 1, start.line: 287, start.column: 30",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, loc: start.line: 291, start.column: 1, start.line: 291, start.column: 23",
+    "#187 bindingType or bindingParentType unhandled:start.line: 19, start.column: 1, start.line: 19, start.column: 11",
+    "#281 !calleeName.includes('take'): /Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/sagas/repayment.ts, loc: start.line: 293, start.column: 1, start.line: 293, start.column: 33",
+    "#187 bindingType or bindingParentType unhandled:start.line: 14, start.column: 1, start.line: 14, start.column: 10",
     "#201 actions not found by , payResult, loc: start.line: 117, start.column: 9, start.line: 117, start.column: 48"
   ]
 }
