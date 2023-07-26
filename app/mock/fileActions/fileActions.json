@@ -1456,14 +1456,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 255,
+                  "line": 256,
                   "column": 48,
-                  "index": 8167
+                  "index": 8203
                 },
                 "end": {
-                  "line": 892,
+                  "line": 887,
                   "column": 1,
-                  "index": 27434
+                  "index": 27276
                 }
               }
             }
@@ -1698,14 +1698,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 255,
+                  "line": 256,
                   "column": 48,
-                  "index": 8167
+                  "index": 8203
                 },
                 "end": {
-                  "line": 892,
+                  "line": 887,
                   "column": 1,
-                  "index": 27434
+                  "index": 27276
                 }
               }
             }
@@ -2202,14 +2202,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 201,
+                  "line": 202,
                   "column": 52,
-                  "index": 5585
+                  "index": 5593
                 },
                 "end": {
-                  "line": 1064,
+                  "line": 1087,
                   "column": 1,
-                  "index": 31325
+                  "index": 31926
                 }
               }
             }
@@ -3868,7 +3868,7 @@
                 "end": {
                   "line": 866,
                   "column": 1,
-                  "index": 27729
+                  "index": 27716
                 }
               }
             }
@@ -5757,14 +5757,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 604,
+                  "line": 609,
                   "column": 52,
-                  "index": 20881
+                  "index": 21096
                 },
                 "end": {
-                  "line": 734,
+                  "line": 739,
                   "column": 1,
-                  "index": 24335
+                  "index": 24550
                 }
               }
             }
@@ -7583,7 +7583,7 @@
                 "end": {
                   "line": 585,
                   "column": 1,
-                  "index": 17769
+                  "index": 17781
                 }
               }
             }
@@ -14945,12 +14945,12 @@
                 "start": {
                   "line": 210,
                   "column": 48,
-                  "index": 5853
+                  "index": 5863
                 },
                 "end": {
-                  "line": 868,
+                  "line": 879,
                   "column": 1,
-                  "index": 27695
+                  "index": 28195
                 }
               }
             }
@@ -15053,14 +15053,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 58,
+                  "line": 57,
                   "column": 43,
-                  "index": 1635
+                  "index": 1634
                 },
                 "end": {
-                  "line": 156,
+                  "line": 155,
                   "column": 1,
-                  "index": 4998
+                  "index": 4997
                 }
               }
             }

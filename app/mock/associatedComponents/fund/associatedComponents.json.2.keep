@@ -985,9 +985,9 @@
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/xshield.ts,setMFAVisible",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -2045,7 +2045,6 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFile",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFileFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFileSucceed",
@@ -2053,6 +2052,7 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,firmInfoOCRFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,orderInvoiceOCR",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,logisticBillOCR"
@@ -2360,7 +2360,6 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFile",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFileFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFileSucceed",
@@ -2368,6 +2367,7 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,firmInfoOCRFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,orderInvoiceOCR",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,logisticBillOCR"
@@ -2660,7 +2660,6 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFile",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFileFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/file.ts,uploadFileSucceed",
@@ -2668,6 +2667,7 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,firmInfoOCRFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,orderInvoiceOCR",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/ocr.ts,logisticBillOCR"
@@ -2955,9 +2955,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -3530,9 +3530,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -3880,193 +3880,6 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
-        ]
-      }
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js",
-      "associatedComponentsCount": 41,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
         ]
       }
     },
@@ -4464,9 +4277,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -4913,9 +4726,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -5663,9 +5476,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -6240,9 +6053,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -6686,9 +6499,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -6735,193 +6548,6 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
-        ]
-      }
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
-      "associatedComponentsCount": 41,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
         ]
       }
     },
@@ -7319,9 +6945,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -7593,9 +7219,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -8171,9 +7797,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -8447,9 +8073,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -8496,193 +8122,6 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
-        ]
-      }
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
-      "associatedComponentsCount": 41,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
         ]
       }
     },
@@ -9083,9 +8522,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -9658,193 +9097,6 @@
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx"
       ],
       "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus"
-        ]
-      }
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
-      "associatedComponentsCount": 41,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Crm/SideFunctions/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddBindPhoneForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/EarnListQueryForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/OperationListQueryForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/PartnerLoginForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/SetPasswordForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferAddMaterialForm/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/TransferApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/BindEmailModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/ServiceProtocolModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Modal/SetLoginPasswordModal/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/NavPanel/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/OrderAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/BindEmailOrMobileOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Steps/SetPasswordOperate/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalNormalAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Account/Withdrawal/WithdrawalTransferAdd/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDeduction/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanDetails/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanHistory/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/DashboardHome/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/FixRate/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundTT/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Statement/StatementDetail/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXAddMaterial/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/BasicSet/BasicSetPreview/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Settings/OperationRecords/index.js",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/middlewares/BindAcctUpperLimit.tsx"
-      ],
-      "associatedSagaTakers": [
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
@@ -10020,9 +9272,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -10294,9 +9546,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -10732,9 +9984,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -11170,9 +10422,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -11731,9 +10983,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -11998,9 +11250,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -12265,9 +11517,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -12532,9 +11784,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -12799,9 +12051,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -13066,9 +12318,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -13333,9 +12585,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -13600,9 +12852,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -13867,9 +13119,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -14476,9 +13728,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -14743,9 +13995,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -15010,9 +14262,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -15283,9 +14535,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddTransferAccount/StepOne.tsx": [
@@ -16357,9 +15609,9 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMeta",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/modal.ts,toggleModalStatus",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/meta.ts,fetchMetaFailed"
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/AddWithdrawalAccount/StepOne.tsx": [
@@ -26547,6 +25799,37 @@
       }
     },
     {
+      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js",
+      "associatedComponentsCount": 3,
+      "associatedComponents": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx"
+      ],
+      "associatedSagaTakers": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+      ],
+      "associatedComponentsMap": {
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ]
+      }
+    },
+    {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawFXApply/index.js",
       "associatedComponentsCount": 3,
       "associatedComponents": [
@@ -26945,6 +26228,37 @@
       "associatedComponentsCount": 3,
       "associatedComponents": [
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js"
+      ],
+      "associatedSagaTakers": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+      ],
+      "associatedComponentsMap": {
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ]
+      }
+    },
+    {
+      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
+      "associatedComponentsCount": 3,
+      "associatedComponents": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/MFAPanel/index.jsx"
       ],
@@ -27045,6 +26359,37 @@
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdraw.ts,withdrawDetail",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdraw.ts,withdrawDetailSucceed",
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdraw.ts,withdrawDetailFailed"
+        ]
+      }
+    },
+    {
+      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
+      "associatedComponentsCount": 3,
+      "associatedComponents": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js"
+      ],
+      "associatedSagaTakers": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+      ],
+      "associatedComponentsMap": {
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
         ]
       }
     },
@@ -27176,6 +26521,37 @@
         ],
         "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Refund/RefundExchangeModal/StepTwo/index.js": [
           "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/countdown.ts,setCountDown"
+        ]
+      }
+    },
+    {
+      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawEasyFXApplyForm/index.tsx",
+      "associatedComponentsCount": 3,
+      "associatedComponents": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js"
+      ],
+      "associatedSagaTakers": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+      ],
+      "associatedComponentsMap": {
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawChoose/index.js": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/index.tsx": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
+        ],
+        "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXAddForm/index.js": [
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfile",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileSucceed",
+          "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/sagas/withdrawals.ts,getLegalProfileFailed"
         ]
       }
     },
