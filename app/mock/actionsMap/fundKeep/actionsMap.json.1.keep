@@ -7840,14 +7840,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 245,
+                  "line": 236,
                   "column": 54,
-                  "index": 7278
+                  "index": 6937
                 },
                 "end": {
-                  "line": 1139,
+                  "line": 1124,
                   "column": 1,
-                  "index": 42203
+                  "index": 41604
                 }
               },
               "actionsMethods": [
@@ -7928,14 +7928,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 245,
+                  "line": 236,
                   "column": 54,
-                  "index": 7278
+                  "index": 6937
                 },
                 "end": {
-                  "line": 1139,
+                  "line": 1124,
                   "column": 1,
-                  "index": 42203
+                  "index": 41604
                 }
               }
             }
@@ -7992,14 +7992,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 614,
+                  "line": 609,
                   "column": 52,
-                  "index": 21232
+                  "index": 21096
                 },
                 "end": {
-                  "line": 744,
+                  "line": 739,
                   "column": 1,
-                  "index": 24686
+                  "index": 24550
                 }
               },
               "actionsMethods": [
@@ -8035,14 +8035,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 614,
+                  "line": 609,
                   "column": 52,
-                  "index": 21232
+                  "index": 21096
                 },
                 "end": {
-                  "line": 744,
+                  "line": 739,
                   "column": 1,
-                  "index": 24686
+                  "index": 24550
                 }
               }
             }
@@ -14850,14 +14850,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 49,
+                  "line": 46,
                   "column": 62,
-                  "index": 1499
+                  "index": 1350
                 },
                 "end": {
-                  "line": 122,
+                  "line": 118,
                   "column": 1,
-                  "index": 3491
+                  "index": 3310
                 }
               },
               "actionsMethods": [
@@ -14909,14 +14909,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 49,
+                  "line": 46,
                   "column": 62,
-                  "index": 1499
+                  "index": 1350
                 },
                 "end": {
-                  "line": 122,
+                  "line": 118,
                   "column": 1,
-                  "index": 3491
+                  "index": 3310
                 }
               }
             }
@@ -14985,14 +14985,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 118,
+                  "line": 130,
                   "column": 69,
-                  "index": 4487
+                  "index": 4633
                 },
                 "end": {
-                  "line": 945,
+                  "line": 1045,
                   "column": 1,
-                  "index": 31896
+                  "index": 33852
                 }
               },
               "actionsMethods": [
@@ -15005,9 +15005,6 @@
                   "usage": "EMModalUsages.CustomerPlanPresignPwd"
                 },
                 {
-                  "name": "push"
-                },
-                {
                   "name": "submitRequested",
                   "usage": "EMSubmitUsages.CustomerPlanBuy"
                 },
@@ -15018,6 +15015,9 @@
                 {
                   "name": "resetSubmit",
                   "usage": "EMSubmitUsages.CustomerPlanBuy"
+                },
+                {
+                  "name": "push"
                 },
                 {
                   "name": "toggleModalStatus",
@@ -15052,13 +15052,6 @@
                   "usage": "EMModalUsages.CustomerPlanPresignPwd"
                 },
                 {
-                  "isNamespace": false,
-                  "localName": "push",
-                  "importedName": "push",
-                  "sourceValue": "react-router-redux",
-                  "dependencyPath": "react-router-redux"
-                },
-                {
                   "localName": "submitRequested",
                   "importedName": "submitRequested",
                   "sourceValue": "actions/submit",
@@ -15078,6 +15071,13 @@
                   "sourceValue": "actions/submit",
                   "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/submit.ts",
                   "usage": "EMSubmitUsages.CustomerPlanBuy"
+                },
+                {
+                  "isNamespace": false,
+                  "localName": "push",
+                  "importedName": "push",
+                  "sourceValue": "react-router-redux",
+                  "dependencyPath": "react-router-redux"
                 },
                 {
                   "localName": "toggleModalStatus",
@@ -15110,14 +15110,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 118,
+                  "line": 130,
                   "column": 69,
-                  "index": 4487
+                  "index": 4633
                 },
                 "end": {
-                  "line": 945,
+                  "line": 1045,
                   "column": 1,
-                  "index": 31896
+                  "index": 33852
                 }
               }
             }
@@ -15175,27 +15175,24 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 43,
+                  "line": 42,
                   "column": 71,
-                  "index": 1435
+                  "index": 1340
                 },
                 "end": {
-                  "line": 147,
+                  "line": 119,
                   "column": 1,
-                  "index": 4649
+                  "index": 3373
                 }
               },
               "actionsMethods": [
                 {
                   "name": "fetchMetaRequested",
-                  "usage": "EMMetaUsages.QueryFailUnsignPaingPackage"
+                  "usage": "EMMetaUsages.CustomerPlanUsed"
                 },
                 {
                   "name": "fetchMetaRequested",
-                  "usage": "EMMetaUsages.CustomerPlanUsedEffective"
-                },
-                {
-                  "name": "fetchMetaRequested"
+                  "usage": "EMMetaUsages.CustomerPlanUsedExpired"
                 }
               ],
               "usedActionsDependencies": [
@@ -15204,32 +15201,26 @@
                   "importedName": "fetchMetaRequested",
                   "sourceValue": "actions/meta",
                   "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/meta.ts",
-                  "usage": "EMMetaUsages.QueryFailUnsignPaingPackage"
+                  "usage": "EMMetaUsages.CustomerPlanUsed"
                 },
                 {
                   "localName": "fetchMetaRequested",
                   "importedName": "fetchMetaRequested",
                   "sourceValue": "actions/meta",
                   "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/meta.ts",
-                  "usage": "EMMetaUsages.CustomerPlanUsedEffective"
-                },
-                {
-                  "localName": "fetchMetaRequested",
-                  "importedName": "fetchMetaRequested",
-                  "sourceValue": "actions/meta",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/meta.ts"
+                  "usage": "EMMetaUsages.CustomerPlanUsedExpired"
                 }
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 43,
+                  "line": 42,
                   "column": 71,
-                  "index": 1435
+                  "index": 1340
                 },
                 "end": {
-                  "line": 147,
+                  "line": 119,
                   "column": 1,
-                  "index": 4649
+                  "index": 3373
                 }
               }
             }
@@ -15339,20 +15330,20 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 35,
+                  "line": 34,
                   "column": 71,
-                  "index": 1108
+                  "index": 1060
                 },
                 "end": {
-                  "line": 117,
+                  "line": 119,
                   "column": 1,
-                  "index": 3275
+                  "index": 3221
                 }
               },
               "actionsMethods": [
                 {
                   "name": "fetchMetaRequested",
-                  "usage": "EMMetaUsages.BenefitPackageRecordNew"
+                  "usage": "EMMetaUsages.BenefitPackageRecord"
                 }
               ],
               "usedActionsDependencies": [
@@ -15361,19 +15352,19 @@
                   "importedName": "fetchMetaRequested",
                   "sourceValue": "actions/meta",
                   "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/actions/meta.ts",
-                  "usage": "EMMetaUsages.BenefitPackageRecordNew"
+                  "usage": "EMMetaUsages.BenefitPackageRecord"
                 }
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 35,
+                  "line": 34,
                   "column": 71,
-                  "index": 1108
+                  "index": 1060
                 },
                 "end": {
-                  "line": 117,
+                  "line": 119,
                   "column": 1,
-                  "index": 3275
+                  "index": 3221
                 }
               }
             }
@@ -18709,9 +18700,9 @@
                   "index": 1521
                 },
                 "end": {
-                  "line": 165,
+                  "line": 156,
                   "column": 1,
-                  "index": 4802
+                  "index": 4589
                 }
               },
               "actionsMethods": [
@@ -18746,9 +18737,9 @@
                   "index": 1521
                 },
                 "end": {
-                  "line": 165,
+                  "line": 156,
                   "column": 1,
-                  "index": 4802
+                  "index": 4589
                 }
               }
             }
@@ -34355,14 +34346,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 25,
+                  "line": 110,
                   "column": 75,
-                  "index": 730
+                  "index": 2319
                 },
                 "end": {
-                  "line": 114,
+                  "line": 410,
                   "column": 1,
-                  "index": 3476
+                  "index": 11078
                 }
               },
               "actionsMethods": [
@@ -34381,14 +34372,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 25,
+                  "line": 110,
                   "column": 75,
-                  "index": 730
+                  "index": 2319
                 },
                 "end": {
-                  "line": 114,
+                  "line": 410,
                   "column": 1,
-                  "index": 3476
+                  "index": 11078
                 }
               }
             }
@@ -36131,12 +36122,12 @@
                 "start": {
                   "line": 120,
                   "column": 53,
-                  "index": 3270
+                  "index": 3283
                 },
                 "end": {
                   "line": 238,
                   "column": 1,
-                  "index": 6827
+                  "index": 6840
                 }
               },
               "actionsMethods": [
@@ -36169,12 +36160,12 @@
                 "start": {
                   "line": 120,
                   "column": 53,
-                  "index": 3270
+                  "index": 3283
                 },
                 "end": {
                   "line": 238,
                   "column": 1,
-                  "index": 6827
+                  "index": 6840
                 }
               }
             }
@@ -38449,10 +38440,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/helper.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/WithdrawSetting/WithdrawDetail/config.ts",
       "result": null
     },
@@ -38877,7 +38864,7 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/constants/customerPlan.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/deduction/components/PlayModal/index.tsx",
       "result": null
     },
     {
@@ -38890,14 +38877,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/components/CustomerPackage/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/components/RateDrawer/RateDrawer.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/CustomerPlanBuyPage/help.tsx",
       "result": null
     },
     {
@@ -40617,10 +40596,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/StepOne/RateLadder.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/StepOne/hook.tsx",
       "result": null
     },
@@ -40694,10 +40669,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/XtBean/api.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Benefit/CustomerPlan/components/table/help.tsx",
       "result": null
     },
     {
@@ -41010,10 +40981,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/containers/App/Dashboard/Fund/Order/OrderTable/components/ActionsGroup/useHook.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/components/Form/WithdrawFXApplyForm/hooks/useRateLadder.ts",
       "result": null
     },
     {

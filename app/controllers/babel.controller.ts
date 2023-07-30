@@ -43,14 +43,20 @@ import {
 import { DirectedGraph } from 'graphology'
 
 /*
+ * 寻找耦合的 saga
  * (0) /getAstAndAlterCode
- * (1) /traverseToGetGraph
- * (2) /getFileActions 获取 js及jsx 与 actions 的依赖关系
- * (3) /buildActionsMap 完善 fileActions
- * (4) /buildSagaMap
+ * (1) /traverseToGetGraph => app/mock/graphNodes/graphNodes.json
+ * (2) /getFileActions 获取 js及jsx 与 actions 的依赖关系 => app/mock/fileActions/fileActions.json
+ * (3) /buildActionsMap 完善 fileActions => app/mock/actionsMap/actionsMap.json
+ * (4) /buildSagaMap => app/mock/sagaMap/buildSagaMap.json
  * 辅助：parseSingleSagaHandler
- * (5) /buildSagaGraph
- * (6) /buildComponentRelation
+ * (5) /buildSagaGraph => app/mock/sagaGraph/sagaGraph.json
+ * (6) /buildComponentRelation => app/mock/associatedComponents/associatedComponents.json
+ */
+
+/*
+ * 寻找耦合的 reducer/state
+ * (0) /getAstAndAlterCode
  */
 
 @JsonController()
@@ -59,6 +65,7 @@ import { DirectedGraph } from 'graphology'
 export class BabelController {
   constructor(private babelService: BabelService) {}
 
+  // WangFan TODO 2023-07-26 11:28:58
   @Post('/findUnusedSaga')
   async findUnusedSaga() {
     const buildSagaMap = await getSagaMap()
