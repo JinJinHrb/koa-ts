@@ -1,0 +1,520 @@
+{
+  "message": "ok",
+  "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/bridgeConnection/reducer.ts",
+  "result": {
+    "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/bridgeConnection/reducer.ts",
+    "localConnect": "",
+    "localCompose": "",
+    "groups": []
+  },
+  "ast": {
+    "type": "File",
+    "start": 0,
+    "end": 213,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0,
+        "index": 0
+      },
+      "end": {
+        "line": 11,
+        "column": 0,
+        "index": 213
+      }
+    },
+    "errors": [],
+    "program": {
+      "type": "Program",
+      "start": 0,
+      "end": 213,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0,
+          "index": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 0,
+          "index": 213
+        }
+      },
+      "sourceType": "module",
+      "interpreter": null,
+      "body": [
+        {
+          "type": "ImportDeclaration",
+          "start": 16,
+          "end": 55,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "index": 16
+            },
+            "end": {
+              "line": 3,
+              "column": 39,
+              "index": 55
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 25,
+              "end": 40,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9,
+                  "index": 25
+                },
+                "end": {
+                  "line": 3,
+                  "column": 24,
+                  "index": 40
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 25,
+                "end": 40,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 9,
+                    "index": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 24,
+                    "index": 40
+                  },
+                  "identifierName": "combineReducers"
+                },
+                "name": "combineReducers"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 25,
+                "end": 40,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 9,
+                    "index": 25
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 24,
+                    "index": 40
+                  },
+                  "identifierName": "combineReducers"
+                },
+                "name": "combineReducers"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 48,
+            "end": 55,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 32,
+                "index": 48
+              },
+              "end": {
+                "line": 3,
+                "column": 39,
+                "index": 55
+              }
+            },
+            "extra": {
+              "rawValue": "redux",
+              "raw": "'redux'"
+            },
+            "value": "redux"
+          },
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "* @format ",
+              "start": 0,
+              "end": 14,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "index": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 14,
+                  "index": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "ImportDeclaration",
+          "start": 56,
+          "end": 89,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "index": 56
+            },
+            "end": {
+              "line": 4,
+              "column": 33,
+              "index": 89
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportDefaultSpecifier",
+              "start": 63,
+              "end": 73,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 7,
+                  "index": 63
+                },
+                "end": {
+                  "line": 4,
+                  "column": 17,
+                  "index": 73
+                }
+              },
+              "local": {
+                "type": "Identifier",
+                "start": 63,
+                "end": 73,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 7,
+                    "index": 63
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 17,
+                    "index": 73
+                  },
+                  "identifierName": "xtRedcuers"
+                },
+                "name": "xtRedcuers"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 79,
+            "end": 89,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 23,
+                "index": 79
+              },
+              "end": {
+                "line": 4,
+                "column": 33,
+                "index": 89
+              }
+            },
+            "extra": {
+              "rawValue": "reducers",
+              "raw": "'reducers'"
+            },
+            "value": "reducers"
+          }
+        },
+        {
+          "type": "ImportDeclaration",
+          "start": 90,
+          "end": 143,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 0,
+              "index": 90
+            },
+            "end": {
+              "line": 5,
+              "column": 53,
+              "index": 143
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportDefaultSpecifier",
+              "start": 97,
+              "end": 107,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 7,
+                  "index": 97
+                },
+                "end": {
+                  "line": 5,
+                  "column": 17,
+                  "index": 107
+                }
+              },
+              "local": {
+                "type": "Identifier",
+                "start": 97,
+                "end": 107,
+                "loc": {
+                  "start": {
+                    "line": 5,
+                    "column": 7,
+                    "index": 97
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 17,
+                    "index": 107
+                  },
+                  "identifierName": "efRecuders"
+                },
+                "name": "efRecuders"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 113,
+            "end": 143,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 23,
+                "index": 113
+              },
+              "end": {
+                "line": 5,
+                "column": 53,
+                "index": 143
+              }
+            },
+            "extra": {
+              "rawValue": "enterpriseFinancing/reducers",
+              "raw": "'enterpriseFinancing/reducers'"
+            },
+            "value": "enterpriseFinancing/reducers"
+          }
+        },
+        {
+          "type": "ExportDefaultDeclaration",
+          "start": 145,
+          "end": 212,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 0,
+              "index": 145
+            },
+            "end": {
+              "line": 10,
+              "column": 2,
+              "index": 212
+            }
+          },
+          "exportKind": "value",
+          "declaration": {
+            "type": "CallExpression",
+            "start": 160,
+            "end": 212,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 15,
+                "index": 160
+              },
+              "end": {
+                "line": 10,
+                "column": 2,
+                "index": 212
+              }
+            },
+            "callee": {
+              "type": "Identifier",
+              "start": 160,
+              "end": 175,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 15,
+                  "index": 160
+                },
+                "end": {
+                  "line": 7,
+                  "column": 30,
+                  "index": 175
+                },
+                "identifierName": "combineReducers"
+              },
+              "name": "combineReducers"
+            },
+            "arguments": [
+              {
+                "type": "ObjectExpression",
+                "start": 176,
+                "end": 211,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 31,
+                    "index": 176
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 1,
+                    "index": 211
+                  }
+                },
+                "properties": [
+                  {
+                    "type": "SpreadElement",
+                    "start": 179,
+                    "end": 192,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 1,
+                        "index": 179
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 14,
+                        "index": 192
+                      }
+                    },
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 182,
+                      "end": 192,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 4,
+                          "index": 182
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 14,
+                          "index": 192
+                        },
+                        "identifierName": "xtRedcuers"
+                      },
+                      "name": "xtRedcuers"
+                    }
+                  },
+                  {
+                    "type": "SpreadElement",
+                    "start": 195,
+                    "end": 208,
+                    "loc": {
+                      "start": {
+                        "line": 9,
+                        "column": 1,
+                        "index": 195
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 14,
+                        "index": 208
+                      }
+                    },
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 198,
+                      "end": 208,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 4,
+                          "index": 198
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 14,
+                          "index": 208
+                        },
+                        "identifierName": "efRecuders"
+                      },
+                      "name": "efRecuders"
+                    }
+                  }
+                ],
+                "extra": {
+                  "trailingComma": 208
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "directives": []
+    },
+    "comments": [
+      {
+        "type": "CommentBlock",
+        "value": "* @format ",
+        "start": 0,
+        "end": 14,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0,
+            "index": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "index": 14
+          }
+        }
+      }
+    ]
+  },
+  "stats": {
+    "dev": 16777220,
+    "mode": 33188,
+    "nlink": 1,
+    "uid": 501,
+    "gid": 20,
+    "rdev": 0,
+    "blksize": 4096,
+    "ino": 79589521,
+    "size": 213,
+    "blocks": 8,
+    "atimeMs": 1676913137016.447,
+    "mtimeMs": 1676618900997.7441,
+    "ctimeMs": 1676618900997.7441,
+    "birthtimeMs": 1676618900997.615,
+    "atime": "2023-02-20T17:12:17.016Z",
+    "mtime": "2023-02-17T07:28:20.998Z",
+    "ctime": "2023-02-17T07:28:20.998Z",
+    "birthtime": "2023-02-17T07:28:20.998Z",
+    "life": 14116736844,
+    "lifeInDay": 163,
+    "fname": "reducer.ts",
+    "fileFlag": true,
+    "directoryFlag": false,
+    "symbolicLinkFlag": false
+  }
+}

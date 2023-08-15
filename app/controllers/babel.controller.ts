@@ -23,6 +23,8 @@ import {
   findReferencedNodes,
   buildSagaGraphByActionsMap,
   recurBuildSagaGraph,
+  ParseSingleReducersFileParams,
+  parseSingleReducersFile,
 } from 'app/services/babelHelper'
 // import buildActionsMap from 'app/mock/actionsMap/buildActionsMap'
 import { TActionsMap } from 'app/services/babelHelper'
@@ -64,6 +66,12 @@ import { DirectedGraph } from 'graphology'
 @Controller('/babel')
 export class BabelController {
   constructor(private babelService: BabelService) {}
+
+  @Post('/parseReducer')
+  async parseReducer(@Body() params: ParseSingleReducersFileParams) {
+    const { ...result } = await parseSingleReducersFile(params)
+    return { ...result }
+  }
 
   // WangFan TODO 2023-07-26 11:28:58
   @Post('/findUnusedSaga')

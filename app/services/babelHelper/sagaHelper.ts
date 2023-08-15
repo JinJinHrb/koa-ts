@@ -180,18 +180,18 @@ export const traverseSagaGraph = function traverseSagaGraphHandler({
 export type GetSagaFileParams = {
   babelService: BabelService
   filePath: string
-  localSagaName: string
+  localIdentifier: string
   path: NodePath<any>
 }
 
-export const getSagaFilesByLocalSagaName = ({
+export const getFilesByLocalIdentifier = ({
   babelService,
   filePath,
-  localSagaName,
+  localIdentifier,
   path,
 }: GetSagaFileParams) => {
   let toAnalyzeFile = ''
-  const sagaBinding = path.scope.getBinding(localSagaName)
+  const sagaBinding = path.scope.getBinding(localIdentifier)
   const sagaBindingNode = sagaBinding?.path.node
   if (sagaBindingNode?.type === 'ImportDefaultSpecifier') {
     const importDeclaration = sagaBinding!.path.findParent(

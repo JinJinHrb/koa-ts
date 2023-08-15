@@ -7,7 +7,7 @@ import { BabelService } from '../babel.service'
 import { isDirectory, getFileData, isFile } from '../../helpers/fsUtils'
 import traverse, { Node, NodePath } from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
-import { File, SourceLocation } from '@babel/types'
+import { File, SourceLocation, CallExpression, ObjectProperty } from '@babel/types'
 import generate from '@babel/generator'
 import _ from 'lodash'
 import { getParentPathSkipTSNonNullExpression } from 'app/helpers/iterationUtil'
@@ -20,12 +20,29 @@ import {
   getSagaMap,
 } from './innerHelper'
 import { DirectedGraph } from 'graphology'
-import { getSagaEffects } from './sagaHelper'
+import { getFilesByLocalIdentifier, getSagaEffects } from './sagaHelper'
 import type {
   RootBuildSagaMap,
   key2Path4HandlerMap1,
   key2Path4HandlerMap2,
 } from 'app/mock/sagaMap/buildSagaMap.json.d'
+
+export type ParseSingleReducersFileParams = {
+  filePath: string
+  tsconfigPath: string
+  warnings: string[]
+}
+
+export const parseSingleReducersFile = async (params: ParseSingleReducersFileParams) => {
+  const { filePath, tsconfigPath } = params
+  const warnings: string[] = []
+  const code = (await getFileData(filePath as string))?.toString()
+  const babelService = new BabelService()
+  await babelService.setAlias(tsconfigPath)
+  const ast = await babelService.getAstByCode(code)
+  const result = await findReduxActions(filePath, babelService, ast, warnings)
+  return { result, warnings }
+}
 
 export type BuildSagaGraphParams = {
   actionsKeys: string[]
@@ -703,6 +720,257 @@ export const removeUnusedVars = (ast: ParseResult<File>, code: string) => {
     },
     code,
   )
+}
+
+export type TReduxActionsResut = {
+  localHandleActions: string
+}
+
+export type TActionStatesMap = {
+  [key: string]: string[]
+}
+
+export const findReduxActions = async (
+  filePath: string,
+  babelService: BabelService,
+  ast: ParseResult<File>,
+  warnings: string[],
+) => {
+  const result: any /* TReduxActionsResut */ = {
+    localHandleActions: '',
+    localImmutable: '',
+  }
+
+  traverse(ast, {
+    ImportDeclaration(path) {
+      const { node } = path
+      if (node.source.value === 'redux-actions') {
+        const composeSpecifier = node.specifiers.filter(
+          (a: any) => a.imported.name === 'handleActions',
+        )[0]
+        if (composeSpecifier) {
+          result.localHandleActions = composeSpecifier.local.name
+        }
+      }
+      if (node.source.value === 'immutable') {
+        const composeSpecifier = node.specifiers.filter(
+          (a: any) => a.type === 'ImportDefaultSpecifier',
+        )[0]
+        if (composeSpecifier) {
+          result.localImmutable = composeSpecifier.local.name
+        }
+      }
+      if (result.localHandleActions && result.localImmutable) {
+        path.stop()
+      }
+    },
+  })
+
+  const { localHandleActions } = result
+  if (!localHandleActions) {
+    return result
+  }
+
+  traverse(ast, {
+    ExportDefaultDeclaration(path) {
+      const { node } = path
+      if (
+        !node.declaration ||
+        node.declaration.type !== 'CallExpression' ||
+        (node.declaration.callee as any).name !== localHandleActions
+      ) {
+        path.stop()
+        return
+      }
+
+      const nodeArguments = node.declaration.arguments
+      if (!_.isArray(nodeArguments) || nodeArguments.length !== 2) {
+        warnings.push(
+          `[warning] #766 nodeArguments.length !== 2, ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+        path.stop()
+        return
+      }
+      const firstArgument = nodeArguments[0]
+      const secondArgument = nodeArguments[1]
+
+      // 寻找 actions listener
+      if (firstArgument.type !== 'ObjectExpression') {
+        warnings.push(
+          `[warning] #778 firstArgument.type !== 'ObjectExpression', ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+        path.stop()
+        return
+      }
+
+      const actionListenerProperties = firstArgument.properties
+      const nonSpreadProperties = actionListenerProperties.filter(
+        a => a.type !== 'SpreadElement' || a.argument.type !== 'Identifier',
+      )
+      if (!_.isEmpty(nonSpreadProperties)) {
+        warnings.push(
+          `[warning] #812 nonSpreadProperties is not empty, ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+      }
+      const reducerdentifiers = actionListenerProperties.map((a: any) => a.argument.name)
+      result.reducerdentifiers = reducerdentifiers
+
+      const actionStatesMap: TActionStatesMap = {} // WangFan TODO 2023-08-07 02:00:20
+      for (const reducerdentifier of reducerdentifiers) {
+        const reducerdentifierBinding = path.scope.getBinding(reducerdentifier)
+        const reducerdentifierBindingNode = reducerdentifierBinding?.path.node as Node
+        if (reducerdentifierBindingNode.type !== 'VariableDeclarator') {
+          warnings.push(
+            `[warning] #830 reducerdentifierBindingNode.type !== 'VariableDeclarator', ${loc2String(
+              node?.loc as SourceLocation,
+            )}`,
+          )
+          continue
+        }
+        if (reducerdentifierBindingNode.init?.type !== 'ObjectExpression') {
+          warnings.push(
+            `[warning] #838 reducerdentifierBindingNode.init?.type !== 'ObjectExpression', ${loc2String(
+              node?.loc as SourceLocation,
+            )}`,
+          )
+          continue
+        }
+        const objectExpressionProperties = reducerdentifierBindingNode.init?.properties
+        const nonObjectMethods = objectExpressionProperties.filter(
+          a => a.type !== 'ObjectMethod',
+        )
+        if (!_.isEmpty(nonObjectMethods)) {
+          warnings.push(
+            `[warning] #850 !_.isEmpty(nonObjectMethods), ${loc2String(
+              node?.loc as SourceLocation,
+            )}`,
+          )
+          continue
+        }
+        for (const objectExpressionProperty of objectExpressionProperties) {
+          const { key } = objectExpressionProperty as ObjectProperty
+          const { params: objectExpressionParams, body: objectExpressionBody } =
+            objectExpressionProperty as any
+          console.log(
+            '#858 objectExpressionParams:',
+            objectExpressionParams,
+            '\nobjectExpressionBody:',
+            objectExpressionBody,
+          )
+          const keyType = key.type
+          const keyObject = key.object
+          const keyProperty = key.property
+          if (keyType !== 'MemberExpression') {
+            warnings.push(
+              `[warning] #861 keyType !== 'MemberExpression', keyType: ${keyType}, ${loc2String(
+                node?.loc as SourceLocation,
+              )}`,
+            )
+            continue
+          }
+
+          const actionsName = keyObject.name
+          const actionsProperty = keyProperty.name
+
+          if (!actionStatesMap[`${actionsName}.${actionsProperty}`]) {
+            actionStatesMap[`${actionsName}.${actionsProperty}`] = []
+          }
+        }
+      }
+      result.actionStatesMap = actionStatesMap
+
+      // 寻找 initState
+      if (secondArgument.type !== 'Identifier') {
+        warnings.push(
+          `[warning] #787 secondArgument.type !== 'Identifier', ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+        path.stop()
+        return
+      }
+      const localIdentifier = secondArgument.name
+
+      const initStateFile = getFilesByLocalIdentifier({
+        babelService,
+        filePath,
+        localIdentifier,
+        path,
+      })
+
+      if (initStateFile) {
+        warnings.push(
+          `[warning] #813 initStateFile is not blank: ${initStateFile}, ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+      }
+
+      const initStateBinding = path.scope.getBinding(localIdentifier)
+      const initStateBindingNode = initStateBinding?.path.node as Node
+      if (initStateBindingNode.type !== 'VariableDeclarator') {
+        warnings.push(
+          `[warning] #832 initStateBindingNode.type !== 'VariableDeclarator', ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+        return
+      }
+      const initStateInitNode = initStateBindingNode.init as CallExpression
+      if (
+        initStateInitNode.callee.type !== 'MemberExpression' ||
+        (initStateInitNode.callee as any).object.name !== result.localImmutable
+      ) {
+        warnings.push(
+          `[warning] #844 (initStateInitNode.callee as any).object.name !== result.localImmutable', ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+        return
+      }
+      const initStateArguments = initStateInitNode.arguments
+      if (initStateArguments.length !== 1) {
+        warnings.push(
+          `[warning] #853 initStateArguments.length !== 1', ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+        return
+      }
+      const initStateArgument = initStateArguments[0]
+      if (initStateArgument.type !== 'ObjectExpression') {
+        warnings.push(
+          `[warning] #862 initStateArgument.type !== 'ObjectExpression', ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+        return
+      }
+      const initStateProperties = initStateArgument.properties
+      const nonObjectProperties = initStateProperties.filter(
+        a => a.type !== 'ObjectProperty' || a.key.type !== 'Identifier',
+      )
+      if (!_.isEmpty(nonObjectProperties)) {
+        warnings.push(
+          `[warning] #862 nonObjectProperty found, ${loc2String(
+            node?.loc as SourceLocation,
+          )}`,
+        )
+      }
+      const initStateNames = initStateProperties
+        .filter(a => a.type === 'ObjectProperty')
+        .map(a => (a as any)?.key?.name)
+      result.initStateNames = initStateNames
+    },
+  })
+
+  return result
 }
 
 export type TConnectActionsResult = {

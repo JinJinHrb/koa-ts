@@ -1,0 +1,750 @@
+{
+  "message": "ok",
+  "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/reducers/index.ts",
+  "result": {
+    "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-fund/shared/enterpriseFinancing/reducers/index.ts",
+    "localConnect": "",
+    "localCompose": "",
+    "groups": []
+  },
+  "ast": {
+    "type": "File",
+    "start": 0,
+    "end": 278,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0,
+        "index": 0
+      },
+      "end": {
+        "line": 12,
+        "column": 1,
+        "index": 278
+      }
+    },
+    "errors": [],
+    "program": {
+      "type": "Program",
+      "start": 0,
+      "end": 278,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0,
+          "index": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 1,
+          "index": 278
+        }
+      },
+      "sourceType": "module",
+      "interpreter": null,
+      "body": [
+        {
+          "type": "ImportDeclaration",
+          "start": 0,
+          "end": 50,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "index": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 50,
+              "index": 50
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 9,
+              "end": 29,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 9,
+                  "index": 9
+                },
+                "end": {
+                  "line": 1,
+                  "column": 29,
+                  "index": 29
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 9,
+                "end": 16,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 9,
+                    "index": 9
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 16,
+                    "index": 16
+                  },
+                  "identifierName": "default"
+                },
+                "name": "default"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 20,
+                "end": 29,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 20,
+                    "index": 20
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 29,
+                    "index": 29
+                  },
+                  "identifierName": "orderLoan"
+                },
+                "name": "orderLoan"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 37,
+            "end": 50,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 37,
+                "index": 37
+              },
+              "end": {
+                "line": 1,
+                "column": 50,
+                "index": 50
+              }
+            },
+            "extra": {
+              "rawValue": "./orderLoan",
+              "raw": "'./orderLoan'"
+            },
+            "value": "./orderLoan"
+          }
+        },
+        {
+          "type": "ImportDeclaration",
+          "start": 51,
+          "end": 107,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "index": 51
+            },
+            "end": {
+              "line": 2,
+              "column": 56,
+              "index": 107
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 60,
+              "end": 83,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 9,
+                  "index": 60
+                },
+                "end": {
+                  "line": 2,
+                  "column": 32,
+                  "index": 83
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 60,
+                "end": 67,
+                "loc": {
+                  "start": {
+                    "line": 2,
+                    "column": 9,
+                    "index": 60
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 16,
+                    "index": 67
+                  },
+                  "identifierName": "default"
+                },
+                "name": "default"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 71,
+                "end": 83,
+                "loc": {
+                  "start": {
+                    "line": 2,
+                    "column": 20,
+                    "index": 71
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 32,
+                    "index": 83
+                  },
+                  "identifierName": "loanWithdraw"
+                },
+                "name": "loanWithdraw"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 91,
+            "end": 107,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 40,
+                "index": 91
+              },
+              "end": {
+                "line": 2,
+                "column": 56,
+                "index": 107
+              }
+            },
+            "extra": {
+              "rawValue": "./loanWithdraw",
+              "raw": "'./loanWithdraw'"
+            },
+            "value": "./loanWithdraw"
+          }
+        },
+        {
+          "type": "ImportDeclaration",
+          "start": 108,
+          "end": 154,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "index": 108
+            },
+            "end": {
+              "line": 3,
+              "column": 46,
+              "index": 154
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 117,
+              "end": 135,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9,
+                  "index": 117
+                },
+                "end": {
+                  "line": 3,
+                  "column": 27,
+                  "index": 135
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 117,
+                "end": 124,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 9,
+                    "index": 117
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 16,
+                    "index": 124
+                  },
+                  "identifierName": "default"
+                },
+                "name": "default"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 128,
+                "end": 135,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 20,
+                    "index": 128
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 27,
+                    "index": 135
+                  },
+                  "identifierName": "myLoans"
+                },
+                "name": "myLoans"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 143,
+            "end": 154,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 35,
+                "index": 143
+              },
+              "end": {
+                "line": 3,
+                "column": 46,
+                "index": 154
+              }
+            },
+            "extra": {
+              "rawValue": "./myLoans",
+              "raw": "'./myLoans'"
+            },
+            "value": "./myLoans"
+          }
+        },
+        {
+          "type": "ImportDeclaration",
+          "start": 155,
+          "end": 205,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "index": 155
+            },
+            "end": {
+              "line": 4,
+              "column": 50,
+              "index": 205
+            }
+          },
+          "importKind": "value",
+          "specifiers": [
+            {
+              "type": "ImportSpecifier",
+              "start": 164,
+              "end": 184,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 9,
+                  "index": 164
+                },
+                "end": {
+                  "line": 4,
+                  "column": 29,
+                  "index": 184
+                }
+              },
+              "imported": {
+                "type": "Identifier",
+                "start": 164,
+                "end": 171,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 9,
+                    "index": 164
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 16,
+                    "index": 171
+                  },
+                  "identifierName": "default"
+                },
+                "name": "default"
+              },
+              "importKind": "value",
+              "local": {
+                "type": "Identifier",
+                "start": 175,
+                "end": 184,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 20,
+                    "index": 175
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 29,
+                    "index": 184
+                  },
+                  "identifierName": "repayment"
+                },
+                "name": "repayment"
+              }
+            }
+          ],
+          "source": {
+            "type": "StringLiteral",
+            "start": 192,
+            "end": 205,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 37,
+                "index": 192
+              },
+              "end": {
+                "line": 4,
+                "column": 50,
+                "index": 205
+              }
+            },
+            "extra": {
+              "rawValue": "./repayment",
+              "raw": "'./repayment'"
+            },
+            "value": "./repayment"
+          }
+        },
+        {
+          "type": "ExportDefaultDeclaration",
+          "start": 208,
+          "end": 278,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 0,
+              "index": 208
+            },
+            "end": {
+              "line": 12,
+              "column": 1,
+              "index": 278
+            }
+          },
+          "exportKind": "value",
+          "declaration": {
+            "type": "ObjectExpression",
+            "start": 223,
+            "end": 278,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 15,
+                "index": 223
+              },
+              "end": {
+                "line": 12,
+                "column": 1,
+                "index": 278
+              }
+            },
+            "properties": [
+              {
+                "type": "ObjectProperty",
+                "start": 227,
+                "end": 236,
+                "loc": {
+                  "start": {
+                    "line": 8,
+                    "column": 2,
+                    "index": 227
+                  },
+                  "end": {
+                    "line": 8,
+                    "column": 11,
+                    "index": 236
+                  }
+                },
+                "method": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 227,
+                  "end": 236,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 2,
+                      "index": 227
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 11,
+                      "index": 236
+                    },
+                    "identifierName": "orderLoan"
+                  },
+                  "name": "orderLoan"
+                },
+                "computed": false,
+                "shorthand": true,
+                "value": {
+                  "type": "Identifier",
+                  "start": 227,
+                  "end": 236,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 2,
+                      "index": 227
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 11,
+                      "index": 236
+                    },
+                    "identifierName": "orderLoan"
+                  },
+                  "name": "orderLoan"
+                },
+                "extra": {
+                  "shorthand": true
+                }
+              },
+              {
+                "type": "ObjectProperty",
+                "start": 240,
+                "end": 252,
+                "loc": {
+                  "start": {
+                    "line": 9,
+                    "column": 2,
+                    "index": 240
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 14,
+                    "index": 252
+                  }
+                },
+                "method": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 240,
+                  "end": 252,
+                  "loc": {
+                    "start": {
+                      "line": 9,
+                      "column": 2,
+                      "index": 240
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 14,
+                      "index": 252
+                    },
+                    "identifierName": "loanWithdraw"
+                  },
+                  "name": "loanWithdraw"
+                },
+                "computed": false,
+                "shorthand": true,
+                "value": {
+                  "type": "Identifier",
+                  "start": 240,
+                  "end": 252,
+                  "loc": {
+                    "start": {
+                      "line": 9,
+                      "column": 2,
+                      "index": 240
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 14,
+                      "index": 252
+                    },
+                    "identifierName": "loanWithdraw"
+                  },
+                  "name": "loanWithdraw"
+                },
+                "extra": {
+                  "shorthand": true
+                }
+              },
+              {
+                "type": "ObjectProperty",
+                "start": 256,
+                "end": 263,
+                "loc": {
+                  "start": {
+                    "line": 10,
+                    "column": 2,
+                    "index": 256
+                  },
+                  "end": {
+                    "line": 10,
+                    "column": 9,
+                    "index": 263
+                  }
+                },
+                "method": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 256,
+                  "end": 263,
+                  "loc": {
+                    "start": {
+                      "line": 10,
+                      "column": 2,
+                      "index": 256
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 9,
+                      "index": 263
+                    },
+                    "identifierName": "myLoans"
+                  },
+                  "name": "myLoans"
+                },
+                "computed": false,
+                "shorthand": true,
+                "value": {
+                  "type": "Identifier",
+                  "start": 256,
+                  "end": 263,
+                  "loc": {
+                    "start": {
+                      "line": 10,
+                      "column": 2,
+                      "index": 256
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 9,
+                      "index": 263
+                    },
+                    "identifierName": "myLoans"
+                  },
+                  "name": "myLoans"
+                },
+                "extra": {
+                  "shorthand": true
+                }
+              },
+              {
+                "type": "ObjectProperty",
+                "start": 267,
+                "end": 276,
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 2,
+                    "index": 267
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 11,
+                    "index": 276
+                  }
+                },
+                "method": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 267,
+                  "end": 276,
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 2,
+                      "index": 267
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 11,
+                      "index": 276
+                    },
+                    "identifierName": "repayment"
+                  },
+                  "name": "repayment"
+                },
+                "computed": false,
+                "shorthand": true,
+                "value": {
+                  "type": "Identifier",
+                  "start": 267,
+                  "end": 276,
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 2,
+                      "index": 267
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 11,
+                      "index": 276
+                    },
+                    "identifierName": "repayment"
+                  },
+                  "name": "repayment"
+                },
+                "extra": {
+                  "shorthand": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "directives": []
+    },
+    "comments": []
+  },
+  "stats": {
+    "dev": 16777220,
+    "mode": 33188,
+    "nlink": 1,
+    "uid": 501,
+    "gid": 20,
+    "rdev": 0,
+    "blksize": 4096,
+    "ino": 79591187,
+    "size": 278,
+    "blocks": 8,
+    "atimeMs": 1676913138471.1797,
+    "mtimeMs": 1676618901338.0386,
+    "ctimeMs": 1676618901338.0386,
+    "birthtimeMs": 1676618901337.9905,
+    "atime": "2023-02-20T17:12:18.471Z",
+    "mtime": "2023-02-17T07:28:21.338Z",
+    "ctime": "2023-02-17T07:28:21.338Z",
+    "birthtime": "2023-02-17T07:28:21.338Z",
+    "life": 14116937631,
+    "lifeInDay": 163,
+    "fname": "index.ts",
+    "fileFlag": true,
+    "directoryFlag": false,
+    "symbolicLinkFlag": false
+  }
+}

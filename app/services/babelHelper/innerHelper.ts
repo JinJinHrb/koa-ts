@@ -16,7 +16,7 @@ import { RootObject as RootObject4FileActions } from 'app/mock/fileActions/fileA
 import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
 import type { RootActionsMap } from 'app/mock/actionsMap/actionsMap.json.d'
 import type { RootSagaGraph } from 'app/mock/sagaGraph/sagaGraph.d'
-import { getSagaFilesByLocalSagaName } from './sagaHelper'
+import { getFilesByLocalIdentifier } from './sagaHelper'
 import { parseCreateNetworkingSagas } from './createNetworkingSagasHelper'
 
 export const fillInHandler2ActionsMap = async ({
@@ -289,11 +289,11 @@ export const fillInActions2HandlerMap = async ({
                   path.stop()
                   return
                 }
-                const localSagaName = callExpressionNode.arguments[0].name
-                const toAnalyzeFile = getSagaFilesByLocalSagaName({
+                const localIdentifier = callExpressionNode.arguments[0].name
+                const toAnalyzeFile = getFilesByLocalIdentifier({
                   babelService,
                   filePath: nonAnalyzedFile,
-                  localSagaName,
+                  localIdentifier,
                   path,
                 })
                 toAnalyzeFiles.push(toAnalyzeFile)
