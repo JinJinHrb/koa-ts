@@ -194,7 +194,7 @@ export const iterateObject2replaceCertainValueByRegex = (
 /**
  * 遍历对象，供处理函数修改
  * handler 返回 true，代表可以从递归中退出
- *
+ * paths: something like [ 'body', '0' ]
  * */
 export const iterateObjectHandler = function itrObj(
   obj: any,

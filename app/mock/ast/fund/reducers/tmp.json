@@ -1,0 +1,39 @@
+body
+	[0] - ReturnStatement
+	argument - CallExpression
+		callee - MemberExpression
+			object - Identifier state
+			property - Identifier set
+	    arguments
+	    	[0] - StringLiteral "unauthorized"
+	    	[1] - MemberExpression
+	    		object - Identifier "action"
+	    		property - Identifier "payload"
+
+
+
+body
+	[0] - ReturnStatement
+		argument - CallExpression // 984-1178
+			callee - MemberExpression
+				object - CallExpression // 984-1046
+					callee - MemberExpression
+						object - CallExpression // 984-1015
+							callee - MemberExpression
+								object - Identifier state // 984-989
+								property - Identifier set // 994-997
+							arguments
+								[0] - StringLiteral "loggedIn" // 998-1008
+								...
+						property - Identifier set // 1020-1023
+					arguments
+						[0] - StringLiteral "unauthorized"
+				property Identifier update // 1051-1057
+			arguments
+				[0] - StringLiteral "signIn"
+				[1] - ArrowFunctionExpression
+					params
+						[0] - Identifier v
+					body - CallExpression // 1077-1172
+					...
+	

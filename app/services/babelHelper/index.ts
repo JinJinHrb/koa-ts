@@ -10,7 +10,10 @@ import { ParseResult } from '@babel/parser'
 import { File, SourceLocation, CallExpression, ObjectProperty } from '@babel/types'
 import generate from '@babel/generator'
 import _ from 'lodash'
-import { getParentPathSkipTSNonNullExpression } from 'app/helpers/iterationUtil'
+import {
+  getParentPathSkipTSNonNullExpression,
+  iterateObjectHandler,
+} from 'app/helpers/iterationUtil'
 import {
   addCallExpressionPaths,
   fillInActions2HandlerMap,
@@ -21,6 +24,7 @@ import {
 } from './innerHelper'
 import { DirectedGraph } from 'graphology'
 import { getFilesByLocalIdentifier, getSagaEffects } from './sagaHelper'
+import { objectMethodHelper } from './reducerHelper'
 import type {
   RootBuildSagaMap,
   key2Path4HandlerMap1,
@@ -40,7 +44,7 @@ export const parseSingleReducersFile = async (params: ParseSingleReducersFilePar
   const babelService = new BabelService()
   await babelService.setAlias(tsconfigPath)
   const ast = await babelService.getAstByCode(code)
-  const result = await findReduxActions(filePath, babelService, ast, warnings)
+  const result = await findReduxActionsInReducer(filePath, babelService, ast, warnings)
   return { result, warnings }
 }
 
@@ -730,7 +734,7 @@ export type TActionStatesMap = {
   [key: string]: string[]
 }
 
-export const findReduxActions = async (
+export const findReduxActionsInReducer = async (
   filePath: string,
   babelService: BabelService,
   ast: ParseResult<File>,
@@ -809,7 +813,15 @@ export const findReduxActions = async (
 
       const actionListenerProperties = firstArgument.properties
       const nonSpreadProperties = actionListenerProperties.filter(
-        a => a.type !== 'SpreadElement' || a.argument.type !== 'Identifier',
+        a =>
+          (a.type !== 'SpreadElement' && a.type !== 'ObjectMethod') ||
+          (a.type === 'SpreadElement' && a.argument.type !== 'Identifier'),
+      )
+      const objectMethodProperties = actionListenerProperties.filter(
+        a => a.type === 'ObjectMethod',
+      ) // WangFan TODO 2023-08-21 14:27:27
+      const spreadElementProperties = actionListenerProperties.filter(
+        a => a.type === 'SpreadElement',
       )
       if (!_.isEmpty(nonSpreadProperties)) {
         warnings.push(
@@ -818,10 +830,12 @@ export const findReduxActions = async (
           )}`,
         )
       }
-      const reducerdentifiers = actionListenerProperties.map((a: any) => a.argument.name)
+      const reducerdentifiers = spreadElementProperties.map((a: any) => a.argument.name)
       result.reducerdentifiers = reducerdentifiers
 
       const actionStatesMap: TActionStatesMap = {} // WangFan TODO 2023-08-07 02:00:20
+      objectMethodHelper(actionStatesMap, node, objectMethodProperties, warnings)
+
       for (const reducerdentifier of reducerdentifiers) {
         const reducerdentifierBinding = path.scope.getBinding(reducerdentifier)
         const reducerdentifierBindingNode = reducerdentifierBinding?.path.node as Node
@@ -841,10 +855,8 @@ export const findReduxActions = async (
           )
           continue
         }
-        const objectExpressionProperties = reducerdentifierBindingNode.init?.properties
-        const nonObjectMethods = objectExpressionProperties.filter(
-          a => a.type !== 'ObjectMethod',
-        )
+        const objectMethods = reducerdentifierBindingNode.init?.properties
+        const nonObjectMethods = objectMethods.filter(a => a.type !== 'ObjectMethod')
         if (!_.isEmpty(nonObjectMethods)) {
           warnings.push(
             `[warning] #850 !_.isEmpty(nonObjectMethods), ${loc2String(
@@ -853,35 +865,8 @@ export const findReduxActions = async (
           )
           continue
         }
-        for (const objectExpressionProperty of objectExpressionProperties) {
-          const { key } = objectExpressionProperty as ObjectProperty
-          const { params: objectExpressionParams, body: objectExpressionBody } =
-            objectExpressionProperty as any
-          console.log(
-            '#858 objectExpressionParams:',
-            objectExpressionParams,
-            '\nobjectExpressionBody:',
-            objectExpressionBody,
-          )
-          const keyType = key.type
-          const keyObject = key.object
-          const keyProperty = key.property
-          if (keyType !== 'MemberExpression') {
-            warnings.push(
-              `[warning] #861 keyType !== 'MemberExpression', keyType: ${keyType}, ${loc2String(
-                node?.loc as SourceLocation,
-              )}`,
-            )
-            continue
-          }
 
-          const actionsName = keyObject.name
-          const actionsProperty = keyProperty.name
-
-          if (!actionStatesMap[`${actionsName}.${actionsProperty}`]) {
-            actionStatesMap[`${actionsName}.${actionsProperty}`] = []
-          }
-        }
+        objectMethodHelper(actionStatesMap, node, objectMethods, warnings)
       }
       result.actionStatesMap = actionStatesMap
 

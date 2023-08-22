@@ -1,0 +1,309 @@
+{
+  "type": "ObjectMethod",
+  "start": 4077,
+  "end": 4172,
+  "loc": {
+    "start": {
+      "line": 138,
+      "column": 2,
+      "index": 4077
+    },
+    "end": {
+      "line": 140,
+      "column": 3,
+      "index": 4172
+    }
+  },
+  "method": true,
+  "computed": true,
+  "key": {
+    "type": "MemberExpression",
+    "start": 4078,
+    "end": 4098,
+    "loc": {
+      "start": {
+        "line": 138,
+        "column": 3,
+        "index": 4078
+      },
+      "end": {
+        "line": 138,
+        "column": 23,
+        "index": 4098
+      }
+    },
+    "object": {
+      "type": "Identifier",
+      "start": 4078,
+      "end": 4085,
+      "loc": {
+        "start": {
+          "line": 138,
+          "column": 3,
+          "index": 4078
+        },
+        "end": {
+          "line": 138,
+          "column": 10,
+          "index": 4085
+        },
+        "identifierName": "actions"
+      },
+      "name": "actions"
+    },
+    "computed": false,
+    "property": {
+      "type": "Identifier",
+      "start": 4086,
+      "end": 4098,
+      "loc": {
+        "start": {
+          "line": 138,
+          "column": 11,
+          "index": 4086
+        },
+        "end": {
+          "line": 138,
+          "column": 23,
+          "index": 4098
+        },
+        "identifierName": "unauthorized"
+      },
+      "name": "unauthorized"
+    }
+  },
+  "kind": "method",
+  "id": null,
+  "generator": false,
+  "async": false,
+  "params": [
+    {
+      "type": "Identifier",
+      "start": 4100,
+      "end": 4105,
+      "loc": {
+        "start": {
+          "line": 138,
+          "column": 25,
+          "index": 4100
+        },
+        "end": {
+          "line": 138,
+          "column": 30,
+          "index": 4105
+        },
+        "identifierName": "state"
+      },
+      "name": "state"
+    },
+    {
+      "type": "Identifier",
+      "start": 4107,
+      "end": 4113,
+      "loc": {
+        "start": {
+          "line": 138,
+          "column": 32,
+          "index": 4107
+        },
+        "end": {
+          "line": 138,
+          "column": 38,
+          "index": 4113
+        },
+        "identifierName": "action"
+      },
+      "name": "action"
+    }
+  ],
+  "body": {
+    "type": "BlockStatement",
+    "start": 4115,
+    "end": 4172,
+    "loc": {
+      "start": {
+        "line": 138,
+        "column": 40,
+        "index": 4115
+      },
+      "end": {
+        "line": 140,
+        "column": 3,
+        "index": 4172
+      }
+    },
+    "body": [
+      {
+        "type": "ReturnStatement",
+        "start": 4120,
+        "end": 4168,
+        "loc": {
+          "start": {
+            "line": 139,
+            "column": 3,
+            "index": 4120
+          },
+          "end": {
+            "line": 139,
+            "column": 51,
+            "index": 4168
+          }
+        },
+        "argument": {
+          "type": "CallExpression",
+          "start": 4127,
+          "end": 4168,
+          "loc": {
+            "start": {
+              "line": 139,
+              "column": 10,
+              "index": 4127
+            },
+            "end": {
+              "line": 139,
+              "column": 51,
+              "index": 4168
+            }
+          },
+          "callee": {
+            "type": "MemberExpression",
+            "start": 4127,
+            "end": 4136,
+            "loc": {
+              "start": {
+                "line": 139,
+                "column": 10,
+                "index": 4127
+              },
+              "end": {
+                "line": 139,
+                "column": 19,
+                "index": 4136
+              }
+            },
+            "object": {
+              "type": "Identifier",
+              "start": 4127,
+              "end": 4132,
+              "loc": {
+                "start": {
+                  "line": 139,
+                  "column": 10,
+                  "index": 4127
+                },
+                "end": {
+                  "line": 139,
+                  "column": 15,
+                  "index": 4132
+                },
+                "identifierName": "state"
+              },
+              "name": "state"
+            },
+            "computed": false,
+            "property": {
+              "type": "Identifier",
+              "start": 4133,
+              "end": 4136,
+              "loc": {
+                "start": {
+                  "line": 139,
+                  "column": 16,
+                  "index": 4133
+                },
+                "end": {
+                  "line": 139,
+                  "column": 19,
+                  "index": 4136
+                },
+                "identifierName": "set"
+              },
+              "name": "set"
+            }
+          },
+          "arguments": [
+            {
+              "type": "StringLiteral",
+              "start": 4137,
+              "end": 4151,
+              "loc": {
+                "start": {
+                  "line": 139,
+                  "column": 20,
+                  "index": 4137
+                },
+                "end": {
+                  "line": 139,
+                  "column": 34,
+                  "index": 4151
+                }
+              },
+              "extra": {
+                "rawValue": "unauthorized",
+                "raw": "'unauthorized'"
+              },
+              "value": "unauthorized"
+            },
+            {
+              "type": "MemberExpression",
+              "start": 4153,
+              "end": 4167,
+              "loc": {
+                "start": {
+                  "line": 139,
+                  "column": 36,
+                  "index": 4153
+                },
+                "end": {
+                  "line": 139,
+                  "column": 50,
+                  "index": 4167
+                }
+              },
+              "object": {
+                "type": "Identifier",
+                "start": 4153,
+                "end": 4159,
+                "loc": {
+                  "start": {
+                    "line": 139,
+                    "column": 36,
+                    "index": 4153
+                  },
+                  "end": {
+                    "line": 139,
+                    "column": 42,
+                    "index": 4159
+                  },
+                  "identifierName": "action"
+                },
+                "name": "action"
+              },
+              "computed": false,
+              "property": {
+                "type": "Identifier",
+                "start": 4160,
+                "end": 4167,
+                "loc": {
+                  "start": {
+                    "line": 139,
+                    "column": 43,
+                    "index": 4160
+                  },
+                  "end": {
+                    "line": 139,
+                    "column": 50,
+                    "index": 4167
+                  },
+                  "identifierName": "payload"
+                },
+                "name": "payload"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "directives": []
+  }
+}

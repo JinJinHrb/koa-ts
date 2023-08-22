@@ -45,6 +45,13 @@ import {
 import { DirectedGraph } from 'graphology'
 
 /*
+ * 确定项目依赖图
+ * (0) /getAstAndAlterCode
+ * (1) /traverseToGetGraph => app/mock/graphNodes/graphNodes.json
+ * (2) /removeFilteredFilesDemo 清理未用到的模块
+ */
+
+/*
  * 寻找耦合的 saga
  * (0) /getAstAndAlterCode
  * (1) /traverseToGetGraph => app/mock/graphNodes/graphNodes.json
