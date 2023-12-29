@@ -1,8 +1,48 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Created by WangFan on 14/11/10.
  */
 import _ from 'lodash'
 import pathUtil from 'path'
+
+export const resumeCurlyBrackets = (from: string, matches: string[]) => {
+  let count = 1
+  let to = from
+  while (count <= matches?.length ?? 0) {
+    const toReplace = 'CurlyBrackets [' + count++ + ']'
+    to = to.replace(toReplace, `{{${matches[count - 2]}}}`)
+  }
+  return to
+}
+
+export function replaceCurlyBrackets(str: string): [string, string[]] {
+  const regex = /\{\{(.*?)\}\}/g
+  let match,
+    count = 1
+  const matches: string[] = []
+  while ((match = regex.exec(str)) !== null) {
+    str = str.replace(match[0], 'CurlyBrackets [' + count++ + ']')
+    matches.push(removeDoubleCurlyBrackets(match[0]))
+  }
+  return [str, matches]
+}
+
+export function removeDoubleCurlyBrackets(str: string) {
+  return str.replace(/{{\s*|\s*}}/g, '')
+}
+
+export function insertStringBeforeLastDot(filePath: string, b: string) {
+  const lastDotIndex = filePath.lastIndexOf('.')
+  if (lastDotIndex === -1) {
+    return filePath + b
+  }
+  return filePath.slice(0, lastDotIndex) + b + filePath.slice(lastDotIndex)
+}
+
+export function isLink(url: string) {
+  const pattern = /^https?:\/\/[^\s]+$/
+  return pattern.test(url)
+}
 
 /**
  * 获取变量o的数据类型

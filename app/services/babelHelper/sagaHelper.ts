@@ -4,7 +4,7 @@ import { ParseResult } from '@babel/parser'
 import { File, SourceLocation } from '@babel/types'
 import { findLocalActions } from './innerHelper'
 import _ from 'lodash'
-import { iterateObjectHandler } from '../../helpers/iterationUtil'
+import { iterateObjectHandler } from 'app/helpers/iterationUtil'
 import { BabelService } from '../babel.service'
 import { DirectedGraph } from 'graphology'
 

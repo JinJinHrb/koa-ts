@@ -1,0 +1,13 @@
+{
+  ":authority": "dev35.xtrfr.cn",
+  ":method": "GET",
+  ":path": "/mfe/mfe-user-customer-service/",
+  ":scheme": "https",
+  "Accept": "*/*",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Accept-Language": "en,ru;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+  "Cookie": "experimentation_subject_id=IjAyMGM0YmY2LWY0Y2QtNDBjOS1hMmYwLTZiYjY3ZGExZDg2NSI%3D--67cfda31eb24825dfd39c93435b932452305a442; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2200990100001000021041601003170%22%2C%22first_id%22%3A%22187c092684c23c-01d9832018b8da9-1e525634-1296000-187c092684dfc1%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTg3YzA5MjY4NGMyM2MtMDFkOTgzMjAxOGI4ZGE5LTFlNTI1NjM0LTEyOTYwMDAtMTg3YzA5MjY4NGRmYzEiLCIkaWRlbnRpdHlfbG9naW5faWQiOiIwMDk5MDEwMDAwMTAwMDAyMTA0MTYwMTAwMzE3MCJ9%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%2200990100001000021041601003170%22%7D%2C%22%24device_id%22%3A%22187c092684c23c-01d9832018b8da9-1e525634-1296000-187c092684dfc1%22%7D; xt_lang=en; _dx_uzZo5y=b6be7ffba73d9e4c7e394e8c6d251c7679a25cdd0071f4abd5ee8c5c67bfeb007a7a6805; _dx_FMrPY6=64e74f53HtzUOEx98ZaDhW5kNLznxeJ2pdDmxQN1; XSRF-TOKEN=68086721-9062-4f5e-a330-10fa5bdcff5d; token=eyJhbGciOiJIUzUxMiJ9.eyJhZ2VudENvbnRleHQiOnsidHlwZSI6IlBDX0Jyb3dzZXIiLCJpcCI6IjIxMS45NS4xNi40MiIsInNlcnZlckdyYW50SWQiOm51bGwsIm9yaURldmljZUlkIjpudWxsLCJzZXJ2aWNlUHJvdmlkZXIiOm51bGx9LCJzdWJBY2N0IjpmYWxzZSwidXNlcm5hbWUiOiLmtYvor5Xms5XkuroiLCJmaXJtSWQiOiIwMDk5MDEwMDAwMjAwMDAyMTA0MTYwMTAwMjcyNCIsIm1pZCI6IlhUcmFuc2ZlciIsImF1dGhUeXBlIjoiSldUIiwicmVnaXN0ZXJSZWdpb24iOiJDTiIsImlzcyI6Inh0cmFuc2ZlciIsImlhdCI6MTY5Mjk0NzM1OSwiZXhwIjoxNjkyOTQ3OTU5LCJzdWIiOiIwMDk5MDEwMDAwMTAwMDAyMTA0MTYwMTAwMzE3MCJ9.SXZttAch1j23E9nz-XV9wb5-jjwCYZFmr9XK7j0tiSrjapcKcvct2r1swOeIodclV-rsnCh4QRbFWE7CHFxXJA; refreshToken=eyJhbGciOiJIUzUxMiJ9.eyJyZWZyZXNoSXNzdWVkQXQiOjE2OTI5Mjk5OTYyMzMsImF1dGhUeXBlIjoiUkVGUkVTSCIsImlzcyI6Inh0cmFuc2ZlciIsImlhdCI6MTY5Mjk0NzM1OSwiZXhwIjoxNjkyOTkwNTU5LCJzdWIiOiIwMDk5MDEwMDAwMTAwMDAyMTA0MTYwMTAwMzE3MCJ9.qZKA_-AVI7r1vJuqOpHdBWzjPSJcGD2ZlVsYqa6osU7QYHsWqw2Jpv26_0UE__l3NE3fSPAPUcwE9ELGC5Yrgg; xt_uuid=23759e30431711eea87f6be0d7a8be5b",
+  "If-Modified-Since": "Wed, 31 May 2023 13:14:41 GMT",
+  "If-None-Match": "W/\"64774841-2cb\"",
+  "Referer": "https://dev35.xtrfr.cn/dashboard/fund/earn-exchange?from=fund_menu"
+}

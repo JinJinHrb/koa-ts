@@ -4,7 +4,7 @@
 
 import pathUtil from 'path'
 import { BabelService } from '../babel.service'
-import { isDirectory, getFileData, isFile } from '../../helpers/fsUtils'
+import { isDirectory, getFileData, isFile } from 'app/helpers/fsUtils'
 import traverse, { Node, NodePath } from '@babel/traverse'
 import { ParseResult } from '@babel/parser'
 import { File, SourceLocation, CallExpression, ObjectProperty } from '@babel/types'

@@ -5,7 +5,7 @@ import {
   ObjectMethod,
   SpreadElement,
 } from '@babel/types'
-import { iterateObjectHandler } from '../../helpers/iterationUtil'
+import { iterateObjectHandler } from 'app/helpers/iterationUtil'
 import { loc2String, TActionStatesMap } from './index'
 import _ from 'lodash'
 

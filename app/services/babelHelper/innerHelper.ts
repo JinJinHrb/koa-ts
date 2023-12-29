@@ -6,7 +6,7 @@ import pathUtil from 'path'
 import {
   getParentPathSkipTSNonNullExpression,
   iterateObjectHandler,
-} from '../../helpers/iterationUtil'
+} from 'app/helpers/iterationUtil'
 import { TActionsMap, TFileCollectorElement, loc2String } from '.'
 import { DirectedGraph } from 'graphology'
 import { BabelService } from '../babel.service'
