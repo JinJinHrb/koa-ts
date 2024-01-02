@@ -30,9 +30,9 @@ export const retryTranslation = async (
   const pLimit = new PLimit(15)
   const { data, contents } = (await readColumns(filePath, 1, zhIndex, enIndex)) as any
   // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
-  const curlyBracketsReplace: string[][] = []
   const dataSliced = data.slice(1)
   const contentSliced = contents.slice(1)
+  const curlyBracketsReplace: string[][] = []
   dataSliced.forEach((text: string, index: number) => {
     if (!contentSliced[index].includes('FAIL TO TRANSLATE')) {
       pLimit.enqueue2(() => Promise.resolve(''))
@@ -76,9 +76,10 @@ export const readAndTranslate = async (
 ) => {
   const pLimit = new PLimit(15)
   const data = ((await readColumns(filePath, 1, zhIndex)) as any)?.data ?? []
+  const dataSliced = data.slice(1)
   // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
   const curlyBracketsReplace: string[][] = []
-  data.slice(1).forEach((text: string, index: number) => {
+  dataSliced.slice(1).forEach((text: string, index: number) => {
     if (isLink(text)) {
       pLimit.enqueue2(() => Promise.resolve(text))
     } else {
