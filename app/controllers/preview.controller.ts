@@ -5,13 +5,18 @@ import { TMP_FOLDER } from 'configs/puppeteer.config'
 import { PreviewParams } from 'app/services/preview.params'
 import _ from 'lodash'
 import { translate } from 'app/helpers/translateUtils'
-import { modifyXlsx, readColumns, readAndTranslate } from 'app/helpers/excelUtils'
+import {
+  modifyXlsx,
+  readColumns,
+  readAndTranslate,
+  retryTranslation,
+} from 'app/helpers/excelUtils'
 
 @JsonController()
 @Service()
 export class PreviewController {
-  @Post('/excel/insertText')
-  async insertText(@Body() params: any) {
+  @Post('/excel/translateAgain')
+  async translateAgain(@Body() params: any) {
     const { filePath } = params ?? {}
     if (_.isEmpty(filePath)) {
       return { success: false, message: 'filePath is missing' }
@@ -19,9 +24,19 @@ export class PreviewController {
     if (!_.endsWith(filePath, '.xlsx')) {
       return { success: false, message: 'not an xlsx file' }
     }
-    const data = await readAndTranslate(filePath, 3, 1)
+    return await retryTranslation(filePath, 3, 1)
+  }
 
-    return data
+  @Post('/excel/translateText')
+  async translateText(@Body() params: any) {
+    const { filePath } = params ?? {}
+    if (_.isEmpty(filePath)) {
+      return { success: false, message: 'filePath is missing' }
+    }
+    if (!_.endsWith(filePath, '.xlsx')) {
+      return { success: false, message: 'not an xlsx file' }
+    }
+    return await readAndTranslate(filePath, 3, 1)
   }
 
   @Post('/preview')

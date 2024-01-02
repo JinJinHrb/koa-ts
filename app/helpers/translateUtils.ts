@@ -4,13 +4,20 @@ import dotenv from 'dotenv'
 import { join } from 'path'
 import { print } from './fsUtils'
 import _ from 'lodash'
+import { LRUMap } from 'lru_map'
 
 type BAIDU_TRANSLATE_RESPONSE_DATA = {
   error_code?: string
   error_msg?: string
 }
 
+// 避免重复翻译
+const _translateMemory = new LRUMap(2000)
+
 export async function translate(text: string, from: string, to: string): Promise<string> {
+  if (_translateMemory.has(`${from}_${to}_${text}`)) {
+    return _translateMemory.get(`${from}_${to}_${text}`) as string
+  }
   const parsedEnvs = bootstrapBefore() as any
   // const apiKey = parsedEnvs.BAIDU_TRANSLATE_API_KEY // '你的百度翻译API Key'
   const appId = parsedEnvs.BAIDU_TRANSLATE_API_KEY // '你的百度翻译API Key' // '你的百度翻译App ID'
@@ -47,6 +54,7 @@ export async function translate(text: string, from: string, to: string): Promise
     //   trans_result: [ { src: '取消', dst: 'cancel' } ]
     // }
     console.log('#49 text:', text, 'trans_result:', response.data.trans_result?.[0]?.dst)
+    _translateMemory.set(`${from}_${to}_${text}`, response.data.trans_result?.[0]?.dst)
     return response.data.trans_result?.[0]?.dst
   } catch (error) {
     console.error(error, 'text:', text, 'from:', from, 'to:', to)
@@ -54,8 +62,12 @@ export async function translate(text: string, from: string, to: string): Promise
   return `😢 FAIL TO TRANSLATE: "${text}"`
 }
 
+let _envParsed: any
 // "before" will trigger before the app lift.
 const bootstrapBefore = (): object => {
+  if (_envParsed) {
+    return _envParsed
+  }
   // solve ncc path link.
   const result = dotenv.config({ path: join(__dirname, '../../.env') })
   if (result.error) {
@@ -63,5 +75,8 @@ const bootstrapBefore = (): object => {
     return {}
   }
   print.log('.env loaded.')
+  if (!_.isEmpty(result?.parsed)) {
+    _envParsed = result?.parsed
+  }
   return result.parsed || {}
 }

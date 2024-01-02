@@ -8,6 +8,7 @@ import {
   replaceCurlyBrackets,
   resumeCurlyBrackets,
 } from './stringUtil'
+import _ from 'lodash'
 
 type EXCEL_RESPONSE = {
   success: boolean
@@ -20,21 +21,69 @@ type EXCEL_ROW_COLUMN_VALUE = {
   value: string
 }
 
+/** 补全失败的翻译 */
+export const retryTranslation = async (
+  filePath: string,
+  zhIndex: number,
+  enIndex: number,
+) => {
+  const pLimit = new PLimit(15)
+  const { data, contents } = (await readColumns(filePath, 1, zhIndex, enIndex)) as any
+  // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
+  const curlyBracketsReplace: string[][] = []
+  const dataSliced = data.slice(1)
+  const contentSliced = contents.slice(1)
+  dataSliced.forEach((text: string, index: number) => {
+    if (!contentSliced[index].includes('FAIL TO TRANSLATE')) {
+      pLimit.enqueue2(() => Promise.resolve(''))
+    } else {
+      const [replacedText, matches] = replaceCurlyBrackets(text)
+      curlyBracketsReplace[index] = matches
+      console.log('#40 to translate:', text)
+      pLimit.enqueue2(translate, replacedText, 'zh', 'en')
+      // pLimit.enqueue2(() => Promise.resolve('💣 FAIL TO TRANSLATE'))
+    }
+    // 测试 replaceCurlyBrackets & resumeCurlyBrackets
+    // const [replacedText, matches] = replaceCurlyBrackets(text)
+    // curlyBracketsReplace.push(matches)
+    // pLimit.enqueue2(() => Promise.resolve(replacedText))
+  })
+
+  const resultData = (await pLimit.run2()) as any
+  const excelRowColumnValue = resultData
+    .map((elem: { result: string }, resultIndex: number) => {
+      const { result: text } = elem
+      if (text === '') {
+        return undefined
+      }
+      const resumeText = resumeCurlyBrackets(text, curlyBracketsReplace[resultIndex])
+      return {
+        rowIndex: resultIndex + 1, // 跳过第一行
+        columnIndex: enIndex,
+        value: resumeText,
+      }
+    })
+    .filter((a: any) => a)
+
+  const writeFilePath = insertStringBeforeLastDot(filePath, '2')
+  return await modifyXlsx(filePath, writeFilePath, 1, excelRowColumnValue)
+}
+
 export const readAndTranslate = async (
   filePath: string,
   zhIndex: number,
   enIndex: number,
 ) => {
   const pLimit = new PLimit(15)
-  const data = (await readColumns(filePath, 1, zhIndex))?.data ?? []
+  const data = ((await readColumns(filePath, 1, zhIndex)) as any)?.data ?? []
   // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
   const curlyBracketsReplace: string[][] = []
-  data.slice(1).forEach(text => {
+  data.slice(1).forEach((text: string, index: number) => {
     if (isLink(text)) {
       pLimit.enqueue2(() => Promise.resolve(text))
     } else {
       const [replacedText, matches] = replaceCurlyBrackets(text)
-      curlyBracketsReplace.push(matches)
+      curlyBracketsReplace[index] = matches
       pLimit.enqueue2(translate, replacedText, 'zh', 'en')
     }
     // 测试 replaceCurlyBrackets & resumeCurlyBrackets
@@ -62,7 +111,8 @@ export const readAndTranslate = async (
 export const readColumns = async (
   filePath: string,
   sheet: string | number,
-  columnIndex: number,
+  columnIndex: number, // 返回结果中 data 对应的栏位
+  contentColumnIndex?: number, // 返回结果中 contents 对应的栏位
 ) => {
   // 读取 xlsx 文件
   const workbook = new ExcelJS.Workbook()
@@ -79,16 +129,30 @@ export const readColumns = async (
 
   // 获取某一列的数据
   const data: string[] = []
-
+  const contents: string[] = []
   worksheet.eachRow(function (row, rowNumber) {
     const cellValue = worksheet
       .getRow(rowNumber)
       .getCell(columnIndex + 1)
       .value?.toString()
     data.push(cellValue ?? '')
+    if (_.isNumber(contentColumnIndex)) {
+      const contentCellValue = worksheet
+        .getRow(rowNumber)
+        .getCell(contentColumnIndex + 1)
+        .value?.toString()
+      contents.push(contentCellValue ?? '')
+    }
   })
 
-  return { success: true, data }
+  const result: { success: boolean; data: string[]; contents?: string[] } = {
+    success: true,
+    data,
+  }
+  if (_.isNumber(contentColumnIndex)) {
+    result.contents = contents
+  }
+  return result
 }
 
 export const modifyXlsx = async (
