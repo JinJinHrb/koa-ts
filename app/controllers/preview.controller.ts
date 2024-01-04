@@ -54,7 +54,8 @@ export class PreviewController {
 
   @Post('/git/statistics')
   async doGitStatistics(@Body() params: any) {
-    const { repoPath, pageSize, pageNumber } = params ?? {}
+    const { repoPath, pageSize, pageNumber, attaTeamCookie, attaTeamCsrfToken } =
+      params ?? {}
     if (_.isEmpty(repoPath)) {
       return { success: false, message: 'repoPath is missing' }
     }
@@ -64,10 +65,22 @@ export class PreviewController {
     if (!_.isInteger(pageNumber) || pageNumber < 1) {
       return { success: false, message: 'wrong pageNumber' }
     }
+    if (_.isEmpty(attaTeamCookie)) {
+      return { success: false, message: 'attaTeamCookie is missing' }
+    }
+    if (_.isEmpty(attaTeamCsrfToken)) {
+      return { success: false, message: 'attaTeamCsrfToken is missing' }
+    }
 
     const gitUrl = await getGitUrl(repoPath)
 
-    const commits = await getCommitHistory(gitUrl, pageSize, (pageNumber - 1) * pageSize)
+    const commits = await getCommitHistory(
+      gitUrl,
+      pageSize,
+      (pageNumber - 1) * pageSize,
+      attaTeamCookie,
+      attaTeamCsrfToken,
+    )
     const commitsByDate = parse4Commits(commits.html)
     const commitIdObj = commitsByDate.reduce((acc, el) => {
       const commitIds = el.commits.map(el => el.commitId)
@@ -76,7 +89,7 @@ export class PreviewController {
     }, {} as { [key: string]: CommitDetail | null })
 
     const commitIdPromises = Object.keys(commitIdObj).map(id =>
-      getCommitDetail(gitUrl, id),
+      getCommitDetail(gitUrl, id, attaTeamCookie),
     )
     const commitDetails = (await Promise.all(commitIdPromises)).map(parse4Commit)
     commitDetails.forEach(el => {

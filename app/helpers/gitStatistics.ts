@@ -51,56 +51,64 @@ const attaTeamCookie =
 const attaTeamCsrfToken =
   'XfLWlzMnzTgkN5UZVXGl5CcVHVimoBLt5l2mYqu5RolSdpQj1xUA02WvCkyHw/ctN7MgTS7iq3ptSD+8JEyzWA=='
 
-const requestHeader = {
-  // ':authority': 'atta-gitlab.xtrfr.cn',
-  // ':method': 'GET',
-  // ':path': '/atta-team/dev/mfe-user/mfe-user-crm/commits/master?limit=40&offset=0',
-  // ':scheme': 'https',
-  Accept: 'application/json, text/plain, */*',
-  'Accept-Encoding': 'gzip, deflate, br',
-  'Accept-Language': 'en,ru;q=0.9,zh-CN;q=0.8,zh;q=0.7',
-  Cookie: attaTeamCookie,
-  Referer:
-    'https://atta-gitlab.xtrfr.cn/atta-team/dev/mfe-user/mfe-user-crm/commits/master',
-  'Sec-Ch-Ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
-  'Sec-Ch-Ua-Mobile': '?0',
-  'Sec-Ch-Ua-Platform': '"macOS"',
-  'Sec-Fetch-Dest': 'empty',
-  'Sec-Fetch-Mode': 'cors',
-  'Sec-Fetch-Site': 'same-origin',
-  'User-Agent':
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-  'X-Csrf-Token': attaTeamCsrfToken,
-  'X-Requested-With': 'XMLHttpRequest',
+const requestHeader = (attaTeamCookie: string, attaTeamCsrfToken: string) => {
+  return {
+    // ':authority': 'atta-gitlab.xtrfr.cn',
+    // ':method': 'GET',
+    // ':path': '/atta-team/dev/mfe-user/mfe-user-crm/commits/master?limit=40&offset=0',
+    // ':scheme': 'https',
+    Accept: 'application/json, text/plain, */*',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Language': 'en,ru;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+    Cookie: attaTeamCookie,
+    Referer:
+      'https://atta-gitlab.xtrfr.cn/atta-team/dev/mfe-user/mfe-user-crm/commits/master',
+    'Sec-Ch-Ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"macOS"',
+    'Sec-Fetch-Dest': 'empty',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Site': 'same-origin',
+    'User-Agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'X-Csrf-Token': attaTeamCsrfToken,
+    'X-Requested-With': 'XMLHttpRequest',
+  }
 }
 
-const requestHeadr4Detail = {
-  Accept:
-    'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-  'Accept-Encoding': 'gzip, deflate, br',
-  'Accept-Language': 'en,ru;q=0.9,zh-CN;q=0.8,zh;q=0.7',
-  'Cache-Control': 'max-age=0',
-  Cookie: attaTeamCookie,
-  Referer:
-    'https://atta-gitlab.xtrfr.cn/atta-team/dev/mfe-user/mfe-user-crm/commits/master',
-  'Sec-Ch-Ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
-  'Sec-Ch-Ua-Mobile': '?0',
-  'Sec-Ch-Ua-Platform': '"macOS"',
-  'Sec-Fetch-Dest': 'document',
-  'Sec-Fetch-Mode': 'navigate',
-  'Sec-Fetch-Site': 'same-origin',
-  'Sec-Fetch-User': '?1',
-  'Upgrade-Insecure-Requests': '1',
-  'User-Agent':
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+const requestHeadr4Detail = (attaTeamCookie: string) => {
+  return {
+    Accept:
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Language': 'en,ru;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+    'Cache-Control': 'max-age=0',
+    Cookie: attaTeamCookie,
+    Referer:
+      'https://atta-gitlab.xtrfr.cn/atta-team/dev/mfe-user/mfe-user-crm/commits/master',
+    'Sec-Ch-Ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"macOS"',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  }
 }
 
-export async function getCommitDetail(gitUrl: string, commitId: string) {
+export async function getCommitDetail(
+  gitUrl: string,
+  commitId: string,
+  attaTeamCookie: string,
+) {
   const key = gitUrl.split(':')[1].replace(/\.git$/, '')
   const url = `https://atta-gitlab.xtrfr.cn/${key}/commit/${commitId}`
   // 示例: https://atta-gitlab.xtrfr.cn/atta-team/dev/mfe-user/mfe-user-crm/commit/75fc10dd13d8fa5ad5f02824fed442be637b8c02
 
-  const response = await axios.get(url, { headers: requestHeadr4Detail })
+  const response = await axios.get(url, { headers: requestHeadr4Detail(attaTeamCookie) })
   return response.data
 }
 
@@ -108,12 +116,16 @@ export async function getCommitHistory(
   gitUrl: string,
   limit: number,
   offset: number,
+  attaTeamCookie: string,
+  attaTeamCsrfToken: string,
 ): Promise<any> {
   const key = gitUrl.split(':')[1].replace(/\.git$/, '')
   const url = `https://atta-gitlab.xtrfr.cn/${key}/commits/master?limit=${limit}&offset=${offset}`
   // 示例: `https://atta-gitlab.xtrfr.cn/atta-team/dev/mfe-user/mfe-user-crm/commits/master?limit=${limit}&offset=${offset}`
 
-  const response = await axios.get(url, { headers: requestHeader })
+  const response = await axios.get(url, {
+    headers: requestHeader(attaTeamCookie, attaTeamCsrfToken),
+  })
   return response.data
 }
 
