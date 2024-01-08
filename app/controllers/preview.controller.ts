@@ -4,7 +4,6 @@ import { Service } from 'typedi'
 import { TMP_FOLDER } from 'configs/puppeteer.config'
 import { PreviewParams } from 'app/services/preview.params'
 import _ from 'lodash'
-import { translate } from 'app/helpers/translateUtils'
 import {
   modifyXlsx,
   readColumns,

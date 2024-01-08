@@ -79,7 +79,7 @@ export const readAndTranslate = async (
   const dataSliced = data.slice(1)
   // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
   const curlyBracketsReplace: string[][] = []
-  dataSliced.slice(1).forEach((text: string, index: number) => {
+  dataSliced.forEach((text: string, index: number) => {
     if (isLink(text)) {
       pLimit.enqueue2(() => Promise.resolve(text))
     } else {
