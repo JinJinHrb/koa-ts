@@ -201,3 +201,4 @@ tmp
 configs/chrome-extensions
 settings.json
 chrome-mac.zip
+*.keep

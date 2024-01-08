@@ -56,7 +56,7 @@ import { DirectedGraph } from 'graphology'
  * (0) /getAstAndAlterCode
  * (1) /traverseToGetGraph => app/mock/graphNodes/graphNodes.json
  * (2) /getFileActions 获取 js及jsx 与 actions 的依赖关系 => app/mock/fileActions/fileActions.json
- * (3) /buildActionsMap 完善 fileActions => app/mock/actionsMap/actionsMap.json
+ * (3) /buildActionsMap 完善 fileActions 补充 actions 用到的方法 => app/mock/fileActionsMap/fileActionsMap.json
  * (4) /buildSagaMap => app/mock/sagaMap/buildSagaMap.json
  * 辅助：parseSingleSagaHandler
  * (5) /buildSagaGraph => app/mock/sagaGraph/sagaGraph.json
@@ -109,7 +109,7 @@ export class BabelController {
     }
     const actionKeys = flattenArray(fileActions, [
       'groups',
-      'actionsComponents',
+      'actionsComponents', // 被注入 actions 的组件名数组
       'usedActionsDependencies',
     ])
       .filter((a: any) => a)

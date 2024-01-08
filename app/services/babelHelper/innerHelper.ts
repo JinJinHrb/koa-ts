@@ -14,7 +14,7 @@ import { getFileData } from 'app/helpers/fsUtils'
 import { RootObject as RootObject4GraphNodes } from 'app/mock/graphNodes/graphNodes.json.d'
 import { RootObject as RootObject4FileActions } from 'app/mock/fileActions/fileActions.json.d'
 import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
-import type { RootActionsMap } from 'app/mock/actionsMap/actionsMap.json.d'
+import type { RootActionsMap } from 'app/mock/fileActionsMap/fileActionsMap.json.d'
 import type { RootSagaGraph } from 'app/mock/sagaGraph/sagaGraph.d'
 import { getFilesByLocalIdentifier } from './sagaHelper'
 import { parseCreateNetworkingSagas } from './createNetworkingSagasHelper'
@@ -943,7 +943,7 @@ export const getActionsMap = async () =>
       await getFileData(
         pathUtil.resolve(
           __dirname.slice(0, __dirname.indexOf('app')),
-          './app/mock/actionsMap/actionsMap.json',
+          './app/mock/fileActionsMap/fileActionsMap.json',
         ),
       )
     )?.toString(),

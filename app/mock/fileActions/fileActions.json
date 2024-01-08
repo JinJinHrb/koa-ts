@@ -123,12 +123,12 @@
                 "start": {
                   "line": 118,
                   "column": 28,
-                  "index": 3738
+                  "index": 3743
                 },
                 "end": {
-                  "line": 263,
+                  "line": 262,
                   "column": 1,
-                  "index": 7258
+                  "index": 7213
                 }
               }
             }
@@ -643,6 +643,54 @@
       ]
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ABVPanel/index.tsx",
+      "localConnect": "connect",
+      "localCompose": "",
+      "groups": [
+        {
+          "actionsDependencies": [
+            {
+              "isNamespace": true,
+              "localName": "securityActions",
+              "sourceValue": "actions/security",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts",
+              "exportNames": [
+                "checkABVType",
+                "openABVPanel",
+                "closeABVPanel",
+                "validateCaptchaRequested",
+                "validateCaptchaSucceed",
+                "validateCaptchaFailed",
+                "initValidateCaptcha",
+                "setABVVeriType",
+                "logSliderVeriInfo"
+              ]
+            }
+          ],
+          "actionsComponents": [
+            {
+              "type": "ClassBody",
+              "loc": {
+                "start": {
+                  "line": 43,
+                  "column": 58,
+                  "index": 1262
+                },
+                "end": {
+                  "line": 83,
+                  "column": 1,
+                  "index": 2318
+                }
+              }
+            }
+          ],
+          "unknownElements": [],
+          "spreadElementNames": ["securityActions"],
+          "objectPropertyMap": {}
+        }
+      ]
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/index.tsx",
       "localConnect": "connect",
       "localCompose": "",
@@ -718,14 +766,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 99,
+                  "line": 100,
                   "column": 49,
-                  "index": 3548
+                  "index": 3582
                 },
                 "end": {
-                  "line": 717,
+                  "line": 722,
                   "column": 1,
-                  "index": 19730
+                  "index": 20633
                 }
               }
             }
@@ -837,14 +885,14 @@
               "name": "AgendaHome",
               "loc": {
                 "start": {
-                  "line": 150,
+                  "line": 156,
                   "column": 2,
-                  "index": 4683
+                  "index": 4929
                 },
                 "end": {
-                  "line": 150,
+                  "line": 156,
                   "column": 12,
-                  "index": 4693
+                  "index": 4939
                 },
                 "identifierName": "AgendaHome"
               }
@@ -899,14 +947,14 @@
               "name": "BusinessEditor",
               "loc": {
                 "start": {
-                  "line": 298,
+                  "line": 316,
                   "column": 4,
-                  "index": 10021
+                  "index": 10785
                 },
                 "end": {
-                  "line": 298,
+                  "line": 316,
                   "column": 18,
-                  "index": 10035
+                  "index": 10799
                 },
                 "identifierName": "BusinessEditor"
               }
@@ -1360,14 +1408,14 @@
               "name": "CustomerDetail",
               "loc": {
                 "start": {
-                  "line": 224,
+                  "line": 313,
                   "column": 3,
-                  "index": 7609
+                  "index": 10809
                 },
                 "end": {
-                  "line": 224,
+                  "line": 313,
                   "column": 17,
-                  "index": 7623
+                  "index": 10823
                 },
                 "identifierName": "CustomerDetail"
               }
@@ -1403,14 +1451,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 341,
+                  "line": 392,
                   "column": 2,
-                  "index": 11839
+                  "index": 14439
                 },
                 "end": {
-                  "line": 341,
+                  "line": 392,
                   "column": 6,
-                  "index": 11843
+                  "index": 14443
                 },
                 "identifierName": "Home"
               }
@@ -1457,14 +1505,14 @@
               "name": "Template",
               "loc": {
                 "start": {
-                  "line": 142,
+                  "line": 195,
                   "column": 3,
-                  "index": 4736
+                  "index": 5555
                 },
                 "end": {
-                  "line": 142,
+                  "line": 195,
                   "column": 11,
-                  "index": 4744
+                  "index": 5563
                 },
                 "identifierName": "Template"
               }
@@ -1727,14 +1775,14 @@
               "name": "AdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 225,
+                  "line": 237,
                   "column": 2,
-                  "index": 5645
+                  "index": 6563
                 },
                 "end": {
-                  "line": 225,
+                  "line": 237,
                   "column": 27,
-                  "index": 5670
+                  "index": 6588
                 },
                 "identifierName": "AdvancedScreenContentForm"
               }
@@ -1779,14 +1827,14 @@
               "name": "BottomBtnGroup",
               "loc": {
                 "start": {
-                  "line": 67,
+                  "line": 71,
                   "column": 2,
-                  "index": 1445
+                  "index": 1745
                 },
                 "end": {
-                  "line": 67,
+                  "line": 71,
                   "column": 16,
-                  "index": 1459
+                  "index": 1759
                 },
                 "identifierName": "BottomBtnGroup"
               }
@@ -1798,6 +1846,182 @@
             "nav": "push",
             "goBack": "goBack"
           }
+        }
+      ]
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ABVPanel/XTCaptcha/index.tsx",
+      "localConnect": "connect",
+      "localCompose": "",
+      "groups": [
+        {
+          "actionsDependencies": [
+            {
+              "isNamespace": true,
+              "localName": "userActions",
+              "sourceValue": "actions/user",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
+              "exportNames": [
+                "getUserFlowId",
+                "getUserFlowIdAndCaptcha",
+                "getUserFlowIdSucceed",
+                "getUserFlowIdFailed",
+                "initUserFlowId",
+                "getUserCaptcha",
+                "getUserCaptchaSucceed",
+                "getUserCaptchaFailed",
+                "initUserCaptcha",
+                "verifyMfaRequested",
+                "verifyMfaSucceed",
+                "verifyMfaFailed",
+                "initVerifyMfa",
+                "setAuthId",
+                "resetAuthId",
+                "executeAuthIdCallBackRequested",
+                "executeAuthIdCallBackSucceed",
+                "executeAuthIdCallBackFailed",
+                "sendMfaMessageRequested",
+                "getMfaCaptchaRequested",
+                "getMfaCaptchaSucceed",
+                "getMfaCaptchaFailed",
+                "initMfaCaptcha",
+                "getWhiteListRequested",
+                "getWhiteListSucceed",
+                "getWhiteListFailed",
+                "getWhiteListInit",
+                "setMfaJson",
+                "resetMfaJson",
+                "queryIndustryRequested",
+                "queryIndustrySucceed",
+                "queryIndustryFailed"
+              ]
+            },
+            {
+              "isNamespace": true,
+              "localName": "securityActions",
+              "sourceValue": "actions/security",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts",
+              "exportNames": [
+                "checkABVType",
+                "openABVPanel",
+                "closeABVPanel",
+                "validateCaptchaRequested",
+                "validateCaptchaSucceed",
+                "validateCaptchaFailed",
+                "initValidateCaptcha",
+                "setABVVeriType",
+                "logSliderVeriInfo"
+              ]
+            }
+          ],
+          "actionsComponents": [
+            {
+              "type": "ClassBody",
+              "loc": {
+                "start": {
+                  "line": 64,
+                  "column": 65,
+                  "index": 1939
+                },
+                "end": {
+                  "line": 154,
+                  "column": 1,
+                  "index": 4367
+                }
+              }
+            }
+          ],
+          "unknownElements": [],
+          "spreadElementNames": ["userActions", "securityActions"],
+          "objectPropertyMap": {}
+        }
+      ]
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ABVPanel/NCCaptcha/index.tsx",
+      "localConnect": "connect",
+      "localCompose": "",
+      "groups": [
+        {
+          "actionsDependencies": [
+            {
+              "isNamespace": true,
+              "localName": "userActions",
+              "sourceValue": "actions/user",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
+              "exportNames": [
+                "getUserFlowId",
+                "getUserFlowIdAndCaptcha",
+                "getUserFlowIdSucceed",
+                "getUserFlowIdFailed",
+                "initUserFlowId",
+                "getUserCaptcha",
+                "getUserCaptchaSucceed",
+                "getUserCaptchaFailed",
+                "initUserCaptcha",
+                "verifyMfaRequested",
+                "verifyMfaSucceed",
+                "verifyMfaFailed",
+                "initVerifyMfa",
+                "setAuthId",
+                "resetAuthId",
+                "executeAuthIdCallBackRequested",
+                "executeAuthIdCallBackSucceed",
+                "executeAuthIdCallBackFailed",
+                "sendMfaMessageRequested",
+                "getMfaCaptchaRequested",
+                "getMfaCaptchaSucceed",
+                "getMfaCaptchaFailed",
+                "initMfaCaptcha",
+                "getWhiteListRequested",
+                "getWhiteListSucceed",
+                "getWhiteListFailed",
+                "getWhiteListInit",
+                "setMfaJson",
+                "resetMfaJson",
+                "queryIndustryRequested",
+                "queryIndustrySucceed",
+                "queryIndustryFailed"
+              ]
+            },
+            {
+              "isNamespace": true,
+              "localName": "securityActions",
+              "sourceValue": "actions/security",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts",
+              "exportNames": [
+                "checkABVType",
+                "openABVPanel",
+                "closeABVPanel",
+                "validateCaptchaRequested",
+                "validateCaptchaSucceed",
+                "validateCaptchaFailed",
+                "initValidateCaptcha",
+                "setABVVeriType",
+                "logSliderVeriInfo"
+              ]
+            }
+          ],
+          "actionsComponents": [
+            {
+              "type": "ClassBody",
+              "loc": {
+                "start": {
+                  "line": 38,
+                  "column": 65,
+                  "index": 1160
+                },
+                "end": {
+                  "line": 124,
+                  "column": 1,
+                  "index": 3729
+                }
+              }
+            }
+          ],
+          "unknownElements": [],
+          "spreadElementNames": ["userActions", "securityActions"],
+          "objectPropertyMap": {}
         }
       ]
     },
@@ -1946,14 +2170,14 @@
               "type": "ArrowFunctionExpression",
               "loc": {
                 "start": {
-                  "line": 133,
+                  "line": 135,
                   "column": 2,
-                  "index": 4080
+                  "index": 4798
                 },
                 "end": {
-                  "line": 359,
+                  "line": 366,
                   "column": 1,
-                  "index": 10103
+                  "index": 11125
                 }
               }
             }
@@ -2035,14 +2259,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 137,
+                  "line": 170,
                   "column": 60,
-                  "index": 4015
+                  "index": 4784
                 },
                 "end": {
-                  "line": 412,
+                  "line": 453,
                   "column": 1,
-                  "index": 12007
+                  "index": 13126
                 }
               }
             }
@@ -2081,14 +2305,14 @@
               "name": "TopInfoBlock",
               "loc": {
                 "start": {
-                  "line": 142,
+                  "line": 154,
                   "column": 2,
-                  "index": 4401
+                  "index": 4953
                 },
                 "end": {
-                  "line": 142,
+                  "line": 154,
                   "column": 14,
-                  "index": 4413
+                  "index": 4965
                 },
                 "identifierName": "TopInfoBlock"
               }
@@ -2138,14 +2362,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 423,
+                  "line": 425,
                   "column": 3,
-                  "index": 11356
+                  "index": 12332
                 },
                 "end": {
-                  "line": 423,
+                  "line": 425,
                   "column": 8,
-                  "index": 11361
+                  "index": 12337
                 },
                 "identifierName": "Table"
               }
@@ -2225,14 +2449,14 @@
               "name": "Index",
               "loc": {
                 "start": {
-                  "line": 119,
+                  "line": 120,
                   "column": 3,
-                  "index": 2788
+                  "index": 2907
                 },
                 "end": {
-                  "line": 119,
+                  "line": 120,
                   "column": 8,
-                  "index": 2793
+                  "index": 2912
                 },
                 "identifierName": "Index"
               }
@@ -2274,14 +2498,14 @@
               "name": "Preview",
               "loc": {
                 "start": {
-                  "line": 250,
+                  "line": 266,
                   "column": 2,
-                  "index": 7696
+                  "index": 8143
                 },
                 "end": {
-                  "line": 250,
+                  "line": 266,
                   "column": 9,
-                  "index": 7703
+                  "index": 8150
                 },
                 "identifierName": "Preview"
               }
@@ -2339,12 +2563,12 @@
                 "start": {
                   "line": 56,
                   "column": 52,
-                  "index": 1625
+                  "index": 1704
                 },
                 "end": {
-                  "line": 256,
+                  "line": 295,
                   "column": 1,
-                  "index": 7708
+                  "index": 8655
                 }
               }
             }
@@ -2457,14 +2681,14 @@
               "type": "ArrowFunctionExpression",
               "loc": {
                 "start": {
-                  "line": 27,
-                  "column": 4,
-                  "index": 1190
+                  "line": 37,
+                  "column": 2,
+                  "index": 1390
                 },
                 "end": {
-                  "line": 66,
+                  "line": 98,
                   "column": 1,
-                  "index": 2596
+                  "index": 3247
                 }
               }
             }
@@ -2498,14 +2722,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 80,
+                  "line": 85,
                   "column": 3,
-                  "index": 1785
+                  "index": 2145
                 },
                 "end": {
-                  "line": 80,
+                  "line": 85,
                   "column": 7,
-                  "index": 1789
+                  "index": 2149
                 },
                 "identifierName": "Home"
               }
@@ -2533,14 +2757,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 80,
+                  "line": 85,
                   "column": 3,
-                  "index": 1785
+                  "index": 2145
                 },
                 "end": {
-                  "line": 80,
+                  "line": 85,
                   "column": 7,
-                  "index": 1789
+                  "index": 2149
                 },
                 "identifierName": "Home"
               }
@@ -2617,14 +2841,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 36,
+                  "line": 34,
                   "column": 52,
-                  "index": 1008
+                  "index": 864
                 },
                 "end": {
-                  "line": 144,
+                  "line": 137,
                   "column": 1,
-                  "index": 3834
+                  "index": 3531
                 }
               }
             }
@@ -3027,14 +3251,14 @@
               "name": "OrderIndex",
               "loc": {
                 "start": {
-                  "line": 120,
+                  "line": 126,
                   "column": 3,
-                  "index": 2908
+                  "index": 3038
                 },
                 "end": {
-                  "line": 120,
+                  "line": 126,
                   "column": 13,
-                  "index": 2918
+                  "index": 3048
                 },
                 "identifierName": "OrderIndex"
               }
@@ -3076,14 +3300,14 @@
               "name": "Preview",
               "loc": {
                 "start": {
-                  "line": 288,
+                  "line": 307,
                   "column": 2,
-                  "index": 8476
+                  "index": 8934
                 },
                 "end": {
-                  "line": 288,
+                  "line": 307,
                   "column": 9,
-                  "index": 8483
+                  "index": 8941
                 },
                 "identifierName": "Preview"
               }
@@ -3216,12 +3440,12 @@
                 "start": {
                   "line": 1191,
                   "column": 90,
-                  "index": 37713
+                  "index": 37721
                 },
                 "end": {
                   "line": 1191,
                   "column": 104,
-                  "index": 37727
+                  "index": 37735
                 },
                 "identifierName": "ActivityCreate"
               }
@@ -3273,14 +3497,14 @@
               "type": "CallExpression",
               "loc": {
                 "start": {
-                  "line": 300,
+                  "line": 303,
                   "column": 4,
-                  "index": 8735
+                  "index": 8961
                 },
                 "end": {
-                  "line": 300,
+                  "line": 303,
                   "column": 39,
-                  "index": 8770
+                  "index": 8996
                 }
               }
             }
@@ -3317,12 +3541,12 @@
                 "start": {
                   "line": 403,
                   "column": 2,
-                  "index": 12785
+                  "index": 12793
                 },
                 "end": {
                   "line": 403,
                   "column": 23,
-                  "index": 12806
+                  "index": 12814
                 },
                 "identifierName": "AddressBookManagement"
               }
@@ -3355,12 +3579,12 @@
               "name": "TemplateManagement",
               "loc": {
                 "start": {
-                  "line": 231,
+                  "line": 230,
                   "column": 96,
                   "index": 7513
                 },
                 "end": {
-                  "line": 231,
+                  "line": 230,
                   "column": 114,
                   "index": 7531
                 },
@@ -3397,14 +3621,14 @@
               "name": "LeadsGeneralInfo",
               "loc": {
                 "start": {
-                  "line": 1517,
+                  "line": 1615,
                   "column": 4,
-                  "index": 44859
+                  "index": 48926
                 },
                 "end": {
-                  "line": 1517,
+                  "line": 1615,
                   "column": 20,
-                  "index": 44875
+                  "index": 48942
                 },
                 "identifierName": "LeadsGeneralInfo"
               }
@@ -3439,14 +3663,14 @@
               "name": "BasicMsg",
               "loc": {
                 "start": {
-                  "line": 116,
+                  "line": 136,
                   "column": 4,
-                  "index": 4119
+                  "index": 5414
                 },
                 "end": {
-                  "line": 116,
+                  "line": 136,
                   "column": 12,
-                  "index": 4127
+                  "index": 5422
                 },
                 "identifierName": "BasicMsg"
               }
@@ -3491,14 +3715,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 42,
+                  "line": 43,
                   "column": 62,
-                  "index": 1098
+                  "index": 1132
                 },
                 "end": {
-                  "line": 79,
+                  "line": 80,
                   "column": 1,
-                  "index": 2073
+                  "index": 2235
                 }
               }
             }
@@ -3731,14 +3955,14 @@
               "name": "EdmFissionExchange",
               "loc": {
                 "start": {
-                  "line": 228,
+                  "line": 235,
                   "column": 2,
-                  "index": 6176
+                  "index": 6314
                 },
                 "end": {
-                  "line": 228,
+                  "line": 235,
                   "column": 20,
-                  "index": 6194
+                  "index": 6332
                 },
                 "identifierName": "EdmFissionExchange"
               }
@@ -3750,6 +3974,236 @@
             "push": "push",
             "change": "change"
           }
+        }
+      ]
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ABVPanel/SliderVerification/index.js",
+      "localConnect": "connect",
+      "localCompose": "",
+      "groups": [
+        {
+          "actionsDependencies": [
+            {
+              "isNamespace": true,
+              "localName": "authActions",
+              "sourceValue": "actions/auth",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/auth.ts",
+              "exportNames": [
+                "oauthRequested",
+                "oauthSucceed",
+                "logoutRequested",
+                "logoutSucceed",
+                "unauthorized",
+                "signInRequested",
+                "signInSucceed",
+                "signInFailed",
+                "initSignIn",
+                "wechatSignInRequested",
+                "wechatSignInSucceed",
+                "wechatSignInFailed",
+                "setWechatSignInSliderData",
+                "setWechatSignInSliderError",
+                "initWechatSignIn",
+                "setWechatSignInState",
+                "pollingQRScannedRequested",
+                "pollingQRScannedSucceed",
+                "pollingQRScannedFailed",
+                "pollingQRConfirmedRequested",
+                "pollingQRConfirmedSucceed",
+                "pollingQRConfirmedFailed",
+                "resetQRConfirmed",
+                "qrcodeSigninRequested"
+              ]
+            },
+            {
+              "isNamespace": true,
+              "localName": "userActions",
+              "sourceValue": "actions/user",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
+              "exportNames": [
+                "getUserFlowId",
+                "getUserFlowIdAndCaptcha",
+                "getUserFlowIdSucceed",
+                "getUserFlowIdFailed",
+                "initUserFlowId",
+                "getUserCaptcha",
+                "getUserCaptchaSucceed",
+                "getUserCaptchaFailed",
+                "initUserCaptcha",
+                "verifyMfaRequested",
+                "verifyMfaSucceed",
+                "verifyMfaFailed",
+                "initVerifyMfa",
+                "setAuthId",
+                "resetAuthId",
+                "executeAuthIdCallBackRequested",
+                "executeAuthIdCallBackSucceed",
+                "executeAuthIdCallBackFailed",
+                "sendMfaMessageRequested",
+                "getMfaCaptchaRequested",
+                "getMfaCaptchaSucceed",
+                "getMfaCaptchaFailed",
+                "initMfaCaptcha",
+                "getWhiteListRequested",
+                "getWhiteListSucceed",
+                "getWhiteListFailed",
+                "getWhiteListInit",
+                "setMfaJson",
+                "resetMfaJson",
+                "queryIndustryRequested",
+                "queryIndustrySucceed",
+                "queryIndustryFailed"
+              ]
+            },
+            {
+              "isNamespace": true,
+              "localName": "errorActions",
+              "sourceValue": "actions/error",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/error.ts",
+              "exportNames": ["specificSpotError"]
+            }
+          ],
+          "actionsComponents": [
+            {
+              "type": "ClassBody",
+              "loc": {
+                "start": {
+                  "line": 31,
+                  "column": 58,
+                  "index": 723
+                },
+                "end": {
+                  "line": 138,
+                  "column": 1,
+                  "index": 3538
+                }
+              }
+            }
+          ],
+          "unknownElements": [],
+          "spreadElementNames": ["authActions", "userActions", "errorActions"],
+          "objectPropertyMap": {}
+        }
+      ]
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ABVPanel/SliderTencent/index.tsx",
+      "localConnect": "connect",
+      "localCompose": "",
+      "groups": [
+        {
+          "actionsDependencies": [
+            {
+              "isNamespace": true,
+              "localName": "authActions",
+              "sourceValue": "actions/auth",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/auth.ts",
+              "exportNames": [
+                "oauthRequested",
+                "oauthSucceed",
+                "logoutRequested",
+                "logoutSucceed",
+                "unauthorized",
+                "signInRequested",
+                "signInSucceed",
+                "signInFailed",
+                "initSignIn",
+                "wechatSignInRequested",
+                "wechatSignInSucceed",
+                "wechatSignInFailed",
+                "setWechatSignInSliderData",
+                "setWechatSignInSliderError",
+                "initWechatSignIn",
+                "setWechatSignInState",
+                "pollingQRScannedRequested",
+                "pollingQRScannedSucceed",
+                "pollingQRScannedFailed",
+                "pollingQRConfirmedRequested",
+                "pollingQRConfirmedSucceed",
+                "pollingQRConfirmedFailed",
+                "resetQRConfirmed",
+                "qrcodeSigninRequested"
+              ]
+            },
+            {
+              "isNamespace": true,
+              "localName": "userActions",
+              "sourceValue": "actions/user",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts",
+              "exportNames": [
+                "getUserFlowId",
+                "getUserFlowIdAndCaptcha",
+                "getUserFlowIdSucceed",
+                "getUserFlowIdFailed",
+                "initUserFlowId",
+                "getUserCaptcha",
+                "getUserCaptchaSucceed",
+                "getUserCaptchaFailed",
+                "initUserCaptcha",
+                "verifyMfaRequested",
+                "verifyMfaSucceed",
+                "verifyMfaFailed",
+                "initVerifyMfa",
+                "setAuthId",
+                "resetAuthId",
+                "executeAuthIdCallBackRequested",
+                "executeAuthIdCallBackSucceed",
+                "executeAuthIdCallBackFailed",
+                "sendMfaMessageRequested",
+                "getMfaCaptchaRequested",
+                "getMfaCaptchaSucceed",
+                "getMfaCaptchaFailed",
+                "initMfaCaptcha",
+                "getWhiteListRequested",
+                "getWhiteListSucceed",
+                "getWhiteListFailed",
+                "getWhiteListInit",
+                "setMfaJson",
+                "resetMfaJson",
+                "queryIndustryRequested",
+                "queryIndustrySucceed",
+                "queryIndustryFailed"
+              ]
+            },
+            {
+              "isNamespace": true,
+              "localName": "securityActions",
+              "sourceValue": "actions/security",
+              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/security.ts",
+              "exportNames": [
+                "checkABVType",
+                "openABVPanel",
+                "closeABVPanel",
+                "validateCaptchaRequested",
+                "validateCaptchaSucceed",
+                "validateCaptchaFailed",
+                "initValidateCaptcha",
+                "setABVVeriType",
+                "logSliderVeriInfo"
+              ]
+            }
+          ],
+          "actionsComponents": [
+            {
+              "type": "ClassBody",
+              "loc": {
+                "start": {
+                  "line": 48,
+                  "column": 104,
+                  "index": 1297
+                },
+                "end": {
+                  "line": 140,
+                  "column": 1,
+                  "index": 3549
+                }
+              }
+            }
+          ],
+          "unknownElements": [],
+          "spreadElementNames": ["authActions", "userActions", "securityActions"],
+          "objectPropertyMap": {}
         }
       ]
     },
@@ -4063,14 +4517,14 @@
               "name": "MarketingModal",
               "loc": {
                 "start": {
-                  "line": 90,
+                  "line": 78,
                   "column": 2,
-                  "index": 2649
+                  "index": 2270
                 },
                 "end": {
-                  "line": 90,
+                  "line": 78,
                   "column": 16,
-                  "index": 2663
+                  "index": 2284
                 },
                 "identifierName": "MarketingModal"
               }
@@ -4204,12 +4658,12 @@
                 "start": {
                   "line": 260,
                   "column": 3,
-                  "index": 7520
+                  "index": 7574
                 },
                 "end": {
                   "line": 260,
                   "column": 21,
-                  "index": 7538
+                  "index": 7592
                 },
                 "identifierName": "SubAccountPassword"
               }
@@ -4403,14 +4857,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 93,
+                  "line": 96,
                   "column": 66,
-                  "index": 2751
+                  "index": 3284
                 },
                 "end": {
-                  "line": 270,
+                  "line": 280,
                   "column": 1,
-                  "index": 7924
+                  "index": 9066
                 }
               }
             }
@@ -4447,14 +4901,14 @@
               "name": "connectGlobalProfile",
               "loc": {
                 "start": {
-                  "line": 136,
+                  "line": 137,
                   "column": 4,
-                  "index": 3634
+                  "index": 3897
                 },
                 "end": {
-                  "line": 136,
+                  "line": 137,
                   "column": 24,
-                  "index": 3654
+                  "index": 3917
                 },
                 "identifierName": "connectGlobalProfile"
               }
@@ -4489,14 +4943,14 @@
               "name": "BusinessCardRecognition",
               "loc": {
                 "start": {
-                  "line": 291,
+                  "line": 302,
                   "column": 3,
-                  "index": 7619
+                  "index": 8584
                 },
                 "end": {
-                  "line": 291,
+                  "line": 302,
                   "column": 26,
-                  "index": 7642
+                  "index": 8607
                 },
                 "identifierName": "BusinessCardRecognition"
               }
@@ -4552,14 +5006,14 @@
               "name": "CustomerAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 101,
+                  "line": 102,
                   "column": 2,
-                  "index": 3114
+                  "index": 3205
                 },
                 "end": {
-                  "line": 101,
+                  "line": 102,
                   "column": 35,
-                  "index": 3147
+                  "index": 3238
                 },
                 "identifierName": "CustomerAdvancedScreenContentForm"
               }
@@ -4604,14 +5058,14 @@
               "name": "BatchActions",
               "loc": {
                 "start": {
-                  "line": 147,
+                  "line": 149,
                   "column": 2,
-                  "index": 4511
+                  "index": 4681
                 },
                 "end": {
-                  "line": 147,
+                  "line": 149,
                   "column": 14,
-                  "index": 4523
+                  "index": 4693
                 },
                 "identifierName": "BatchActions"
               }
@@ -4654,14 +5108,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 743,
+                  "line": 751,
                   "column": 2,
-                  "index": 19087
+                  "index": 20623
                 },
                 "end": {
-                  "line": 743,
+                  "line": 751,
                   "column": 7,
-                  "index": 19092
+                  "index": 20628
                 },
                 "identifierName": "Table"
               }
@@ -4705,14 +5159,14 @@
               "name": "TopBlock",
               "loc": {
                 "start": {
-                  "line": 425,
+                  "line": 455,
                   "column": 2,
-                  "index": 13030
+                  "index": 14345
                 },
                 "end": {
-                  "line": 425,
+                  "line": 455,
                   "column": 10,
-                  "index": 13038
+                  "index": 14353
                 },
                 "identifierName": "TopBlock"
               }
@@ -4769,14 +5223,14 @@
               "name": "CustomerAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 100,
+                  "line": 101,
                   "column": 2,
-                  "index": 3070
+                  "index": 3162
                 },
                 "end": {
-                  "line": 100,
+                  "line": 101,
                   "column": 35,
-                  "index": 3103
+                  "index": 3195
                 },
                 "identifierName": "CustomerAdvancedScreenContentForm"
               }
@@ -4821,14 +5275,14 @@
               "name": "Content",
               "loc": {
                 "start": {
-                  "line": 428,
+                  "line": 436,
                   "column": 2,
-                  "index": 12333
+                  "index": 13076
                 },
                 "end": {
-                  "line": 428,
+                  "line": 436,
                   "column": 9,
-                  "index": 12340
+                  "index": 13083
                 },
                 "identifierName": "Content"
               }
@@ -4875,14 +5329,14 @@
               "name": "AdvancedScreenContent",
               "loc": {
                 "start": {
-                  "line": 107,
+                  "line": 119,
                   "column": 2,
-                  "index": 2718
+                  "index": 2878
                 },
                 "end": {
-                  "line": 107,
+                  "line": 119,
                   "column": 23,
-                  "index": 2739
+                  "index": 2899
                 },
                 "identifierName": "AdvancedScreenContent"
               }
@@ -4919,12 +5373,12 @@
                 "start": {
                   "line": 331,
                   "column": 2,
-                  "index": 9081
+                  "index": 11057
                 },
                 "end": {
                   "line": 331,
                   "column": 15,
-                  "index": 9094
+                  "index": 11070
                 },
                 "identifierName": "AccountEditor"
               }
@@ -4978,14 +5432,14 @@
               "name": "FirmInfoBlock",
               "loc": {
                 "start": {
-                  "line": 482,
+                  "line": 513,
                   "column": 4,
-                  "index": 13587
+                  "index": 15371
                 },
                 "end": {
-                  "line": 482,
+                  "line": 513,
                   "column": 17,
-                  "index": 13600
+                  "index": 15384
                 },
                 "identifierName": "FirmInfoBlock"
               }
@@ -5020,14 +5474,14 @@
               "type": "ArrowFunctionExpression",
               "loc": {
                 "start": {
-                  "line": 34,
+                  "line": 35,
                   "column": 2,
-                  "index": 844
+                  "index": 878
                 },
                 "end": {
-                  "line": 73,
+                  "line": 74,
                   "column": 1,
-                  "index": 1923
+                  "index": 2211
                 }
               }
             }
@@ -5067,14 +5521,14 @@
               "type": "ArrowFunctionExpression",
               "loc": {
                 "start": {
-                  "line": 70,
+                  "line": 66,
                   "column": 3,
-                  "index": 1985
+                  "index": 2014
                 },
                 "end": {
-                  "line": 232,
+                  "line": 234,
                   "column": 2,
-                  "index": 5954
+                  "index": 7219
                 }
               }
             }
@@ -5156,14 +5610,14 @@
               "name": "BasicInfo",
               "loc": {
                 "start": {
-                  "line": 326,
+                  "line": 310,
                   "column": 16,
-                  "index": 8821
+                  "index": 9597
                 },
                 "end": {
-                  "line": 326,
+                  "line": 310,
                   "column": 25,
-                  "index": 8830
+                  "index": 9606
                 },
                 "identifierName": "BasicInfo"
               }
@@ -5206,14 +5660,14 @@
               "name": "Content",
               "loc": {
                 "start": {
-                  "line": 439,
+                  "line": 458,
                   "column": 2,
-                  "index": 12402
+                  "index": 13566
                 },
                 "end": {
-                  "line": 439,
+                  "line": 458,
                   "column": 9,
-                  "index": 12409
+                  "index": 13573
                 },
                 "identifierName": "Content"
               }
@@ -5260,14 +5714,14 @@
               "name": "AdvancedScreenContent",
               "loc": {
                 "start": {
-                  "line": 111,
+                  "line": 120,
                   "column": 2,
-                  "index": 2758
+                  "index": 2907
                 },
                 "end": {
-                  "line": 111,
+                  "line": 120,
                   "column": 23,
-                  "index": 2779
+                  "index": 2928
                 },
                 "identifierName": "AdvancedScreenContent"
               }
@@ -5474,14 +5928,14 @@
               "name": "StepTwo",
               "loc": {
                 "start": {
-                  "line": 331,
+                  "line": 330,
                   "column": 69,
-                  "index": 10073
+                  "index": 10044
                 },
                 "end": {
-                  "line": 331,
+                  "line": 330,
                   "column": 76,
-                  "index": 10080
+                  "index": 10051
                 },
                 "identifierName": "StepTwo"
               }
@@ -5877,14 +6331,14 @@
               "name": "TradeTaskDetail",
               "loc": {
                 "start": {
-                  "line": 57,
+                  "line": 75,
                   "column": 4,
-                  "index": 1899
+                  "index": 2640
                 },
                 "end": {
-                  "line": 57,
+                  "line": 75,
                   "column": 19,
-                  "index": 1914
+                  "index": 2655
                 },
                 "identifierName": "TradeTaskDetail"
               }
@@ -5920,14 +6374,14 @@
               "name": "SendEmail",
               "loc": {
                 "start": {
-                  "line": 72,
+                  "line": 81,
                   "column": 4,
-                  "index": 1917
+                  "index": 2384
                 },
                 "end": {
-                  "line": 72,
+                  "line": 81,
                   "column": 13,
-                  "index": 1926
+                  "index": 2393
                 },
                 "identifierName": "SendEmail"
               }
@@ -5962,14 +6416,14 @@
               "name": "BasicMsg",
               "loc": {
                 "start": {
-                  "line": 70,
+                  "line": 57,
                   "column": 4,
-                  "index": 2410
+                  "index": 2863
                 },
                 "end": {
-                  "line": 70,
+                  "line": 57,
                   "column": 12,
-                  "index": 2418
+                  "index": 2871
                 },
                 "identifierName": "BasicMsg"
               }
@@ -6008,14 +6462,14 @@
               "name": "SetPasswordOperate",
               "loc": {
                 "start": {
-                  "line": 36,
+                  "line": 37,
                   "column": 2,
-                  "index": 738
+                  "index": 841
                 },
                 "end": {
-                  "line": 36,
+                  "line": 37,
                   "column": 20,
-                  "index": 756
+                  "index": 859
                 },
                 "identifierName": "SetPasswordOperate"
               }
@@ -6080,14 +6534,14 @@
               "name": "HelpPanel",
               "loc": {
                 "start": {
-                  "line": 97,
+                  "line": 98,
                   "column": 2,
-                  "index": 2335
+                  "index": 2512
                 },
                 "end": {
-                  "line": 97,
+                  "line": 98,
                   "column": 11,
-                  "index": 2344
+                  "index": 2521
                 },
                 "identifierName": "HelpPanel"
               }
@@ -6129,14 +6583,14 @@
               "name": "AdviseModal",
               "loc": {
                 "start": {
-                  "line": 148,
+                  "line": 150,
                   "column": 3,
-                  "index": 4078
+                  "index": 4779
                 },
                 "end": {
-                  "line": 148,
+                  "line": 150,
                   "column": 14,
-                  "index": 4089
+                  "index": 4790
                 },
                 "identifierName": "AdviseModal"
               }
@@ -6176,9 +6630,9 @@
                   "index": 1064
                 },
                 "end": {
-                  "line": 85,
+                  "line": 82,
                   "column": 1,
-                  "index": 2365
+                  "index": 2188
                 }
               }
             }
@@ -6211,14 +6665,14 @@
               "type": "CallExpression",
               "loc": {
                 "start": {
-                  "line": 46,
+                  "line": 47,
                   "column": 1,
-                  "index": 1593
+                  "index": 1627
                 },
                 "end": {
-                  "line": 91,
+                  "line": 94,
                   "column": 2,
-                  "index": 2829
+                  "index": 3237
                 }
               }
             }
@@ -6266,14 +6720,14 @@
               "name": "ModuleRelatedContainer",
               "loc": {
                 "start": {
-                  "line": 608,
+                  "line": 667,
                   "column": 2,
-                  "index": 17087
+                  "index": 19166
                 },
                 "end": {
-                  "line": 608,
+                  "line": 667,
                   "column": 24,
-                  "index": 17109
+                  "index": 19188
                 },
                 "identifierName": "ModuleRelatedContainer"
               }
@@ -6285,48 +6739,6 @@
             "initialize": "initialize",
             "change": "change",
             "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AgendaFormModal/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "AgendaFormModal",
-              "loc": {
-                "start": {
-                  "line": 72,
-                  "column": 2,
-                  "index": 1993
-                },
-                "end": {
-                  "line": 72,
-                  "column": 17,
-                  "index": 2008
-                },
-                "identifierName": "AgendaFormModal"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "initialize": "initialize"
           }
         }
       ]
@@ -6366,14 +6778,14 @@
               "name": "QuotationAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 116,
+                  "line": 102,
                   "column": 2,
-                  "index": 3025
+                  "index": 3082
                 },
                 "end": {
-                  "line": 116,
+                  "line": 102,
                   "column": 36,
-                  "index": 3059
+                  "index": 3116
                 },
                 "identifierName": "QuotationAdvancedScreenContentForm"
               }
@@ -6554,14 +6966,14 @@
               "name": "TopBlock",
               "loc": {
                 "start": {
-                  "line": 179,
+                  "line": 186,
                   "column": 2,
-                  "index": 5525
+                  "index": 5977
                 },
                 "end": {
-                  "line": 179,
+                  "line": 186,
                   "column": 10,
-                  "index": 5533
+                  "index": 5985
                 },
                 "identifierName": "TopBlock"
               }
@@ -6611,14 +7023,14 @@
               "name": "OrderAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 113,
+                  "line": 99,
                   "column": 2,
-                  "index": 2936
+                  "index": 3048
                 },
                 "end": {
-                  "line": 113,
+                  "line": 99,
                   "column": 32,
-                  "index": 2966
+                  "index": 3078
                 },
                 "identifierName": "OrderAdvancedScreenContentForm"
               }
@@ -6657,12 +7069,12 @@
                 "start": {
                   "line": 313,
                   "column": 60,
-                  "index": 9868
+                  "index": 9881
                 },
                 "end": {
                   "line": 313,
                   "column": 72,
-                  "index": 9880
+                  "index": 9893
                 },
                 "identifierName": "EDMTaskTable"
               }
@@ -7171,14 +7583,14 @@
               "name": "SendEmail",
               "loc": {
                 "start": {
-                  "line": 96,
+                  "line": 156,
                   "column": 2,
-                  "index": 2818
+                  "index": 4262
                 },
                 "end": {
-                  "line": 96,
+                  "line": 156,
                   "column": 11,
-                  "index": 2827
+                  "index": 4271
                 },
                 "identifierName": "SendEmail"
               }
@@ -7213,14 +7625,14 @@
               "name": "ResponsibleUser",
               "loc": {
                 "start": {
-                  "line": 79,
+                  "line": 74,
                   "column": 2,
-                  "index": 2094
+                  "index": 2186
                 },
                 "end": {
-                  "line": 79,
+                  "line": 74,
                   "column": 17,
-                  "index": 2109
+                  "index": 2201
                 },
                 "identifierName": "ResponsibleUser"
               }
@@ -7255,14 +7667,14 @@
               "name": "BasicMsg",
               "loc": {
                 "start": {
-                  "line": 95,
+                  "line": 112,
                   "column": 4,
-                  "index": 3385
+                  "index": 4474
                 },
                 "end": {
-                  "line": 95,
+                  "line": 112,
                   "column": 12,
-                  "index": 3393
+                  "index": 4482
                 },
                 "identifierName": "BasicMsg"
               }
@@ -7404,14 +7816,14 @@
               "name": "BatchActions",
               "loc": {
                 "start": {
-                  "line": 274,
+                  "line": 278,
                   "column": 2,
-                  "index": 7670
+                  "index": 9114
                 },
                 "end": {
-                  "line": 274,
+                  "line": 278,
                   "column": 14,
-                  "index": 7682
+                  "index": 9126
                 },
                 "identifierName": "BatchActions"
               }
@@ -7440,14 +7852,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 749,
+                  "line": 816,
                   "column": 2,
-                  "index": 19385
+                  "index": 22242
                 },
                 "end": {
-                  "line": 749,
+                  "line": 816,
                   "column": 7,
-                  "index": 19390
+                  "index": 22247
                 },
                 "identifierName": "Table"
               }
@@ -7490,12 +7902,12 @@
                 "start": {
                   "line": 53,
                   "column": 2,
-                  "index": 2225
+                  "index": 2411
                 },
                 "end": {
-                  "line": 185,
+                  "line": 212,
                   "column": 1,
-                  "index": 6613
+                  "index": 7245
                 }
               }
             }
@@ -7548,14 +7960,14 @@
               "name": "AgendaForm",
               "loc": {
                 "start": {
-                  "line": 306,
+                  "line": 315,
                   "column": 53,
-                  "index": 8753
+                  "index": 9663
                 },
                 "end": {
-                  "line": 306,
+                  "line": 315,
                   "column": 63,
-                  "index": 8763
+                  "index": 9673
                 },
                 "identifierName": "AgendaForm"
               }
@@ -7633,14 +8045,14 @@
               "name": "TimePicker",
               "loc": {
                 "start": {
-                  "line": 114,
+                  "line": 139,
                   "column": 2,
-                  "index": 3332
+                  "index": 3977
                 },
                 "end": {
-                  "line": 114,
+                  "line": 139,
                   "column": 12,
-                  "index": 3342
+                  "index": 3987
                 },
                 "identifierName": "TimePicker"
               }
@@ -7717,14 +8129,14 @@
               "name": "CreatedTime",
               "loc": {
                 "start": {
-                  "line": 102,
+                  "line": 127,
                   "column": 2,
-                  "index": 3027
+                  "index": 3672
                 },
                 "end": {
-                  "line": 102,
+                  "line": 127,
                   "column": 13,
-                  "index": 3038
+                  "index": 3683
                 },
                 "identifierName": "CreatedTime"
               }
@@ -7759,14 +8171,14 @@
               "name": "DrawerTitle",
               "loc": {
                 "start": {
-                  "line": 152,
+                  "line": 163,
                   "column": 4,
-                  "index": 3971
+                  "index": 4422
                 },
                 "end": {
-                  "line": 152,
+                  "line": 163,
                   "column": 15,
-                  "index": 3982
+                  "index": 4433
                 },
                 "identifierName": "DrawerTitle"
               }
@@ -7776,68 +8188,6 @@
           "spreadElementNames": [],
           "objectPropertyMap": {
             "navigate": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AgendaFormModal/components/AgendaForm/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "uploadActions",
-              "sourceValue": "foreignTradePlatform/actions/upload",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/upload.ts",
-              "exportNames": [
-                "uploadRequest",
-                "uploadSucceed",
-                "uploadFailed",
-                "uploadInit"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "AgendaForm",
-              "loc": {
-                "start": {
-                  "line": 515,
-                  "column": 66,
-                  "index": 15634
-                },
-                "end": {
-                  "line": 515,
-                  "column": 76,
-                  "index": 15644
-                },
-                "identifierName": "AgendaForm"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["uploadActions"],
-          "objectPropertyMap": {
-            "change": "change",
-            "initialize": "initialize"
           }
         }
       ]
@@ -7969,14 +8319,14 @@
               "name": "DrawerTitle",
               "loc": {
                 "start": {
-                  "line": 150,
+                  "line": 161,
                   "column": 4,
-                  "index": 4094
+                  "index": 4547
                 },
                 "end": {
-                  "line": 150,
+                  "line": 161,
                   "column": 15,
-                  "index": 4105
+                  "index": 4558
                 },
                 "identifierName": "DrawerTitle"
               }
@@ -7986,168 +8336,6 @@
           "spreadElementNames": [],
           "objectPropertyMap": {
             "navigate": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/ContactFormModal/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "ContactFormModal",
-              "loc": {
-                "start": {
-                  "line": 149,
-                  "column": 3,
-                  "index": 4334
-                },
-                "end": {
-                  "line": 149,
-                  "column": 19,
-                  "index": 4350
-                },
-                "identifierName": "ContactFormModal"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "initialize": "initialize"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/AddCustomer/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "uploadActions",
-              "sourceValue": "foreignTradePlatform/actions/upload",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/upload.ts",
-              "exportNames": [
-                "uploadRequest",
-                "uploadSucceed",
-                "uploadFailed",
-                "uploadInit"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "goBack",
-              "importedName": "goBack",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "AddCustomer",
-              "loc": {
-                "start": {
-                  "line": 184,
-                  "column": 4,
-                  "index": 5866
-                },
-                "end": {
-                  "line": 184,
-                  "column": 15,
-                  "index": 5877
-                },
-                "identifierName": "AddCustomer"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["uploadActions"],
-          "objectPropertyMap": {
-            "push": "push",
-            "goBack": "goBack",
-            "change": "change",
-            "initialize": "initialize"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/AddNewModal/AddContact/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "ContactFormModal",
-              "loc": {
-                "start": {
-                  "line": 106,
-                  "column": 3,
-                  "index": 3011
-                },
-                "end": {
-                  "line": 106,
-                  "column": 19,
-                  "index": 3027
-                },
-                "identifierName": "ContactFormModal"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "initialize": "initialize"
           }
         }
       ]
@@ -8192,14 +8380,14 @@
               "name": "AgendaForm",
               "loc": {
                 "start": {
-                  "line": 304,
-                  "column": 53,
-                  "index": 8833
+                  "line": 331,
+                  "column": 4,
+                  "index": 10091
                 },
                 "end": {
-                  "line": 304,
-                  "column": 63,
-                  "index": 8843
+                  "line": 331,
+                  "column": 14,
+                  "index": 10101
                 },
                 "identifierName": "AgendaForm"
               }
@@ -8235,14 +8423,14 @@
               "name": "RangeDatePicker",
               "loc": {
                 "start": {
-                  "line": 125,
+                  "line": 150,
                   "column": 2,
-                  "index": 3590
+                  "index": 4193
                 },
                 "end": {
-                  "line": 125,
+                  "line": 150,
                   "column": 17,
-                  "index": 3605
+                  "index": 4208
                 },
                 "identifierName": "RangeDatePicker"
               }
@@ -8277,14 +8465,14 @@
               "name": "FirmTitle",
               "loc": {
                 "start": {
-                  "line": 62,
+                  "line": 60,
                   "column": 2,
-                  "index": 1621
+                  "index": 1714
                 },
                 "end": {
-                  "line": 62,
+                  "line": 60,
                   "column": 11,
-                  "index": 1630
+                  "index": 1723
                 },
                 "identifierName": "FirmTitle"
               }
@@ -8319,14 +8507,14 @@
               "name": "FirmTitle",
               "loc": {
                 "start": {
-                  "line": 62,
+                  "line": 60,
                   "column": 2,
-                  "index": 1621
+                  "index": 1714
                 },
                 "end": {
-                  "line": 62,
+                  "line": 60,
                   "column": 11,
-                  "index": 1630
+                  "index": 1723
                 },
                 "identifierName": "FirmTitle"
               }
@@ -8361,14 +8549,14 @@
               "name": "BuyVipConfirm",
               "loc": {
                 "start": {
-                  "line": 39,
+                  "line": 41,
                   "column": 2,
-                  "index": 914
+                  "index": 1175
                 },
                 "end": {
-                  "line": 39,
+                  "line": 41,
                   "column": 15,
-                  "index": 927
+                  "index": 1188
                 },
                 "identifierName": "BuyVipConfirm"
               }

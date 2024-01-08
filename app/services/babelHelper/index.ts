@@ -835,6 +835,7 @@ export const findReduxActionsInReducer = async (
 
       const actionStatesMap: TActionStatesMap = {} // WangFan TODO 2023-08-07 02:00:20
       objectMethodHelper(actionStatesMap, node, objectMethodProperties, warnings)
+      // warnings.push('#838 actionStatesMap:', JSON.stringify(actionStatesMap))
 
       for (const reducerdentifier of reducerdentifiers) {
         const reducerdentifierBinding = path.scope.getBinding(reducerdentifier)
