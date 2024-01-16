@@ -834,7 +834,7 @@ export const findReduxActionsInReducer = async (
       result.reducerdentifiers = reducerdentifiers
 
       const actionStatesMap: TActionStatesMap = {} // WangFan TODO 2023-08-07 02:00:20
-      objectMethodHelper(actionStatesMap, node, objectMethodProperties, warnings)
+      objectMethodHelper(actionStatesMap, path, objectMethodProperties, warnings)
       // warnings.push('#838 actionStatesMap:', JSON.stringify(actionStatesMap))
 
       for (const reducerdentifier of reducerdentifiers) {
@@ -867,7 +867,7 @@ export const findReduxActionsInReducer = async (
           continue
         }
 
-        objectMethodHelper(actionStatesMap, node, objectMethods, warnings)
+        objectMethodHelper(actionStatesMap, path, objectMethods, warnings)
       }
       result.actionStatesMap = actionStatesMap
 
@@ -1685,4 +1685,4 @@ export const findReduxConnect = (ast: ParseResult<File>) => {
 
 export const loc2String = (loc: SourceLocation) =>
   `start.line: ${loc.start.line}, start.column: ${loc.start.column}, ` +
-  `start.line: ${loc.end.line}, start.column: ${loc.end.column}`
+  `end.line: ${loc.end.line}, end.column: ${loc.end.column}`

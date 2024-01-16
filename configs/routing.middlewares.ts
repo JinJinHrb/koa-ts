@@ -7,7 +7,7 @@ import { Service } from 'typedi'
 export class HeaderMiddleware implements KoaMiddlewareInterface {
   async use(context: Context, next: (err?: Error) => unknown): Promise<unknown> {
     if (context.path.includes('apis')) {
-      console.log('#10', context.path)
+      console.log('routing #10', context.path)
       return next()
     }
     console.log('HeaderMiddleware #20')

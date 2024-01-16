@@ -25,6 +25,7 @@ import {
   recurBuildSagaGraph,
   ParseSingleReducersFileParams,
   parseSingleReducersFile,
+  loc2String,
 } from 'app/services/babelHelper'
 // import buildActionsMap from 'app/mock/actionsMap/buildActionsMap'
 import { TActionsMap } from 'app/services/babelHelper'
@@ -43,6 +44,7 @@ import {
   traverseSagaGraph,
 } from 'app/services/babelHelper/sagaHelper'
 import { DirectedGraph } from 'graphology'
+import { iterate2FindCertainStructure } from 'app/helpers/iterationUtil'
 
 /*
  * 确定项目依赖图
@@ -73,6 +75,104 @@ import { DirectedGraph } from 'graphology'
 @Controller('/babel')
 export class BabelController {
   constructor(private babelService: BabelService) {}
+
+  @Post('/testIterator')
+  async testIterator() {
+    const fileAstPath = pathUtil.join(__dirname, '../mock/ast/crm/file.ast_2.json')
+    const code = (await getFileData(fileAstPath))?.toString()
+    const astObj = JSON.parse(code)
+
+    /* 
+    * state
+				.set(...)
+				.set(usages.BUSINESS_LICENSE_TRANSFER, cell)
+        *
+    */
+    const selector2 = (current: any, paths: string[], exports: any) => {
+      if (paths.length < 5) {
+        return
+      }
+
+      const possiblePrevCallee = paths.slice(0, -2)
+      possiblePrevCallee.push('callee')
+      const possiblePrevCalleeNode = _.get(astObj, possiblePrevCallee)
+      const flag1 = possiblePrevCalleeNode?.property?.name === 'set'
+
+      const possibleParentCallExpression = paths.slice(0, -2)
+      const possibleParentCallExpressionNode = _.get(astObj, possibleParentCallExpression)
+      const flag2 =
+        possibleParentCallExpressionNode?.type === 'CallExpression' &&
+        current?.type === 'MemberExpression' &&
+        current?.object?.type === 'Identifier' &&
+        current?.property?.type === 'Identifier'
+
+      const flag3 =
+        current?.type === 'MemberExpression' &&
+        current?.object?.type === 'Identifier' &&
+        current?.property?.type === 'Identifier'
+
+      const flag4 =
+        possibleParentCallExpressionNode?.type && current?.type === 'StringLiteral'
+      if (current?.loc?.start?.line === 359) {
+        console.log(
+          '#116 current.value:',
+          current.value,
+          flag1,
+          flag2,
+          flag3,
+          flag4,
+          'possibleParentCallExpressionNode?.type:',
+          possibleParentCallExpressionNode?.type,
+          'current?.type:',
+          current?.type,
+          'current?.object?.type:',
+          current?.object?.type,
+          'current?.property?.type:',
+          current?.property?.type,
+        )
+      }
+
+      let stateName = ''
+      if ((flag1 && flag2 && flag3) || (flag1 && flag4)) {
+        const pathKey = paths.join('.')
+        // if (!exports[pathKey]) {
+        //   exports[pathKey] = []
+        // }
+        stateName =
+          possiblePrevCalleeNode?.object?.type === 'Identifier'
+            ? possiblePrevCalleeNode?.object?.name
+            : undefined
+        let nextNode = stateName ? null : possibleParentCallExpressionNode?.callee?.object
+        while (nextNode) {
+          if (
+            nextNode.callee?.type === 'MemberExpression' &&
+            nextNode.callee?.object?.type === 'Identifier' &&
+            nextNode.callee?.property?.type === 'Identifier' &&
+            nextNode.callee?.object?.name
+          ) {
+            stateName = nextNode.callee?.object?.name
+            nextNode = null
+          } else {
+            nextNode = nextNode?.callee?.object
+          }
+        }
+        const toInsert: string[] = []
+        toInsert.push(loc2String(current.loc))
+        toInsert.push(`${stateName}.set`)
+        if (flag4) {
+          toInsert.push(current.value)
+        } else {
+          toInsert.push(`${current.object.name}.${current.property.name}`)
+        }
+        // exports[pathKey].push(toInsert)
+        exports[pathKey] = toInsert
+      }
+    }
+
+    const data = iterate2FindCertainStructure(astObj, [/* selector1 */ selector2])
+
+    return { data }
+  }
 
   @Post('/parseReducer')
   async parseReducer(@Body() params: ParseSingleReducersFileParams) {

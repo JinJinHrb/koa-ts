@@ -5,6 +5,7 @@ import _ from 'lodash'
 import { oType } from './stringUtil'
 import { Node, NodePath } from '@babel/traverse'
 import { Identifier } from '@babel/types'
+import deepClone from './deepClone'
 
 // 跳过 "type": "TSNonNullExpression" 获取 parentPath
 export const getParentPathSkipTSNonNullExpression = (
@@ -245,6 +246,37 @@ export const iterateObjectHandler2 = function itrObj(
   return obj
 }
 
+/**
+ * 遍历对象，找到特殊结构
+ */
+export const iterate2FindCertainStructure = function itr2FindCertainStructure(
+  current: any,
+  handlers: ((current: any, paths: string[], exports: any) => void)[],
+  paths?: string[],
+  exports?: any,
+) {
+  if (!_.isObject(current as any) || current instanceof Date) {
+    return
+  }
+  if (_.isNil(paths)) {
+    paths = []
+  }
+  if (_.isNil(exports)) {
+    exports = {}
+  }
+  deepClone(exports)
+  const currentKeys = Object.keys(current)
+  for (const k of currentKeys) {
+    const clonePaths = [...paths]
+    clonePaths.push(k)
+    for (const handler of handlers) {
+      handler(current[k], clonePaths, exports)
+    }
+    itr2FindCertainStructure(current[k], handlers, clonePaths, exports)
+  }
+  return exports
+}
+
 /** 比较两个对象的不同之处 */
 export const iterateObject4DiffHandler = function itrObj4Dif(
   obj1: any,
@@ -279,59 +311,4 @@ export const iterateObject4DiffHandler = function itrObj4Dif(
     const copyA = _.flattenDeep(deepClone(a as unknown[]) as unknown[])
     return !_.isEmpty(copyA)
   })
-}
-
-/**
- * 深度克隆；如果提供了转换方法，可以同时转换日期格式，并存入克隆对象
- * */
-export const deepClone = function fnDeepClone(
-  obj: any,
-  options?: {
-    oidHandler: undefined | ((k: string) => unknown)
-    dateHandler: undefined | ((d: Date) => unknown)
-    bufferHandler: undefined | ((k: Buffer) => unknown)
-  },
-): any {
-  if (!_.isObject(obj)) {
-    return obj
-  }
-  if (!options) {
-    options = {
-      oidHandler: undefined,
-      dateHandler: undefined,
-      bufferHandler: undefined,
-    }
-  }
-  const oidHandler = options.oidHandler
-  const result = (typeof (obj as any)['splice'] === 'function' ? [] : {}) as any
-  let key
-  if (obj && typeof obj === 'object' && !(obj instanceof RegExp)) {
-    for (key in obj) {
-      if ((obj as any)[key] && (obj as any)[key] instanceof Date) {
-        if (options.dateHandler && options.dateHandler instanceof Function) {
-          result[key] = options.dateHandler((obj as any)[key])
-        } else {
-          result[key] = new Date((obj as any)[key])
-        }
-      } else if ((obj as any)[key] && (obj as any)[key] instanceof Buffer) {
-        if (options.bufferHandler && options.bufferHandler instanceof Function) {
-          result[key] = options.bufferHandler((obj as any)[key])
-        } else {
-          result[key] = (obj as any)[key]
-        }
-      } else if ((obj as any)[key] && typeof (obj as any)[key] === 'object') {
-        result[key] = fnDeepClone((obj as any)[key], options) //如果对象的属性值为object的时候，递归调用deepClone，即再把某个值对象复制一份到新的对象的对应值中
-      } else {
-        if (key === '_id') {
-          if (_.isFunction(oidHandler)) {
-            result[key] = oidHandler((obj as any)[key])
-            continue
-          }
-        }
-        result[key] = (obj as any)[key] //如果对象的属性值不为object的时候，直接复制参数对象的每一个键/值到新对象对应的键/值中
-      }
-    }
-    return result
-  }
-  return obj
 }
