@@ -1,7 +1,7 @@
 import * as ExcelJS from 'exceljs'
 import { print } from './fsUtils'
 import PLimit from './pLimitUtil'
-import { translate } from './translateUtils'
+import { cacheTranslation, translate } from './translateUtils'
 import {
   isLink,
   insertStringBeforeLastDot,
@@ -73,7 +73,11 @@ export const readAndTranslate = async (
   filePath: string,
   zhIndex: number,
   enIndex: number,
+  referencePathsFiltered?: string[],
 ) => {
+  if (!_.isEmpty(referencePathsFiltered)) {
+    await cacheTranslation(referencePathsFiltered as string[])
+  }
   const pLimit = new PLimit(15)
   const data = ((await readColumns(filePath, 1, zhIndex)) as any)?.data ?? []
   const dataSliced = data.slice(1)

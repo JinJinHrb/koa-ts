@@ -5,6 +5,7 @@ import { join } from 'path'
 import { print } from './fsUtils'
 import _ from 'lodash'
 import { LRUMap } from 'lru_map'
+import { readColumns } from './excelUtils'
 
 type BAIDU_TRANSLATE_RESPONSE_DATA = {
   error_code?: string
@@ -12,7 +13,25 @@ type BAIDU_TRANSLATE_RESPONSE_DATA = {
 }
 
 // 避免重复翻译
-const _translateMemory = new LRUMap(2000)
+const _translateMemory = new LRUMap(5000)
+
+export async function cacheTranslation(filePaths: string[]) {
+  const results = []
+  for (const filePath of filePaths) {
+    const { data, contents } = (await readColumns(filePath, 1, 3, 1)) as any
+    if (data.length > 1 && data.length === contents.length) {
+      const data2 = data.slice(1)
+      const contents2 = contents.slice(1)
+      for (let i = 0; i < data2.length; i++) {
+        const text = data2[i]
+        const translation = contents2[i]
+        _translateMemory.set(`zh_en_${text}`, translation)
+      }
+    }
+    results.push({ data, contents })
+  }
+  return _translateMemory.toJSON()
+}
 
 export async function translate(text: string, from: string, to: string): Promise<string> {
   if (_translateMemory.has(`${from}_${to}_${text}`)) {

@@ -20,6 +20,8 @@ import {
   Commit,
   CommitDetail,
 } from 'app/helpers/gitStatistics'
+import fs from 'fs'
+import { cacheTranslation } from 'app/helpers/translateUtils'
 
 // import commits from 'app/helpers/mock/commits'
 // import commit from 'app/helpers/mock/commit'
@@ -41,14 +43,18 @@ export class PreviewController {
 
   @Post('/excel/translateText')
   async translateText(@Body() params: any) {
-    const { filePath } = params ?? {}
+    const { filePath, referencePaths } = params ?? {}
     if (_.isEmpty(filePath)) {
       return { success: false, message: 'filePath is missing' }
     }
     if (!_.endsWith(filePath, '.xlsx')) {
       return { success: false, message: 'not an xlsx file' }
     }
-    return await readAndTranslate(filePath, 3, 1)
+    const referencePathsFiltered = (referencePaths as string[]).filter(a =>
+      fs.existsSync(a),
+    )
+    console.log('#55', 'referencePathsFiltered:', referencePathsFiltered)
+    return await readAndTranslate(filePath, 3, 1, referencePathsFiltered)
   }
 
   @Post('/git/statistics')
