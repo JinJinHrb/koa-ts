@@ -124,7 +124,42 @@ const parseReturnStatement = (
   return storeState
 }
 
-export const objectMethodHelper = (
+// WangFan TODO 2024-01-18 12:03:41
+export const getActionsKey = (
+  filePath: string,
+  path: NodePath<ExportDefaultDeclaration>,
+  objectMethods: (ObjectMethod | ObjectProperty | SpreadElement)[],
+  warnings: string[],
+) => {
+  // const { node } = path // ExportDefaultDeclaration,
+  // console.log(
+  //   '#135',
+  //   'filePath:',
+  //   filePath,
+  //   'loc:',
+  //   loc2String(node?.loc as SourceLocation),
+  // )
+  const actionsProperties: string[] = []
+  for (const objectExpressionProperty of objectMethods) {
+    const { key } = objectExpressionProperty as ObjectProperty
+    // const actionsName = key.object.name
+    const actionsProperty = key.property.name
+    const { /* params: objectExpressionParams, */ body: objectExpressionBody } =
+      objectExpressionProperty as any
+    // console.log(
+    //   '#140 actionsName:',
+    //   actionsName,
+    //   'actionsProperty:',
+    //   actionsProperty,
+    //   'loc:',
+    //   loc2String(objectExpressionProperty?.loc as SourceLocation),
+    // )
+    actionsProperties.push(actionsProperty)
+  }
+  return actionsProperties
+}
+
+export const getActionsStatesMapByObjectMethod = (
   actionStatesMap: TActionStatesMap,
   path: NodePath<ExportDefaultDeclaration>,
   objectMethods: (ObjectMethod | ObjectProperty | SpreadElement)[],
@@ -149,7 +184,7 @@ export const objectMethodHelper = (
       }
       return false
     })
-    // console.log('parseReturnStatement #52 array:', storeState)
+    console.log('parseReturnStatement #52 array:', storeState)
 
     const keyType = key.type
     const keyObject = key.object

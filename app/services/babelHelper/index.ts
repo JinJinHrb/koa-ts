@@ -24,7 +24,7 @@ import {
 } from './innerHelper'
 import { DirectedGraph } from 'graphology'
 import { getFilesByLocalIdentifier, getSagaEffects } from './sagaHelper'
-import { objectMethodHelper } from './reducerHelper'
+import { getActionsStatesMapByObjectMethod, getActionsKey } from './reducerHelper'
 import type {
   RootBuildSagaMap,
   key2Path4HandlerMap1,
@@ -37,6 +37,9 @@ export type ParseSingleReducersFileParams = {
   warnings: string[]
 }
 
+/*
+ * 计划:
+ */
 export const parseSingleReducersFile = async (params: ParseSingleReducersFileParams) => {
   const { filePath, tsconfigPath } = params
   const warnings: string[] = []
@@ -734,6 +737,9 @@ export type TActionStatesMap = {
   [key: string]: string[]
 }
 
+/*
+ * 从 saga reducer 模块中找出 使用到的 actions
+ */
 export const findReduxActionsInReducer = async (
   filePath: string,
   babelService: BabelService,
@@ -744,7 +750,7 @@ export const findReduxActionsInReducer = async (
     localHandleActions: '',
     localImmutable: '',
   }
-
+  // const absPath = babelService.getRealPathByAlias(alias, nonAnalyzedFile)
   traverse(ast, {
     ImportDeclaration(path) {
       const { node } = path
@@ -764,16 +770,34 @@ export const findReduxActionsInReducer = async (
           result.localImmutable = composeSpecifier.local.name
         }
       }
-      if (result.localHandleActions && result.localImmutable) {
+      if (
+        node.specifiers[0]?.type === 'ImportNamespaceSpecifier' &&
+        node.source.value.indexOf('actions/') === 0
+      ) {
+        const absPath4Actions = babelService.getRealPathByAlias(
+          node.source.value,
+          filePath,
+        )
+        result.absPath4Actions = absPath4Actions
+      }
+      if (result.localHandleActions && result.localImmutable && result.absPath4Actions) {
         path.stop()
       }
     },
   })
 
-  const { localHandleActions } = result
+  const { localHandleActions, absPath4Actions } = result
   if (!localHandleActions) {
     return result
   }
+
+  // console.log(
+  //   '#784 localHandleActions:',
+  //   localHandleActions,
+  //   'absPath4Actions:',
+  //   absPath4Actions,
+  // )
+  result.absPath4Actions = absPath4Actions
 
   traverse(ast, {
     ExportDefaultDeclaration(path) {
@@ -798,7 +822,7 @@ export const findReduxActionsInReducer = async (
         return
       }
       const firstArgument = nodeArguments[0]
-      const secondArgument = nodeArguments[1]
+      // const secondArgument = nodeArguments[1]
 
       // 寻找 actions listener
       if (firstArgument.type !== 'ObjectExpression') {
@@ -818,7 +842,7 @@ export const findReduxActionsInReducer = async (
           (a.type === 'SpreadElement' && a.argument.type !== 'Identifier'),
       )
       const objectMethodProperties = actionListenerProperties.filter(
-        a => a.type === 'ObjectMethod',
+        a => a.type === 'ObjectMethod', // [actions.uploadFileRequested](state, action) { ... }
       ) // WangFan TODO 2023-08-21 14:27:27
       const spreadElementProperties = actionListenerProperties.filter(
         a => a.type === 'SpreadElement',
@@ -830,33 +854,37 @@ export const findReduxActionsInReducer = async (
           )}`,
         )
       }
-      const reducerdentifiers = spreadElementProperties.map((a: any) => a.argument.name)
-      result.reducerdentifiers = reducerdentifiers
+      const reducerIdentifiers = spreadElementProperties.map((a: any) => a.argument.name)
+      result.reducerIdentifiers = reducerIdentifiers
 
-      const actionStatesMap: TActionStatesMap = {} // WangFan TODO 2023-08-07 02:00:20
-      objectMethodHelper(actionStatesMap, path, objectMethodProperties, warnings)
-      // warnings.push('#838 actionStatesMap:', JSON.stringify(actionStatesMap))
+      const actionsProperties = getActionsKey(
+        filePath,
+        path,
+        objectMethodProperties,
+        warnings,
+      )
+      console.log('#865 actionsProperties:', actionsProperties)
 
-      for (const reducerdentifier of reducerdentifiers) {
-        const reducerdentifierBinding = path.scope.getBinding(reducerdentifier)
-        const reducerdentifierBindingNode = reducerdentifierBinding?.path.node as Node
-        if (reducerdentifierBindingNode.type !== 'VariableDeclarator') {
+      for (const reducerIdentifier of reducerIdentifiers) {
+        const reducerIdentifierBinding = path.scope.getBinding(reducerIdentifier)
+        const reducerIdentifierBindingNode = reducerIdentifierBinding?.path.node as Node
+        if (reducerIdentifierBindingNode.type !== 'VariableDeclarator') {
           warnings.push(
-            `[warning] #830 reducerdentifierBindingNode.type !== 'VariableDeclarator', ${loc2String(
+            `[warning] #830 reducerIdentifierBindingNode.type !== 'VariableDeclarator', ${loc2String(
               node?.loc as SourceLocation,
             )}`,
           )
           continue
         }
-        if (reducerdentifierBindingNode.init?.type !== 'ObjectExpression') {
+        if (reducerIdentifierBindingNode.init?.type !== 'ObjectExpression') {
           warnings.push(
-            `[warning] #838 reducerdentifierBindingNode.init?.type !== 'ObjectExpression', ${loc2String(
+            `[warning] #838 reducerIdentifierBindingNode.init?.type !== 'ObjectExpression', ${loc2String(
               node?.loc as SourceLocation,
             )}`,
           )
           continue
         }
-        const objectMethods = reducerdentifierBindingNode.init?.properties
+        const objectMethods = reducerIdentifierBindingNode.init?.properties
         const nonObjectMethods = objectMethods.filter(a => a.type !== 'ObjectMethod')
         if (!_.isEmpty(nonObjectMethods)) {
           warnings.push(
@@ -867,92 +895,95 @@ export const findReduxActionsInReducer = async (
           continue
         }
 
-        objectMethodHelper(actionStatesMap, path, objectMethods, warnings)
-      }
-      result.actionStatesMap = actionStatesMap
-
-      // 寻找 initState
-      if (secondArgument.type !== 'Identifier') {
-        warnings.push(
-          `[warning] #787 secondArgument.type !== 'Identifier', ${loc2String(
-            node?.loc as SourceLocation,
-          )}`,
-        )
-        path.stop()
-        return
-      }
-      const localIdentifier = secondArgument.name
-
-      const initStateFile = getFilesByLocalIdentifier({
-        babelService,
-        filePath,
-        localIdentifier,
-        path,
-      })
-
-      if (initStateFile) {
-        warnings.push(
-          `[warning] #813 initStateFile is not blank: ${initStateFile}, ${loc2String(
-            node?.loc as SourceLocation,
-          )}`,
-        )
+        actionsProperties.push(...getActionsKey(filePath, path, objectMethods, warnings))
+        console.log('#903 actionsProperties:', actionsProperties)
+        /* getActionsStatesMapByObjectMethod(actionStatesMap, path, objectMethods, warnings) */
       }
 
-      const initStateBinding = path.scope.getBinding(localIdentifier)
-      const initStateBindingNode = initStateBinding?.path.node as Node
-      if (initStateBindingNode.type !== 'VariableDeclarator') {
-        warnings.push(
-          `[warning] #832 initStateBindingNode.type !== 'VariableDeclarator', ${loc2String(
-            node?.loc as SourceLocation,
-          )}`,
-        )
-        return
-      }
-      const initStateInitNode = initStateBindingNode.init as CallExpression
-      if (
-        initStateInitNode.callee.type !== 'MemberExpression' ||
-        (initStateInitNode.callee as any).object.name !== result.localImmutable
-      ) {
-        warnings.push(
-          `[warning] #844 (initStateInitNode.callee as any).object.name !== result.localImmutable', ${loc2String(
-            node?.loc as SourceLocation,
-          )}`,
-        )
-        return
-      }
-      const initStateArguments = initStateInitNode.arguments
-      if (initStateArguments.length !== 1) {
-        warnings.push(
-          `[warning] #853 initStateArguments.length !== 1', ${loc2String(
-            node?.loc as SourceLocation,
-          )}`,
-        )
-        return
-      }
-      const initStateArgument = initStateArguments[0]
-      if (initStateArgument.type !== 'ObjectExpression') {
-        warnings.push(
-          `[warning] #862 initStateArgument.type !== 'ObjectExpression', ${loc2String(
-            node?.loc as SourceLocation,
-          )}`,
-        )
-        return
-      }
-      const initStateProperties = initStateArgument.properties
-      const nonObjectProperties = initStateProperties.filter(
-        a => a.type !== 'ObjectProperty' || a.key.type !== 'Identifier',
-      )
-      if (!_.isEmpty(nonObjectProperties)) {
-        warnings.push(
-          `[warning] #862 nonObjectProperty found, ${loc2String(
-            node?.loc as SourceLocation,
-          )}`,
-        )
-      }
-      const initStateNames = initStateProperties
-        .filter(a => a.type === 'ObjectProperty')
-        .map(a => (a as any)?.key?.name)
-      result.initStateNames = initStateNames
+      result.actionsProperties = actionsProperties
+
+      // // 寻找 initState
+      // if (secondArgument.type !== 'Identifier') {
+      //   warnings.push(
+      //     `[warning] #787 secondArgument.type !== 'Identifier', ${loc2String(
+      //       node?.loc as SourceLocation,
+      //     )}`,
+      //   )
+      //   path.stop()
+      //   return
+      // }
+      // const localIdentifier = secondArgument.name
+
+      // const initStateFile = getFilesByLocalIdentifier({
+      //   babelService,
+      //   filePath,
+      //   localIdentifier,
+      //   path,
+      // })
+
+      // if (initStateFile) {
+      //   warnings.push(
+      //     `[warning] #813 initStateFile is not blank: ${initStateFile}, ${loc2String(
+      //       node?.loc as SourceLocation,
+      //     )}`,
+      //   )
+      // }
+
+      // const initStateBinding = path.scope.getBinding(localIdentifier)
+      // const initStateBindingNode = initStateBinding?.path.node as Node
+      // if (initStateBindingNode.type !== 'VariableDeclarator') {
+      //   warnings.push(
+      //     `[warning] #832 initStateBindingNode.type !== 'VariableDeclarator', ${loc2String(
+      //       node?.loc as SourceLocation,
+      //     )}`,
+      //   )
+      //   return
+      // }
+      // const initStateInitNode = initStateBindingNode.init as CallExpression
+      // if (
+      //   initStateInitNode.callee.type !== 'MemberExpression' ||
+      //   (initStateInitNode.callee as any).object.name !== result.localImmutable
+      // ) {
+      //   warnings.push(
+      //     `[warning] #844 (initStateInitNode.callee as any).object.name !== result.localImmutable', ${loc2String(
+      //       node?.loc as SourceLocation,
+      //     )}`,
+      //   )
+      //   return
+      // }
+      // const initStateArguments = initStateInitNode.arguments
+      // if (initStateArguments.length !== 1) {
+      //   warnings.push(
+      //     `[warning] #853 initStateArguments.length !== 1', ${loc2String(
+      //       node?.loc as SourceLocation,
+      //     )}`,
+      //   )
+      //   return
+      // }
+      // const initStateArgument = initStateArguments[0]
+      // if (initStateArgument.type !== 'ObjectExpression') {
+      //   warnings.push(
+      //     `[warning] #862 initStateArgument.type !== 'ObjectExpression', ${loc2String(
+      //       node?.loc as SourceLocation,
+      //     )}`,
+      //   )
+      //   return
+      // }
+      // const initStateProperties = initStateArgument.properties
+      // const nonObjectProperties = initStateProperties.filter(
+      //   a => a.type !== 'ObjectProperty' || a.key.type !== 'Identifier',
+      // )
+      // if (!_.isEmpty(nonObjectProperties)) {
+      //   warnings.push(
+      //     `[warning] #862 nonObjectProperty found, ${loc2String(
+      //       node?.loc as SourceLocation,
+      //     )}`,
+      //   )
+      // }
+      // const initStateNames = initStateProperties
+      //   .filter(a => a.type === 'ObjectProperty')
+      //   .map(a => (a as any)?.key?.name)
+      // result.initStateNames = initStateNames
     },
   })
 

@@ -56,10 +56,10 @@ import { iterate2FindCertainStructure } from 'app/helpers/iterationUtil'
 /*
  * 寻找耦合的 saga
  * (0) /getAstAndAlterCode
- * (1) /traverseToGetGraph => app/mock/graphNodes/graphNodes.json
- * (2) /getFileActions 获取 js及jsx 与 actions 的依赖关系 => app/mock/fileActions/fileActions.json
+ * (1) /traverseToGetGraph => app/mock/s/graphNodes.json
+ * (2) /getFileActions 获取由 react 组件发起的 actions => app/mock/fileActions/fileActions.json
  * (3) /buildActionsMap 完善 fileActions 补充 actions 用到的方法 => app/mock/fileActionsMap/fileActionsMap.json
- * (4) /buildSagaMap => app/mock/sagaMap/buildSagaMap.json
+ * (4) /buildSagaMap 从 rootSaga 入口开始递归寻找 saga takers 接收的 actions 以及 takers 发起的 actions  => app/mock/sagaMap/buildSagaMap.json
  * 辅助：parseSingleSagaHandler
  * (5) /buildSagaGraph => app/mock/sagaGraph/sagaGraph.json
  * (6) /buildComponentRelation => app/mock/associatedComponents/associatedComponents.json
@@ -76,6 +76,9 @@ import { iterate2FindCertainStructure } from 'app/helpers/iterationUtil'
 export class BabelController {
   constructor(private babelService: BabelService) {}
 
+  /*
+   * iterate2FindCertainStructure 示例
+   */
   @Post('/testIterator')
   async testIterator() {
     const fileAstPath = pathUtil.join(__dirname, '../mock/ast/crm/file.ast_2.json')
@@ -88,7 +91,7 @@ export class BabelController {
 				.set(usages.BUSINESS_LICENSE_TRANSFER, cell)
         *
     */
-    const selector2 = (current: any, paths: string[], exports: any) => {
+    const selector = (current: any, paths: string[], exports: any) => {
       if (paths.length < 5) {
         return
       }
@@ -169,7 +172,7 @@ export class BabelController {
       }
     }
 
-    const data = iterate2FindCertainStructure(astObj, [/* selector1 */ selector2])
+    const data = iterate2FindCertainStructure(astObj, [/* selector1 */ selector])
 
     return { data }
   }
@@ -180,14 +183,13 @@ export class BabelController {
     return { ...result }
   }
 
-  // WangFan TODO 2023-07-26 11:28:58
   @Post('/findUnusedSaga')
   async findUnusedSaga() {
     const buildSagaMap = await getSagaMap()
     const { fileActions } = await getActionsMap()
     const warnings: string[] = []
     // const { fileActions } = buildActionsMap
-    const actions2HandlerMap = buildSagaMap.actions2HandlerMap as any
+    // const actions2HandlerMap = buildSagaMap.actions2HandlerMap as any
     const handler2ActionsMap = buildSagaMap.handler2ActionsMap as any
     const flattenArray = function recur(array: any, keys: string[]): any {
       // console.log(`#56 keys.length: ${keys.length} array:`, array)
@@ -220,8 +222,14 @@ export class BabelController {
     const referencedNodes = findReferencedNodes(_.clone(actionKeys), graph)
     const all = [...actionKeys, ...referencedNodes]
     const unusedNodes = graph.nodes().filter(a => !all.includes(a))
+    // 此处的 unusedActions, unusedHandlers 是通过 graphNodes 比对得到的没有使用到的 saga actions 及 saga handlers
     const unusedActions = unusedNodes.filter(a => a.includes('/actions/'))
     const unusedHandlers = unusedNodes.filter(a => !a.includes('/actions/'))
+
+    // TODO 2024-01-17 15:56:59
+    // 1. 列出所有的 saga actions 及 saga handlers 通过 sagaMap 过滤出无用的
+    // 2. 对使用到的 saga 找出对应的 usage，比对没有使用到的 usage
+
     return { actionKeys, warnings, referencedNodes, unusedActions, unusedHandlers }
   }
 
@@ -514,6 +522,7 @@ export class BabelController {
         if (!_.isEmpty(result?.groups)) {
           fileActions.push(result)
         } else {
+          // 分析 saga-reducers
           warnings.push({ filePath, result })
         }
       }
