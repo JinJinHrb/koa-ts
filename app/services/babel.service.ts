@@ -246,7 +246,7 @@ export class BabelService {
     return undefined
   }
 
-  getRealPathByAlias(alias: string, currentFilePath?: string) {
+  getAbsolutePathByAlias(alias: string, currentFilePath?: string) {
     let currentDir = ''
     if (currentFilePath && isFile(currentFilePath)) {
       currentDir = pathUtil.dirname(currentFilePath)
@@ -372,7 +372,7 @@ export class BabelService {
         this.findFilePathByCandidate(pathUtil.resolve(dirname, sourceValue)) ??
         pathUtil.resolve(dirname, sourceValue)
     } else {
-      const tempAlias = this.getRealPathByAlias(sourceValue)
+      const tempAlias = this.getAbsolutePathByAlias(sourceValue)
       if (tempAlias) {
         alias = tempAlias
       } else if (
@@ -392,7 +392,7 @@ export class BabelService {
     const componentAbsPaths: string[] = []
     const warnings: string[] = []
     const ast = await this.getAst(filePath)
-    const getRealPathByAlias = this.getRealPathByAlias.bind(this)
+    const getRealPathByAlias = this.getAbsolutePathByAlias.bind(this)
     traverse(ast, {
       Identifier(path) {
         if (path.node.name === 'exposes') {
@@ -445,7 +445,7 @@ export class BabelService {
       aliasNpmMap: { [key: string]: string } = {},
       fileDependencies: string[] = [],
       npmDependencies: string[] = [],
-      getAlias = this.getRealPathByAlias.bind(this),
+      getAlias = this.getAbsolutePathByAlias.bind(this),
       findFilePathByCandidate = this.findFilePathByCandidate.bind(this),
       dynamicImportExportHandler = originDynamicImportExportHandler.bind(this),
       projectPath = this.projectPath

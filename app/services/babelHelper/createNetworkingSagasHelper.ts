@@ -66,7 +66,7 @@ export const parseCreateNetworkingSagas = ({
   }
 
   const actionsSource = actionsMap[actionsName]
-    ? babelService.getRealPathByAlias(actionsMap[actionsName], nonAnalyzedFile)
+    ? babelService.getAbsolutePathByAlias(actionsMap[actionsName], nonAnalyzedFile)
     : ''
 
   const rawUsages = { handlerSource: nonAnalyzedFile, importedHandlerName: calleeName }

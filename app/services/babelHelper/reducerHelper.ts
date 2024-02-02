@@ -6,9 +6,8 @@ import {
   SpreadElement,
 } from '@babel/types'
 import { iterateObjectHandler } from 'app/helpers/iterationUtil'
-import { loc2String, TActionStatesMap } from './index'
+import { loc2String, TActionStatesMap, traceIdentifier } from './index'
 import _ from 'lodash'
-import { traceIdentifier } from './innerHelper'
 import { NodePath } from '@babel/core'
 
 const UPDATE_SET_SET_IN = ['update', 'set', 'setIn']
@@ -124,14 +123,13 @@ const parseReturnStatement = (
   return storeState
 }
 
-// WangFan TODO 2024-01-18 12:03:41
 export const getActionsKey = (
   filePath: string,
   path: NodePath<ExportDefaultDeclaration>,
   objectMethods: (ObjectMethod | ObjectProperty | SpreadElement)[],
   warnings: string[],
 ) => {
-  // const { node } = path // ExportDefaultDeclaration,
+  const { node } = path // ExportDefaultDeclaration,
   // console.log(
   //   '#135',
   //   'filePath:',
@@ -143,18 +141,36 @@ export const getActionsKey = (
   for (const objectExpressionProperty of objectMethods) {
     const { key } = objectExpressionProperty as ObjectProperty
     // const actionsName = key.object.name
-    const actionsProperty = key.property.name
-    const { /* params: objectExpressionParams, */ body: objectExpressionBody } =
-      objectExpressionProperty as any
-    // console.log(
-    //   '#140 actionsName:',
-    //   actionsName,
-    //   'actionsProperty:',
-    //   actionsProperty,
-    //   'loc:',
-    //   loc2String(objectExpressionProperty?.loc as SourceLocation),
-    // )
-    actionsProperties.push(actionsProperty)
+    if (key.type === 'MemberExpression') {
+      const actionsProperty = key.property.name
+      const { /* params: objectExpressionParams, */ body: objectExpressionBody } =
+        objectExpressionProperty as any
+      // console.log(
+      //   '#140 actionsName:',
+      //   actionsName,
+      //   'actionsProperty:',
+      //   actionsProperty,
+      //   'loc:',
+      //   loc2String(objectExpressionProperty?.loc as SourceLocation),
+      // )
+      actionsProperties.push(actionsProperty)
+    } else if (
+      key.type === 'CallExpression' &&
+      key.callee.type === 'MemberExpression' &&
+      key.callee.object.object.name === 'actions'
+    ) {
+      // console.log(
+      //   '#166 key.callee.object.property.name:',
+      //   key.callee.object.property.name,
+      // )
+      actionsProperties.push(key.callee.object.property.name)
+    } else {
+      warnings.push(
+        `#170 getActionsKey key.type unrecognized ${loc2String(
+          node?.loc as SourceLocation,
+        )}`,
+      )
+    }
   }
   return actionsProperties
 }

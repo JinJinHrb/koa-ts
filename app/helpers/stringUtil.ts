@@ -5,6 +5,13 @@
 import _ from 'lodash'
 import pathUtil from 'path'
 
+export const genId = (len = 6) => {
+  const negLen = -1 * len
+  return Number(
+    Math.random().toString().slice(negLen) + String(Date.now()).slice(-8),
+  ).toString(36)
+}
+
 export const resumeCurlyBrackets = (from: string, matches: string[]) => {
   let count = 1
   let to = from

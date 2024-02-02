@@ -198,13 +198,13 @@ export const getFilesByLocalIdentifier = ({
       subPath => subPath.node.type === 'ImportDeclaration',
     )
     const alias = (importDeclaration.node as any).source.value
-    toAnalyzeFile = babelService.getRealPathByAlias(alias, filePath)
+    toAnalyzeFile = babelService.getAbsolutePathByAlias(alias, filePath)
   } else if (sagaBindingNode?.type === 'ImportSpecifier') {
     const importDeclaration = sagaBinding!.path.findParent(
       subPath => subPath.node.type === 'ImportDeclaration',
     )
     const alias = (importDeclaration.node as any).source.value
-    const absPath = babelService.getRealPathByAlias(alias, filePath)
+    const absPath = babelService.getAbsolutePathByAlias(alias, filePath)
     toAnalyzeFile = absPath
   }
   return toAnalyzeFile
@@ -333,7 +333,7 @@ export const getHandlerActions = ({
                     actionsPropertyName2,
                     usageName,
                   }) */
-                  const actionsSource2 = babelService.getRealPathByAlias(
+                  const actionsSource2 = babelService.getAbsolutePathByAlias(
                     actionsSourceValue,
                     filePath,
                   )

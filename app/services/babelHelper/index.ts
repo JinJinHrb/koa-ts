@@ -31,24 +31,129 @@ import type {
   key2Path4HandlerMap2,
 } from 'app/mock/sagaMap/buildSagaMap.json.d'
 
-export type ParseSingleReducersFileParams = {
-  filePath: string
-  tsconfigPath: string
+/**
+ * 返回值第二个元素如果缺失，代表变量在path同一模块中
+ * @returns [identifierName, ? absPath]
+ * */
+export const traceIdentifier = ({
+  identifier,
+  path,
+  warnings,
+}: {
+  identifier: string
+  path: NodePath<any>
   warnings: string[]
+}) => {
+  const traces: string[] = []
+  const identifierBinding = path.scope.getBinding(identifier)
+  const identifierBindingPath = identifierBinding?.path as NodePath<any>
+  const identifierBindingParentPath =
+    getParentPathSkipTSNonNullExpression(identifierBindingPath)
+  console.log(
+    '#747 identifierBindingPath node type:',
+    identifierBindingPath.node.type,
+    `loc: ${loc2String(identifierBindingPath.node.loc)}`,
+    'identifierBindingParentPath node type:',
+    identifierBindingParentPath?.node?.type
+      ? identifierBindingParentPath?.node?.type
+      : undefined,
+    `loc: ${
+      identifierBindingParentPath?.node?.loc
+        ? loc2String(identifierBindingParentPath.node.loc as SourceLocation)
+        : null
+    }`,
+  )
+  const isConst = (identifierBindingParentPath as NodePath<any>).node.kind === 'const'
+  const isImmutableFromJS =
+    (identifierBindingPath as NodePath<any>).node?.init?.callee?.type ===
+      'MemberExpression' &&
+    (identifierBindingPath as NodePath<any>).node.init.callee.object.name ===
+      'Immutable' &&
+    (identifierBindingPath as NodePath<any>).node.init.callee.property.name === 'fromJS'
+  if (isConst && isImmutableFromJS) {
+    traces.push(identifierBindingPath?.node?.id?.name)
+  } else {
+    // 2024-01-09 21:02:37 未考虑引用其他模块的情况
+    warnings.push(
+      '#780 Identifier not handled:',
+      `loc: ${loc2String(identifierBindingPath.node.loc)}`,
+    )
+  }
+  return traces
 }
 
 /*
- * 计划:
+ * 2024-01-28 14:23:09 暂时没有实际作用
  */
-export const parseSingleReducersFile = async (params: ParseSingleReducersFileParams) => {
-  const { filePath, tsconfigPath } = params
-  const warnings: string[] = []
-  const code = (await getFileData(filePath as string))?.toString()
-  const babelService = new BabelService()
-  await babelService.setAlias(tsconfigPath)
-  const ast = await babelService.getAstByCode(code)
-  const result = await findReduxActionsInReducer(filePath, babelService, ast, warnings)
-  return { result, warnings }
+export const findImportedIdentifier = async (
+  babelService: BabelService,
+  filePath: string,
+  sourceValue: string,
+  importedName: string,
+  // warnings: string[],
+) => {
+  const absPath = babelService.getAbsolutePathByAlias(sourceValue, filePath)
+  const parentBabelService = new BabelService()
+  await parentBabelService.setAlias(babelService.tsconfigPath)
+  const parentCode = (await getFileData(absPath))?.toString()
+  const parentAst = await parentBabelService.getAstByCode(parentCode)
+  traverse(parentAst, {
+    ExportNamedDeclaration(path) {
+      const { node } = path
+      if (node.exportKind === 'value') {
+        if (
+          node.declaration.type === 'FunctionDeclaration' &&
+          importedName === node.declaration.id.name
+        ) {
+          console.log(
+            '#102 node.declaration.id.name:',
+            node.declaration.id.name,
+            'is imported function:',
+            importedName === node.declaration.id.name,
+          )
+        } /* else {
+          warnings.push(
+            '#105 exported declaration is not FunctionDeclaration:',
+            `loc: ${loc2String(node.loc as SourceLocation)}`,
+          )
+        } */
+      }
+    },
+  })
+  return absPath
+}
+
+export const findImportedModule = (
+  path: NodePath<any>,
+  calleeName: string,
+  warnings: string[],
+) => {
+  const binding = path.scope.getBinding(calleeName)
+  const bindingPath = binding?.path as NodePath<any>
+  const bindingPathNode = (binding?.path as NodePath<any>).node
+  const importedName = bindingPathNode.imported.name
+  const localName = bindingPathNode.local.name
+  const parentPath = getParentPathSkipTSNonNullExpression(bindingPath)
+  const parentPathNode = parentPath.node
+  if (parentPathNode.type === 'ImportDeclaration') {
+    return { importedModule: parentPathNode.source.value, importedName, localName }
+  } else {
+    console.log(
+      '#880',
+      'importedName:',
+      importedName,
+      'localName:',
+      localName,
+      'parentPath:',
+      parentPathNode,
+    )
+    warnings.push(
+      `#890 parentPathNode.type !== "ImportDeclaration", loc: ${loc2String(
+        path.node.loc,
+      )}`,
+    )
+  }
+  return {}
 }
 
 export type BuildSagaGraphParams = {
@@ -625,7 +730,7 @@ export const buildSingleActionsMap = async (filePath: string, ast: ParseResult<F
             usageVariable?: string
           }) => {
             const k = objectPropertyMap[v] ?? v
-            OUTTER: for (const actionsDependency of actionsDependencies) {
+            OUTER: for (const actionsDependency of actionsDependencies) {
               if (actionsDependency.isNamespace) {
                 const exportNames = actionsDependency.exportNames || []
                 if (exportNames.includes(k)) {
@@ -645,11 +750,11 @@ export const buildSingleActionsMap = async (filePath: string, ast: ParseResult<F
                     usageVariable?: string
                   }
                   usedActionsDependencies.push(usedActionsDependency)
-                  break OUTTER
+                  break OUTER
                 }
               } else if (actionsDependency.localName === k) {
                 usedActionsDependencies.push(_.clone(actionsDependency))
-                break OUTTER
+                break OUTER
               }
             }
           },
@@ -703,7 +808,7 @@ export const dynamicImportExportHandler = function (
       this.findFilePathByCandidate(pathUtil.resolve(dirname, value)) ??
       pathUtil.resolve(dirname, value)
   } else {
-    const tempAlias = this.getRealPathByAlias(value)
+    const tempAlias = this.getAbsolutePathByAlias(value)
     if (tempAlias) {
       aliasFileMap[value] = tempAlias
     } else if (isDirectory(pathUtil.resolve(projectPath, 'node_modules', value))) {
@@ -735,6 +840,28 @@ export type TReduxActionsResut = {
 
 export type TActionStatesMap = {
   [key: string]: string[]
+}
+
+export type ParseSingleReducersFileParams = {
+  filePath?: string
+  filePaths?: string[]
+  tsconfigPath: string
+}
+
+export const parseSingleSagaReducer = async (params: ParseSingleReducersFileParams) => {
+  const { filePath, tsconfigPath } = params
+  const warnings: string[] = []
+  const code = (await getFileData(filePath as string))?.toString()
+  const babelService = new BabelService()
+  await babelService.setAlias(tsconfigPath)
+  const ast = await babelService.getAstByCode(code)
+  const result = await findReduxActionsInReducer(
+    filePath as string,
+    babelService,
+    ast,
+    warnings,
+  )
+  return { result, warnings }
 }
 
 /*
@@ -772,9 +899,9 @@ export const findReduxActionsInReducer = async (
       }
       if (
         node.specifiers[0]?.type === 'ImportNamespaceSpecifier' &&
-        node.source.value.indexOf('actions/') === 0
+        node.source.value.includes('actions/')
       ) {
-        const absPath4Actions = babelService.getRealPathByAlias(
+        const absPath4Actions = babelService.getAbsolutePathByAlias(
           node.source.value,
           filePath,
         )
@@ -798,6 +925,14 @@ export const findReduxActionsInReducer = async (
   //   absPath4Actions,
   // )
   result.absPath4Actions = absPath4Actions
+
+  const importedModuleArguments: {
+    absPath: string
+    importedModule: string
+    importedName: string
+    localName: string
+    actionsProperty: string
+  }[] = [] // traverse 内部不能异步调用，用变量保存外部模块方法供后续处理
 
   traverse(ast, {
     ExportDefaultDeclaration(path) {
@@ -836,25 +971,76 @@ export const findReduxActionsInReducer = async (
       }
 
       const actionListenerProperties = firstArgument.properties
+
       const nonSpreadProperties = actionListenerProperties.filter(
         a =>
           (a.type !== 'SpreadElement' && a.type !== 'ObjectMethod') ||
-          (a.type === 'SpreadElement' && a.argument.type !== 'Identifier'),
+          (a.type === 'SpreadElement' && a.argument.type !== 'Identifier') ||
+          (a.type === 'SpreadElement' &&
+            a.argument.type === 'CallExpression' &&
+            a.argument.callee.type === 'Identifier' &&
+            a.argument.callee.name),
       )
       const objectMethodProperties = actionListenerProperties.filter(
         a => a.type === 'ObjectMethod', // [actions.uploadFileRequested](state, action) { ... }
-      ) // WangFan TODO 2023-08-21 14:27:27
+      )
       const spreadElementProperties = actionListenerProperties.filter(
         a => a.type === 'SpreadElement',
       )
-      if (!_.isEmpty(nonSpreadProperties)) {
+
+      const spreadCallExpressions = spreadElementProperties.filter(
+        (a: any) =>
+          a?.argument.type === 'CallExpression' &&
+          a.argument?.callee.type === 'Identifier',
+      )
+      for (const spreadCallExpression of spreadCallExpressions as any[]) {
+        // console.log(
+        //   '#872 spreadCallExpression:',
+        //   // (spreadCallExpression as any).argument.callee.name,
+        //   spreadCallExpression,
+        // )
+        const { importedModule, importedName, localName } = findImportedModule(
+          path,
+          (spreadCallExpression as any).argument.callee.name,
+          warnings,
+        )
+        // WangFan TODO 2024-01-28 14:29:45
+        if (importedModule && importedName && localName) {
+          const absPath = babelService.getAbsolutePathByAlias(importedModule, filePath)
+          const toPush = {
+            absPath,
+            importedModule,
+            importedName,
+            localName,
+            actionsProperty: '',
+          }
+          if (
+            _.endsWith(absPath, 'shared/utils/reduxHelpers.ts') &&
+            importedName === 'createNetworkingReducers' &&
+            spreadCallExpression?.argument?.arguments?.[0].type === 'MemberExpression' &&
+            spreadCallExpression?.argument?.arguments?.[0].object.name === 'actions'
+          ) {
+            toPush.actionsProperty =
+              spreadCallExpression.argument.arguments[0].property.name
+          }
+          importedModuleArguments.push(toPush)
+        }
+      }
+
+      if (
+        !_.isEmpty(nonSpreadProperties) &&
+        nonSpreadProperties.length > importedModuleArguments.length
+      ) {
         warnings.push(
-          `[warning] #812 nonSpreadProperties is not empty, ${loc2String(
+          `[warning] #812 nonSpreadProperties is not empty, filePath: ${filePath}, loc: ${loc2String(
             node?.loc as SourceLocation,
           )}`,
         )
       }
-      const reducerIdentifiers = spreadElementProperties.map((a: any) => a.argument.name)
+
+      const reducerIdentifiers = spreadElementProperties
+        .filter((a: any) => a.argument.type === 'Identifier')
+        .map((a: any) => a.argument.name)
       result.reducerIdentifiers = reducerIdentifiers
 
       const actionsProperties = getActionsKey(
@@ -863,7 +1049,7 @@ export const findReduxActionsInReducer = async (
         objectMethodProperties,
         warnings,
       )
-      console.log('#865 actionsProperties:', actionsProperties)
+      // console.log('#865 actionsProperties:', actionsProperties)
 
       for (const reducerIdentifier of reducerIdentifiers) {
         const reducerIdentifierBinding = path.scope.getBinding(reducerIdentifier)
@@ -896,13 +1082,13 @@ export const findReduxActionsInReducer = async (
         }
 
         actionsProperties.push(...getActionsKey(filePath, path, objectMethods, warnings))
-        console.log('#903 actionsProperties:', actionsProperties)
+        // console.log('#903 actionsProperties:', actionsProperties)
         /* getActionsStatesMapByObjectMethod(actionStatesMap, path, objectMethods, warnings) */
       }
 
       result.actionsProperties = actionsProperties
 
-      // // 寻找 initState
+      // 寻找 initState
       // if (secondArgument.type !== 'Identifier') {
       //   warnings.push(
       //     `[warning] #787 secondArgument.type !== 'Identifier', ${loc2String(
@@ -987,6 +1173,49 @@ export const findReduxActionsInReducer = async (
     },
   })
 
+  // actionsProperties
+  // console.log('#1127 importedModuleArguments:', importedModuleArguments)
+  importedModuleArguments.forEach(importedModuleArgument => {
+    const actionPrefix = importedModuleArgument.actionsProperty
+    const toAddActions = [
+      `${actionPrefix}_REQUESTED`,
+      `${actionPrefix}_SUCCEEDED`,
+      `${actionPrefix}_FAILED`,
+      `${actionPrefix}_STOPPED`,
+      `${actionPrefix}_CLEARED`,
+    ]
+    result.actionsProperties.push(...toAddActions)
+  })
+
+  // const absPath4importedModuleRaw = []
+  // for (const importedModuleArgument of importedModuleArguments) {
+  //   const { importedModule, importedName, localName } = importedModuleArgument
+  //   absPath4importedModuleRaw.push(
+  //     await findImportedIdentifier(babelService, filePath, importedModule, importedName),
+  //   )
+  // }
+
+  // 2024-01-28 14:23:09 暂时没有实际作用
+  // const absPath4importedModule = _.uniq(
+  //   await Promise.all(
+  //     importedModuleArguments.map(
+  //       importedModuleArgument =>
+  //         new Promise(async resolve => {
+  //           resolve(
+  //             await findImportedIdentifier(
+  //               babelService,
+  //               filePath,
+  //               importedModuleArgument.importedModule,
+  //               importedModuleArgument.importedName,
+  //             ),
+  //           )
+  //         }),
+  //     ),
+  //   ),
+  // )
+
+  // console.log('#1135 absPath4importedModule:', absPath4importedModule)
+
   return result
 }
 
@@ -1008,16 +1237,16 @@ const isActionsFound = (
   actionsKey: string,
   bindActionCreatorsReference: NodePath<Node>,
 ) => {
-  let functionExpresstionPath: NodePath<Node> = bindActionCreatorsReference
+  let functionExpressionPath: NodePath<Node> = bindActionCreatorsReference
   let actionsKeyPath: NodePath<Node> | undefined
   while (true) {
-    functionExpresstionPath = functionExpresstionPath.findParent(
+    functionExpressionPath = functionExpressionPath.findParent(
       path => path.type === 'ArrowFunctionExpression',
     )
-    if (!functionExpresstionPath) {
+    if (!functionExpressionPath) {
       break
     }
-    functionExpresstionPath.traverse({
+    functionExpressionPath.traverse({
       Identifier(subPath: any) {
         if (subPath.node.name === actionsKey) {
           actionsKeyPath = subPath

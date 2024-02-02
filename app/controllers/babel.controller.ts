@@ -24,7 +24,7 @@ import {
   buildSagaGraphByActionsMap,
   recurBuildSagaGraph,
   ParseSingleReducersFileParams,
-  parseSingleReducersFile,
+  parseSingleSagaReducer,
   loc2String,
 } from 'app/services/babelHelper'
 // import buildActionsMap from 'app/mock/actionsMap/buildActionsMap'
@@ -38,7 +38,6 @@ import {
   getSagaMap,
 } from 'app/services/babelHelper/innerHelper'
 import {
-  TraversePredicate,
   getHandlerActions,
   getSagaEffects,
   traverseSagaGraph,
@@ -177,16 +176,98 @@ export class BabelController {
     return { data }
   }
 
+  /*
+   * 从 saga reducers/* 文件中
+   */
   @Post('/parseReducer')
   async parseReducer(@Body() params: ParseSingleReducersFileParams) {
-    const { ...result } = await parseSingleReducersFile(params)
-    return { ...result }
+    const { tsconfigPath, filePaths, filePath } = params
+    if (!_.isEmpty(filePaths)) {
+      const fns = filePaths?.map(
+        f =>
+          new Promise((resolve, reject) => {
+            parseSingleSagaReducer({
+              tsconfigPath,
+              filePath: f,
+            })
+              .then(feed => {
+                resolve(feed)
+              })
+              .catch(err => {
+                console.log('#197 file:', f, 'err', err)
+                reject(err)
+              })
+          }),
+      )
+      const reducerActionKeys: string[] = (await Promise.all(fns as any)).reduce(
+        (acc, el) => {
+          if (
+            _.isEmpty(el.result.absPath4Actions) ||
+            _.isEmpty(el.result.actionsProperties)
+          ) {
+            return acc
+          }
+          const absPath4Actions = el.result.absPath4Actions
+          acc.push(
+            ...el.result.actionsProperties.map((se: any) => `${absPath4Actions},${se}`),
+          )
+          return acc
+        },
+        [],
+      )
+      return { reducerActionKeys }
+    } else if (!_.isEmpty(filePath)) {
+      const { ...result } = await parseSingleSagaReducer(params)
+      return { ...result }
+    }
+
+    return { result: [] }
   }
 
+  // WangFan TODO 2024-01-24 10:41:29
   @Post('/findUnusedSaga')
-  async findUnusedSaga() {
+  async findUnusedSaga(@Body() params: any) {
+    const { tsconfigPath } = params
     const buildSagaMap = await getSagaMap()
-    const { fileActions } = await getActionsMap()
+    const { fileActions, warnings: actionsMapWarnings } = await getActionsMap()
+
+    const reducerFilePaths = actionsMapWarnings
+      .filter(a => a.filePath.indexOf('/reducers/') > -1)
+      .map(a => a.filePath)
+    // console.log('#194 reducerFilePaths:', reducerFilePaths)
+
+    const fns = reducerFilePaths?.map(
+      f =>
+        new Promise((resolve, reject) => {
+          parseSingleSagaReducer({
+            tsconfigPath,
+            filePath: f,
+          })
+            .then(feed => {
+              resolve(feed)
+            })
+            .catch(err => {
+              console.log('#197 file:', f, 'err', err)
+              reject(err)
+            })
+        }),
+    )
+    const reducerActionKeys: string[] = (await Promise.all(fns as any)).reduce(
+      (acc, el) => {
+        if (
+          _.isEmpty(el.result.absPath4Actions) ||
+          _.isEmpty(el.result.actionsProperties)
+        ) {
+          return acc
+        }
+        const absPath4Actions = el.result.absPath4Actions
+        acc.push(
+          ...el.result.actionsProperties.map((se: any) => `${absPath4Actions},${se}`),
+        )
+        return acc
+      },
+      [],
+    )
     const warnings: string[] = []
     // const { fileActions } = buildActionsMap
     // const actions2HandlerMap = buildSagaMap.actions2HandlerMap as any
@@ -218,9 +299,21 @@ export class BabelController {
       .map((a: any) => `${a.dependencyPath},${a.importedName}`)
       .filter((a: any) => a.charAt(0) === '/')
 
+    actionKeys.push(...reducerActionKeys)
+    const uniqActionKeys = _.uniq(actionKeys) as string[]
+    console.log(
+      '#224 actionKeys.length:',
+      actionKeys.length,
+      'uniqActionKeys.length:',
+      uniqActionKeys.length,
+      // 'actionKeys:',
+      // actionKeys,
+    )
+
     const graph = getHandlerGraph(handler2ActionsMap)
-    const referencedNodes = findReferencedNodes(_.clone(actionKeys), graph)
-    const all = [...actionKeys, ...referencedNodes]
+    const referencedNodes = findReferencedNodes(uniqActionKeys, graph)
+    const all = [...uniqActionKeys, ...referencedNodes]
+
     const unusedNodes = graph.nodes().filter(a => !all.includes(a))
     // 此处的 unusedActions, unusedHandlers 是通过 graphNodes 比对得到的没有使用到的 saga actions 及 saga handlers
     const unusedActions = unusedNodes.filter(a => a.includes('/actions/'))
@@ -596,7 +689,7 @@ export class BabelController {
     if (tsconfigPath) {
       await this.babelService.setAlias(tsconfigPath)
     }
-    return { filePath: this.babelService.getRealPathByAlias(filePath as string) }
+    return { filePath: this.babelService.getAbsolutePathByAlias(filePath as string) }
   }
 
   @Post('/getModuleFederationEntries')

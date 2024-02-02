@@ -157,7 +157,7 @@ export const fillInHandler2ActionsMap = async ({
                       actionsPropertyName,
                       handlerName,
                       handlerSource,
-                      actionsSource2: babelService.getRealPathByAlias(
+                      actionsSource2: babelService.getAbsolutePathByAlias(
                         actionsSourceValue,
                         nonAnalyzedFile,
                       ),
@@ -379,14 +379,20 @@ export const fillInActions2HandlerMap = async ({
                   subPath => subPath.node.type === 'ImportDeclaration',
                 )
                 const alias = (importDeclaration.node as any).source.value
-                const absPath = babelService.getRealPathByAlias(alias, nonAnalyzedFile)
+                const absPath = babelService.getAbsolutePathByAlias(
+                  alias,
+                  nonAnalyzedFile,
+                )
                 toAnalyzeFiles.push(absPath)
               } else if (sagaBindingNode?.type === 'ImportSpecifier') {
                 const importDeclaration = sagaBinding!.path.findParent(
                   subPath => subPath.node.type === 'ImportDeclaration',
                 )
                 const alias = (importDeclaration.node as any).source.value
-                const absPath = babelService.getRealPathByAlias(alias, nonAnalyzedFile)
+                const absPath = babelService.getAbsolutePathByAlias(
+                  alias,
+                  nonAnalyzedFile,
+                )
                 toAnalyzeFiles.push(absPath)
               }
             }
@@ -526,7 +532,7 @@ export const fillInActions2HandlerMap = async ({
               return subPath.type === 'ImportDeclaration'
             })
             const relativePath = (importDeclarationPath!.node as any).source.value
-            const sourceValue = babelService.getRealPathByAlias(
+            const sourceValue = babelService.getAbsolutePathByAlias(
               relativePath,
               nonAnalyzedFile,
             )
@@ -545,7 +551,10 @@ export const fillInActions2HandlerMap = async ({
 
           const rawUsages = { handlerSource, importedHandlerName }
           const actionsSource = actionsMap[actionsName]
-            ? babelService.getRealPathByAlias(actionsMap[actionsName], nonAnalyzedFile)
+            ? babelService.getAbsolutePathByAlias(
+                actionsMap[actionsName],
+                nonAnalyzedFile,
+              )
             : ''
           const result = {
             actionsSource,
@@ -733,57 +742,6 @@ const buildDirectedGrpah = (directedGraph: DirectedGraph, a: string, b: string) 
     directedGraph.addDirectedEdge(a, b)
   }
   return directedGraph
-}
-
-/**
- * 返回值第二个元素如果缺失，代表变量在path同一模块中
- * @returns [identifierName, ? absPath]
- * */
-export const traceIdentifier = ({
-  identifier,
-  path,
-  warnings,
-}: {
-  identifier: string
-  path: NodePath<any>
-  warnings: string[]
-}) => {
-  const traces: string[] = []
-  const identifierBinding = path.scope.getBinding(identifier)
-  const identifierBindingPath = identifierBinding?.path as NodePath<any>
-  const identifierBindingParentPath =
-    getParentPathSkipTSNonNullExpression(identifierBindingPath)
-  console.log(
-    '#747 identifierBindingPath node type:',
-    identifierBindingPath.node.type,
-    `loc: ${loc2String(identifierBindingPath.node.loc)}`,
-    'identifierBindingParentPath node type:',
-    identifierBindingParentPath?.node?.type
-      ? identifierBindingParentPath?.node?.type
-      : undefined,
-    `loc: ${
-      identifierBindingParentPath?.node?.loc
-        ? loc2String(identifierBindingParentPath.node.loc as SourceLocation)
-        : null
-    }`,
-  )
-  const isConst = (identifierBindingParentPath as NodePath<any>).node.kind === 'const'
-  const isImmutableFromJS =
-    (identifierBindingPath as NodePath<any>).node?.init?.callee?.type ===
-      'MemberExpression' &&
-    (identifierBindingPath as NodePath<any>).node.init.callee.object.name ===
-      'Immutable' &&
-    (identifierBindingPath as NodePath<any>).node.init.callee.property.name === 'fromJS'
-  if (isConst && isImmutableFromJS) {
-    traces.push(identifierBindingPath?.node?.id?.name)
-  } else {
-    // WangFan TODO 2024-01-09 21:02:37 未考虑引用其他模块的情况
-    warnings.push(
-      '#780 Identifier not handled:',
-      `loc: ${loc2String(identifierBindingPath.node.loc)}`,
-    )
-  }
-  return traces
 }
 
 export const findLocalActions = ({
