@@ -116,7 +116,7 @@ export function findChineseSubstrings(str: string) {
   }
 }
 
-type Dict = { [text: string]: string }
+type Dict = Record<string, string>
 
 /** findChineseSubstringsInTemplate 的配套方法 */
 const findChineseInTemplateHelper = (subValue: string, dict: Dict) => {
@@ -154,9 +154,53 @@ const findChineseInTemplateHelper = (subValue: string, dict: Dict) => {
   return null
 }
 
+export const fillInHelper = (str: string, map: Record<string, string>) => {
+  // const regex = /\#\{([^(\{|\})]*?)\}/g
+  const regex = /#\{(.*?)\}/g
+  let match: RegExpExecArray | null
+  const arr: string[][] = []
+  while ((match = regex.exec(str)) !== null) {
+    const key = match[1]
+    const value = map[key]
+    if (!value) {
+      console.log('#164 missing key:', key)
+      continue
+    }
+    arr.push([match[0], value])
+  }
+  arr.forEach(([toReplace, substitute]) => {
+    str = str.replace(toReplace, substitute)
+  })
+  return str
+}
+
+export const fillInTemplateWithDict = (
+  value: object | string,
+  map: Record<string, string>,
+) => {
+  if (_.isString(value)) {
+    return fillInHelper(value, map)
+  }
+  if (!_.isObject(value)) {
+    return map
+  }
+  Object.keys(value).forEach(k => {
+    const subValue = (value as any)[k] as object | string
+    if (_.isObject(subValue)) {
+      fillInTemplateWithDict((value as any)[k] as object, map)
+    } else if (_.isString(subValue) && !isHyperlink(subValue)) {
+      const text = fillInHelper(subValue, map as Dict)
+      if ((value as any)[k] !== text) {
+        ;(value as any)[k] = text
+      }
+    }
+  })
+  return value
+}
+
 export const findChineseSubstringsInTemplate = (
   value: object | string,
-  dict?: { [text: string]: string },
+  dict?: Record<string, string>,
 ) => {
   if (_.isNil(dict)) {
     dict = {}

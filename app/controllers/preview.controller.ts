@@ -4,6 +4,8 @@ import { Service } from 'typedi'
 import { TMP_FOLDER } from 'configs/puppeteer.config'
 import { PreviewParams } from 'app/services/preview.params'
 import {
+  fillInHelper,
+  fillInTemplateWithDict,
   findChineseSubstringsInTemplate,
   parseBackendTemplate,
   reverseObject,
@@ -35,6 +37,30 @@ import { getFileData } from 'app/helpers/fsUtils'
 @JsonController()
 @Service()
 export class PreviewController {
+  @Post('/resumeBackendTemplate')
+  async resumeBackendTemplate(@Body() params: { filePath: string }) {
+    const { filePath } = params
+    const txt = (await getFileData(filePath)) as unknown as string
+    const obj = JSON.parse(txt)
+    const { collection: rawCollection, dict } = obj
+    const collection = _.cloneDeep(rawCollection)
+    const map = reverseObject(dict)
+    fillInTemplateWithDict(collection, map)
+    const isEqual = _.isEqual(collection, rawCollection)
+    return { isEqual, collection }
+  }
+
+  @Post('/testFillInHelper')
+  async testFillInHelper(@Body() params: { filePath: string; str: string }) {
+    const { filePath, str } = params
+    const txt = (await getFileData(filePath)) as unknown as string
+    const obj = JSON.parse(txt)
+    const { dict } = obj
+    const map = reverseObject(dict)
+    const text = fillInHelper(str, map)
+    return { text }
+  }
+
   @Post('/excel/textToExcel')
   async textToExcel(@Body() params: any) {
     const { filePath } = params
