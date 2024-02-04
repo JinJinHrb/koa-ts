@@ -3,7 +3,11 @@ import { PuppeteerService } from '../services'
 import { Service } from 'typedi'
 import { TMP_FOLDER } from 'configs/puppeteer.config'
 import { PreviewParams } from 'app/services/preview.params'
-import { findChineseSubstringsInTemplate, reverseObject } from 'app/helpers/templateUtils'
+import {
+  findChineseSubstringsInTemplate,
+  parseBackendTemplate,
+  reverseObject,
+} from 'app/helpers/templateUtils'
 import _ from 'lodash'
 import {
   modifyXlsx,
@@ -31,62 +35,46 @@ import { getFileData } from 'app/helpers/fsUtils'
 @JsonController()
 @Service()
 export class PreviewController {
-  @Post('/textToExcel')
+  @Post('/excel/textToExcel')
   async textToExcel(@Body() params: any) {
     const { filePath } = params
     const txt = (await getFileData(filePath)) as unknown as string
     const obj = JSON.parse(txt)
     const { dict } = obj
     const map = reverseObject(dict)
+    const dictKeysLength = Object.keys(dict).length
+    const mapKeysLength = Object.keys(map).length
+    if (dictKeysLength !== mapKeysLength) {
+      return {
+        error: 'dictKeysLength !== mapKeysLength',
+      }
+    }
     return {
-      objKeysLength: Object.keys(obj).length,
+      dictKeysLength: Object.keys(dict).length,
       mapKeysLength: Object.keys(map).length,
       map,
     }
   }
 
-  @Post('/preTranslateWebsiteTemplate')
-  async preTranslateWebsiteTemplate(@Body() params: { filePath: string }) {
-    let dict: { [key: string]: string } = {}
+  @Post('/preTranslateBackendTemplate')
+  async preTranslateBackendTemplate(@Body() params: { filePath: string }) {
     const { filePath } = params
-    const txt = (await getFileData(filePath)) as unknown as string
-    const collection = txt
-      .split('\n')
-      .map(a => JSON.parse(a))
-      .map(a => {
-        if (!_.startsWith(a.template, '{') || !_.endsWith(a.template, '}')) {
-          return a
-        }
-        let isParseDone = false
-        let caseFlag = 0
-        while (!isParseDone) {
-          try {
-            if (caseFlag === 1) {
-              console.log('#62 caseFlag === 1 templateName:', a.templateName)
-              a.template = a.template.replace(/\n/g, '')
-            } else if (caseFlag === 2) {
-              console.log('#65 caseFlag === 2 templateName:', a.templateName)
-              a.template = a.template.replace(/,\}\}$/, '}}')
-            }
-            const template = JSON.parse(a.template)
-            a.template = template
-            isParseDone = true
-          } catch (e) {
-            caseFlag++
-            if (caseFlag > 2) {
-              isParseDone = true
-            }
-          }
-        }
-
-        return a
-      })
-    const collection2 = _.cloneDeep(collection)
-    for (const element of collection2) {
+    const dict: { [key: string]: string } = {}
+    const { warnings, collection } = await parseBackendTemplate(filePath)
+    for (const element of collection) {
       const { template } = element
-      dict = { ...dict, ...findChineseSubstringsInTemplate(template) }
+      // dict = { ...dict, ...findChineseSubstringsInTemplate(template) }
+      findChineseSubstringsInTemplate(template, dict)
     }
-    return { collection2, dict, collection }
+    return { warnings, collection, dict }
+  }
+
+  /** 获取后端的提供的建站模板 */
+  @Post('/getBackendTemplate')
+  async getBackendTemplate(@Body() params: { filePath: string }) {
+    const { filePath } = params
+    const { warnings, collection } = await parseBackendTemplate(filePath)
+    return { warnings, collection }
   }
 
   @Post('/excel/translateAgain')

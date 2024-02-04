@@ -7,6 +7,8 @@ import {
   insertStringBeforeLastDot,
   replaceCurlyBrackets,
   resumeCurlyBrackets,
+  replaceDollarCurlyBrackets,
+  resumeDollarCurlyBrackets,
 } from './stringUtil'
 import _ from 'lodash'
 
@@ -82,14 +84,23 @@ export const readAndTranslate = async (
   const data = ((await readColumns(filePath, 1, zhIndex)) as any)?.data ?? []
   const dataSliced = data.slice(1)
   // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
+  const dollarCurlyBracketsReplace: string[][] = []
   const curlyBracketsReplace: string[][] = []
   dataSliced.forEach((text: string, index: number) => {
     if (isLink(text)) {
       pLimit.enqueue2(() => Promise.resolve(text))
     } else {
-      const [replacedText, matches] = replaceCurlyBrackets(text)
-      curlyBracketsReplace[index] = matches
-      pLimit.enqueue2(translate, replacedText, 'zh', 'en')
+      // const regex1 = /\{\{(.*?)\}\}/
+      const regex2 = /\$\{([^\}]*?)\}/
+      if (regex2.test(text)) {
+        const [replacedText, matches] = replaceDollarCurlyBrackets(text)
+        dollarCurlyBracketsReplace[index] = matches
+        pLimit.enqueue2(translate, replacedText, 'zh', 'en')
+      } else {
+        const [replacedText, matches] = replaceCurlyBrackets(text)
+        curlyBracketsReplace[index] = matches
+        pLimit.enqueue2(translate, replacedText, 'zh', 'en')
+      }
     }
     // 测试 replaceCurlyBrackets & resumeCurlyBrackets
     // const [replacedText, matches] = replaceCurlyBrackets(text)
@@ -101,7 +112,11 @@ export const readAndTranslate = async (
   const excelRowColumnValue = resultData.map(
     (elem: { result: string }, resultIndex: number) => {
       const { result: text } = elem
-      const resumeText = resumeCurlyBrackets(text, curlyBracketsReplace[resultIndex])
+      const text2 = resumeDollarCurlyBrackets(
+        text,
+        dollarCurlyBracketsReplace[resultIndex],
+      )
+      const resumeText = resumeCurlyBrackets(text2, curlyBracketsReplace[resultIndex])
       return {
         rowIndex: resultIndex + 1, // 跳过第一行
         columnIndex: enIndex,

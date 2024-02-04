@@ -22,6 +22,16 @@ export const resumeCurlyBrackets = (from: string, matches: string[]) => {
   return to
 }
 
+export const resumeDollarCurlyBrackets = (from: string, matches: string[]) => {
+  let count = 1
+  let to = from
+  while (count <= matches?.length ?? 0) {
+    const toReplace = 'DollarCurlyBrackets [' + count++ + ']'
+    to = to.replace(toReplace, `{{${matches[count - 2]}}}`)
+  }
+  return to
+}
+
 export function replaceCurlyBrackets(str: string): [string, string[]] {
   const regex = /\{\{(.*?)\}\}/g
   let match,
@@ -36,6 +46,22 @@ export function replaceCurlyBrackets(str: string): [string, string[]] {
 
 export function removeDoubleCurlyBrackets(str: string) {
   return str.replace(/{{\s*|\s*}}/g, '')
+}
+
+export function replaceDollarCurlyBrackets(str: string): [string, string[]] {
+  const regex = /\$\{([^\}]*?)\}/g
+  let match,
+    count = 1
+  const matches: string[] = []
+  while ((match = regex.exec(str)) !== null) {
+    str = str.replace(match[0], 'DollarCurlyBrackets [' + count++ + ']')
+    matches.push(removeDollarCurlyBrackets(match[0]))
+  }
+  return [str, matches]
+}
+
+export function removeDollarCurlyBrackets(str: string) {
+  return str.replace(/\$\{\s*|\s*\}/g, '')
 }
 
 export function insertStringBeforeLastDot(filePath: string, b: string) {

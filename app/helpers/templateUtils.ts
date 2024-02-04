@@ -1,5 +1,51 @@
 import _ from 'lodash'
 import { genId } from './stringUtil'
+import { getFileData } from './fsUtils'
+
+export const parseBackendTemplate = async (filePath: string) => {
+  const warnings: string[] = []
+  const txt = (await getFileData(filePath)) as unknown as string
+  const collection = txt
+    .split('\n')
+    .map(a => JSON.parse(a))
+    .map(a => {
+      if (/^\s|\s$/.test(a.template)) {
+        a.template = _.trim(a.template)
+      }
+      if (!_.startsWith(a.template, '{') || !_.endsWith(a.template, '}')) {
+        return a
+      }
+      let isParseDone = false
+      let caseFlag = 0
+      while (!isParseDone) {
+        try {
+          if (caseFlag === 1) {
+            a.template = a.template.replace(/\n/g, '')
+          } else if (caseFlag === 2) {
+            a.template = a.template.replace(/,\}\}$/, '}}')
+          }
+          const template = JSON.parse(a.template)
+          a.template = template
+          isParseDone = true
+          if (caseFlag === 1) {
+            warnings.push(`#62 caseFlag === 1 templateName:, ${a.templateName}`)
+          } else if (caseFlag === 2) {
+            warnings.push(`#65 caseFlag === 2 templateName:, ${a.templateName}`)
+          }
+        } catch (e) {
+          caseFlag++
+          if (caseFlag > 2) {
+            warnings.push(`#78 caseFlag > 2 templateName:, ${a.templateName}`)
+            a.template = a.template.replace(/,\}\}$/, '}}')
+            isParseDone = true
+          }
+        }
+      }
+
+      return a
+    })
+  return { warnings, collection }
+}
 
 export function reverseObject(obj: Record<string, any>): Record<string, any> {
   const entries = Object.entries(obj)
@@ -17,6 +63,11 @@ function replaceText(str: string, start: number, end: number, newStr: string) {
 }
 
 type StartEndResult = { start: number; end: number; sub: string }
+
+const hasChinese = (str: string) => {
+  const chRegex = /[\u4e00-\u9fa5]/ // 中文字符集
+  return chRegex.test(str)
+}
 
 export function findChineseSubstrings(str: string) {
   const chRegex = /[\u4e00-\u9fa5]/ // 中文字符集
@@ -67,12 +118,51 @@ export function findChineseSubstrings(str: string) {
 
 type Dict = { [text: string]: string }
 
+/** findChineseSubstringsInTemplate 的配套方法 */
+const findChineseInTemplateHelper = (subValue: string, dict: Dict) => {
+  const temp = findChineseSubstrings(subValue)
+  if (!_.isEmpty(temp.parsed)) {
+    let text = temp.text
+    let diff = 0
+    for (const { start, end, sub } of temp.parsed) {
+      if (!sub || !hasChinese(sub)) {
+        console.log('#74 sub:', `"${sub}"`, 'temp:', temp)
+      } else {
+        // case1 Start
+        let toReplace = ''
+        if ((dict as Dict)[sub]) {
+          toReplace = (dict as Dict)[sub]
+        } else {
+          toReplace = genId()
+          ;(dict as Dict)[sub] = toReplace
+        }
+        // case1 End
+
+        // case2 Start
+        // let toReplace = genId()
+        // ;(dict as Dict)[toReplace] = sub
+        // case2 End
+
+        toReplace = `#{${toReplace}}`
+        text = replaceText(text, start + diff, end + 1 + diff, toReplace)
+        diff += toReplace.length - end - 1 + start
+      }
+    }
+    // ;(value as any)[k] = text
+    return text
+  }
+  return null
+}
+
 export const findChineseSubstringsInTemplate = (
   value: object | string,
   dict?: { [text: string]: string },
 ) => {
   if (_.isNil(dict)) {
     dict = {}
+  }
+  if (_.isString(value)) {
+    return findChineseInTemplateHelper(value, dict)
   }
   if (!_.isObject(value)) {
     return dict
@@ -82,7 +172,7 @@ export const findChineseSubstringsInTemplate = (
     if (_.isObject(subValue)) {
       findChineseSubstringsInTemplate((value as any)[k] as object, dict)
     } else if (_.isString(subValue) && !isHyperlink(subValue)) {
-      const temp = findChineseSubstrings(subValue)
+      /* const temp = findChineseSubstrings(subValue)
       if (!_.isEmpty(temp.parsed)) {
         let text = temp.text
         let diff = 0
@@ -104,6 +194,10 @@ export const findChineseSubstringsInTemplate = (
             diff += toReplace.length - end - 1 + start
           }
         }
+        ;(value as any)[k] = text
+      } */
+      const text = findChineseInTemplateHelper(subValue, dict as Dict)
+      if (!_.isNil(text)) {
         ;(value as any)[k] = text
       }
     }
