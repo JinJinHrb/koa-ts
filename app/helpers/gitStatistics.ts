@@ -5,6 +5,85 @@ import { exec } from 'child_process'
 import _ from 'lodash'
 import createDOMPurify from 'dompurify'
 import { JSDOM } from 'jsdom'
+import dayjs from 'dayjs'
+
+type CommitInfo = {
+  author: string
+  'author-mail': string
+  'author-time': string
+  'author-tz': string
+  committer: string
+  'committer-mail': string
+  'committer-time': string
+  'committer-tz': string
+  summary: string
+  previous: string
+  filename: string
+}
+
+export function getCommitInfoForLine(
+  projectFolderPath: string,
+  filePath: string,
+  lineNumber: number,
+  callback: (error: Error | null, response?: CommitInfo) => void,
+) {
+  exec(
+    `cd ${projectFolderPath} && git blame -L ${lineNumber},${lineNumber} --porcelain ${filePath}`,
+    (error, stdout, stderr) => {
+      if (error) {
+        return callback(error)
+      }
+
+      // 解析 git blame 的输出以获取提交信息
+      try {
+        const lines = stdout.trim().split('\n')
+        const committerLine = lines
+          .filter(a =>
+            [
+              'author',
+              'author-mail',
+              'author-time',
+              'author-tz',
+              'committer',
+              'committer-mail',
+              'committer-time',
+              'committer-tz',
+              'summary',
+              'previous',
+              'filename',
+            ].includes(a.split(' ')[0]),
+          )
+          .reduce((acc, a) => {
+            const arr = a.split(' ')
+            const key = arr[0]
+            const value = arr.slice(1).join(' ')
+            if (key.endsWith('time')) {
+              acc[key] = formatUnixTimestamp(parseInt(value))
+            } else {
+              acc[key] = value
+            }
+            return acc
+          }, {} as Record<string, string>)
+
+        callback(null, committerLine as unknown as CommitInfo)
+      } catch (err) {
+        console.log('#28 Failed to parse git blame output:', err)
+        callback(new Error('Failed to parse git blame output'))
+      }
+    },
+  )
+}
+
+function formatUnixTimestamp(unixTimestamp: number) {
+  // 创建一个新的 Date 对象，使用传入的 UNIX 时间戳（乘以 1000，因为 JavaScript 使用毫秒）
+  const date = new Date(unixTimestamp * 1000)
+
+  // 使用 toLocaleString 方法将日期格式化为本地时间
+  // 你可以根据需要调整选项，比如时区、日期格式等
+  // const formattedDate = date.toLocaleString()
+  // return formattedDate
+  return dayjs(date).format('YYYY-MM-DD HH:mm:ss')
+}
 
 export async function getGitCommits(repoPath: string) {
   return await new Promise((resolve, reject) => {
