@@ -18,7 +18,7 @@ const _translateMemory = new LRUMap(5000)
 export async function cacheTranslation(filePaths: string[]) {
   const results = []
   for (const filePath of filePaths) {
-    const { data, contents } = (await readColumns(filePath, 1, 3, 1)) as any
+    const { data, contents } = (await readColumns(filePath, 1, 3, 5)) as any
     if (data.length > 1 && data.length === contents.length) {
       const data2 = data.slice(1)
       const contents2 = contents.slice(1)

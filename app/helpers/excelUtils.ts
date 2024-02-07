@@ -12,6 +12,47 @@ import {
 } from './stringUtil'
 import _ from 'lodash'
 
+/**
+ * 2024-02-06 补救：
+ * 1. 将第2列的英文翻译放到第5列
+ * 2. 将第2列的文本改为 "TEXT"
+ * */
+export const switch2Columns = async (
+  filePath: string,
+  index1: number,
+  index2: number,
+) => {
+  const { data: contents1, contents: contents2 } = (await readColumns(
+    filePath,
+    1,
+    index1,
+    index2,
+  )) as any
+
+  const data = contents1
+    .slice(1) // 跳过第一行
+    .map((text: string, resultIndex: number) => {
+      return {
+        rowIndex: resultIndex + 1, // 跳过第一行
+        columnIndex: index2,
+        value: text,
+      }
+    })
+    .filter((a: any) => a)
+
+  const data2: { rowIndex: number; columnIndex: number; value: string }[] = []
+  for (let i = 0; i < contents1.length - 1 /* 跳过第一行 */; i++) {
+    data2.push({
+      rowIndex: i + 1, // 跳过第一行
+      columnIndex: index1,
+      value: 'TEXT',
+    })
+  }
+
+  // return data
+  return await modifyXlsx(filePath, filePath, 1, [...data, ...data2])
+}
+
 type EXCEL_RESPONSE = {
   success: boolean
   message: string
@@ -32,18 +73,26 @@ export const retryTranslation = async (
   const pLimit = new PLimit(15)
   const { data, contents } = (await readColumns(filePath, 1, zhIndex, enIndex)) as any
   // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
-  const dataSliced = data.slice(1)
-  const contentSliced = contents.slice(1)
+  const dataSliced = data.slice(1) // 跳过第一行
+  const contentSliced = contents.slice(1) // 跳过第一行
   const curlyBracketsReplace: string[][] = []
   dataSliced.forEach((text: string, index: number) => {
     if (!contentSliced[index].includes('FAIL TO TRANSLATE')) {
       pLimit.enqueue2(() => Promise.resolve(''))
     } else {
+      console.log(
+        '#80 index:',
+        index,
+        'text:',
+        text,
+        `contentSliced[${index}]:`,
+        contentSliced[index],
+      )
       const [replacedText, matches] = replaceCurlyBrackets(text)
       curlyBracketsReplace[index] = matches
       console.log('#40 to translate:', text)
       pLimit.enqueue2(translate, replacedText, 'zh', 'en')
-      // pLimit.enqueue2(() => Promise.resolve('💣 FAIL TO TRANSLATE'))
+      // pLimit.enqueue2(() => Promise.resolve('重试测试'))
     }
     // 测试 replaceCurlyBrackets & resumeCurlyBrackets
     // const [replacedText, matches] = replaceCurlyBrackets(text)
@@ -82,7 +131,7 @@ export const readAndTranslate = async (
   }
   const pLimit = new PLimit(15)
   const data = ((await readColumns(filePath, 1, zhIndex)) as any)?.data ?? []
-  const dataSliced = data.slice(1)
+  const dataSliced = data.slice(1) // 跳过第一行
   // curlyBracketsReplace 将 {{...}} 内容提取出，不做翻译，写回的时候再替换回去
   const dollarCurlyBracketsReplace: string[][] = []
   const curlyBracketsReplace: string[][] = []
@@ -131,8 +180,8 @@ export const readAndTranslate = async (
 export const readColumns = async (
   filePath: string,
   sheet: string | number,
-  columnIndex: number, // 返回结果中 data 对应的栏位
-  contentColumnIndex?: number, // 返回结果中 contents 对应的栏位
+  dataIndex: number, // 返回结果中 data 对应的栏位
+  contentIndex?: number, // 返回结果中 contents 对应的栏位
 ) => {
   // 读取 xlsx 文件
   const workbook = new ExcelJS.Workbook()
@@ -153,13 +202,13 @@ export const readColumns = async (
   worksheet.eachRow(function (row, rowNumber) {
     const cellValue = worksheet
       .getRow(rowNumber)
-      .getCell(columnIndex + 1)
+      .getCell(dataIndex + 1)
       .value?.toString()
     data.push(cellValue ?? '')
-    if (_.isNumber(contentColumnIndex)) {
+    if (_.isNumber(contentIndex)) {
       const contentCellValue = worksheet
         .getRow(rowNumber)
-        .getCell(contentColumnIndex + 1)
+        .getCell(contentIndex + 1)
         .value?.toString()
       contents.push(contentCellValue ?? '')
     }
@@ -169,7 +218,7 @@ export const readColumns = async (
     success: true,
     data,
   }
-  if (_.isNumber(contentColumnIndex)) {
+  if (_.isNumber(contentIndex)) {
     result.contents = contents
   }
   return result

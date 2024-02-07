@@ -16,6 +16,7 @@ import {
   readColumns,
   readAndTranslate,
   retryTranslation,
+  switch2Columns,
 } from 'app/helpers/excelUtils'
 import {
   getCommitHistory,
@@ -103,6 +104,44 @@ export class PreviewController {
     return { warnings, collection }
   }
 
+  @Post('/excel/switch2Columns')
+  async switch2ColumnsController(@Body() params: { filePaths: string[] }) {
+    const invalidFilePaths = (params.filePaths ?? []).filter(
+      a => a && !_.endsWith(a, '.xlsx'),
+    )
+    // const filePaths = (params.filePaths ?? []).filter(a => a && _.endsWith(a, '.xlsx'))
+    // if (_.isEmpty(filePath)) {
+    //   return { success: false, message: 'filePath is missing' }
+    // }
+    // if (!_.endsWith(filePath, '.xlsx')) {
+    //   return { success: false, message: 'not an xlsx file' }
+    // }
+    if (!_.isEmpty(invalidFilePaths)) {
+      return {
+        success: false,
+        message: `not an xlsx file: ${invalidFilePaths.join(', ')}`,
+      }
+    }
+    const filePaths = params.filePaths
+    if (_.isEmpty(filePaths)) {
+      return { success: false, message: 'filePaths is missing' }
+    }
+    const promises = params.filePaths.map(
+      filePath =>
+        new Promise((rsv, rej) => {
+          switch2Columns(filePath, 1, 5)
+            .then(feed => {
+              rsv(feed)
+            })
+            .catch(err => {
+              rej(err)
+            })
+        }),
+    )
+    // return await switch2Columns(filePath, 1, 5)
+    return await Promise.all(promises)
+  }
+
   @Post('/excel/translateAgain')
   async translateAgain(@Body() params: any) {
     const { filePath } = params ?? {}
@@ -112,7 +151,7 @@ export class PreviewController {
     if (!_.endsWith(filePath, '.xlsx')) {
       return { success: false, message: 'not an xlsx file' }
     }
-    return await retryTranslation(filePath, 3, 1)
+    return await retryTranslation(filePath, 3, 5)
   }
 
   @Post('/excel/translateText')
@@ -128,7 +167,13 @@ export class PreviewController {
       fs.existsSync(a),
     )
     console.log('#55', 'referencePathsFiltered:', referencePathsFiltered)
-    return await readAndTranslate(filePath, 3, 1, referencePathsFiltered)
+    return await readAndTranslate(filePath, 3, 5, referencePathsFiltered)
+  }
+
+  @Post('/cacheTranslation')
+  async cacheTranslationController(@Body() params: any) {
+    const { filePaths } = params
+    return await cacheTranslation(filePaths as string[])
   }
 
   @Post('/git/statistics')
