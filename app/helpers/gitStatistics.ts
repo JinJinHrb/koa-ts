@@ -7,7 +7,7 @@ import createDOMPurify from 'dompurify'
 import { JSDOM } from 'jsdom'
 import dayjs from 'dayjs'
 
-type CommitInfo = {
+export type CommitInfo = {
   author: string
   'author-mail': string
   'author-time': string
@@ -21,12 +21,34 @@ type CommitInfo = {
   filename: string
 }
 
+type Params4CommitInfo = {
+  projectFolderPath: string
+  filePath: string
+  lineNumber: number
+}
+
+/*
+ *
+示例：
+{
+    "author": "曲继彬",
+    "author-mail": "<15189763507@xtransfer.cn>",
+    "author-time": "2023-08-24 14:29:24",
+    "author-tz": "+0800",
+    "committer": "曲继彬",
+    "committer-mail": "<15189763507@xtransfer.cn>",
+    "committer-time": "2023-08-24 14:29:24",
+    "committer-tz": "+0800",
+    "summary": "feat: 完成平台切换、滚动广告、云盘搜索迁移XTI-58460",
+    "previous": "e5c724aa21ada23eb05cd6d3733f1e06c9bf3c84 src/services/modal/index.ts",
+    "filename": "src/services/modal/index.ts"
+}
+*/
 export function getCommitInfoForLine(
-  projectFolderPath: string,
-  filePath: string,
-  lineNumber: number,
+  params: Params4CommitInfo,
   callback: (error: Error | null, response?: CommitInfo) => void,
 ) {
+  const { projectFolderPath, filePath, lineNumber } = params
   exec(
     `cd ${projectFolderPath} && git blame -L ${lineNumber},${lineNumber} --porcelain ${filePath}`,
     (error, stdout, stderr) => {

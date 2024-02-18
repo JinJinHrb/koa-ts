@@ -67,6 +67,7 @@ import { iterate2FindCertainStructure } from 'app/helpers/iterationUtil'
 /*
  * 寻找耦合的 reducer/state
  * (0) /getAstAndAlterCode
+ * (1) /findUnusedSaga
  */
 
 @JsonController()
@@ -268,6 +269,14 @@ export class BabelController {
       },
       [],
     )
+    const uniqReducerActionKeys = _.uniq(reducerActionKeys)
+    console.log(
+      '#224 reducerActionKeys.length:',
+      reducerActionKeys.length,
+      'uniqReducerActionKeys.length:',
+      uniqReducerActionKeys.length,
+    )
+
     const warnings: string[] = []
     // const { fileActions } = buildActionsMap
     // const actions2HandlerMap = buildSagaMap.actions2HandlerMap as any
@@ -290,7 +299,7 @@ export class BabelController {
       }
       return recur(rtn, keys)
     }
-    const actionKeys = flattenArray(fileActions, [
+    const fileActionKeys = flattenArray(fileActions, [
       'groups',
       'actionsComponents', // 被注入 actions 的组件名数组
       'usedActionsDependencies',
@@ -299,31 +308,32 @@ export class BabelController {
       .map((a: any) => `${a.dependencyPath},${a.importedName}`)
       .filter((a: any) => a.charAt(0) === '/')
 
-    actionKeys.push(...reducerActionKeys)
-    const uniqActionKeys = _.uniq(actionKeys) as string[]
+    // actionKeys.push(...reducerActionKeys)
+    const uniqFileActionKeys = _.uniq(fileActionKeys) as string[]
     console.log(
-      '#224 actionKeys.length:',
-      actionKeys.length,
-      'uniqActionKeys.length:',
-      uniqActionKeys.length,
+      '#224 fileActionKeys.length:',
+      fileActionKeys.length,
+      'uniqFileActionKeys.length:',
+      uniqFileActionKeys.length,
       // 'actionKeys:',
       // actionKeys,
     )
 
     const graph = getHandlerGraph(handler2ActionsMap)
-    const referencedNodes = findReferencedNodes(uniqActionKeys, graph)
-    const all = [...uniqActionKeys, ...referencedNodes]
+    const referencedNodes = findReferencedNodes(uniqFileActionKeys, graph)
+    // const all = [...uniqActionKeys, ...referencedNodes]
 
-    const unusedNodes = graph.nodes().filter(a => !all.includes(a))
-    // 此处的 unusedActions, unusedHandlers 是通过 graphNodes 比对得到的没有使用到的 saga actions 及 saga handlers
-    const unusedActions = unusedNodes.filter(a => a.includes('/actions/'))
-    const unusedHandlers = unusedNodes.filter(a => !a.includes('/actions/'))
+    // const unusedNodes = graph.nodes().filter(a => !all.includes(a))
+    // // 此处的 unusedActions, unusedHandlers 是通过 graphNodes 比对得到的没有使用到的 saga actions 及 saga handlers
+    // const unusedActions = unusedNodes.filter(a => a.includes('/actions/'))
+    // const unusedHandlers = unusedNodes.filter(a => !a.includes('/actions/'))
 
     // TODO 2024-01-17 15:56:59
     // 1. 列出所有的 saga actions 及 saga handlers 通过 sagaMap 过滤出无用的
     // 2. 对使用到的 saga 找出对应的 usage，比对没有使用到的 usage
 
-    return { actionKeys, warnings, referencedNodes, unusedActions, unusedHandlers }
+    // return { actionKeys, warnings, referencedNodes, unusedActions, unusedHandlers }
+    return { reducerActionKeys, uniqFileActionKeys, referencedNodes }
   }
 
   @Post('/buildComponentRelation')

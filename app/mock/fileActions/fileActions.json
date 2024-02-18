@@ -121,14 +121,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 118,
+                  "line": 109,
                   "column": 28,
-                  "index": 3743
+                  "index": 3800
                 },
                 "end": {
-                  "line": 262,
+                  "line": 245,
                   "column": 1,
-                  "index": 7213
+                  "index": 7367
                 }
               }
             }
@@ -505,14 +505,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 93,
+                  "line": 86,
                   "column": 52,
-                  "index": 2934
+                  "index": 3690
                 },
                 "end": {
-                  "line": 387,
+                  "line": 370,
                   "column": 1,
-                  "index": 12183
+                  "index": 13552
                 }
               }
             }
@@ -623,14 +623,14 @@
               "name": "SetLoginPasswordModal",
               "loc": {
                 "start": {
-                  "line": 73,
+                  "line": 72,
                   "column": 60,
-                  "index": 1839
+                  "index": 1961
                 },
                 "end": {
-                  "line": 73,
+                  "line": 72,
                   "column": 81,
-                  "index": 1860
+                  "index": 1982
                 },
                 "identifierName": "SetLoginPasswordModal"
               }
@@ -672,14 +672,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 43,
+                  "line": 41,
                   "column": 58,
-                  "index": 1262
+                  "index": 1575
                 },
                 "end": {
-                  "line": 83,
+                  "line": 73,
                   "column": 1,
-                  "index": 2318
+                  "index": 2666
                 }
               }
             }
@@ -766,14 +766,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 100,
+                  "line": 98,
                   "column": 49,
-                  "index": 3582
+                  "index": 3505
                 },
                 "end": {
-                  "line": 722,
+                  "line": 721,
                   "column": 1,
-                  "index": 20633
+                  "index": 20656
                 }
               }
             }
@@ -836,14 +836,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 61,
+                  "line": 60,
                   "column": 59,
-                  "index": 1955
+                  "index": 1902
                 },
                 "end": {
-                  "line": 147,
+                  "line": 146,
                   "column": 1,
-                  "index": 4206
+                  "index": 4242
                 }
               }
             }
@@ -947,14 +947,14 @@
               "name": "BusinessEditor",
               "loc": {
                 "start": {
-                  "line": 316,
+                  "line": 313,
                   "column": 4,
-                  "index": 10785
+                  "index": 10686
                 },
                 "end": {
-                  "line": 316,
+                  "line": 313,
                   "column": 18,
-                  "index": 10799
+                  "index": 10700
                 },
                 "identifierName": "BusinessEditor"
               }
@@ -1099,14 +1099,14 @@
               "name": "PurchaseHome",
               "loc": {
                 "start": {
-                  "line": 244,
+                  "line": 262,
                   "column": 20,
-                  "index": 8942
+                  "index": 10398
                 },
                 "end": {
-                  "line": 244,
+                  "line": 262,
                   "column": 32,
-                  "index": 8954
+                  "index": 10410
                 },
                 "identifierName": "PurchaseHome"
               }
@@ -1202,14 +1202,14 @@
               "name": "MallPurchaseFlow",
               "loc": {
                 "start": {
-                  "line": 211,
+                  "line": 234,
                   "column": 2,
-                  "index": 7215
+                  "index": 7696
                 },
                 "end": {
-                  "line": 211,
+                  "line": 234,
                   "column": 18,
-                  "index": 7231
+                  "index": 7712
                 },
                 "identifierName": "MallPurchaseFlow"
               }
@@ -1244,14 +1244,14 @@
               "name": "MallTicket",
               "loc": {
                 "start": {
-                  "line": 193,
+                  "line": 190,
                   "column": 67,
-                  "index": 5873
+                  "index": 6805
                 },
                 "end": {
-                  "line": 193,
+                  "line": 190,
                   "column": 77,
-                  "index": 5883
+                  "index": 6815
                 },
                 "identifierName": "MallTicket"
               }
@@ -1299,14 +1299,14 @@
               "name": "List",
               "loc": {
                 "start": {
-                  "line": 297,
+                  "line": 318,
                   "column": 20,
-                  "index": 7719
+                  "index": 9414
                 },
                 "end": {
-                  "line": 297,
+                  "line": 318,
                   "column": 24,
-                  "index": 7723
+                  "index": 9418
                 },
                 "identifierName": "List"
               }
@@ -1352,14 +1352,14 @@
               "name": "Detail",
               "loc": {
                 "start": {
-                  "line": 191,
+                  "line": 201,
                   "column": 49,
-                  "index": 6475
+                  "index": 7555
                 },
                 "end": {
-                  "line": 191,
+                  "line": 201,
                   "column": 55,
-                  "index": 6481
+                  "index": 7561
                 },
                 "identifierName": "Detail"
               }
@@ -1408,14 +1408,14 @@
               "name": "CustomerDetail",
               "loc": {
                 "start": {
-                  "line": 313,
+                  "line": 307,
                   "column": 3,
-                  "index": 10809
+                  "index": 10741
                 },
                 "end": {
-                  "line": 313,
+                  "line": 307,
                   "column": 17,
-                  "index": 10823
+                  "index": 10755
                 },
                 "identifierName": "CustomerDetail"
               }
@@ -1451,14 +1451,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 392,
+                  "line": 389,
                   "column": 2,
-                  "index": 14439
+                  "index": 14315
                 },
                 "end": {
-                  "line": 392,
+                  "line": 389,
                   "column": 6,
-                  "index": 14443
+                  "index": 14319
                 },
                 "identifierName": "Home"
               }
@@ -1618,14 +1618,14 @@
               "name": "SetPasswordForm",
               "loc": {
                 "start": {
-                  "line": 193,
+                  "line": 174,
                   "column": 4,
-                  "index": 5482
+                  "index": 7674
                 },
                 "end": {
-                  "line": 193,
+                  "line": 174,
                   "column": 19,
-                  "index": 5497
+                  "index": 7689
                 },
                 "identifierName": "SetPasswordForm"
               }
@@ -1714,14 +1714,14 @@
               "name": "FormBottomBtnGroup",
               "loc": {
                 "start": {
-                  "line": 105,
+                  "line": 88,
                   "column": 2,
-                  "index": 2693
+                  "index": 3203
                 },
                 "end": {
-                  "line": 105,
+                  "line": 88,
                   "column": 20,
-                  "index": 2711
+                  "index": 3221
                 },
                 "identifierName": "FormBottomBtnGroup"
               }
@@ -1827,14 +1827,14 @@
               "name": "BottomBtnGroup",
               "loc": {
                 "start": {
-                  "line": 71,
+                  "line": 73,
                   "column": 2,
-                  "index": 1745
+                  "index": 1877
                 },
                 "end": {
-                  "line": 71,
+                  "line": 73,
                   "column": 16,
-                  "index": 1759
+                  "index": 1891
                 },
                 "identifierName": "BottomBtnGroup"
               }
@@ -1919,14 +1919,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 64,
+                  "line": 66,
                   "column": 65,
-                  "index": 1939
+                  "index": 2558
                 },
                 "end": {
-                  "line": 154,
+                  "line": 155,
                   "column": 1,
-                  "index": 4367
+                  "index": 5188
                 }
               }
             }
@@ -2009,12 +2009,12 @@
                 "start": {
                   "line": 38,
                   "column": 65,
-                  "index": 1160
+                  "index": 1176
                 },
                 "end": {
                   "line": 124,
                   "column": 1,
-                  "index": 3729
+                  "index": 3743
                 }
               }
             }
@@ -2046,14 +2046,14 @@
               "name": "RenewTips",
               "loc": {
                 "start": {
-                  "line": 93,
+                  "line": 88,
                   "column": 16,
-                  "index": 2078
+                  "index": 2279
                 },
                 "end": {
-                  "line": 93,
+                  "line": 88,
                   "column": 25,
-                  "index": 2087
+                  "index": 2288
                 },
                 "identifierName": "RenewTips"
               }
@@ -2362,14 +2362,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 425,
+                  "line": 453,
                   "column": 3,
-                  "index": 12332
+                  "index": 12501
                 },
                 "end": {
-                  "line": 425,
+                  "line": 453,
                   "column": 8,
-                  "index": 12337
+                  "index": 12506
                 },
                 "identifierName": "Table"
               }
@@ -2561,14 +2561,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 56,
+                  "line": 55,
                   "column": 52,
-                  "index": 1704
+                  "index": 1654
                 },
                 "end": {
-                  "line": 295,
+                  "line": 294,
                   "column": 1,
-                  "index": 8655
+                  "index": 8605
                 }
               }
             }
@@ -2686,9 +2686,9 @@
                   "index": 1390
                 },
                 "end": {
-                  "line": 98,
+                  "line": 104,
                   "column": 1,
-                  "index": 3247
+                  "index": 3277
                 }
               }
             }
@@ -2722,14 +2722,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 85,
+                  "line": 86,
                   "column": 3,
-                  "index": 2145
+                  "index": 2127
                 },
                 "end": {
-                  "line": 85,
+                  "line": 86,
                   "column": 7,
-                  "index": 2149
+                  "index": 2131
                 },
                 "identifierName": "Home"
               }
@@ -2757,14 +2757,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 85,
+                  "line": 86,
                   "column": 3,
-                  "index": 2145
+                  "index": 2127
                 },
                 "end": {
-                  "line": 85,
+                  "line": 86,
                   "column": 7,
-                  "index": 2149
+                  "index": 2131
                 },
                 "identifierName": "Home"
               }
@@ -2841,14 +2841,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 34,
+                  "line": 33,
                   "column": 52,
-                  "index": 864
+                  "index": 896
                 },
                 "end": {
-                  "line": 137,
+                  "line": 124,
                   "column": 1,
-                  "index": 3531
+                  "index": 3595
                 }
               }
             }
@@ -2932,14 +2932,14 @@
               "name": "PurchaseFlowStepOne",
               "loc": {
                 "start": {
-                  "line": 313,
+                  "line": 365,
                   "column": 63,
-                  "index": 10556
+                  "index": 12075
                 },
                 "end": {
-                  "line": 313,
+                  "line": 365,
                   "column": 82,
-                  "index": 10575
+                  "index": 12094
                 },
                 "identifierName": "PurchaseFlowStepOne"
               }
@@ -2992,14 +2992,14 @@
               "name": "OrderDetail",
               "loc": {
                 "start": {
-                  "line": 616,
+                  "line": 679,
                   "column": 4,
-                  "index": 19239
+                  "index": 22802
                 },
                 "end": {
-                  "line": 616,
+                  "line": 679,
                   "column": 15,
-                  "index": 19250
+                  "index": 22813
                 },
                 "identifierName": "OrderDetail"
               }
@@ -3053,14 +3053,14 @@
               "name": "Payment",
               "loc": {
                 "start": {
-                  "line": 586,
+                  "line": 539,
                   "column": 2,
-                  "index": 16402
+                  "index": 18391
                 },
                 "end": {
-                  "line": 586,
+                  "line": 539,
                   "column": 9,
-                  "index": 16409
+                  "index": 18398
                 },
                 "identifierName": "Payment"
               }
@@ -3137,14 +3137,14 @@
               "name": "Payment",
               "loc": {
                 "start": {
-                  "line": 586,
+                  "line": 539,
                   "column": 2,
-                  "index": 16402
+                  "index": 18391
                 },
                 "end": {
-                  "line": 586,
+                  "line": 539,
                   "column": 9,
-                  "index": 16409
+                  "index": 18398
                 },
                 "identifierName": "Payment"
               }
@@ -3197,14 +3197,14 @@
               "name": "PurchaseFlowStepTwo",
               "loc": {
                 "start": {
-                  "line": 539,
+                  "line": 585,
                   "column": 4,
-                  "index": 17992
+                  "index": 20934
                 },
                 "end": {
-                  "line": 539,
+                  "line": 585,
                   "column": 23,
-                  "index": 18011
+                  "index": 20953
                 },
                 "identifierName": "PurchaseFlowStepTwo"
               }
@@ -3300,14 +3300,14 @@
               "name": "Preview",
               "loc": {
                 "start": {
-                  "line": 307,
+                  "line": 309,
                   "column": 2,
-                  "index": 8934
+                  "index": 9061
                 },
                 "end": {
-                  "line": 307,
+                  "line": 309,
                   "column": 9,
-                  "index": 8941
+                  "index": 9068
                 },
                 "identifierName": "Preview"
               }
@@ -3318,202 +3318,6 @@
           "objectPropertyMap": {
             "uploadAnnexSuccess": "uploadAnnexSuccess",
             "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "destroy",
-              "importedName": "destroy",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "ActivityCreate",
-              "loc": {
-                "start": {
-                  "line": 1191,
-                  "column": 90,
-                  "index": 37721
-                },
-                "end": {
-                  "line": 1191,
-                  "column": 104,
-                  "index": 37735
-                },
-                "identifierName": "ActivityCreate"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "initialize": "initialize",
-            "destroy": "destroy",
-            "change": "change",
-            "push": "push",
-            "touch": "touch"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTask/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "edmActions",
-              "sourceValue": "emailDirectMarketing/services/actions",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/actions/index.ts",
-              "exportNames": []
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "replace",
-              "importedName": "replace",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "CallExpression",
-              "loc": {
-                "start": {
-                  "line": 303,
-                  "column": 4,
-                  "index": 8961
-                },
-                "end": {
-                  "line": 303,
-                  "column": 39,
-                  "index": 8996
-                }
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["edmActions"],
-          "objectPropertyMap": {
-            "push": "push",
-            "replace": "replace"
           }
         }
       ]
@@ -3559,48 +3363,6 @@
       ]
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TemplateManagement/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "TemplateManagement",
-              "loc": {
-                "start": {
-                  "line": 230,
-                  "column": 96,
-                  "index": 7513
-                },
-                "end": {
-                  "line": 230,
-                  "column": 114,
-                  "index": 7531
-                },
-                "identifierName": "TemplateManagement"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/components/LeadsGeneralInfo/index.tsx",
       "localConnect": "connect",
       "localCompose": "",
@@ -3621,14 +3383,14 @@
               "name": "LeadsGeneralInfo",
               "loc": {
                 "start": {
-                  "line": 1615,
+                  "line": 1608,
                   "column": 4,
-                  "index": 48926
+                  "index": 48778
                 },
                 "end": {
-                  "line": 1615,
+                  "line": 1608,
                   "column": 20,
-                  "index": 48942
+                  "index": 48794
                 },
                 "identifierName": "LeadsGeneralInfo"
               }
@@ -3834,14 +3596,14 @@
               "name": "Exchange",
               "loc": {
                 "start": {
-                  "line": 194,
+                  "line": 198,
                   "column": 2,
-                  "index": 5269
+                  "index": 6084
                 },
                 "end": {
-                  "line": 194,
+                  "line": 198,
                   "column": 10,
-                  "index": 5277
+                  "index": 6092
                 },
                 "identifierName": "Exchange"
               }
@@ -3955,14 +3717,14 @@
               "name": "EdmFissionExchange",
               "loc": {
                 "start": {
-                  "line": 235,
+                  "line": 230,
                   "column": 2,
-                  "index": 6314
+                  "index": 7229
                 },
                 "end": {
-                  "line": 235,
+                  "line": 230,
                   "column": 20,
-                  "index": 6332
+                  "index": 7247
                 },
                 "identifierName": "EdmFissionExchange"
               }
@@ -4071,12 +3833,12 @@
                 "start": {
                   "line": 31,
                   "column": 58,
-                  "index": 723
+                  "index": 700
                 },
                 "end": {
-                  "line": 138,
+                  "line": 165,
                   "column": 1,
-                  "index": 3538
+                  "index": 4258
                 }
               }
             }
@@ -4189,14 +3951,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 48,
-                  "column": 104,
-                  "index": 1297
+                  "line": 53,
+                  "column": 2,
+                  "index": 1353
                 },
                 "end": {
-                  "line": 140,
+                  "line": 155,
                   "column": 1,
-                  "index": 3549
+                  "index": 3788
                 }
               }
             }
@@ -4353,14 +4115,14 @@
               "name": "Balance",
               "loc": {
                 "start": {
-                  "line": 222,
-                  "column": 2,
-                  "index": 6814
+                  "line": 215,
+                  "column": 128,
+                  "index": 7744
                 },
                 "end": {
-                  "line": 222,
-                  "column": 9,
-                  "index": 6821
+                  "line": 215,
+                  "column": 135,
+                  "index": 7751
                 },
                 "identifierName": "Balance"
               }
@@ -4395,14 +4157,14 @@
               "name": "Wechat",
               "loc": {
                 "start": {
-                  "line": 202,
+                  "line": 209,
                   "column": 73,
-                  "index": 5831
+                  "index": 6584
                 },
                 "end": {
-                  "line": 202,
+                  "line": 209,
                   "column": 79,
-                  "index": 5837
+                  "index": 6590
                 },
                 "identifierName": "Wechat"
               }
@@ -4437,14 +4199,14 @@
               "name": "ResultPage",
               "loc": {
                 "start": {
-                  "line": 153,
+                  "line": 156,
                   "column": 73,
-                  "index": 4569
+                  "index": 5276
                 },
                 "end": {
-                  "line": 153,
+                  "line": 156,
                   "column": 83,
-                  "index": 4579
+                  "index": 5286
                 },
                 "identifierName": "ResultPage"
               }
@@ -4656,14 +4418,14 @@
               "name": "SubAccountPassword",
               "loc": {
                 "start": {
-                  "line": 260,
+                  "line": 332,
                   "column": 3,
-                  "index": 7574
+                  "index": 10263
                 },
                 "end": {
-                  "line": 260,
+                  "line": 332,
                   "column": 21,
-                  "index": 7592
+                  "index": 10281
                 },
                 "identifierName": "SubAccountPassword"
               }
@@ -4903,12 +4665,12 @@
                 "start": {
                   "line": 137,
                   "column": 4,
-                  "index": 3897
+                  "index": 3838
                 },
                 "end": {
                   "line": 137,
                   "column": 24,
-                  "index": 3917
+                  "index": 3858
                 },
                 "identifierName": "connectGlobalProfile"
               }
@@ -5058,14 +4820,14 @@
               "name": "BatchActions",
               "loc": {
                 "start": {
-                  "line": 149,
+                  "line": 145,
                   "column": 2,
-                  "index": 4681
+                  "index": 4644
                 },
                 "end": {
-                  "line": 149,
+                  "line": 145,
                   "column": 14,
-                  "index": 4693
+                  "index": 4656
                 },
                 "identifierName": "BatchActions"
               }
@@ -5108,14 +4870,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 751,
+                  "line": 766,
                   "column": 2,
-                  "index": 20623
+                  "index": 20787
                 },
                 "end": {
-                  "line": 751,
+                  "line": 766,
                   "column": 7,
-                  "index": 20628
+                  "index": 20792
                 },
                 "identifierName": "Table"
               }
@@ -5161,12 +4923,12 @@
                 "start": {
                   "line": 455,
                   "column": 2,
-                  "index": 14345
+                  "index": 14360
                 },
                 "end": {
                   "line": 455,
                   "column": 10,
-                  "index": 14353
+                  "index": 14368
                 },
                 "identifierName": "TopBlock"
               }
@@ -5275,14 +5037,14 @@
               "name": "Content",
               "loc": {
                 "start": {
-                  "line": 436,
+                  "line": 432,
                   "column": 2,
-                  "index": 13076
+                  "index": 13023
                 },
                 "end": {
-                  "line": 436,
+                  "line": 432,
                   "column": 9,
-                  "index": 13083
+                  "index": 13030
                 },
                 "identifierName": "Content"
               }
@@ -5432,14 +5194,14 @@
               "name": "FirmInfoBlock",
               "loc": {
                 "start": {
-                  "line": 513,
+                  "line": 516,
                   "column": 4,
-                  "index": 15371
+                  "index": 15584
                 },
                 "end": {
-                  "line": 513,
+                  "line": 516,
                   "column": 17,
-                  "index": 15384
+                  "index": 15597
                 },
                 "identifierName": "FirmInfoBlock"
               }
@@ -5479,9 +5241,9 @@
                   "index": 878
                 },
                 "end": {
-                  "line": 74,
+                  "line": 80,
                   "column": 1,
-                  "index": 2211
+                  "index": 2250
                 }
               }
             }
@@ -5660,14 +5422,14 @@
               "name": "Content",
               "loc": {
                 "start": {
-                  "line": 458,
+                  "line": 455,
                   "column": 2,
-                  "index": 13566
+                  "index": 13514
                 },
                 "end": {
-                  "line": 458,
+                  "line": 455,
                   "column": 9,
-                  "index": 13573
+                  "index": 13521
                 },
                 "identifierName": "Content"
               }
@@ -5732,480 +5494,6 @@
           "objectPropertyMap": {
             "updateFilterCondition": "updateFilterCondition"
           }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "TradeTaskMent",
-              "loc": {
-                "start": {
-                  "line": 204,
-                  "column": 28,
-                  "index": 7054
-                },
-                "end": {
-                  "line": 204,
-                  "column": 41,
-                  "index": 7067
-                },
-                "identifierName": "TradeTaskMent"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepOne",
-              "loc": {
-                "start": {
-                  "line": 55,
-                  "column": 48,
-                  "index": 1637
-                },
-                "end": {
-                  "line": 55,
-                  "column": 55,
-                  "index": 1644
-                },
-                "identifierName": "StepOne"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepTwo/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "goBack",
-              "importedName": "goBack",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepTwo",
-              "loc": {
-                "start": {
-                  "line": 330,
-                  "column": 69,
-                  "index": 10044
-                },
-                "end": {
-                  "line": 330,
-                  "column": 76,
-                  "index": 10051
-                },
-                "identifierName": "StepTwo"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "push": "push",
-            "goBack": "goBack",
-            "change": "change",
-            "initialize": "initialize"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "destroy",
-              "importedName": "destroy",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "submit",
-              "importedName": "submit",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "unregisterField",
-              "importedName": "unregisterField",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "untouch",
-              "importedName": "untouch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepThree",
-              "loc": {
-                "start": {
-                  "line": 690,
-                  "column": 71,
-                  "index": 22365
-                },
-                "end": {
-                  "line": 690,
-                  "column": 80,
-                  "index": 22374
-                },
-                "identifierName": "StepThree"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "destroy": "destroy",
-            "touch": "touch",
-            "change": "change",
-            "submit": "submit",
-            "unregisterField": "unregisterField",
-            "untouch": "untouch",
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "SendTestEmailModal",
-              "loc": {
-                "start": {
-                  "line": 293,
-                  "column": 48,
-                  "index": 8274
-                },
-                "end": {
-                  "line": 293,
-                  "column": 66,
-                  "index": 8292
-                },
-                "identifierName": "SendTestEmailModal"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {}
         }
       ]
     },
@@ -6297,63 +5585,6 @@
       ]
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "edmActions",
-              "sourceValue": "emailDirectMarketing/services/actions",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/actions/index.ts",
-              "exportNames": []
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "replace",
-              "importedName": "replace",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "TradeTaskDetail",
-              "loc": {
-                "start": {
-                  "line": 75,
-                  "column": 4,
-                  "index": 2640
-                },
-                "end": {
-                  "line": 75,
-                  "column": 19,
-                  "index": 2655
-                },
-                "identifierName": "TradeTaskDetail"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["edmActions"],
-          "objectPropertyMap": {
-            "push": "push",
-            "replace": "replace"
-          }
-        }
-      ]
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/HomePage/components/OperationBar/SendEmail.tsx",
       "localConnect": "connect",
       "localCompose": "",
@@ -6376,12 +5607,12 @@
                 "start": {
                   "line": 81,
                   "column": 4,
-                  "index": 2384
+                  "index": 2399
                 },
                 "end": {
                   "line": 81,
                   "column": 13,
-                  "index": 2393
+                  "index": 2408
                 },
                 "identifierName": "SendEmail"
               }
@@ -6416,14 +5647,14 @@
               "name": "BasicMsg",
               "loc": {
                 "start": {
-                  "line": 57,
+                  "line": 78,
                   "column": 4,
-                  "index": 2863
+                  "index": 2959
                 },
                 "end": {
-                  "line": 57,
+                  "line": 78,
                   "column": 12,
-                  "index": 2871
+                  "index": 2967
                 },
                 "identifierName": "BasicMsg"
               }
@@ -6494,14 +5725,14 @@
               "name": "ValidaInput",
               "loc": {
                 "start": {
-                  "line": 90,
+                  "line": 65,
                   "column": 3,
-                  "index": 2235
+                  "index": 2359
                 },
                 "end": {
-                  "line": 90,
+                  "line": 65,
                   "column": 14,
-                  "index": 2246
+                  "index": 2370
                 },
                 "identifierName": "ValidaInput"
               }
@@ -6722,12 +5953,12 @@
                 "start": {
                   "line": 667,
                   "column": 2,
-                  "index": 19166
+                  "index": 19194
                 },
                 "end": {
                   "line": 667,
                   "column": 24,
-                  "index": 19188
+                  "index": 19216
                 },
                 "identifierName": "ModuleRelatedContainer"
               }
@@ -6778,14 +6009,14 @@
               "name": "QuotationAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 102,
+                  "line": 112,
                   "column": 2,
-                  "index": 3082
+                  "index": 3112
                 },
                 "end": {
-                  "line": 102,
+                  "line": 112,
                   "column": 36,
-                  "index": 3116
+                  "index": 3146
                 },
                 "identifierName": "QuotationAdvancedScreenContentForm"
               }
@@ -6841,14 +6072,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 84,
+                  "line": 67,
                   "column": 67,
-                  "index": 2364
+                  "index": 2381
                 },
                 "end": {
-                  "line": 269,
+                  "line": 175,
                   "column": 1,
-                  "index": 8034
+                  "index": 7727
                 }
               }
             }
@@ -7023,14 +6254,14 @@
               "name": "OrderAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 99,
+                  "line": 109,
                   "column": 2,
-                  "index": 3048
+                  "index": 3078
                 },
                 "end": {
-                  "line": 99,
+                  "line": 109,
                   "column": 32,
-                  "index": 3078
+                  "index": 3108
                 },
                 "identifierName": "OrderAdvancedScreenContentForm"
               }
@@ -7042,447 +6273,6 @@
             "setNormalFormField": "change",
             "removeArrayField": "arrayRemove",
             "navRouter": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/DataTable/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "EDMTaskTable",
-              "loc": {
-                "start": {
-                  "line": 313,
-                  "column": 60,
-                  "index": 9881
-                },
-                "end": {
-                  "line": 313,
-                  "column": 72,
-                  "index": 9893
-                },
-                "identifierName": "EDMTaskTable"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "reset",
-              "importedName": "reset",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepOneForm",
-              "loc": {
-                "start": {
-                  "line": 288,
-                  "column": 71,
-                  "index": 9502
-                },
-                "end": {
-                  "line": 288,
-                  "column": 82,
-                  "index": 9513
-                },
-                "identifierName": "StepOneForm"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "change": "change",
-            "reset": "reset",
-            "push": "push",
-            "initialize": "initialize",
-            "touch": "touch"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/TimeModal/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "Timing",
-              "loc": {
-                "start": {
-                  "line": 112,
-                  "column": 71,
-                  "index": 3635
-                },
-                "end": {
-                  "line": 112,
-                  "column": 77,
-                  "index": 3641
-                },
-                "identifierName": "Timing"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "change": "change",
-            "push": "push",
-            "touch": "touch"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "BindForm",
-              "loc": {
-                "start": {
-                  "line": 756,
-                  "column": 2,
-                  "index": 22465
-                },
-                "end": {
-                  "line": 756,
-                  "column": 10,
-                  "index": 22473
-                },
-                "identifierName": "BindForm"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "change": "change",
-            "initialize": "initialize",
-            "touch": "touch",
-            "push": "push"
           }
         }
       ]
@@ -7583,14 +6373,14 @@
               "name": "SendEmail",
               "loc": {
                 "start": {
-                  "line": 156,
+                  "line": 163,
                   "column": 2,
-                  "index": 4262
+                  "index": 4327
                 },
                 "end": {
-                  "line": 156,
+                  "line": 163,
                   "column": 11,
-                  "index": 4271
+                  "index": 4336
                 },
                 "identifierName": "SendEmail"
               }
@@ -7689,106 +6479,6 @@
       ]
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "ComponentWithBindEmail",
-              "loc": {
-                "start": {
-                  "line": 45,
-                  "column": 53,
-                  "index": 1555
-                },
-                "end": {
-                  "line": 45,
-                  "column": 75,
-                  "index": 1577
-                },
-                "identifierName": "ComponentWithBindEmail"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {}
-        }
-      ]
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/index.tsx",
       "localConnect": "connect",
       "localCompose": "compose",
@@ -7816,14 +6506,14 @@
               "name": "BatchActions",
               "loc": {
                 "start": {
-                  "line": 278,
+                  "line": 280,
                   "column": 2,
-                  "index": 9114
+                  "index": 9243
                 },
                 "end": {
-                  "line": 278,
+                  "line": 280,
                   "column": 14,
-                  "index": 9126
+                  "index": 9255
                 },
                 "identifierName": "BatchActions"
               }
@@ -7852,14 +6542,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 816,
+                  "line": 818,
                   "column": 2,
-                  "index": 22242
+                  "index": 22371
                 },
                 "end": {
-                  "line": 816,
+                  "line": 818,
                   "column": 7,
-                  "index": 22247
+                  "index": 22376
                 },
                 "identifierName": "Table"
               }
@@ -7902,12 +6592,12 @@
                 "start": {
                   "line": 53,
                   "column": 2,
-                  "index": 2411
+                  "index": 2410
                 },
                 "end": {
-                  "line": 212,
+                  "line": 213,
                   "column": 1,
-                  "index": 7245
+                  "index": 7261
                 }
               }
             }
@@ -8380,14 +7070,14 @@
               "name": "AgendaForm",
               "loc": {
                 "start": {
-                  "line": 331,
+                  "line": 346,
                   "column": 4,
-                  "index": 10091
+                  "index": 10198
                 },
                 "end": {
-                  "line": 331,
+                  "line": 346,
                   "column": 14,
-                  "index": 10101
+                  "index": 10208
                 },
                 "identifierName": "AgendaForm"
               }

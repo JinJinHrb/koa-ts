@@ -864,51 +864,6 @@
       }
     },
     {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-      "associatedComponentsCount": 5,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ]
-      }
-    },
-    {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/MallPurchase/MallPurchaseHome/index.tsx",
       "associatedComponentsCount": 4,
       "associatedComponents": [
@@ -1146,75 +1101,6 @@
       }
     },
     {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx",
-      "associatedComponentsCount": 3,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ]
-      }
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
-      "associatedComponentsCount": 3,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ]
-      }
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx",
-      "associatedComponentsCount": 3,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-        ]
-      }
-    },
-    {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/containers/App/index.js",
       "associatedComponentsCount": 2,
       "associatedComponents": [
@@ -1437,37 +1323,6 @@
       }
     },
     {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-      "associatedComponentsCount": 2,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
-        ],
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
-        ]
-      }
-    },
-    {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/SetLoginPasswordModal/index.tsx",
       "associatedComponentsCount": 1,
       "associatedComponents": [
@@ -1591,29 +1446,6 @@
       }
     },
     {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx",
-      "associatedComponentsCount": 1,
-      "associatedComponents": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx"
-      ],
-      "associatedSagaTakers": [
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
-      ],
-      "associatedComponentsMap": {
-        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx": [
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-          "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
-        ]
-      }
-    },
-    {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/MarketingModal/index.tsx",
       "associatedComponentsCount": 1,
       "associatedComponents": [
@@ -1684,6 +1516,18 @@
         "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesRequested",
         "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesSucceeded",
         "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryEurCountriesFailed"
+      ],
+      "associatedComponentsMap": {}
+    },
+    {
+      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/ListTable/AdvancedSearchForm/index.tsx",
+      "associatedComponentsCount": 0,
+      "associatedSagaTakers": [
+        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
+        "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed"
       ],
       "associatedComponentsMap": {}
     },
@@ -1969,30 +1813,6 @@
       "associatedComponentsMap": {}
     },
     {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/modals/ConfirmCancelModal/index.tsx",
       "associatedComponentsCount": 0,
       "associatedSagaTakers": [],
@@ -2149,24 +1969,6 @@
       "associatedComponentsMap": {}
     },
     {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepTwo/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/tools/SideFunctions/components/AdviseModal/index.tsx",
       "associatedComponentsCount": 0,
       "associatedSagaTakers": [],
@@ -2216,54 +2018,6 @@
     },
     {
       "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/DataTable/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/TimeModal/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/TimeModal/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-      "associatedComponentsCount": 0,
-      "associatedSagaTakers": [],
-      "associatedComponentsMap": {}
-    },
-    {
-      "componentFilePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
       "associatedComponentsCount": 0,
       "associatedSagaTakers": [],
       "associatedComponentsMap": {}

@@ -1,202 +1,6 @@
 {
   "message": "ok",
   "actions2HandlerMap": {
-    ",@@redux-form/CHANGE": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onChange"
-      }
-    ],
-    ",@@redux-form/BLUR": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onBlur"
-      }
-    ],
-    ",@@redux-form/UNREGISTER_FIELD": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,unregisterField"
-      }
-    ],
-    ",@@redux-form/FOCUS": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onFocus"
-      }
-    ],
-    ",@@redux-form/SET_SUBMIT_FAILED": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onSubmitFailed"
-      }
-    ],
-    ",@@redux-form/TOUCH": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onTouch"
-      }
-    ],
-    ",@@redux-form/START_ASYNC_VALIDATION": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onAsyncValidate"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
-        "usages": [
-          "EMQueryUsage.AccountStatus",
-          "EMQueryUsage.SendEmail",
-          "EMQueryUsage.Unbind",
-          "EMQueryUsage.AccountUpdate",
-          "EMQueryUsage.Folder",
-          "EMQueryUsage.PreviewAnnex",
-          "EMQueryUsage.QuerySignature",
-          "EMQueryUsage.DetailSignature",
-          "EMQueryUsage.QueryTemplateDetail",
-          "EMQueryUsage.QueryTemplateList",
-          "EMQueryUsage.TemplateCover",
-          "EMQueryUsage.SaveGeneralSetting",
-          "EMQueryUsage.CreateTemplate",
-          "EMQueryUsage.UpdateTemplate",
-          "EMQueryUsage.DeleteTemplate",
-          "EMQueryUsage.SaveDraft",
-          "EMQueryUsage.Refresh",
-          "EMQueryUsage.AccountList",
-          "EMQueryUsage.StaffAccountList",
-          "EMQueryUsage.Host",
-          "EMQueryUsage.MessagesCount",
-          "EMQueryUsage.List",
-          "EMQueryUsage.GetAttachment",
-          "EMQueryUsage.EmailDetail",
-          "EMQueryUsage.EditFlag",
-          "EMQueryUsage.BatchEditFlag",
-          "EMQueryUsage.MoveTo",
-          "EMQueryUsage.BatchMoveTo",
-          "EMQueryUsage.DownloadMails",
-          "EMQueryUsage.SetDefaultAcct",
-          "EMQueryUsage.DeleteSignature"
-        ]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed",
-        "usages": ["EMQueryUsage.PullEmailMessage", "EMQueryUsage.Bind"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
-        "usages": ["EMAnnexType.Annex", "EMAnnexType.Annex", "EMAnnexType.Annex"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImage": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadImage"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImage": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,previewImage"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImageSuccess": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,previewImageSuccess"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,polling": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,polling"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setDashboardUrl": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,editDashboardUrlSession"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addOpenPage": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/generators.ts,addOpenPageSession"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeOpenPage": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/generators.ts,removeOpenPageSession"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetCrmEmail": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,resetStorage"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,debounceEmailDetail": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,debounceEmailDetail"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileRequested": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,uploadFile"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileSucceed": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,uploadFileSucceed",
-        "usages": ["usages.TRADE_EMAIL_ATTACHEMENT"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileFailed": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,uploadFileFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,deleteFile": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,deleteFile"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,deleteSyncFile": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,deleteSyncFile"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,getThumbnailRequested": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,getThumbnailRequested"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,getThumbnailSucceed": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,getThumbnailSucceed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,getThumbnailFailed": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,getThumbnailFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,fileDownload": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,fileDownload"
-      }
-    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,modifyTradePasswordRequested": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,modifyTradePassword"
@@ -405,11 +209,6 @@
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/error.ts,errorLog"
       }
     ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/intl.ts,setLocale": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/intl.ts,setLocale"
-      }
-    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/trend.ts,rateTrendRequested": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/trend.ts,rateTrend"
@@ -503,21 +302,6 @@
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,setMFAVisible": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,setMFAVisible"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountRequested": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,unBindSubAccountRequested"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountSucceed": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,unBindSubAccountSucceed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountFailed": [
-      {
-        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,unBindSubAccountFailed"
       }
     ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowId": [
@@ -651,8 +435,6 @@
           "EMMetaUsages.QueryMakeUserKnowPackageChange",
           "EMMetaUsages.BankCardMetaInfo",
           "EMMetaUsages.PromotionStarPoster",
-          "EMMetaUsages.SendEmail",
-          "EMMetaUsages.GetEmailDetail",
           "EMMetaUsages.AuthFirm",
           "EMMetaUsages.QueryBenefitByRequestId",
           "EMMetaUsages.QueryFailUnsignPaingPackage",
@@ -853,6 +635,121 @@
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/addressLocations.ts,queryCountriesIfNeeded"
       }
     ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess",
+        "usages": [
+          "EMQueryUsage.AccountStatus",
+          "EMQueryUsage.SendEmail",
+          "EMQueryUsage.Unbind",
+          "EMQueryUsage.AccountUpdate",
+          "EMQueryUsage.Folder",
+          "EMQueryUsage.PreviewAnnex",
+          "EMQueryUsage.QuerySignature",
+          "EMQueryUsage.DetailSignature",
+          "EMQueryUsage.QueryTemplateDetail",
+          "EMQueryUsage.QueryTemplateList",
+          "EMQueryUsage.TemplateCover",
+          "EMQueryUsage.SaveGeneralSetting",
+          "EMQueryUsage.CreateTemplate",
+          "EMQueryUsage.UpdateTemplate",
+          "EMQueryUsage.DeleteTemplate",
+          "EMQueryUsage.SaveDraft",
+          "EMQueryUsage.Refresh",
+          "EMQueryUsage.AccountList",
+          "EMQueryUsage.StaffAccountList",
+          "EMQueryUsage.Host",
+          "EMQueryUsage.MessagesCount",
+          "EMQueryUsage.List",
+          "EMQueryUsage.GetAttachment",
+          "EMQueryUsage.EmailDetail",
+          "EMQueryUsage.EditFlag",
+          "EMQueryUsage.BatchEditFlag",
+          "EMQueryUsage.MoveTo",
+          "EMQueryUsage.BatchMoveTo",
+          "EMQueryUsage.DownloadMails",
+          "EMQueryUsage.SetDefaultAcct",
+          "EMQueryUsage.DeleteSignature"
+        ]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed",
+        "usages": ["EMQueryUsage.PullEmailMessage", "EMQueryUsage.Bind"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex",
+        "usages": ["EMAnnexType.Annex", "EMAnnexType.Annex", "EMAnnexType.Annex"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImage": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadImage"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImage": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,previewImage"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImageSuccess": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,previewImageSuccess"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,polling": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,polling"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setDashboardUrl": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,editDashboardUrlSession"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addOpenPage": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/generators.ts,addOpenPageSession"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeOpenPage": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/generators.ts,removeOpenPageSession"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetCrmEmail": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,resetStorage"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,debounceEmailDetail": [
+      {
+        "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,debounceEmailDetail"
+      }
+    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/order/index.ts,updateOrderList": [
       {
         "handler2ActionsKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/order/index.ts,fetchOrderList"
@@ -910,314 +807,6 @@
     ]
   },
   "handler2ActionsMap": {
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onChange": [
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileFailed"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/withdrawals.ts,setBeneficiaryNameError"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/pwStrength.ts,setPwStrength"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/util.ts,resetAddressFieldsThenSetCountry"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,resetFile"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fixRate.ts,getFixRateMarginFeeRequested"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fixRate.ts,resetMarginFee"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fixRate.ts,getContractDeadlineRequested"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/withdraw.ts,resetGetFXWithdrawFee"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/CHANGE",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/withdraw.ts,getFXWithdrawFeeRequested"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts,onBlur": [
-      {
-        "actions2HandlerKey": ",@@redux-form/BLUR",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/firm.ts,firmRegistedIdExistRequested"
-      },
-      {
-        "actions2HandlerKey": ",@@redux-form/BLUR",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/firm.ts,checkEngNameExistRequested"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "usageNames": [
-          "EMQueryUsage.PreviewAnnex",
-          "EMQueryUsage.GetAttachment",
-          "EMQueryUsage.Folder",
-          "EMQueryUsage.GetGeneralSetting"
-        ]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,modifyMailListFlag"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,modifyMailDetailFlag"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setEmailDomain"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearMailCache",
-        "usageNames": ["EMMailCacheTYpe.SelectedMails", "EMMailCacheTYpe.MailsDetail"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess",
-        "usageNames": ["EMAnnexType.Annex", "EMAnnexType.InsertImage"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addMailCache",
-        "usageNames": ["EMMailCacheTYpe.MailsDetail"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModalWithCallback",
-        "usageNames": ["EMModalUsage.Confirm"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
-        "usageNames": ["EMAnnexType.Annex"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setAlert",
-        "usageNames": ["EMAlertUsage.LoginWarning"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "usageNames": ["EMQueryUsage.AccountList"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,filterOpenPage"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
-        "usageNames": ["EMCacheType.TempAnnex"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeCache",
-        "usageNames": ["EMCacheType.TempAnnex"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexFailed"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setCacheError",
-        "usageNames": ["EMCacheType.TempAnnex"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
-        "usageNames": ["EMCacheType.InsertImage"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadImage": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImage",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImageSuccess"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImage",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImageFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,previewImage": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImage",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImageSuccess"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImage",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImageFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setConnectLoading"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetGeneral",
-        "usageNames": ["EMQueryUsage.Bind"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearCache",
-        "usageNames": [
-          "EMCacheType.Order",
-          "EMCacheType.Quotation",
-          "EMCacheType.Production",
-          "EMCacheType.TemplateImage"
-        ]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearImage",
-        "usageNames": ["EMCacheType.SignatureImage", "EMCacheType.TemplateImage"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setConnectLoading"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
-        "usageNames": [
-          "EMQueryUsage.AccountUpdate",
-          "EMQueryUsage.AccountList",
-          "EMQueryUsage.StaffAccountList"
-        ]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setEmailQueryParams",
-        "usageNames": ["EMQueryUsage.Bind"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
-        "usageNames": ["EMModalUsage.EmailBind"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,polling": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,polling",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
-        "usageNames": ["EMCacheType.Polling"]
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,polling",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeCache",
-        "usageNames": ["EMCacheType.Polling"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,resetStorage": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetCrmEmail",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setOpenPage"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetCrmEmail",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,stopPolling",
-        "usageNames": ["EMQueryUsage.AccountStatus", "EMQueryUsage.MessagesCount"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,debounceEmailDetail": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,debounceEmailDetail",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,uploadFile": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileFailed"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileSucceed"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/ocr.ts,firmInfoOCRRequested"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,uploadFileRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/meta.ts,fetchMetaRequested",
-        "usageNames": ["EMMetaUsages.IdBackOcr", "EMMetaUsages.IdFrondOcr"]
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,deleteFile": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,deleteFile",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/preview.ts,removePreview"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,getThumbnailRequested": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,getThumbnailRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,getThumbnailSucceed"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,getThumbnailRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,getThumbnailFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts,fileDownload": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,fileDownload",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/preview.ts,previewLoading"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts,fileDownload",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/preview.ts,preview"
-      }
-    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts,modifyTradePassword": [
       {
         "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/password.ts,modifyTradePasswordRequested",
@@ -1676,26 +1265,6 @@
         "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,setAuthId"
       }
     ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,unBindSubAccountRequested": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountSucceed"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountRequested",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountFailed"
-      }
-    ],
-    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/xshield.ts,unBindSubAccountSucceed": [
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountSucceed",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/staff.ts,staffListRequested"
-      },
-      {
-        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountSucceed",
-        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/xshield.ts,unBindSubAccountModal"
-      }
-    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/user.ts,getUserFlowId": [
       {
         "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/user.ts,getUserFlowId",
@@ -2065,6 +1634,213 @@
         "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/addressLocations.ts,queryEurCountriesRequested"
       }
     ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneral": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralSuccess": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
+        "usageNames": [
+          "EMQueryUsage.PreviewAnnex",
+          "EMQueryUsage.GetAttachment",
+          "EMQueryUsage.Folder",
+          "EMQueryUsage.GetGeneralSetting"
+        ]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,modifyMailListFlag"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,modifyMailDetailFlag"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setEmailDomain"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearMailCache",
+        "usageNames": ["EMMailCacheTYpe.SelectedMails", "EMMailCacheTYpe.MailsDetail"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess",
+        "usageNames": ["EMAnnexType.Annex", "EMAnnexType.InsertImage"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addMailCache",
+        "usageNames": ["EMMailCacheTYpe.MailsDetail"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModalWithCallback",
+        "usageNames": ["EMModalUsage.Confirm"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
+        "usageNames": ["EMAnnexType.Annex"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setAlert",
+        "usageNames": ["EMAlertUsage.LoginWarning"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,queryGeneralFailed": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
+        "usageNames": ["EMQueryUsage.AccountList"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneralFailed",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,filterOpenPage"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnex": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
+        "usageNames": ["EMCacheType.TempAnnex"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeCache",
+        "usageNames": ["EMCacheType.TempAnnex"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexFailed"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnex",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setCacheError",
+        "usageNames": ["EMCacheType.TempAnnex"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadAnnexSuccess": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadAnnexSuccess",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
+        "usageNames": ["EMCacheType.InsertImage"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,uploadImage": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImage",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImageSuccess"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImage",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,uploadImageFailed"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,previewImage": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImage",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImageSuccess"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImage",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,previewImageFailed"
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,setModal": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setConnectLoading"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetGeneral",
+        "usageNames": ["EMQueryUsage.Bind"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearCache",
+        "usageNames": [
+          "EMCacheType.Order",
+          "EMCacheType.Quotation",
+          "EMCacheType.Production",
+          "EMCacheType.TemplateImage"
+        ]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,clearImage",
+        "usageNames": ["EMCacheType.SignatureImage", "EMCacheType.TemplateImage"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,isConnect": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setConnectLoading"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral",
+        "usageNames": [
+          "EMQueryUsage.AccountUpdate",
+          "EMQueryUsage.AccountList",
+          "EMQueryUsage.StaffAccountList"
+        ]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setEmailQueryParams",
+        "usageNames": ["EMQueryUsage.Bind"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,isConnect",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setModal",
+        "usageNames": ["EMModalUsage.EmailBind"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,polling": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,polling",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,addCache",
+        "usageNames": ["EMCacheType.Polling"]
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,polling",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,removeCache",
+        "usageNames": ["EMCacheType.Polling"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,resetStorage": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetCrmEmail",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,setOpenPage"
+      },
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,resetCrmEmail",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,stopPolling",
+        "usageNames": ["EMQueryUsage.AccountStatus", "EMQueryUsage.MessagesCount"]
+      }
+    ],
+    "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/sagas/index.ts,debounceEmailDetail": [
+      {
+        "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,debounceEmailDetail",
+        "actions2HandlerKey2": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts,queryGeneral"
+      }
+    ],
     "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/sagas/order/index.ts,fetchOrderList": [
       {
         "actions2HandlerKey": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/order/index.ts,updateOrderList",
@@ -2177,8 +1953,8 @@
     ]
   },
   "warnings": [
-    "#74 nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/logger.ts, loc: start.line: 14, start.column: 2, start.line: 14, start.column: 63",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/logger.ts, actionsName: action, loc: start.line: 12, start.column: 0, start.line: 21, start.column: 1",
-    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/error.ts, actionsName: action, loc: start.line: 69, start.column: 0, start.line: 72, start.column: 1"
+    "#74 nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/logger.ts, loc: start.line: 14, start.column: 2, end.line: 14, end.column: 63",
+    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/logger.ts, actionsName: action, loc: start.line: 12, start.column: 0, end.line: 21, end.column: 1",
+    "#563 !actionsBindingPath nonAnalyzedFile: /Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/error.ts, actionsName: action, loc: start.line: 69, start.column: 0, end.line: 72, end.column: 1"
   ]
 }

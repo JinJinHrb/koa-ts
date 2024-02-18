@@ -121,14 +121,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 118,
+                  "line": 109,
                   "column": 28,
-                  "index": 3743
+                  "index": 3800
                 },
                 "end": {
-                  "line": 262,
+                  "line": 245,
                   "column": 1,
-                  "index": 7213
+                  "index": 7367
                 }
               },
               "actionsMethods": [
@@ -186,14 +186,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 118,
+                  "line": 109,
                   "column": 28,
-                  "index": 3743
+                  "index": 3800
                 },
                 "end": {
-                  "line": 262,
+                  "line": 245,
                   "column": 1,
-                  "index": 7213
+                  "index": 7367
                 }
               }
             }
@@ -570,14 +570,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 93,
+                  "line": 86,
                   "column": 52,
-                  "index": 2934
+                  "index": 3690
                 },
                 "end": {
-                  "line": 387,
+                  "line": 370,
                   "column": 1,
-                  "index": 12183
+                  "index": 13552
                 }
               },
               "actionsMethods": [
@@ -615,14 +615,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 93,
+                  "line": 86,
                   "column": 52,
-                  "index": 2934
+                  "index": 3690
                 },
                 "end": {
-                  "line": 387,
+                  "line": 370,
                   "column": 1,
-                  "index": 12183
+                  "index": 13552
                 }
               }
             }
@@ -733,14 +733,14 @@
               "name": "SetLoginPasswordModal",
               "loc": {
                 "start": {
-                  "line": 73,
+                  "line": 72,
                   "column": 60,
-                  "index": 1839
+                  "index": 1961
                 },
                 "end": {
-                  "line": 73,
+                  "line": 72,
                   "column": 81,
-                  "index": 1860
+                  "index": 1982
                 },
                 "identifierName": "SetLoginPasswordModal"
               },
@@ -781,14 +781,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 15,
+                  "line": 13,
                   "column": 6,
-                  "index": 520
+                  "index": 551
                 },
                 "end": {
-                  "line": 15,
+                  "line": 13,
                   "column": 27,
-                  "index": 541
+                  "index": 572
                 },
                 "identifierName": "SetLoginPasswordModal"
               }
@@ -830,14 +830,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 43,
+                  "line": 41,
                   "column": 58,
-                  "index": 1262
+                  "index": 1575
                 },
                 "end": {
-                  "line": 83,
+                  "line": 73,
                   "column": 1,
-                  "index": 2318
+                  "index": 2666
                 }
               },
               "actionsMethods": [
@@ -857,14 +857,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 43,
+                  "line": 41,
                   "column": 58,
-                  "index": 1262
+                  "index": 1575
                 },
                 "end": {
-                  "line": 83,
+                  "line": 73,
                   "column": 1,
-                  "index": 2318
+                  "index": 2666
                 }
               }
             }
@@ -951,14 +951,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 100,
+                  "line": 98,
                   "column": 49,
-                  "index": 3582
+                  "index": 3505
                 },
                 "end": {
-                  "line": 722,
+                  "line": 721,
                   "column": 1,
-                  "index": 20633
+                  "index": 20656
                 }
               },
               "actionsMethods": [
@@ -987,14 +987,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 100,
+                  "line": 98,
                   "column": 49,
-                  "index": 3582
+                  "index": 3505
                 },
                 "end": {
-                  "line": 722,
+                  "line": 721,
                   "column": 1,
-                  "index": 20633
+                  "index": 20656
                 }
               }
             }
@@ -1057,14 +1057,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 61,
+                  "line": 60,
                   "column": 59,
-                  "index": 1955
+                  "index": 1902
                 },
                 "end": {
-                  "line": 147,
+                  "line": 146,
                   "column": 1,
-                  "index": 4206
+                  "index": 4242
                 }
               },
               "actionsMethods": [
@@ -1093,14 +1093,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 61,
+                  "line": 60,
                   "column": 59,
-                  "index": 1955
+                  "index": 1902
                 },
                 "end": {
-                  "line": 147,
+                  "line": 146,
                   "column": 1,
-                  "index": 4206
+                  "index": 4242
                 }
               }
             }
@@ -1231,14 +1231,14 @@
               "name": "BusinessEditor",
               "loc": {
                 "start": {
-                  "line": 316,
+                  "line": 313,
                   "column": 4,
-                  "index": 10785
+                  "index": 10686
                 },
                 "end": {
-                  "line": 316,
+                  "line": 313,
                   "column": 18,
-                  "index": 10799
+                  "index": 10700
                 },
                 "identifierName": "BusinessEditor"
               },
@@ -1268,14 +1268,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 51,
+                  "line": 50,
                   "column": 6,
-                  "index": 2411
+                  "index": 2357
                 },
                 "end": {
-                  "line": 51,
+                  "line": 50,
                   "column": 20,
-                  "index": 2425
+                  "index": 2371
                 },
                 "identifierName": "BusinessEditor"
               }
@@ -1447,14 +1447,14 @@
               "name": "PurchaseHome",
               "loc": {
                 "start": {
-                  "line": 244,
+                  "line": 262,
                   "column": 20,
-                  "index": 8942
+                  "index": 10398
                 },
                 "end": {
-                  "line": 244,
+                  "line": 262,
                   "column": 32,
-                  "index": 8954
+                  "index": 10410
                 },
                 "identifierName": "PurchaseHome"
               },
@@ -1501,14 +1501,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 36,
+                  "line": 34,
                   "column": 6,
-                  "index": 1623
+                  "index": 2126
                 },
                 "end": {
-                  "line": 36,
+                  "line": 34,
                   "column": 18,
-                  "index": 1635
+                  "index": 2138
                 },
                 "identifierName": "PurchaseHome"
               }
@@ -1604,14 +1604,14 @@
               "name": "MallPurchaseFlow",
               "loc": {
                 "start": {
-                  "line": 211,
+                  "line": 234,
                   "column": 2,
-                  "index": 7215
+                  "index": 7696
                 },
                 "end": {
-                  "line": 211,
+                  "line": 234,
                   "column": 18,
-                  "index": 7231
+                  "index": 7712
                 },
                 "identifierName": "MallPurchaseFlow"
               },
@@ -1639,14 +1639,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 23,
+                  "line": 28,
                   "column": 6,
-                  "index": 1102
+                  "index": 1140
                 },
                 "end": {
-                  "line": 23,
+                  "line": 28,
                   "column": 22,
-                  "index": 1118
+                  "index": 1156
                 },
                 "identifierName": "MallPurchaseFlow"
               }
@@ -1681,14 +1681,14 @@
               "name": "MallTicket",
               "loc": {
                 "start": {
-                  "line": 193,
+                  "line": 190,
                   "column": 67,
-                  "index": 5873
+                  "index": 6805
                 },
                 "end": {
-                  "line": 193,
+                  "line": 190,
                   "column": 77,
-                  "index": 5883
+                  "index": 6815
                 },
                 "identifierName": "MallTicket"
               },
@@ -1708,14 +1708,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 104,
+                  "line": 100,
                   "column": 6,
-                  "index": 2998
+                  "index": 3308
                 },
                 "end": {
-                  "line": 104,
+                  "line": 100,
                   "column": 16,
-                  "index": 3008
+                  "index": 3318
                 },
                 "identifierName": "MallTicket"
               }
@@ -1763,14 +1763,14 @@
               "name": "List",
               "loc": {
                 "start": {
-                  "line": 297,
+                  "line": 318,
                   "column": 20,
-                  "index": 7719
+                  "index": 9414
                 },
                 "end": {
-                  "line": 297,
+                  "line": 318,
                   "column": 24,
-                  "index": 7723
+                  "index": 9418
                 },
                 "identifierName": "List"
               },
@@ -1791,14 +1791,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 150,
+                  "line": 155,
                   "column": 6,
-                  "index": 4072
+                  "index": 4941
                 },
                 "end": {
-                  "line": 150,
+                  "line": 155,
                   "column": 10,
-                  "index": 4076
+                  "index": 4945
                 },
                 "identifierName": "List"
               }
@@ -1844,14 +1844,14 @@
               "name": "Detail",
               "loc": {
                 "start": {
-                  "line": 191,
+                  "line": 201,
                   "column": 49,
-                  "index": 6475
+                  "index": 7555
                 },
                 "end": {
-                  "line": 191,
+                  "line": 201,
                   "column": 55,
-                  "index": 6481
+                  "index": 7561
                 },
                 "identifierName": "Detail"
               },
@@ -1872,14 +1872,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 38,
+                  "line": 35,
                   "column": 6,
-                  "index": 1550
+                  "index": 1580
                 },
                 "end": {
-                  "line": 38,
+                  "line": 35,
                   "column": 12,
-                  "index": 1556
+                  "index": 1586
                 },
                 "identifierName": "Detail"
               }
@@ -1928,14 +1928,14 @@
               "name": "CustomerDetail",
               "loc": {
                 "start": {
-                  "line": 313,
+                  "line": 307,
                   "column": 3,
-                  "index": 10809
+                  "index": 10741
                 },
                 "end": {
-                  "line": 313,
+                  "line": 307,
                   "column": 17,
-                  "index": 10823
+                  "index": 10755
                 },
                 "identifierName": "CustomerDetail"
               },
@@ -1954,14 +1954,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 66,
+                  "line": 65,
                   "column": 6,
-                  "index": 2701
+                  "index": 2668
                 },
                 "end": {
-                  "line": 66,
+                  "line": 65,
                   "column": 20,
-                  "index": 2715
+                  "index": 2682
                 },
                 "identifierName": "CustomerDetail"
               }
@@ -1997,14 +1997,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 392,
+                  "line": 389,
                   "column": 2,
-                  "index": 14439
+                  "index": 14315
                 },
                 "end": {
-                  "line": 392,
+                  "line": 389,
                   "column": 6,
-                  "index": 14443
+                  "index": 14319
                 },
                 "identifierName": "Home"
               },
@@ -2023,14 +2023,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 104,
+                  "line": 103,
                   "column": 6,
-                  "index": 4639
+                  "index": 4587
                 },
                 "end": {
-                  "line": 104,
+                  "line": 103,
                   "column": 10,
-                  "index": 4643
+                  "index": 4591
                 },
                 "identifierName": "Home"
               }
@@ -2226,14 +2226,14 @@
               "name": "SetPasswordForm",
               "loc": {
                 "start": {
-                  "line": 193,
+                  "line": 174,
                   "column": 4,
-                  "index": 5482
+                  "index": 7674
                 },
                 "end": {
-                  "line": 193,
+                  "line": 174,
                   "column": 19,
-                  "index": 5497
+                  "index": 7689
                 },
                 "identifierName": "SetPasswordForm"
               },
@@ -2252,14 +2252,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 81,
+                  "line": 76,
                   "column": 6,
-                  "index": 2475
+                  "index": 4003
                 },
                 "end": {
-                  "line": 81,
+                  "line": 76,
                   "column": 21,
-                  "index": 2490
+                  "index": 4018
                 },
                 "identifierName": "SetPasswordForm"
               }
@@ -2375,14 +2375,14 @@
               "name": "FormBottomBtnGroup",
               "loc": {
                 "start": {
-                  "line": 105,
+                  "line": 88,
                   "column": 2,
-                  "index": 2693
+                  "index": 3203
                 },
                 "end": {
-                  "line": 105,
+                  "line": 88,
                   "column": 20,
-                  "index": 2711
+                  "index": 3221
                 },
                 "identifierName": "FormBottomBtnGroup"
               },
@@ -2414,14 +2414,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 31,
+                  "line": 30,
                   "column": 6,
-                  "index": 916
+                  "index": 948
                 },
                 "end": {
-                  "line": 31,
+                  "line": 30,
                   "column": 24,
-                  "index": 934
+                  "index": 966
                 },
                 "identifierName": "FormBottomBtnGroup"
               }
@@ -2554,14 +2554,14 @@
               "name": "BottomBtnGroup",
               "loc": {
                 "start": {
-                  "line": 71,
+                  "line": 73,
                   "column": 2,
-                  "index": 1745
+                  "index": 1877
                 },
                 "end": {
-                  "line": 71,
+                  "line": 73,
                   "column": 16,
-                  "index": 1759
+                  "index": 1891
                 },
                 "identifierName": "BottomBtnGroup"
               },
@@ -2581,14 +2581,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 22,
+                  "line": 23,
                   "column": 6,
-                  "index": 602
+                  "index": 665
                 },
                 "end": {
-                  "line": 22,
+                  "line": 23,
                   "column": 20,
-                  "index": 616
+                  "index": 679
                 },
                 "identifierName": "BottomBtnGroup"
               }
@@ -2673,14 +2673,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 64,
+                  "line": 66,
                   "column": 65,
-                  "index": 1939
+                  "index": 2558
                 },
                 "end": {
-                  "line": 154,
+                  "line": 155,
                   "column": 1,
-                  "index": 4367
+                  "index": 5188
                 }
               },
               "actionsMethods": [
@@ -2722,14 +2722,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 64,
+                  "line": 66,
                   "column": 65,
-                  "index": 1939
+                  "index": 2558
                 },
                 "end": {
-                  "line": 154,
+                  "line": 155,
                   "column": 1,
-                  "index": 4367
+                  "index": 5188
                 }
               }
             }
@@ -2812,12 +2812,12 @@
                 "start": {
                   "line": 38,
                   "column": 65,
-                  "index": 1160
+                  "index": 1176
                 },
                 "end": {
                   "line": 124,
                   "column": 1,
-                  "index": 3729
+                  "index": 3743
                 }
               },
               "actionsMethods": [
@@ -2848,12 +2848,12 @@
                 "start": {
                   "line": 38,
                   "column": 65,
-                  "index": 1160
+                  "index": 1176
                 },
                 "end": {
                   "line": 124,
                   "column": 1,
-                  "index": 3729
+                  "index": 3743
                 }
               }
             }
@@ -2885,14 +2885,14 @@
               "name": "RenewTips",
               "loc": {
                 "start": {
-                  "line": 93,
+                  "line": 88,
                   "column": 16,
-                  "index": 2078
+                  "index": 2279
                 },
                 "end": {
-                  "line": 93,
+                  "line": 88,
                   "column": 25,
-                  "index": 2087
+                  "index": 2288
                 },
                 "identifierName": "RenewTips"
               },
@@ -2912,14 +2912,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 21,
+                  "line": 18,
                   "column": 6,
-                  "index": 613
+                  "index": 643
                 },
                 "end": {
-                  "line": 21,
+                  "line": 18,
                   "column": 15,
-                  "index": 622
+                  "index": 652
                 },
                 "identifierName": "RenewTips"
               }
@@ -3346,14 +3346,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 425,
+                  "line": 453,
                   "column": 3,
-                  "index": 12332
+                  "index": 12501
                 },
                 "end": {
-                  "line": 425,
+                  "line": 453,
                   "column": 8,
-                  "index": 12337
+                  "index": 12506
                 },
                 "identifierName": "Table"
               },
@@ -3374,14 +3374,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 178,
+                  "line": 173,
                   "column": 6,
-                  "index": 5592
+                  "index": 5587
                 },
                 "end": {
-                  "line": 178,
+                  "line": 173,
                   "column": 11,
-                  "index": 5597
+                  "index": 5592
                 },
                 "identifierName": "Table"
               }
@@ -3640,14 +3640,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 56,
+                  "line": 55,
                   "column": 52,
-                  "index": 1704
+                  "index": 1654
                 },
                 "end": {
-                  "line": 295,
+                  "line": 294,
                   "column": 1,
-                  "index": 8655
+                  "index": 8605
                 }
               },
               "actionsMethods": [
@@ -3721,14 +3721,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 56,
+                  "line": 55,
                   "column": 52,
-                  "index": 1704
+                  "index": 1654
                 },
                 "end": {
-                  "line": 295,
+                  "line": 294,
                   "column": 1,
-                  "index": 8655
+                  "index": 8605
                 }
               }
             }
@@ -3899,9 +3899,9 @@
                   "index": 1390
                 },
                 "end": {
-                  "line": 98,
+                  "line": 104,
                   "column": 1,
-                  "index": 3247
+                  "index": 3277
                 }
               },
               "actionsMethods": [
@@ -3925,9 +3925,9 @@
                   "index": 1390
                 },
                 "end": {
-                  "line": 98,
+                  "line": 104,
                   "column": 1,
-                  "index": 3247
+                  "index": 3277
                 }
               }
             }
@@ -3961,14 +3961,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 85,
+                  "line": 86,
                   "column": 3,
-                  "index": 2145
+                  "index": 2127
                 },
                 "end": {
-                  "line": 85,
+                  "line": 86,
                   "column": 7,
-                  "index": 2149
+                  "index": 2131
                 },
                 "identifierName": "Home"
               },
@@ -3976,14 +3976,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 38,
+                  "line": 36,
                   "column": 6,
-                  "index": 1081
+                  "index": 1079
                 },
                 "end": {
-                  "line": 38,
+                  "line": 36,
                   "column": 19,
-                  "index": 1094
+                  "index": 1092
                 },
                 "identifierName": "Home"
               }
@@ -4011,14 +4011,14 @@
               "name": "Home",
               "loc": {
                 "start": {
-                  "line": 85,
+                  "line": 86,
                   "column": 3,
-                  "index": 2145
+                  "index": 2127
                 },
                 "end": {
-                  "line": 85,
+                  "line": 86,
                   "column": 7,
-                  "index": 2149
+                  "index": 2131
                 },
                 "identifierName": "Home"
               },
@@ -4026,14 +4026,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 38,
+                  "line": 36,
                   "column": 6,
-                  "index": 1081
+                  "index": 1079
                 },
                 "end": {
-                  "line": 38,
+                  "line": 36,
                   "column": 19,
-                  "index": 1094
+                  "index": 1092
                 },
                 "identifierName": "Home"
               }
@@ -4110,14 +4110,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 34,
+                  "line": 33,
                   "column": 52,
-                  "index": 864
+                  "index": 896
                 },
                 "end": {
-                  "line": 137,
+                  "line": 124,
                   "column": 1,
-                  "index": 3531
+                  "index": 3595
                 }
               },
               "actionsMethods": [
@@ -4147,14 +4147,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 34,
+                  "line": 33,
                   "column": 52,
-                  "index": 864
+                  "index": 896
                 },
                 "end": {
-                  "line": 137,
+                  "line": 124,
                   "column": 1,
-                  "index": 3531
+                  "index": 3595
                 }
               }
             }
@@ -4253,14 +4253,14 @@
               "name": "PurchaseFlowStepOne",
               "loc": {
                 "start": {
-                  "line": 313,
+                  "line": 365,
                   "column": 63,
-                  "index": 10556
+                  "index": 12075
                 },
                 "end": {
-                  "line": 313,
+                  "line": 365,
                   "column": 82,
-                  "index": 10575
+                  "index": 12094
                 },
                 "identifierName": "PurchaseFlowStepOne"
               },
@@ -4280,14 +4280,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 52,
+                  "line": 63,
                   "column": 6,
-                  "index": 1928
+                  "index": 2162
                 },
                 "end": {
-                  "line": 52,
+                  "line": 63,
                   "column": 25,
-                  "index": 1947
+                  "index": 2181
                 },
                 "identifierName": "PurchaseFlowStepOne"
               }
@@ -4340,14 +4340,14 @@
               "name": "OrderDetail",
               "loc": {
                 "start": {
-                  "line": 616,
+                  "line": 679,
                   "column": 4,
-                  "index": 19239
+                  "index": 22802
                 },
                 "end": {
-                  "line": 616,
+                  "line": 679,
                   "column": 15,
-                  "index": 19250
+                  "index": 22813
                 },
                 "identifierName": "OrderDetail"
               },
@@ -4378,14 +4378,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 60,
+                  "line": 50,
                   "column": 6,
-                  "index": 2390
+                  "index": 2413
                 },
                 "end": {
-                  "line": 60,
+                  "line": 50,
                   "column": 17,
-                  "index": 2401
+                  "index": 2424
                 },
                 "identifierName": "OrderDetail"
               }
@@ -4439,14 +4439,14 @@
               "name": "Payment",
               "loc": {
                 "start": {
-                  "line": 586,
+                  "line": 539,
                   "column": 2,
-                  "index": 16402
+                  "index": 18391
                 },
                 "end": {
-                  "line": 586,
+                  "line": 539,
                   "column": 9,
-                  "index": 16409
+                  "index": 18398
                 },
                 "identifierName": "Payment"
               },
@@ -4465,14 +4465,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 48,
+                  "line": 39,
                   "column": 6,
-                  "index": 2200
+                  "index": 2224
                 },
                 "end": {
-                  "line": 48,
+                  "line": 39,
                   "column": 13,
-                  "index": 2207
+                  "index": 2231
                 },
                 "identifierName": "Payment"
               }
@@ -4549,14 +4549,14 @@
               "name": "Payment",
               "loc": {
                 "start": {
-                  "line": 586,
+                  "line": 539,
                   "column": 2,
-                  "index": 16402
+                  "index": 18391
                 },
                 "end": {
-                  "line": 586,
+                  "line": 539,
                   "column": 9,
-                  "index": 16409
+                  "index": 18398
                 },
                 "identifierName": "Payment"
               },
@@ -4596,14 +4596,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 48,
+                  "line": 39,
                   "column": 6,
-                  "index": 2200
+                  "index": 2224
                 },
                 "end": {
-                  "line": 48,
+                  "line": 39,
                   "column": 13,
-                  "index": 2207
+                  "index": 2231
                 },
                 "identifierName": "Payment"
               }
@@ -4656,14 +4656,14 @@
               "name": "PurchaseFlowStepTwo",
               "loc": {
                 "start": {
-                  "line": 539,
+                  "line": 585,
                   "column": 4,
-                  "index": 17992
+                  "index": 20934
                 },
                 "end": {
-                  "line": 539,
+                  "line": 585,
                   "column": 23,
-                  "index": 18011
+                  "index": 20953
                 },
                 "identifierName": "PurchaseFlowStepTwo"
               },
@@ -4704,14 +4704,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 55,
+                  "line": 47,
                   "column": 6,
-                  "index": 2377
+                  "index": 2402
                 },
                 "end": {
-                  "line": 55,
+                  "line": 47,
                   "column": 25,
-                  "index": 2396
+                  "index": 2421
                 },
                 "identifierName": "PurchaseFlowStepTwo"
               }
@@ -4844,14 +4844,14 @@
               "name": "Preview",
               "loc": {
                 "start": {
-                  "line": 307,
+                  "line": 309,
                   "column": 2,
-                  "index": 8934
+                  "index": 9061
                 },
                 "end": {
-                  "line": 307,
+                  "line": 309,
                   "column": 9,
-                  "index": 8941
+                  "index": 9068
                 },
                 "identifierName": "Preview"
               },
@@ -4859,14 +4859,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 91,
+                  "line": 93,
                   "column": 6,
-                  "index": 2974
+                  "index": 3101
                 },
                 "end": {
-                  "line": 91,
+                  "line": 93,
                   "column": 13,
-                  "index": 2981
+                  "index": 3108
                 },
                 "identifierName": "Preview"
               }
@@ -4877,273 +4877,6 @@
           "objectPropertyMap": {
             "uploadAnnexSuccess": "uploadAnnexSuccess",
             "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "destroy",
-              "importedName": "destroy",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "ActivityCreate",
-              "loc": {
-                "start": {
-                  "line": 1191,
-                  "column": 90,
-                  "index": 37721
-                },
-                "end": {
-                  "line": 1191,
-                  "column": 104,
-                  "index": 37735
-                },
-                "identifierName": "ActivityCreate"
-              },
-              "actionsMethods": [
-                {
-                  "name": "destroy"
-                },
-                {
-                  "name": "change"
-                },
-                {
-                  "name": "initialize"
-                },
-                {
-                  "name": "touch"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "isNamespace": false,
-                  "localName": "destroy",
-                  "importedName": "destroy",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "change",
-                  "importedName": "change",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "initialize",
-                  "importedName": "initialize",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "touch",
-                  "importedName": "touch",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 129,
-                  "column": 6,
-                  "index": 4613
-                },
-                "end": {
-                  "line": 129,
-                  "column": 20,
-                  "index": 4627
-                },
-                "identifierName": "ActivityCreate"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "initialize": "initialize",
-            "destroy": "destroy",
-            "change": "change",
-            "push": "push",
-            "touch": "touch"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTask/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "edmActions",
-              "sourceValue": "emailDirectMarketing/services/actions",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/actions/index.ts",
-              "exportNames": []
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "replace",
-              "importedName": "replace",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "CallExpression",
-              "loc": {
-                "start": {
-                  "line": 303,
-                  "column": 4,
-                  "index": 8961
-                },
-                "end": {
-                  "line": 303,
-                  "column": 39,
-                  "index": 8996
-                }
-              },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
-              "nodeLoc": {
-                "start": {
-                  "line": 303,
-                  "column": 4,
-                  "index": 8961
-                },
-                "end": {
-                  "line": 303,
-                  "column": 39,
-                  "index": 8996
-                }
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["edmActions"],
-          "objectPropertyMap": {
-            "push": "push",
-            "replace": "replace"
           }
         }
       ]
@@ -5204,63 +4937,6 @@
       ]
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TemplateManagement/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "TemplateManagement",
-              "loc": {
-                "start": {
-                  "line": 230,
-                  "column": 96,
-                  "index": 7513
-                },
-                "end": {
-                  "line": 230,
-                  "column": 114,
-                  "index": 7531
-                },
-                "identifierName": "TemplateManagement"
-              },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
-              "nodeLoc": {
-                "start": {
-                  "line": 47,
-                  "column": 6,
-                  "index": 1990
-                },
-                "end": {
-                  "line": 47,
-                  "column": 24,
-                  "index": 2008
-                },
-                "identifierName": "TemplateManagement"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/components/LeadsGeneralInfo/index.tsx",
       "localConnect": "connect",
       "localCompose": "",
@@ -5281,14 +4957,14 @@
               "name": "LeadsGeneralInfo",
               "loc": {
                 "start": {
-                  "line": 1615,
+                  "line": 1608,
                   "column": 4,
-                  "index": 48926
+                  "index": 48778
                 },
                 "end": {
-                  "line": 1615,
+                  "line": 1608,
                   "column": 20,
-                  "index": 48942
+                  "index": 48794
                 },
                 "identifierName": "LeadsGeneralInfo"
               },
@@ -5296,14 +4972,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 929,
+                  "line": 928,
                   "column": 9,
-                  "index": 26398
+                  "index": 26358
                 },
                 "end": {
-                  "line": 929,
+                  "line": 928,
                   "column": 25,
-                  "index": 26414
+                  "index": 26374
                 },
                 "identifierName": "LeadsGeneralInfo"
               }
@@ -5561,14 +5237,14 @@
               "name": "Exchange",
               "loc": {
                 "start": {
-                  "line": 194,
+                  "line": 198,
                   "column": 2,
-                  "index": 5269
+                  "index": 6084
                 },
                 "end": {
-                  "line": 194,
+                  "line": 198,
                   "column": 10,
-                  "index": 5277
+                  "index": 6092
                 },
                 "identifierName": "Exchange"
               },
@@ -5598,14 +5274,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 56,
+                  "line": 53,
                   "column": 6,
-                  "index": 1975
+                  "index": 2274
                 },
                 "end": {
-                  "line": 56,
+                  "line": 53,
                   "column": 26,
-                  "index": 1995
+                  "index": 2294
                 },
                 "identifierName": "Exchange"
               }
@@ -5719,14 +5395,14 @@
               "name": "EdmFissionExchange",
               "loc": {
                 "start": {
-                  "line": 235,
+                  "line": 230,
                   "column": 2,
-                  "index": 6314
+                  "index": 7229
                 },
                 "end": {
-                  "line": 235,
+                  "line": 230,
                   "column": 20,
-                  "index": 6332
+                  "index": 7247
                 },
                 "identifierName": "EdmFissionExchange"
               },
@@ -5746,14 +5422,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 62,
+                  "line": 59,
                   "column": 6,
-                  "index": 2063
+                  "index": 2402
                 },
                 "end": {
-                  "line": 62,
+                  "line": 59,
                   "column": 36,
-                  "index": 2093
+                  "index": 2432
                 },
                 "identifierName": "EdmFissionExchange"
               }
@@ -5862,12 +5538,12 @@
                 "start": {
                   "line": 31,
                   "column": 58,
-                  "index": 723
+                  "index": 700
                 },
                 "end": {
-                  "line": 138,
+                  "line": 165,
                   "column": 1,
-                  "index": 3538
+                  "index": 4258
                 }
               },
               "actionsMethods": [
@@ -5905,12 +5581,12 @@
                 "start": {
                   "line": 31,
                   "column": 58,
-                  "index": 723
+                  "index": 700
                 },
                 "end": {
-                  "line": 138,
+                  "line": 165,
                   "column": 1,
-                  "index": 3538
+                  "index": 4258
                 }
               }
             }
@@ -6023,14 +5699,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 48,
-                  "column": 104,
-                  "index": 1297
+                  "line": 53,
+                  "column": 2,
+                  "index": 1353
                 },
                 "end": {
-                  "line": 140,
+                  "line": 155,
                   "column": 1,
-                  "index": 3549
+                  "index": 3788
                 }
               },
               "actionsMethods": [
@@ -6068,14 +5744,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 48,
-                  "column": 104,
-                  "index": 1297
+                  "line": 53,
+                  "column": 2,
+                  "index": 1353
                 },
                 "end": {
-                  "line": 140,
+                  "line": 155,
                   "column": 1,
-                  "index": 3549
+                  "index": 3788
                 }
               }
             }
@@ -6281,14 +5957,14 @@
               "name": "Balance",
               "loc": {
                 "start": {
-                  "line": 222,
-                  "column": 2,
-                  "index": 6814
+                  "line": 215,
+                  "column": 128,
+                  "index": 7744
                 },
                 "end": {
-                  "line": 222,
-                  "column": 9,
-                  "index": 6821
+                  "line": 215,
+                  "column": 135,
+                  "index": 7751
                 },
                 "identifierName": "Balance"
               },
@@ -6308,14 +5984,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 43,
+                  "line": 39,
                   "column": 6,
-                  "index": 1640
+                  "index": 1732
                 },
                 "end": {
-                  "line": 43,
+                  "line": 39,
                   "column": 13,
-                  "index": 1647
+                  "index": 1739
                 },
                 "identifierName": "Balance"
               }
@@ -6350,14 +6026,14 @@
               "name": "Wechat",
               "loc": {
                 "start": {
-                  "line": 202,
+                  "line": 209,
                   "column": 73,
-                  "index": 5831
+                  "index": 6584
                 },
                 "end": {
-                  "line": 202,
+                  "line": 209,
                   "column": 79,
-                  "index": 5837
+                  "index": 6590
                 },
                 "identifierName": "Wechat"
               },
@@ -6377,14 +6053,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 30,
+                  "line": 29,
                   "column": 6,
-                  "index": 1383
+                  "index": 1415
                 },
                 "end": {
-                  "line": 30,
+                  "line": 29,
                   "column": 12,
-                  "index": 1389
+                  "index": 1421
                 },
                 "identifierName": "Wechat"
               }
@@ -6419,14 +6095,14 @@
               "name": "ResultPage",
               "loc": {
                 "start": {
-                  "line": 153,
+                  "line": 156,
                   "column": 73,
-                  "index": 4569
+                  "index": 5276
                 },
                 "end": {
-                  "line": 153,
+                  "line": 156,
                   "column": 83,
-                  "index": 4579
+                  "index": 5286
                 },
                 "identifierName": "ResultPage"
               },
@@ -6434,14 +6110,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 107,
+                  "line": 105,
                   "column": 6,
-                  "index": 3195
+                  "index": 3870
                 },
                 "end": {
-                  "line": 107,
+                  "line": 105,
                   "column": 16,
-                  "index": 3205
+                  "index": 3880
                 },
                 "identifierName": "ResultPage"
               }
@@ -6697,14 +6373,14 @@
               "name": "SubAccountPassword",
               "loc": {
                 "start": {
-                  "line": 260,
+                  "line": 332,
                   "column": 3,
-                  "index": 7574
+                  "index": 10263
                 },
                 "end": {
-                  "line": 260,
+                  "line": 332,
                   "column": 21,
-                  "index": 7592
+                  "index": 10281
                 },
                 "identifierName": "SubAccountPassword"
               },
@@ -6756,12 +6432,12 @@
                 "start": {
                   "line": 35,
                   "column": 6,
-                  "index": 1462
+                  "index": 1495
                 },
                 "end": {
                   "line": 35,
                   "column": 43,
-                  "index": 1499
+                  "index": 1532
                 },
                 "identifierName": "SubAccountPassword"
               }
@@ -7084,12 +6760,12 @@
                 "start": {
                   "line": 137,
                   "column": 4,
-                  "index": 3897
+                  "index": 3838
                 },
                 "end": {
                   "line": 137,
                   "column": 24,
-                  "index": 3917
+                  "index": 3858
                 },
                 "identifierName": "connectGlobalProfile"
               },
@@ -7111,12 +6787,12 @@
                 "start": {
                   "line": 49,
                   "column": 6,
-                  "index": 1511
+                  "index": 1452
                 },
                 "end": {
                   "line": 49,
                   "column": 29,
-                  "index": 1534
+                  "index": 1475
                 },
                 "identifierName": "AgreementForm"
               }
@@ -7318,14 +6994,14 @@
               "name": "BatchActions",
               "loc": {
                 "start": {
-                  "line": 149,
+                  "line": 145,
                   "column": 2,
-                  "index": 4681
+                  "index": 4644
                 },
                 "end": {
-                  "line": 149,
+                  "line": 145,
                   "column": 14,
-                  "index": 4693
+                  "index": 4656
                 },
                 "identifierName": "BatchActions"
               },
@@ -7333,14 +7009,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 73,
+                  "line": 69,
                   "column": 6,
-                  "index": 2892
+                  "index": 2835
                 },
                 "end": {
-                  "line": 73,
+                  "line": 69,
                   "column": 18,
-                  "index": 2904
+                  "index": 2847
                 },
                 "identifierName": "BatchActions"
               }
@@ -7383,14 +7059,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 751,
+                  "line": 766,
                   "column": 2,
-                  "index": 20623
+                  "index": 20787
                 },
                 "end": {
-                  "line": 751,
+                  "line": 766,
                   "column": 7,
-                  "index": 20628
+                  "index": 20792
                 },
                 "identifierName": "Table"
               },
@@ -7411,14 +7087,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 459,
+                  "line": 454,
                   "column": 6,
-                  "index": 13104
+                  "index": 13097
                 },
                 "end": {
-                  "line": 459,
+                  "line": 454,
                   "column": 11,
-                  "index": 13109
+                  "index": 13102
                 },
                 "identifierName": "Table"
               }
@@ -7464,12 +7140,12 @@
                 "start": {
                   "line": 455,
                   "column": 2,
-                  "index": 14345
+                  "index": 14360
                 },
                 "end": {
                   "line": 455,
                   "column": 10,
-                  "index": 14353
+                  "index": 14368
                 },
                 "identifierName": "TopBlock"
               },
@@ -7491,12 +7167,12 @@
                 "start": {
                   "line": 152,
                   "column": 6,
-                  "index": 5368
+                  "index": 5367
                 },
                 "end": {
                   "line": 152,
                   "column": 14,
-                  "index": 5376
+                  "index": 5375
                 },
                 "identifierName": "TopBlock"
               }
@@ -7642,14 +7318,14 @@
               "name": "Content",
               "loc": {
                 "start": {
-                  "line": 436,
+                  "line": 432,
                   "column": 2,
-                  "index": 13076
+                  "index": 13023
                 },
                 "end": {
-                  "line": 436,
+                  "line": 432,
                   "column": 9,
-                  "index": 13083
+                  "index": 13030
                 },
                 "identifierName": "Content"
               },
@@ -7669,14 +7345,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 68,
+                  "line": 67,
                   "column": 6,
-                  "index": 2944
+                  "index": 2890
                 },
                 "end": {
-                  "line": 68,
+                  "line": 67,
                   "column": 30,
-                  "index": 2968
+                  "index": 2914
                 },
                 "identifierName": "Content"
               }
@@ -7878,14 +7554,14 @@
               "name": "FirmInfoBlock",
               "loc": {
                 "start": {
-                  "line": 513,
+                  "line": 516,
                   "column": 4,
-                  "index": 15371
+                  "index": 15584
                 },
                 "end": {
-                  "line": 513,
+                  "line": 516,
                   "column": 17,
-                  "index": 15384
+                  "index": 15597
                 },
                 "identifierName": "FirmInfoBlock"
               },
@@ -7915,14 +7591,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 144,
+                  "line": 145,
                   "column": 6,
-                  "index": 4337
+                  "index": 4400
                 },
                 "end": {
-                  "line": 144,
+                  "line": 145,
                   "column": 43,
-                  "index": 4374
+                  "index": 4437
                 },
                 "identifierName": "FirmInfoBlock"
               }
@@ -7962,9 +7638,9 @@
                   "index": 878
                 },
                 "end": {
-                  "line": 74,
+                  "line": 80,
                   "column": 1,
-                  "index": 2211
+                  "index": 2250
                 }
               },
               "actionsMethods": [
@@ -7988,9 +7664,9 @@
                   "index": 878
                 },
                 "end": {
-                  "line": 74,
+                  "line": 80,
                   "column": 1,
-                  "index": 2211
+                  "index": 2250
                 }
               }
             }
@@ -8231,14 +7907,14 @@
               "name": "Content",
               "loc": {
                 "start": {
-                  "line": 458,
+                  "line": 455,
                   "column": 2,
-                  "index": 13566
+                  "index": 13514
                 },
                 "end": {
-                  "line": 458,
+                  "line": 455,
                   "column": 9,
-                  "index": 13573
+                  "index": 13521
                 },
                 "identifierName": "Content"
               },
@@ -8260,12 +7936,12 @@
                 "start": {
                   "line": 69,
                   "column": 6,
-                  "index": 3047
+                  "index": 2994
                 },
                 "end": {
                   "line": 69,
                   "column": 30,
-                  "index": 3071
+                  "index": 3018
                 },
                 "identifierName": "Content"
               }
@@ -8367,602 +8043,6 @@
           "objectPropertyMap": {
             "updateFilterCondition": "updateFilterCondition"
           }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "TradeTaskMent",
-              "loc": {
-                "start": {
-                  "line": 204,
-                  "column": 28,
-                  "index": 7054
-                },
-                "end": {
-                  "line": 204,
-                  "column": 41,
-                  "index": 7067
-                },
-                "identifierName": "TradeTaskMent"
-              },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
-              "nodeLoc": {
-                "start": {
-                  "line": 43,
-                  "column": 6,
-                  "index": 2079
-                },
-                "end": {
-                  "line": 43,
-                  "column": 37,
-                  "index": 2110
-                },
-                "identifierName": "TradeTaskMent"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepOne",
-              "loc": {
-                "start": {
-                  "line": 55,
-                  "column": 48,
-                  "index": 1637
-                },
-                "end": {
-                  "line": 55,
-                  "column": 55,
-                  "index": 1644
-                },
-                "identifierName": "StepOne"
-              },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
-              "nodeLoc": {
-                "start": {
-                  "line": 14,
-                  "column": 6,
-                  "index": 446
-                },
-                "end": {
-                  "line": 14,
-                  "column": 13,
-                  "index": 453
-                },
-                "identifierName": "StepOne"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepTwo/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "goBack",
-              "importedName": "goBack",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepTwo",
-              "loc": {
-                "start": {
-                  "line": 330,
-                  "column": 69,
-                  "index": 10044
-                },
-                "end": {
-                  "line": 330,
-                  "column": 76,
-                  "index": 10051
-                },
-                "identifierName": "StepTwo"
-              },
-              "actionsMethods": [
-                {
-                  "name": "change"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "isNamespace": false,
-                  "localName": "change",
-                  "importedName": "change",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 47,
-                  "column": 6,
-                  "index": 2235
-                },
-                "end": {
-                  "line": 47,
-                  "column": 13,
-                  "index": 2242
-                },
-                "identifierName": "StepTwo"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "push": "push",
-            "goBack": "goBack",
-            "change": "change",
-            "initialize": "initialize"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "destroy",
-              "importedName": "destroy",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "submit",
-              "importedName": "submit",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "unregisterField",
-              "importedName": "unregisterField",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "untouch",
-              "importedName": "untouch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepThree",
-              "loc": {
-                "start": {
-                  "line": 690,
-                  "column": 71,
-                  "index": 22365
-                },
-                "end": {
-                  "line": 690,
-                  "column": 80,
-                  "index": 22374
-                },
-                "identifierName": "StepThree"
-              },
-              "actionsMethods": [
-                {
-                  "name": "change"
-                },
-                {
-                  "name": "destroy"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "isNamespace": false,
-                  "localName": "change",
-                  "importedName": "change",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "destroy",
-                  "importedName": "destroy",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 58,
-                  "column": 6,
-                  "index": 2237
-                },
-                "end": {
-                  "line": 58,
-                  "column": 15,
-                  "index": 2246
-                },
-                "identifierName": "StepThree"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "destroy": "destroy",
-            "touch": "touch",
-            "change": "change",
-            "submit": "submit",
-            "unregisterField": "unregisterField",
-            "untouch": "untouch",
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/SendTestEmailModal/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "SendTestEmailModal",
-              "loc": {
-                "start": {
-                  "line": 293,
-                  "column": 48,
-                  "index": 8274
-                },
-                "end": {
-                  "line": 293,
-                  "column": 66,
-                  "index": 8292
-                },
-                "identifierName": "SendTestEmailModal"
-              },
-              "actionsMethods": [
-                {
-                  "name": "setModal",
-                  "usage": "EMModalUsage.EmailBind"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "localName": "setModal",
-                  "importedName": "setModal",
-                  "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMModalUsage.EmailBind"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 50,
-                  "column": 6,
-                  "index": 1669
-                },
-                "end": {
-                  "line": 50,
-                  "column": 54,
-                  "index": 1717
-                },
-                "identifierName": "SendTestEmailModal"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {}
         }
       ]
     },
@@ -9069,78 +8149,6 @@
       ]
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "edmActions",
-              "sourceValue": "emailDirectMarketing/services/actions",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/actions/index.ts",
-              "exportNames": []
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "replace",
-              "importedName": "replace",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "TradeTaskDetail",
-              "loc": {
-                "start": {
-                  "line": 75,
-                  "column": 4,
-                  "index": 2640
-                },
-                "end": {
-                  "line": 75,
-                  "column": 19,
-                  "index": 2655
-                },
-                "identifierName": "TradeTaskDetail"
-              },
-              "actionsMethods": [],
-              "usedActionsDependencies": [],
-              "nodeLoc": {
-                "start": {
-                  "line": 31,
-                  "column": 6,
-                  "index": 1298
-                },
-                "end": {
-                  "line": 31,
-                  "column": 39,
-                  "index": 1331
-                },
-                "identifierName": "TradeTaskDetail"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["edmActions"],
-          "objectPropertyMap": {
-            "push": "push",
-            "replace": "replace"
-          }
-        }
-      ]
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/Leads/HomePage/components/OperationBar/SendEmail.tsx",
       "localConnect": "connect",
       "localCompose": "",
@@ -9163,12 +8171,12 @@
                 "start": {
                   "line": 81,
                   "column": 4,
-                  "index": 2384
+                  "index": 2399
                 },
                 "end": {
                   "line": 81,
                   "column": 13,
-                  "index": 2393
+                  "index": 2408
                 },
                 "identifierName": "SendEmail"
               },
@@ -9178,12 +8186,12 @@
                 "start": {
                   "line": 21,
                   "column": 6,
-                  "index": 755
+                  "index": 754
                 },
                 "end": {
                   "line": 21,
                   "column": 15,
-                  "index": 764
+                  "index": 763
                 },
                 "identifierName": "SendEmail"
               }
@@ -9218,14 +8226,14 @@
               "name": "BasicMsg",
               "loc": {
                 "start": {
-                  "line": 57,
+                  "line": 78,
                   "column": 4,
-                  "index": 2863
+                  "index": 2959
                 },
                 "end": {
-                  "line": 57,
+                  "line": 78,
                   "column": 12,
-                  "index": 2871
+                  "index": 2967
                 },
                 "identifierName": "BasicMsg"
               },
@@ -9233,14 +8241,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 19,
+                  "line": 23,
                   "column": 4,
-                  "index": 781
+                  "index": 785
                 },
                 "end": {
-                  "line": 19,
+                  "line": 23,
                   "column": 29,
-                  "index": 806
+                  "index": 810
                 },
                 "identifierName": "BasicMsg"
               }
@@ -9339,14 +8347,14 @@
               "name": "ValidaInput",
               "loc": {
                 "start": {
-                  "line": 90,
+                  "line": 65,
                   "column": 3,
-                  "index": 2235
+                  "index": 2359
                 },
                 "end": {
-                  "line": 90,
+                  "line": 65,
                   "column": 14,
-                  "index": 2246
+                  "index": 2370
                 },
                 "identifierName": "ValidaInput"
               },
@@ -9354,14 +8362,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 25,
+                  "line": 23,
                   "column": 6,
-                  "index": 724
+                  "index": 755
                 },
                 "end": {
-                  "line": 25,
+                  "line": 23,
                   "column": 48,
-                  "index": 766
+                  "index": 797
                 },
                 "identifierName": "ValidaInput"
               }
@@ -9676,12 +8684,12 @@
                 "start": {
                   "line": 667,
                   "column": 2,
-                  "index": 19166
+                  "index": 19194
                 },
                 "end": {
                   "line": 667,
                   "column": 24,
-                  "index": 19188
+                  "index": 19216
                 },
                 "identifierName": "ModuleRelatedContainer"
               },
@@ -9759,14 +8767,14 @@
               "name": "QuotationAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 102,
+                  "line": 112,
                   "column": 2,
-                  "index": 3082
+                  "index": 3112
                 },
                 "end": {
-                  "line": 102,
+                  "line": 112,
                   "column": 36,
-                  "index": 3116
+                  "index": 3146
                 },
                 "identifierName": "QuotationAdvancedScreenContentForm"
               },
@@ -9849,14 +8857,14 @@
               "type": "ClassBody",
               "loc": {
                 "start": {
-                  "line": 84,
+                  "line": 67,
                   "column": 67,
-                  "index": 2364
+                  "index": 2381
                 },
                 "end": {
-                  "line": 269,
+                  "line": 175,
                   "column": 1,
-                  "index": 8034
+                  "index": 7727
                 }
               },
               "actionsMethods": [
@@ -9897,14 +8905,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 84,
+                  "line": 67,
                   "column": 67,
-                  "index": 2364
+                  "index": 2381
                 },
                 "end": {
-                  "line": 269,
+                  "line": 175,
                   "column": 1,
-                  "index": 8034
+                  "index": 7727
                 }
               }
             }
@@ -10151,14 +9159,14 @@
               "name": "OrderAdvancedScreenContentForm",
               "loc": {
                 "start": {
-                  "line": 99,
+                  "line": 109,
                   "column": 2,
-                  "index": 3048
+                  "index": 3078
                 },
                 "end": {
-                  "line": 99,
+                  "line": 109,
                   "column": 32,
-                  "index": 3078
+                  "index": 3108
                 },
                 "identifierName": "OrderAdvancedScreenContentForm"
               },
@@ -10197,637 +9205,6 @@
             "setNormalFormField": "change",
             "removeArrayField": "arrayRemove",
             "navRouter": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/DataTable/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "EDMTaskTable",
-              "loc": {
-                "start": {
-                  "line": 313,
-                  "column": 60,
-                  "index": 9881
-                },
-                "end": {
-                  "line": 313,
-                  "column": 72,
-                  "index": 9893
-                },
-                "identifierName": "EDMTaskTable"
-              },
-              "actionsMethods": [
-                {
-                  "name": "push"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "isNamespace": false,
-                  "localName": "push",
-                  "importedName": "push",
-                  "sourceValue": "react-router-redux",
-                  "dependencyPath": "react-router-redux"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 51,
-                  "column": 6,
-                  "index": 2062
-                },
-                "end": {
-                  "line": 51,
-                  "column": 58,
-                  "index": 2114
-                },
-                "identifierName": "EDMTaskTable"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": [],
-          "objectPropertyMap": {
-            "push": "push"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepOne/StepOneForm.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "reset",
-              "importedName": "reset",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "StepOneForm",
-              "loc": {
-                "start": {
-                  "line": 288,
-                  "column": 71,
-                  "index": 9502
-                },
-                "end": {
-                  "line": 288,
-                  "column": 82,
-                  "index": 9513
-                },
-                "identifierName": "StepOneForm"
-              },
-              "actionsMethods": [
-                {
-                  "name": "initialize"
-                },
-                {
-                  "name": "change"
-                },
-                {
-                  "name": "setModal",
-                  "usage": "EMModalUsage.EmailBind"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "isNamespace": false,
-                  "localName": "initialize",
-                  "importedName": "initialize",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "change",
-                  "importedName": "change",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "localName": "setModal",
-                  "importedName": "setModal",
-                  "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMModalUsage.EmailBind"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 47,
-                  "column": 6,
-                  "index": 1649
-                },
-                "end": {
-                  "line": 47,
-                  "column": 17,
-                  "index": 1660
-                },
-                "identifierName": "StepOneForm"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "change": "change",
-            "reset": "reset",
-            "push": "push",
-            "initialize": "initialize",
-            "touch": "touch"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/TimeModal/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "Timing",
-              "loc": {
-                "start": {
-                  "line": 112,
-                  "column": 71,
-                  "index": 3635
-                },
-                "end": {
-                  "line": 112,
-                  "column": 77,
-                  "index": 3641
-                },
-                "identifierName": "Timing"
-              },
-              "actionsMethods": [
-                {
-                  "name": "change"
-                },
-                {
-                  "name": "touch"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "isNamespace": false,
-                  "localName": "change",
-                  "importedName": "change",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "touch",
-                  "importedName": "touch",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 34,
-                  "column": 6,
-                  "index": 1287
-                },
-                "end": {
-                  "line": 34,
-                  "column": 12,
-                  "index": 1293
-                },
-                "identifierName": "Timing"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "change": "change",
-            "push": "push",
-            "touch": "touch"
-          }
-        }
-      ]
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "compose",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            },
-            {
-              "isNamespace": false,
-              "localName": "change",
-              "importedName": "change",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "initialize",
-              "importedName": "initialize",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "touch",
-              "importedName": "touch",
-              "sourceValue": "redux-form/es/immutable",
-              "dependencyPath": "redux-form/es/immutable"
-            },
-            {
-              "isNamespace": false,
-              "localName": "push",
-              "importedName": "push",
-              "sourceValue": "react-router-redux",
-              "dependencyPath": "react-router-redux"
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "BindForm",
-              "loc": {
-                "start": {
-                  "line": 756,
-                  "column": 2,
-                  "index": 22465
-                },
-                "end": {
-                  "line": 756,
-                  "column": 10,
-                  "index": 22473
-                },
-                "identifierName": "BindForm"
-              },
-              "actionsMethods": [
-                {
-                  "name": "queryGeneral",
-                  "usage": "EMQueryUsage.AccountDetail"
-                },
-                {
-                  "name": "initialize"
-                },
-                {
-                  "name": "change"
-                },
-                {
-                  "name": "touch"
-                },
-                {
-                  "name": "isConnect"
-                },
-                {
-                  "name": "queryGeneral",
-                  "usage": "EMQueryUsage.Host"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "localName": "queryGeneral",
-                  "importedName": "queryGeneral",
-                  "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMQueryUsage.AccountDetail"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "initialize",
-                  "importedName": "initialize",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "change",
-                  "importedName": "change",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "isNamespace": false,
-                  "localName": "touch",
-                  "importedName": "touch",
-                  "sourceValue": "redux-form/es/immutable",
-                  "dependencyPath": "redux-form/es/immutable"
-                },
-                {
-                  "localName": "isConnect",
-                  "importedName": "isConnect",
-                  "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts"
-                },
-                {
-                  "localName": "queryGeneral",
-                  "importedName": "queryGeneral",
-                  "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMQueryUsage.Host"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 167,
-                  "column": 6,
-                  "index": 5389
-                },
-                "end": {
-                  "line": 167,
-                  "column": 14,
-                  "index": 5397
-                },
-                "identifierName": "BindForm"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {
-            "change": "change",
-            "initialize": "initialize",
-            "touch": "touch",
-            "push": "push"
           }
         }
       ]
@@ -10974,14 +9351,14 @@
               "name": "SendEmail",
               "loc": {
                 "start": {
-                  "line": 156,
+                  "line": 163,
                   "column": 2,
-                  "index": 4262
+                  "index": 4327
                 },
                 "end": {
-                  "line": 156,
+                  "line": 163,
                   "column": 11,
-                  "index": 4271
+                  "index": 4336
                 },
                 "identifierName": "SendEmail"
               },
@@ -10989,14 +9366,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 71,
+                  "line": 75,
                   "column": 6,
-                  "index": 2050
+                  "index": 2087
                 },
                 "end": {
-                  "line": 71,
+                  "line": 75,
                   "column": 15,
-                  "index": 2059
+                  "index": 2096
                 },
                 "identifierName": "SendEmail"
               }
@@ -11137,134 +9514,6 @@
       ]
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BindEmailHOC/index.tsx",
-      "localConnect": "connect",
-      "localCompose": "",
-      "groups": [
-        {
-          "actionsDependencies": [
-            {
-              "isNamespace": true,
-              "localName": "actions",
-              "sourceValue": "crmEmail/actions/index",
-              "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-              "exportNames": [
-                "setAlert",
-                "setAccount",
-                "setTabData",
-                "clearTabData",
-                "setUserSelectAccData",
-                "setStaffSelect",
-                "setIsMainAccount",
-                "clearStaffSelect",
-                "setUserAccount",
-                "clearAccount",
-                "addOpenPage",
-                "removeOpenPage",
-                "setOpenPage",
-                "filterOpenPage",
-                "addCache",
-                "removeCache",
-                "clearCache",
-                "setCacheLoading",
-                "setCacheError",
-                "setModal",
-                "setSuccessPage",
-                "setModalWithCallback",
-                "queryGeneral",
-                "resetGeneral",
-                "queryGeneralSuccess",
-                "queryGeneralFailed",
-                "queryGeneralClearData",
-                "selectMail",
-                "cancelSelectMail",
-                "resetSelectMail",
-                "uploadAnnex",
-                "uploadAnnexSuccess",
-                "uploadAnnexFailed",
-                "deleteAnnex",
-                "clearAnnex",
-                "uploadImage",
-                "uploadImageSuccess",
-                "uploadImageFailed",
-                "clearImage",
-                "previewImage",
-                "previewImageSuccess",
-                "previewImageFailed",
-                "isConnect",
-                "setConnectLoading",
-                "polling",
-                "stopPolling",
-                "queryMailList",
-                "queryMailSuccess",
-                "queryMailListFailed",
-                "setDashboardUrl",
-                "addMailCache",
-                "removeMailCache",
-                "clearMailCache",
-                "resetCrmEmail",
-                "modifyMailListFlag",
-                "modifyMailDetailFlag",
-                "debounceEmailDetail",
-                "setEmailDomain",
-                "setEmailQueryParams"
-              ]
-            }
-          ],
-          "actionsComponents": [
-            {
-              "type": "Identifier",
-              "name": "ComponentWithBindEmail",
-              "loc": {
-                "start": {
-                  "line": 45,
-                  "column": 53,
-                  "index": 1555
-                },
-                "end": {
-                  "line": 45,
-                  "column": 75,
-                  "index": 1577
-                },
-                "identifierName": "ComponentWithBindEmail"
-              },
-              "actionsMethods": [
-                {
-                  "name": "setModal",
-                  "usage": "EMModalUsage.EmailBind"
-                }
-              ],
-              "usedActionsDependencies": [
-                {
-                  "localName": "setModal",
-                  "importedName": "setModal",
-                  "sourceValue": "crmEmail/actions/index",
-                  "dependencyPath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/actions/index.ts",
-                  "usage": "EMModalUsage.EmailBind"
-                }
-              ],
-              "nodeLoc": {
-                "start": {
-                  "line": 30,
-                  "column": 7,
-                  "index": 1029
-                },
-                "end": {
-                  "line": 30,
-                  "column": 29,
-                  "index": 1051
-                },
-                "identifierName": "ComponentWithBindEmail"
-              }
-            }
-          ],
-          "unknownElements": [],
-          "spreadElementNames": ["actions"],
-          "objectPropertyMap": {}
-        }
-      ]
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/Table/index.tsx",
       "localConnect": "connect",
       "localCompose": "compose",
@@ -11292,14 +9541,14 @@
               "name": "BatchActions",
               "loc": {
                 "start": {
-                  "line": 278,
+                  "line": 280,
                   "column": 2,
-                  "index": 9114
+                  "index": 9243
                 },
                 "end": {
-                  "line": 278,
+                  "line": 280,
                   "column": 14,
-                  "index": 9126
+                  "index": 9255
                 },
                 "identifierName": "BatchActions"
               },
@@ -11307,14 +9556,14 @@
               "usedActionsDependencies": [],
               "nodeLoc": {
                 "start": {
-                  "line": 88,
+                  "line": 89,
                   "column": 4,
-                  "index": 3010
+                  "index": 3073
                 },
                 "end": {
-                  "line": 88,
+                  "line": 89,
                   "column": 16,
-                  "index": 3022
+                  "index": 3085
                 },
                 "identifierName": "BatchActions"
               }
@@ -11343,14 +9592,14 @@
               "name": "Table",
               "loc": {
                 "start": {
-                  "line": 816,
+                  "line": 818,
                   "column": 2,
-                  "index": 22242
+                  "index": 22371
                 },
                 "end": {
-                  "line": 816,
+                  "line": 818,
                   "column": 7,
-                  "index": 22247
+                  "index": 22376
                 },
                 "identifierName": "Table"
               },
@@ -11371,14 +9620,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 514,
+                  "line": 516,
                   "column": 6,
-                  "index": 14981
+                  "index": 15110
                 },
                 "end": {
-                  "line": 514,
+                  "line": 516,
                   "column": 11,
-                  "index": 14986
+                  "index": 15115
                 },
                 "identifierName": "Table"
               }
@@ -11421,12 +9670,12 @@
                 "start": {
                   "line": 53,
                   "column": 2,
-                  "index": 2411
+                  "index": 2410
                 },
                 "end": {
-                  "line": 212,
+                  "line": 213,
                   "column": 1,
-                  "index": 7245
+                  "index": 7261
                 }
               },
               "actionsMethods": [
@@ -11446,12 +9695,12 @@
                 "start": {
                   "line": 53,
                   "column": 2,
-                  "index": 2411
+                  "index": 2410
                 },
                 "end": {
-                  "line": 212,
+                  "line": 213,
                   "column": 1,
-                  "index": 7245
+                  "index": 7261
                 }
               }
             }
@@ -12201,14 +10450,14 @@
               "name": "AgendaForm",
               "loc": {
                 "start": {
-                  "line": 331,
+                  "line": 346,
                   "column": 4,
-                  "index": 10091
+                  "index": 10198
                 },
                 "end": {
-                  "line": 331,
+                  "line": 346,
                   "column": 14,
-                  "index": 10101
+                  "index": 10208
                 },
                 "identifierName": "AgendaForm"
               },
@@ -12238,14 +10487,14 @@
               ],
               "nodeLoc": {
                 "start": {
-                  "line": 40,
+                  "line": 45,
                   "column": 6,
-                  "index": 2193
+                  "index": 2198
                 },
                 "end": {
-                  "line": 40,
+                  "line": 45,
                   "column": 16,
-                  "index": 2203
+                  "index": 2208
                 },
                 "identifierName": "AgendaForm"
               }
@@ -12607,19 +10856,11 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CRMMenuProvider/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/GlobalProvider/index.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/hooks/useCRMLocale.ts",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/crmMenu.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CRMMenuProvider/index.tsx",
       "result": null
     },
     {
@@ -12779,14 +11020,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/form.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/file.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/password.ts",
       "result": null
     },
@@ -12808,10 +11041,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/logger.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sagas/intl.ts",
       "result": null
     },
     {
@@ -12891,15 +11120,15 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/reducers/ui.js",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/I18nProvider/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/reducers/intl.js",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/basic.d.ts",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/reducers/file.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/crmMenu.ts",
       "result": null
     },
     {
@@ -12924,10 +11153,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/reducers/preview.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/reducers/staff.js",
       "result": null
     },
     {
@@ -12980,10 +11205,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/reducers/sentry.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/reducers/intl.ts",
       "result": null
     },
     {
@@ -13467,167 +11688,15 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/effects/form/basic.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/fund.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/regexp.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/form.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/radio.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/select.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/pwStrength.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/file.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/preview.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/firm.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fixRate.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/trend.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/fundSwap.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/tip.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/record.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/upload.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/record.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/SwapExchangeForm/helper.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/math.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/index.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/validate.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/tip.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/order.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/helpers/form.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/refund.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/city.js",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/effects/form/order.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/effects/form/address.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/effects/form/transfer.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/effects/form/promotion.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/api.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/coupon.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/effects/form.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/form.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/firm.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/ocr.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/file.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/effects/email.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/error.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/me.ts",
       "result": null
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/auth.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/effects/form/basic.ts",
       "result": null
     },
     {
@@ -13667,15 +11736,11 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/intl.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/trend.ts",
       "result": null
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/faq.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/staff.ts",
       "result": null
     },
     {
@@ -13712,14 +11777,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/effects/staff.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/effects/product.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/effects/firm.ts",
       "result": null
     },
     {
@@ -13791,6 +11848,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/error.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/ModalManager/index.ts",
       "result": null
     },
@@ -13844,6 +11905,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/utils/template.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/validate.ts",
       "result": null
     },
     {
@@ -13903,11 +11968,7 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/ui.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/selectors/intl.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Loading/index.js",
       "result": null
     },
     {
@@ -13915,11 +11976,19 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/firm.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/reduxHelpers.ts",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/staff.d.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/preview.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/fund.js",
       "result": null
     },
     {
@@ -13935,18 +12004,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/actions/intl.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/intl.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/basic.d.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/types/modal.d.ts",
       "result": null
     },
@@ -13956,6 +12013,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/pageSizeStore.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/form.ts",
       "result": null
     },
     {
@@ -14044,10 +12105,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/middlewares/PlatformGuard.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/WaClientIcon.tsx",
       "result": null
     },
     {
@@ -14315,10 +12372,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Loading/index.js",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Mall/components/Payment/PriceTitle/index.tsx",
       "result": null
     },
@@ -14328,6 +12381,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/error/mall/index.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/coupon.d.ts",
       "result": null
     },
     {
@@ -14387,23 +12444,11 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/Activity/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityDetail/index.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/AddressBookRoot/index.tsx",
       "result": null
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/DomainConfig/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TemplateRoot/index.tsx",
       "result": null
     },
     {
@@ -14460,10 +12505,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/sendEmailPage.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/SendEmailModal/index.tsx",
       "result": null
     },
     {
@@ -14859,6 +12900,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/TablePlugin/index.tsx",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Receipt/constant.ts",
       "result": null
     },
@@ -15079,6 +13124,22 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/tip.d.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/order.d.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/api.d.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/refund.d.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/cutomExceptions/HttpException.ts",
       "result": null
     },
@@ -15088,14 +13149,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/FormItem/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/ComplexFormItem/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/Form/TimePicker/index.tsx",
       "result": null
     },
     {
@@ -15195,50 +13248,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/collection.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/bill.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/order.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/helpers/order.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/helpers/address.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Fields/SelectSearchInput/util.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/ids.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/ids.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/activity.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/basic.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/order.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/utils/regExp.ts",
       "result": null
     },
@@ -15263,11 +13272,35 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/actions/ids.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/ids.d.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/count.ts",
       "result": null
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/ga.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/activity.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/city.js",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/basic.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/order.ts",
       "result": null
     },
     {
@@ -15315,7 +13348,7 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/home.js",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/collection.d.ts",
       "result": null
     },
     {
@@ -15367,6 +13400,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/ignore-i18n.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Modal/CRMOpeningModal/CRMOpeningModal.tsx",
       "result": null
     },
@@ -15395,15 +13432,19 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/queries.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/Agenda/index.tsx",
       "result": null
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/Tool/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/Email/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/Adv/index.tsx",
       "result": null
     },
     {
@@ -15591,10 +13632,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/DescriptionBlock/index.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Product/Components/BriefInfo/contructProductInfo.tsx",
       "result": null
     },
@@ -15704,6 +13741,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/utils/form.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/select.js",
       "result": null
     },
     {
@@ -15823,6 +13864,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/home.js",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/NavToPostion/index.tsx",
       "result": null
     },
@@ -15915,95 +13960,7 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/TemplateCore/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/AnnexBar/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/BenefitAlert/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/GuideModal/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/LeaveModal/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/constants.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/constants/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/types/index.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/constants/enum.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/utils/customTinymceToolbar.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/apis/errorMap.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/apis/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/helpers.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/utils/craft.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/TemplateCore/components/SendTooltip/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/utils/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/store.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/utils/templateHtml.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/actions/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/DeleteModal/DeleteModal.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/hooks/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/utils/dom.ts",
       "result": null
     },
     {
@@ -16027,11 +13984,27 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/actions/index.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/AddressBookManagement/constants.ts",
       "result": null
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/AddressBookManagement/enum.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/utils/dom.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/apis/index.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/apis/errorMap.ts",
       "result": null
     },
     {
@@ -16052,30 +14025,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/DomainConfig/ConfigTable.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/PurchaseModal/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TemplateManagement/components/TemplateMenu/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TemplateManagement/components/TemplateCard/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/TreeMenu/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/EDMTemplateModal/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TemplateManagement/constants.ts",
       "result": null
     },
     {
@@ -16192,6 +14141,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/TradeRecord/PurchasingDetail/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/I18nProvider/copy.tsx",
       "result": null
     },
     {
@@ -17055,10 +15008,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/util.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/index.tsx",
       "result": null
     },
@@ -17075,10 +15024,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/limit.d.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/Funnel.tsx",
       "result": null
     },
@@ -17087,7 +15032,7 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/LineChart.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/Charts/Line.tsx",
       "result": null
     },
     {
@@ -17104,6 +15049,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/constants/home.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/queries.ts",
       "result": null
     },
     {
@@ -17159,23 +15108,11 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/CustomerList.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/LeadsList.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/OrderList.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/BusinessList.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/Setting/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/DataWall/loadData.tsx",
       "result": null
     },
     {
@@ -17200,6 +15137,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/Empty/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/Agenda/loadTodo.tsx",
       "result": null
     },
     {
@@ -17499,6 +15440,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/bill.d.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/newTemplate/result.ts",
       "result": null
     },
@@ -17623,6 +15568,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/limit.d.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/ProductWelcome/index.tsx",
       "result": null
     },
@@ -17695,143 +15644,7 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/SearchArea/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/DataStatics/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/reducers/taskMent.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/contexts/taskMent.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/types.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/Menu/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/RightContent/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/TemplateCore/components/TemplateEntry/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/EDMError/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/TemplateHeader/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/RichText/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SaveTemplateDrawer/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BenefitEnoughPopconfirm/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/hooks/useBenefitEnough.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/Section/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/components/ContentErrorModal/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/StepThree/InsertFieldSetion/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/resources/icons/attachment.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/common/CustomUpload/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/EDMTemplateDrawer/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/AnnexBar/constants.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/CustomAlert/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/common/CustomModal/index.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/base.d.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/constants/form.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/apis/type.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/ValidateItem/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/enum/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeTaskHeader/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeTaskStatics/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeTaskTable/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/SecondaryMarketingTable/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/MultiEmailData/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/context.ts",
       "result": null
     },
     {
@@ -17851,11 +15664,23 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/types/index.d.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/AsynWaitPage/index.tsx",
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/index.tsx",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/AddressBookManagement/components/ContactGroupFormDrawer/types.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/constants/enum.ts",
       "result": null
     },
     {
@@ -17875,11 +15700,7 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TemplateManagement/types.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/EDMTemplateDrawer/constants.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/services/apis/type.ts",
       "result": null
     },
     {
@@ -18667,15 +16488,23 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/Table/config.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/queries.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/mutations.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/CustomerList.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/LeadsList.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/OrderList.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/HomePage/components/HomeContent/components/List/BusinessList.tsx",
       "result": null
     },
     {
@@ -18819,10 +16648,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/FirmMemberSelect.tsx",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/components/Fold/index.tsx",
       "result": null
     },
@@ -18907,6 +16732,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/queries.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/mutation/hook.ts",
       "result": null
     },
@@ -18943,11 +16772,23 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Form/Segments/BeneficiaryAddressBeneficiaryAddressSegment/util.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Fields/SelectSearchInput/index.tsx",
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/Fields/SelectSearchInput/util.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/types/address.d.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/helpers/address.ts",
       "result": null
     },
     {
@@ -18972,6 +16813,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/resources/icons/SelectedIcon.js",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/Content/Table/config.tsx",
       "result": null
     },
     {
@@ -19011,175 +16856,15 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/SearchArea/QueryForm.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/components/SearchArea/DatePickerPanel/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/constants.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/form/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/CheckBox/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/Adv/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/MyCustomer/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/PasteEmail.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/UploadEmail.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/GroupContact.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/MyLeads/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/Toolbox/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/SettingPanel/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/RenderNode/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/EditorContainer/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Text/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Button/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Divider/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Social/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/ImageUploader/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/TwoColumnsLayout/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/ThreeColumnsLayout/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/Layout.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/BasicLayout/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/ResizerContainer/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/ImageZoomLayout/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/ImageLayout.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/utils/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/ActivityCreate/TemplateCore/components/Banner/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/RichText/constants.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/listener.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SaveTemplateDrawer/helper.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomDatePicker/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomTimePicker/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/EDMTemplateDrawer/types.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/common/Button/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/common/Spinner/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/util/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/NormalForm/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/IdenticalForm/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/SeparateForm/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/views/Bind/BindForm/EmailFetchSetting.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/constants/form.js",
       "result": null
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/Certification/validate.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/businessComponents/CustomAlert/index.tsx",
       "result": null
     },
     {
@@ -19191,27 +16876,19 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeTaskStatics/ExportTable.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/Menu/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeDetailTable/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/RightContent/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeDetailLineChart/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/constants/index.ts",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeDetailInfo/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/TitleTip/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/constants/index.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/store.ts",
       "result": null
     },
     {
@@ -19651,10 +17328,6 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/format.ts",
-      "result": null
-    },
-    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/components/CreateTodo/hooks/useCreateTodo.ts",
       "result": null
     },
@@ -19907,6 +17580,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/format.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/components/SideDrawBriefInfo/ProductAmount/index.tsx",
       "result": null
     },
@@ -19916,154 +17593,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Order/AdvancedScreen/Content/Form/items/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/hooks/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/form/validate.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/form/input/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/Adv/closeBanner.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/CustomerFilter/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/Cover.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/ContactTable/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/config.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/utils/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/VirtualizedList/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/EmailUploader/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/MyLeads/helper.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/Toolbox/components/Header/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/Toolbox/components/ListCard/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/Toolbox/constants/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/SettingPanel/components/SettingHeader.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/TableLayout/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/EditorContainer/settings.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Text/settings.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Text/TextEditor.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/utils/padding.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Button/settings.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Button/ButtonEditor.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/Hyperlink/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Divider/settings.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/types/index.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Social/settings.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/ImageUploader/settings.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/ImageUploader/IconUpload.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/BlockLayout/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/FlexLayout/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/template/Layout/ResizerContainer/components/Resizer/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomInput/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomPassword/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomRadio/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomSubjectInput/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/crmEmail/comps/form/CustomCheckbox/index.tsx",
       "result": null
     },
     {
@@ -20083,27 +17612,31 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/constants/colums.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/DeleteModal/DeleteModal.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/SeeClickPersonDrawer/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/MyCustomer/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/RadioBtns/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/PasteEmail.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/AddToGroupDrawer/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/UploadEmail.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/ComplaintModal/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/GroupContact.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/EmailDetailButton/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/MyLeads/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/constants/form.ts",
       "result": null
     },
     {
@@ -20339,51 +17872,39 @@
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskMent/hooks/useCollapseGrid.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/CustomerFilter/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/utils/uploadTask.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/Cover.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/ColorPicker/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/ContactTable/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/Slider/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/config.ts",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/PaddingInput/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/utils/index.ts",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/TextRichEditor/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/components/VirtualizedList/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/CommonInput/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/utils/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/TextAlignButton/index.tsx",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/EmailUploader/index.tsx",
       "result": null
     },
     {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/CommonSelect/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/components/ImageCropper/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/BossUserCommonComponent/utils/numToMeasurement.ts",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/AddToGroupDrawer/helper.ts",
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/components/MyLeads/helper.tsx",
       "result": null
     },
     {
@@ -20400,6 +17921,10 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Business/components/CreateBusinessState/BusinessStageForm/schema.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/foreignTradePlatform/views/Customer/components/modals/TransferCustomerModal/components/FirmMemberSelect.tsx",
       "result": null
     },
     {
@@ -20443,6 +17968,10 @@
       "result": null
     },
     {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/SearchContact/utils/uploadTask.ts",
+      "result": null
+    },
+    {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/utils/time.ts",
       "result": null
     },
@@ -20460,10 +17989,6 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/FormDrawer/index.tsx",
-      "result": null
-    },
-    {
-      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/i18n.tsx",
       "result": null
     },
     {
@@ -20516,6 +18041,110 @@
     },
     {
       "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/TemplateTransfer/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/sharedComponent/component/EntryClue/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/EntryClue/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/EntryClue/const.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeTaskTable/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeDetailTable/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeDetailLineChart/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeDetailInfo/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/TitleTip/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/constants/index.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/context.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/TradeTaskStatics/ExportTable.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/constants/colums.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/SeeClickPersonDrawer/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/EDMTemplateModal/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/RadioBtns/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/AddToGroupDrawer/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/ComplaintModal/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/EmailDetailButton/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/constants/action.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/components/BenefitEnoughPopconfirm/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/hooks/useBenefitEnough.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/AddToGroupDrawer/helper.ts",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/CreateLeads/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/CreateCustomer/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/CollectHighSeas/index.tsx",
+      "result": null
+    },
+    {
+      "filePath": "/Users/alexwang/workspace/xTransfer/mfe-user-crm/shared/emailDirectMarketing/pages/TradeTaskDetail/components/SeeFilingDetail/index.tsx",
       "result": null
     }
   ]
