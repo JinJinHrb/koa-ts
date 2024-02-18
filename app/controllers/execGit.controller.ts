@@ -46,15 +46,15 @@ export class ExecGitController {
       const importSpecifiers = elem.importSpecifiers
       importSpecifiers.forEach((el: any) => {
         const { source, importedName, localName, references } = el
+        if (_.isEmpty(references)) {
+          return
+        }
         const key1 = `${source},${importedName}`
         if (!statistics[key1]) {
           statistics[key1] = {
             source,
             importedName,
           }
-        }
-        if (!references) {
-          console.log('#54', el)
         }
         references.forEach((subEl: any) => {
           const commitInfo = subEl.commitInfo
