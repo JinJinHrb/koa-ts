@@ -6,14 +6,12 @@ import pathUtil from 'path'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
 import {
-  findGitRepo,
   getFileData,
   getFileDataSync,
   getFsStatPromise,
   isDirectory,
   listFilteredFilesPromise,
   listStatsPromise,
-  mkdirSync,
 } from 'app/helpers/fsUtils'
 import _ from 'lodash'
 import fs from 'fs'
@@ -38,7 +36,6 @@ import {
   getGraphNodes,
   getSagaGraph,
   getSagaMap,
-  getWriteFolderAndWritePath,
   writeResponse,
 } from 'app/services/babelHelper/innerHelper'
 import {
@@ -54,7 +51,7 @@ import * as fsUtils from 'app/helpers/fsUtils'
  * 确定项目依赖图
  * (0) /getAstAndAlterCode
  * (1) /traverseToGetGraph => app/mock/graphNodes/graphNodes.json
- * (2) /removeFilteredFilesDemo 清理未用到的模块
+ * (2) /removeUnusedModules 清理未用到的模块
  */
 
 /*
@@ -735,7 +732,9 @@ export class BabelController {
     const response: typeof baseResponse & { warning?: string; error?: string } = {
       ...baseResponse,
     }
-    await writeResponse(filePath, response, writeDirectory)
+    if (writeDirectory) {
+      return await writeResponse(filePath, '.ast.json', response, writeDirectory)
+    }
     return response
   }
 
@@ -767,7 +766,8 @@ export class BabelController {
 
   @Post('/traverseToGetGraph')
   async traverseToGetGraph(
-    @Body() { filePath, filePaths, tsconfigPath, noRecur }: ByRegExpParams,
+    @Body()
+    { filePath, filePaths, tsconfigPath, noRecur, writeDirectory }: ByRegExpParams,
   ) {
     if (_.isEmpty(filePath) && !_.isEmpty(filePaths)) {
       filePath = filePaths?.shift()
@@ -781,7 +781,7 @@ export class BabelController {
         filePaths,
         noRecur,
       })
-    return {
+    const baseResponse = {
       filename,
       // fileDependencies,
       npmDependencies,
@@ -790,6 +790,19 @@ export class BabelController {
       size: graph.directedSize,
       graph: graph.toJSON(),
     }
+    const response: typeof baseResponse & { warning?: string; error?: string } = {
+      ...baseResponse,
+    }
+    if (writeDirectory) {
+      return await writeResponse(
+        filePath as string,
+        '.traverseToGetGraph.json',
+        response,
+        writeDirectory,
+      )
+    }
+
+    return response
   }
 
   @Post('/findUnusedDependencies')
@@ -818,12 +831,22 @@ export class BabelController {
     return { unusedDependencies }
   }
 
-  @Post('/removeFilteredFilesDemo')
-  async removeFilteredFilesDemo(
+  @Post('/removeUnusedModules')
+  async removeUnusedModules(
     @Body()
-    { folderPath, isRecur: pIsRecur }: { folderPath: string; isRecur?: boolean | string },
+    {
+      folderPath,
+      graphNodesPath,
+      isRecur: pIsRecur,
+      writeDirectory,
+    }: {
+      folderPath: string
+      graphNodesPath: string
+      isRecur?: boolean | string
+      writeDirectory?: string
+    },
   ) {
-    const graphNodes = await getGraphNodes()
+    const graphNodes = await getGraphNodes(graphNodesPath)
     const isRecur = _.isString(pIsRecur) ? pIsRecur === 'Y' : Boolean(pIsRecur)
     const candidates = (await listFilteredFilesPromise({
       filterHandler: a => a.fileFlag ?? false,
@@ -850,7 +873,19 @@ export class BabelController {
         if (err) return console.error(`delete file "${path}" error:`, err)
       })
     })
-    return { toRemovePaths }
+    const baseResponse = { toRemovePaths }
+    const response: typeof baseResponse & { warning?: string; error?: string } = {
+      ...baseResponse,
+    }
+    if (writeDirectory) {
+      return await writeResponse(
+        folderPath as string,
+        '.removeUnusedModules.json',
+        response,
+        writeDirectory,
+      )
+    }
+    return response
   }
 
   @Post('/parsePackageJsonDemo')

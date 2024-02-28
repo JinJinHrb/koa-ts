@@ -923,14 +923,15 @@ export const addCallExpressionPaths = (
   } */
 }
 
-export const getGraphNodes = async () =>
+export const getGraphNodes = async (graphNodesPath?: string) =>
   JSON.parse(
     (
       await getFileData(
-        pathUtil.resolve(
-          __dirname.slice(0, __dirname.indexOf('app')),
-          './app/mock/graphNodes/graphNodes.json',
-        ),
+        graphNodesPath ??
+          pathUtil.resolve(
+            __dirname.slice(0, __dirname.indexOf('app')),
+            './app/mock/graphNodes/graphNodes.json',
+          ),
       )
     )?.toString(),
   ) as RootObject4GraphNodes
@@ -983,7 +984,7 @@ export const getSagaGraph = async () =>
     )?.toString(),
   ) as RootSagaGraph
 
-export function getWriteFolderAndWritePath(filePath: string, baseDirectory?: string) {
+function getWriteFolderAndWritePath(filePath: string, baseDirectory?: string) {
   const projectPath = findGitRepo(filePath)
   const prjArr = projectPath?.split(pathUtil.sep).filter(a => a)
   const writeFolder = _.trim(prjArr?.slice(-1).join('_'))
@@ -999,9 +1000,15 @@ export function getWriteFolderAndWritePath(filePath: string, baseDirectory?: str
   return response
 }
 
+/**
+ * @params filePath 用作解析结果的项目文件路径
+ * @params response 返回结果
+ * @params writeDirectory 写入的文件夹
+ */
 export async function writeResponse(
   filePath: string,
-  response: any,
+  suffix: string,
+  response: { warning?: string; error?: string },
   writeDirectory?: string,
 ) {
   const dirName =
@@ -1020,10 +1027,11 @@ export async function writeResponse(
       // 格式化JSON数据
       const formattedJson = JSON.stringify(response, null, 2)
 
+      const realWritePath = `${writePath}${suffix}`
       // 将格式化后的JSON数据写入到另一个文件中
       try {
         await new Promise((rsv, rej) => {
-          fs.writeFile(`${writePath}.ast.json`, formattedJson, 'utf8', err => {
+          fs.writeFile(realWritePath, formattedJson, 'utf8', err => {
             if (err) {
               // console.error('Error writing file:', err)
               rej(err)
@@ -1036,6 +1044,12 @@ export async function writeResponse(
       } catch (e) {
         response.error = (e as Error)?.message ?? `fail to write ${writePath}`
       }
+      return {
+        writePath: realWritePath,
+        warning: response.warning,
+        error: response.error,
+      }
     }
   }
+  return null
 }

@@ -21,4 +21,6 @@ export class ByRegExpParams {
 
   // 如果只是单纯测试单个文件，而不是递归整个项目，设 ture
   noRecur?: boolean
+
+  writeDirectory?: string
 }
