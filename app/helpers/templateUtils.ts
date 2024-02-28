@@ -2,48 +2,54 @@ import _ from 'lodash'
 import { genId } from './stringUtil'
 import { getFileData } from './fsUtils'
 
-export const parseBackendTemplate = async (filePath: string) => {
+export const parseBackendTemplate = async (filePath: string, flag?: number) => {
   const warnings: string[] = []
   const txt = (await getFileData(filePath)) as unknown as string
-  const collection = txt
-    .split('\n')
-    .map(a => JSON.parse(a))
-    .map(a => {
-      if (/^\s|\s$/.test(a.template)) {
-        a.template = _.trim(a.template)
-      }
-      if (!_.startsWith(a.template, '{') || !_.endsWith(a.template, '}')) {
-        return a
-      }
-      let isParseDone = false
-      let caseFlag = 0
-      while (!isParseDone) {
-        try {
-          if (caseFlag === 1) {
-            a.template = a.template.replace(/\n/g, '')
-          } else if (caseFlag === 2) {
-            a.template = a.template.replace(/,\}\}$/, '}}')
-          }
-          const template = JSON.parse(a.template)
-          a.template = template
+  let arr = []
+  if (flag === 1) {
+    arr = txt.split('\n').map(a => JSON.parse(a))
+  } else {
+    arr = JSON.parse(txt)
+  }
+  // const collection = txt
+  //   .split('\n')
+  //   .map(a => JSON.parse(a))
+  const collection = arr.map((a: any) => {
+    if (/^\s|\s$/.test(a.template)) {
+      a.template = _.trim(a.template)
+    }
+    if (!_.startsWith(a.template, '{') || !_.endsWith(a.template, '}')) {
+      return a
+    }
+    let isParseDone = false
+    let caseFlag = 0
+    while (!isParseDone) {
+      try {
+        if (caseFlag === 1) {
+          a.template = a.template.replace(/\n/g, '')
+        } else if (caseFlag === 2) {
+          a.template = a.template.replace(/,\}\}$/, '}}')
+        }
+        const template = JSON.parse(a.template)
+        a.template = template
+        isParseDone = true
+        if (caseFlag === 1) {
+          warnings.push(`#62 caseFlag === 1 templateName:, ${a.templateName}`)
+        } else if (caseFlag === 2) {
+          warnings.push(`#65 caseFlag === 2 templateName:, ${a.templateName}`)
+        }
+      } catch (e) {
+        caseFlag++
+        if (caseFlag > 2) {
+          warnings.push(`#78 caseFlag > 2 templateName:, ${a.templateName}`)
+          a.template = a.template.replace(/,\}\}$/, '}}')
           isParseDone = true
-          if (caseFlag === 1) {
-            warnings.push(`#62 caseFlag === 1 templateName:, ${a.templateName}`)
-          } else if (caseFlag === 2) {
-            warnings.push(`#65 caseFlag === 2 templateName:, ${a.templateName}`)
-          }
-        } catch (e) {
-          caseFlag++
-          if (caseFlag > 2) {
-            warnings.push(`#78 caseFlag > 2 templateName:, ${a.templateName}`)
-            a.template = a.template.replace(/,\}\}$/, '}}')
-            isParseDone = true
-          }
         }
       }
+    }
 
-      return a
-    })
+    return a
+  })
   return { warnings, collection }
 }
 
@@ -67,6 +73,36 @@ type StartEndResult = { start: number; end: number; sub: string }
 const hasChinese = (str: string) => {
   const chRegex = /[\u4e00-\u9fa5]/ // 中文字符集
   return chRegex.test(str)
+}
+
+/** 将结尾是${content}或(15/17)的内容识别出来 */
+function removeAndCollectSuffix(str: string) {
+  const regex = /(\$\{([a-zA-Z]+)\})$|(\(([a-zA-Z\-\d/]+)\))$/
+  const matches: string[] = []
+  const resultStr = str.replace(regex, (match, captured) => {
+    matches.push(match)
+    return ''
+  })
+  return {
+    origin: str,
+    resultStr4Suffix: resultStr,
+    removedContent4Suffix: matches,
+  }
+}
+/** 将开头是${content}或(15/17)或。的内容识别出来 */
+function removeAndCollectPrefix(str: string) {
+  const regex =
+    /^[。！？｡＃＄％＆（）＊＋，－／：；＜＝＞＠＼＾＿｀｜～\.\!\?\,\:\;\'\"\*\+\-\/\%\#\\\&\+]/
+  const matches: string[] = []
+  const resultStr = str.replace(regex, (match, captured) => {
+    matches.push(match)
+    return ''
+  })
+  return {
+    origin: str,
+    resultStr4Pre: resultStr,
+    removedContent4Pre: matches,
+  }
 }
 
 export function findChineseSubstrings(str: string) {
@@ -93,21 +129,74 @@ export function findChineseSubstrings(str: string) {
     if (match.index - lastIndex === 1) {
       lastIndex = match.index
     } else {
-      result.push({
+      const temp = {
         start: startIndex,
         end: lastIndex,
         sub: str.slice(startIndex, lastIndex + 1),
-      })
+      }
+      const { resultStr4Pre, removedContent4Pre } = removeAndCollectPrefix(temp.sub)
+      let offset = 0
+      if (removedContent4Pre.length === 1) {
+        console.log('#138 removedContent4Pre.length === 1', {
+          resultStr4Pre,
+          removedContent4Pre,
+        })
+        offset = removedContent4Pre[0].length
+        temp.sub = resultStr4Pre
+        temp.start = temp.start + offset
+      }
+      const { origin, resultStr4Suffix, removedContent4Suffix } = removeAndCollectSuffix(
+        temp.sub,
+      )
+      if (removedContent4Suffix.length === 1) {
+        console.log('#148 removedContent4Pre.length === 1', {
+          origin,
+          resultStr4Suffix,
+          removedContent4Suffix,
+          offset,
+        })
+        temp.sub = resultStr4Suffix
+        temp.end = temp.end - removedContent4Suffix[0].length + offset
+      }
+      result.push(temp)
       startIndex = match.index
       lastIndex = match.index
     }
   }
   if (startIndex > -1 && lastIndex > -1) {
-    result.push({
+    const temp = {
       start: startIndex,
       end: lastIndex,
       sub: str.slice(startIndex, lastIndex + 1),
-    })
+    }
+    const { resultStr4Pre, removedContent4Pre } = removeAndCollectPrefix(temp.sub)
+    let offset = 0
+    if (removedContent4Pre.length === 1) {
+      console.log('#169 removedContent4Pre.length === 1', {
+        resultStr4Pre,
+        removedContent4Pre,
+      })
+      offset = removedContent4Pre[0].length
+      temp.sub = resultStr4Pre
+      temp.start = temp.start + offset
+    }
+    const { origin, resultStr4Suffix, removedContent4Suffix } = removeAndCollectSuffix(
+      temp.sub,
+    )
+    if (removedContent4Suffix.length === 1) {
+      console.log('#179 removedContent4Pre.length === 1', {
+        origin,
+        resultStr4Suffix,
+        removedContent4Suffix,
+        offset,
+      })
+      temp.sub = resultStr4Suffix
+      temp.end = temp.end - removedContent4Suffix[0].length + offset
+    }
+    if (temp.start === temp.end) {
+      console.log('#169 temp.start === temp.end', temp)
+    }
+    result.push(temp)
   }
 
   return {
@@ -116,7 +205,7 @@ export function findChineseSubstrings(str: string) {
   }
 }
 
-type Dict = Record<string, string>
+export type Dict = Record<string, string>
 
 /** findChineseSubstringsInTemplate 的配套方法 */
 const findChineseInTemplateHelper = (subValue: string, dict: Dict) => {
@@ -126,14 +215,14 @@ const findChineseInTemplateHelper = (subValue: string, dict: Dict) => {
     let diff = 0
     for (const { start, end, sub } of temp.parsed) {
       if (!sub || !hasChinese(sub)) {
-        console.log('#74 sub:', `"${sub}"`, 'temp:', temp)
+        // console.log('#74 sub:', `"${sub}"`, 'temp:', temp)
       } else {
         // case1 Start
         let toReplace = ''
         if ((dict as Dict)[sub]) {
           toReplace = (dict as Dict)[sub]
         } else {
-          toReplace = genId()
+          toReplace = `backend/AiHelper/${genId()}`
           ;(dict as Dict)[sub] = toReplace
         }
         // case1 End
@@ -207,6 +296,8 @@ export const findChineseSubstringsInTemplate = (
   }
   if (_.isString(value)) {
     return findChineseInTemplateHelper(value, dict)
+    // console.log('#260 is String value:', value, 'rst259:', rst259)
+    // return rst259
   }
   if (!_.isObject(value)) {
     return dict

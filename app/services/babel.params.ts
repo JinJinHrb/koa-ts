@@ -6,6 +6,8 @@ export class GetAstAndAlterCodeParams {
 
   @IsNotEmpty()
   tsconfigPath!: string
+
+  writeDirectory?: string
 }
 
 export class ByRegExpParams {

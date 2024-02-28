@@ -12,6 +12,30 @@ import {
 } from './stringUtil'
 import _ from 'lodash'
 
+export async function mapToExcel(mapData: Map<string, string>, fileName: string) {
+  const workbook = new ExcelJS.Workbook()
+  const worksheet = workbook.addWorksheet('Sheet 1')
+
+  // 设置列头
+  worksheet.columns = [
+    { header: 'key', key: 'key', width: 20 },
+    { header: 'contentType', key: 'contentType', width: 10 },
+    { header: 'description', key: 'description', width: 10 },
+    { header: 'zh', key: 'zh', width: 30 },
+    { header: 'zh_TW', key: 'zh_TW', width: 30 },
+    { header: 'enSingle', key: 'enSingle', width: 30 },
+    { header: 'enPlural', key: 'enPlural', width: 30 },
+  ]
+
+  // 添加 Map 中的数据
+  mapData.forEach((value, key) => {
+    worksheet.addRow({ key: key, contentType: 'TEXT', zh: value })
+  })
+
+  // 写入文件
+  await workbook.xlsx.writeFile(fileName)
+}
+
 /**
  * 2024-02-06 补救：
  * 1. 将第2列的英文翻译放到第5列
@@ -136,7 +160,7 @@ export const readAndTranslate = async (
   const dollarCurlyBracketsReplace: string[][] = []
   const curlyBracketsReplace: string[][] = []
   dataSliced.forEach((text: string, index: number) => {
-    if (isLink(text)) {
+    if (isLink(text) || !_.trim(text)) {
       pLimit.enqueue2(() => Promise.resolve(text))
     } else {
       // const regex1 = /\{\{(.*?)\}\}/

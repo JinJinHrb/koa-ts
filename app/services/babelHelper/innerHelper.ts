@@ -10,7 +10,7 @@ import {
 import { TActionsMap, TFileCollectorElement, loc2String } from '.'
 import { DirectedGraph } from 'graphology'
 import { BabelService } from '../babel.service'
-import { getFileData } from 'app/helpers/fsUtils'
+import { findGitRepo, getFileData, isDirectory, mkdirSync } from 'app/helpers/fsUtils'
 import { RootObject as RootObject4GraphNodes } from 'app/mock/graphNodes/graphNodes.json.d'
 import { RootObject as RootObject4FileActions } from 'app/mock/fileActions/fileActions.json.d'
 import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
@@ -18,6 +18,7 @@ import type { RootActionsMap } from 'app/mock/fileActionsMap/fileActionsMap.json
 import type { RootSagaGraph } from 'app/mock/sagaGraph/sagaGraph.d'
 import { getFilesByLocalIdentifier } from './sagaHelper'
 import { parseCreateNetworkingSagas } from './createNetworkingSagasHelper'
+import fs from 'fs'
 
 export const fillInHandler2ActionsMap = async ({
   babelService,
@@ -981,3 +982,60 @@ export const getSagaGraph = async () =>
       )
     )?.toString(),
   ) as RootSagaGraph
+
+export function getWriteFolderAndWritePath(filePath: string, baseDirectory?: string) {
+  const projectPath = findGitRepo(filePath)
+  const prjArr = projectPath?.split(pathUtil.sep).filter(a => a)
+  const writeFolder = _.trim(prjArr?.slice(-1).join('_'))
+
+  const relativePathStr = filePath.slice(projectPath?.length)
+  const rpArr = relativePathStr.split(pathUtil.sep).filter(a => a)
+  const writePath = pathUtil.join(writeFolder, rpArr.join('_'))
+  const response = { writeFolder, writePath }
+  if (baseDirectory) {
+    response.writeFolder = pathUtil.join(baseDirectory, response.writeFolder)
+    response.writePath = pathUtil.join(baseDirectory, response.writePath)
+  }
+  return response
+}
+
+export async function writeResponse(
+  filePath: string,
+  response: any,
+  writeDirectory?: string,
+) {
+  const dirName =
+    filePath.lastIndexOf(pathUtil.sep) === filePath.length - 1
+      ? filePath.slice(filePath.slice(0, -1).lastIndexOf(pathUtil.sep), -1)
+      : filePath.slice(filePath.lastIndexOf(pathUtil.sep))
+  if (dirName && writeDirectory) {
+    if (!isDirectory(writeDirectory)) {
+      response.warning = `writePath is not a directory: ${writeDirectory}`
+    } else {
+      const { writeFolder, writePath } = getWriteFolderAndWritePath(
+        filePath,
+        writeDirectory,
+      )
+      mkdirSync(writeFolder)
+      // 格式化JSON数据
+      const formattedJson = JSON.stringify(response, null, 2)
+
+      // 将格式化后的JSON数据写入到另一个文件中
+      try {
+        await new Promise((rsv, rej) => {
+          fs.writeFile(`${writePath}.ast.json`, formattedJson, 'utf8', err => {
+            if (err) {
+              // console.error('Error writing file:', err)
+              rej(err)
+              return
+            }
+            // console.log('File has been written successfully!')
+            rsv({ message: 'OK', writePath })
+          })
+        })
+      } catch (e) {
+        response.error = (e as Error)?.message ?? `fail to write ${writePath}`
+      }
+    }
+  }
+}

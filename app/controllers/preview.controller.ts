@@ -4,6 +4,7 @@ import { Service } from 'typedi'
 import { TMP_FOLDER } from 'configs/puppeteer.config'
 import { PreviewParams } from 'app/services/preview.params'
 import {
+  Dict,
   fillInHelper,
   fillInTemplateWithDict,
   findChineseSubstringsInTemplate,
@@ -17,6 +18,7 @@ import {
   readAndTranslate,
   retryTranslation,
   switch2Columns,
+  mapToExcel,
 } from 'app/helpers/excelUtils'
 import {
   getCommitHistory,
@@ -31,6 +33,7 @@ import {
 import fs from 'fs'
 import { cacheTranslation } from 'app/helpers/translateUtils'
 import { getFileData } from 'app/helpers/fsUtils'
+import { genId } from 'app/helpers/stringUtil'
 
 // import commits from 'app/helpers/mock/commits'
 // import commit from 'app/helpers/mock/commit'
@@ -64,34 +67,53 @@ export class PreviewController {
 
   @Post('/excel/textToExcel')
   async textToExcel(@Body() params: any) {
-    const { filePath } = params
-    const txt = (await getFileData(filePath)) as unknown as string
-    const obj = JSON.parse(txt)
-    const { dict } = obj
-    const map = reverseObject(dict)
+    const { srcPath, destPath } = params
+    const txt = (await getFileData(srcPath)) as unknown as string
+    const jsonObj = JSON.parse(txt)
+    const { dict } = jsonObj
+    const dataObj = reverseObject(dict)
     const dictKeysLength = Object.keys(dict).length
-    const mapKeysLength = Object.keys(map).length
+    const mapKeysLength = Object.keys(dataObj).length
     if (dictKeysLength !== mapKeysLength) {
       return {
         error: 'dictKeysLength !== mapKeysLength',
       }
     }
+    const entries = Object.entries(dataObj)
+    const map = new Map(entries)
+    await mapToExcel(map, destPath)
     return {
       dictKeysLength: Object.keys(dict).length,
-      mapKeysLength: Object.keys(map).length,
-      map,
+      mapKeysLength: Object.keys(dataObj).length,
+      srcPath,
+      destPath,
     }
   }
 
   @Post('/preTranslateBackendTemplate')
-  async preTranslateBackendTemplate(@Body() params: { filePath: string }) {
-    const { filePath } = params
-    const dict: { [key: string]: string } = {}
-    const { warnings, collection } = await parseBackendTemplate(filePath)
+  async preTranslateBackendTemplate(@Body() params: { filePath: string; flag?: number }) {
+    const { filePath, flag } = params
+    // const txt = (await getFileData(filePath)) as unknown as string
+    // const arr = JSON.parse(txt)
+    // return { arr }
+    const dict: Dict = {}
+    const { warnings, collection } = await parseBackendTemplate(filePath, flag)
     for (const element of collection) {
       const { template } = element
       // dict = { ...dict, ...findChineseSubstringsInTemplate(template) }
-      findChineseSubstringsInTemplate(template, dict)
+      if (_.isString(template)) {
+        let toReplace = ''
+        if (dict[template]) {
+          toReplace = dict[template]
+        } else {
+          toReplace = `backend/AiHelper/${genId()}`
+          dict[template] = toReplace
+        }
+        element.template = `#{${toReplace}}`
+      } else {
+        // 正常 100% 是对象
+        findChineseSubstringsInTemplate(template, dict)
+      }
     }
     return { warnings, collection, dict }
   }

@@ -6,12 +6,14 @@ import pathUtil from 'path'
 import { ParseResult } from '@babel/parser'
 import { File } from '@babel/types'
 import {
+  findGitRepo,
   getFileData,
   getFileDataSync,
   getFsStatPromise,
   isDirectory,
   listFilteredFilesPromise,
   listStatsPromise,
+  mkdirSync,
 } from 'app/helpers/fsUtils'
 import _ from 'lodash'
 import fs from 'fs'
@@ -36,6 +38,8 @@ import {
   getGraphNodes,
   getSagaGraph,
   getSagaMap,
+  getWriteFolderAndWritePath,
+  writeResponse,
 } from 'app/services/babelHelper/innerHelper'
 import {
   getHandlerActions,
@@ -44,6 +48,7 @@ import {
 } from 'app/services/babelHelper/sagaHelper'
 import { DirectedGraph } from 'graphology'
 import { iterate2FindCertainStructure } from 'app/helpers/iterationUtil'
+import * as fsUtils from 'app/helpers/fsUtils'
 
 /*
  * 确定项目依赖图
@@ -75,6 +80,35 @@ import { iterate2FindCertainStructure } from 'app/helpers/iterationUtil'
 @Controller('/babel')
 export class BabelController {
   constructor(private babelService: BabelService) {}
+
+  @Post('/test_writeJson')
+  async writeJson() {
+    const dirPath = pathUtil.resolve(
+      __dirname.slice(0, __dirname.indexOf('app')),
+      './app/mock/graphNodes/mfe-user-crm',
+    )
+    fsUtils.mkdirSync(dirPath)
+    const filePath = pathUtil.resolve(dirPath, 'demo.json')
+
+    const jsonData = { a: 1, b: 2, c: { c1: 11, c2: 12 } }
+
+    // 格式化JSON数据
+    const formattedJson = JSON.stringify(jsonData, null, 2)
+
+    // 将格式化后的JSON数据写入到另一个文件中
+    const response = await new Promise((rsv, rej) => {
+      fs.writeFile(filePath, formattedJson, 'utf8', err => {
+        if (err) {
+          // console.error('Error writing file:', err)
+          rej(err)
+          return
+        }
+        // console.log('File has been written successfully!')
+        rsv({ message: 'OK', filePath })
+      })
+    })
+    return response
+  }
 
   /*
    * iterate2FindCertainStructure 示例
@@ -667,7 +701,10 @@ export class BabelController {
   }
 
   @Post('/getAstAndAlterCode')
-  async getAstAndAlterCode(@Body() { filePath, tsconfigPath }: GetAstAndAlterCodeParams) {
+  async getAstAndAlterCode(
+    @Body()
+    { filePath, tsconfigPath, writeDirectory }: GetAstAndAlterCodeParams,
+  ) {
     if (this.babelService.tsconfigPath !== tsconfigPath) {
       await this.babelService.setAlias(tsconfigPath)
     }
@@ -689,7 +726,17 @@ export class BabelController {
       // result = findQueryGeneral(ast)
       result = await findConnectActions(ast, filePath, this.babelService)
     }
-    return { filePath, result, ast, stats }
+    const baseResponse = {
+      filePath,
+      result,
+      ast,
+      stats,
+    }
+    const response: typeof baseResponse & { warning?: string; error?: string } = {
+      ...baseResponse,
+    }
+    await writeResponse(filePath, response, writeDirectory)
+    return response
   }
 
   @Post('/getPathByAlias')

@@ -348,3 +348,49 @@ export const listStatsPromise = async (
       )
   })
 }
+
+export const writeJson = async (filePath: string) => {
+  const dirPath = pathUtil.resolve(
+    __dirname.slice(0, __dirname.indexOf('app')),
+    './app/mock/graphNodes/mfe-user-crm',
+  )
+  mkdirSync(dirPath)
+  // const filePath = pathUtil.resolve(dirPath, 'demo.json')
+
+  const jsonData = { a: 1, b: 2, c: { c1: 11, c2: 12 } }
+
+  // 格式化JSON数据
+  const formattedJson = JSON.stringify(jsonData, null, 2)
+
+  // 将格式化后的JSON数据写入到另一个文件中
+  return await new Promise((rsv, rej) => {
+    fs.writeFile(filePath, formattedJson, 'utf8', err => {
+      if (err) {
+        // console.error('Error writing file:', err)
+        rej(err)
+        return
+      }
+      // console.log('File has been written successfully!')
+      rsv({ message: 'OK', filePath })
+    })
+  })
+}
+
+export function findGitRepo(startPath: string) {
+  let currentPath = startPath
+
+  while (true) {
+    const gitPath = pathUtil.join(currentPath, '.git')
+    if (fs.existsSync(gitPath) && fs.lstatSync(gitPath).isDirectory()) {
+      return currentPath
+    }
+
+    const parentPath = pathUtil.dirname(currentPath)
+    if (parentPath === currentPath) {
+      // 已经到达文件系统的根目录，没有找到 .git 文件夹
+      return null
+    }
+
+    currentPath = parentPath
+  }
+}
