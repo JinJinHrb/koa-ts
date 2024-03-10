@@ -10,7 +10,13 @@ import {
 import { TActionsMap, TFileCollectorElement, loc2String } from '.'
 import { DirectedGraph } from 'graphology'
 import { BabelService } from '../babel.service'
-import { findGitRepo, getFileData, isDirectory, mkdirSync } from 'app/helpers/fsUtils'
+import {
+  findGitRepo,
+  getFileData,
+  getFsStatPromise,
+  isDirectory,
+  mkdirSync,
+} from 'app/helpers/fsUtils'
 import { RootObject as RootObject4GraphNodes } from 'app/mock/graphNodes/graphNodes.json.d'
 import { RootObject as RootObject4FileActions } from 'app/mock/fileActions/fileActions.json.d'
 import type { RootBuildSagaMap } from 'app/mock/sagaMap/buildSagaMap.json.d'
@@ -1052,4 +1058,65 @@ export async function writeResponse(
     }
   }
   return null
+}
+
+export async function getSharedComponentPrefixByModuleFederations(
+  babelService: BabelService,
+  federationConfigPath: string,
+) {
+  // const stats = await getFsStatPromise(webpackConfigPath)
+  const code = (await getFileData(federationConfigPath))?.toString()
+  const ast = await babelService.getAstByCode(code)
+  let relativeSharedFilePath = ''
+  traverse(ast, {
+    VariableDeclaration(path: NodePath<any>) {
+      iterateObjectHandler(path.node, (value: any, key) => {
+        const variableDeclarationProperties = value.id?.properties ?? []
+        const appSharedDeclaration = variableDeclarationProperties.filter(
+          (a: any) => a?.value?.name === 'appShared',
+        )[0]
+        const initValue = value.init?.arguments?.[0].value
+        if (
+          value &&
+          value.type === 'VariableDeclarator' &&
+          value.id?.type === 'ObjectPattern' &&
+          appSharedDeclaration
+        ) {
+          relativeSharedFilePath = initValue
+          return true
+        }
+        return false
+      })
+    },
+  })
+
+  const sharedFilePath = relativeSharedFilePath
+    ? babelService.getAbsolutePathByAlias(relativeSharedFilePath, federationConfigPath)
+    : ''
+
+  const code2 = (await getFileData(sharedFilePath))?.toString()
+  const ast2 = await babelService.getAstByCode(code2)
+  let sharedComponentPrefix
+  traverse(ast2, {
+    ObjectExpression(path: NodePath<any>) {
+      iterateObjectHandler(path.node, (value: any, key) => {
+        const stringArgument =
+          value?.value?.arguments?.[0]?.type === 'StringLiteral'
+            ? value?.value?.arguments?.[0].value
+            : null
+        if (
+          value &&
+          value.type === 'ObjectProperty' &&
+          value.key?.name === 'appShared' &&
+          stringArgument
+        ) {
+          sharedComponentPrefix = stringArgument
+          return true
+        }
+        return false
+      })
+    },
+  })
+
+  return { sharedFilePath, sharedComponentPrefix }
 }

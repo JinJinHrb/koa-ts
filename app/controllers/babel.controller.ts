@@ -52,6 +52,9 @@ import * as fsUtils from 'app/helpers/fsUtils'
  * (0) /getAstAndAlterCode
  * (1) /traverseToGetGraph => app/mock/graphNodes/graphNodes.json
  * (2) /removeUnusedModules 清理未用到的模块
+ *
+ * 整合
+ * /traverseAndRemove
  */
 
 /*
@@ -764,6 +767,101 @@ export class BabelController {
     // /Users/alexwang/workspace/xTransfer/mfe-user-crm/webpack-config/federationConfig.js
   }
 
+  @Post('/traverseAndRemove')
+  async traverseAndRemove(
+    @Body()
+    {
+      filePath,
+      filePaths,
+      tsconfigPath,
+      noRecur,
+      writeDirectory,
+      folderPath, // 检查依赖的范围
+    }: ByRegExpParams & {
+      writeDirectory: string
+      folderPath: string
+    },
+  ) {
+    // /traverseToGetGraph Start
+    if (!isDirectory(writeDirectory)) {
+      return { error: 'invalid writeDirectory' }
+    }
+
+    if (_.isEmpty(filePath) && !_.isEmpty(filePaths)) {
+      filePath = filePaths?.shift()
+    }
+
+    // tsconfigPath
+    await this.babelService.setAlias(tsconfigPath)
+    const { filename, npmDependencies, graph } =
+      await this.babelService.traverseToGetGraph({
+        filePath,
+        filePaths,
+        noRecur,
+      })
+    const baseResponse = {
+      filename,
+      // fileDependencies,
+      npmDependencies,
+      // aliasFileMap,
+      // aliasNpmMap,
+      size: graph.directedSize,
+      graph: graph.toJSON(),
+    }
+    const response: typeof baseResponse & { warning?: string; error?: string } = {
+      ...baseResponse,
+    }
+    const { writePath: graphNodesPath } = (await writeResponse(
+      filePath as string,
+      '.traverseToGetGraph.json',
+      response,
+      writeDirectory,
+    )) || { writePath: '' }
+    // /traverseToGetGraph End
+
+    // /removeUnusedModules Start
+    const graphNodes = await getGraphNodes(graphNodesPath)
+    const candidates = (await listFilteredFilesPromise({
+      filterHandler: a => a.fileFlag ?? false,
+      folderPath,
+      isRecur: true,
+      mapHandler: a => {
+        return a.absPath as string
+      },
+    })) as string[]
+    const toRemovePaths = candidates.filter(
+      a =>
+        !a.endsWith('package.json') &&
+        !a.includes('/shared/types/') && // WangFan TODO 改从 tsconfig 里取
+        !a.includes('/resources/') &&
+        !a.includes('/formily-xtd/') &&
+        !a.includes('/test/') &&
+        !a.includes('/__test__/') &&
+        !a.includes('/__tests__/') &&
+        !a.includes('/constants/env/') &&
+        !graphNodes.graph.nodes.map(a => a.key).includes(a),
+    )
+    toRemovePaths.forEach(path => {
+      fs.unlink(path, function (err) {
+        if (err) return console.error(`delete file "${path}" error:`, err)
+      })
+    })
+    const baseResponse2 = { toRemovePaths }
+    const response2: typeof baseResponse2 & { warning?: string; error?: string } = {
+      ...baseResponse2,
+    }
+    if (writeDirectory) {
+      return await writeResponse(
+        folderPath as string,
+        '.removeUnusedModules.json',
+        response2,
+        writeDirectory,
+      )
+    }
+    return response2
+    // /removeUnusedModules End
+  }
+
   @Post('/traverseToGetGraph')
   async traverseToGetGraph(
     @Body()
@@ -859,7 +957,7 @@ export class BabelController {
     const toRemovePaths = candidates.filter(
       a =>
         !a.endsWith('package.json') &&
-        !a.includes('/shared/types/') &&
+        !a.includes('/shared/types/') && // WangFan TODO 改从 tsconfig 里取
         !a.includes('/resources/') &&
         !a.includes('/formily-xtd/') &&
         !a.includes('/test/') &&

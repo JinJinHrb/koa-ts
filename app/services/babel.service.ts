@@ -158,6 +158,7 @@ export class BabelService {
           npmDependencies = _.uniq(npmDependencies.filter(a => a))
           fileDependencies.forEach(fd => {
             if (
+              !fd.includes('/node_modules/') &&
               !fd.endsWith('.css') &&
               !fd.endsWith('.less') &&
               !fd.endsWith('.sass') &&
