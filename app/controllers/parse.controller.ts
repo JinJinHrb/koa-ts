@@ -3,8 +3,9 @@ import { BabelService } from '../services'
 import { Service } from 'typedi'
 import _ from 'lodash'
 import { GetAstAndAlterCodeParams } from 'app/services/babel.params'
-import { getFileData, getFsStatPromise } from 'app/helpers/fsUtils'
+import { getFileData, getFsStatPromise, isFile } from 'app/helpers/fsUtils'
 import { getSharedComponentPrefixByModuleFederations } from 'app/services/babelHelper/innerHelper'
+import { rankRequestByHar } from 'app/helpers/performanceHelper'
 
 @JsonController()
 @Service()
@@ -24,5 +25,16 @@ export class ParseController {
       this.babelService,
       federationConfigPath,
     )
+  }
+
+  @Post('/rankRequests')
+  async rankRequests(
+    @Body()
+    { harPath }: any,
+  ) {
+    if (!isFile(harPath)) {
+      return { error: `invalid filePath: ${harPath}` }
+    }
+    return await rankRequestByHar(harPath)
   }
 }
