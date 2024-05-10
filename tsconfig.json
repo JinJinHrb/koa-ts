@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": false,
     "strict": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "module": "commonjs",
     "outDir": "./dist",
     "lib": ["ESNext"],
@@ -14,7 +14,7 @@
     "preserveConstEnums": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "typeRoots": ["node_modules/@types", "typings"],
+    "typeRoots": ["node_modules/@types", "app/typings"],
     "baseUrl": ".",
     "paths": {
       "configs/*": ["./configs/*"],
@@ -23,7 +23,7 @@
     }
   },
   "compileOnSave": false,
-  "includes": ["app/**/*", "configs/**/*", "**/*.ts", "**/*.tsx"],
+  "include": ["app/**/*", "configs/**/*", "**/*.ts", "**/*.tsx"],
   "files": ["app.ts"],
   "exclude": ["node_modules", "dist"],
   "ts-node": {

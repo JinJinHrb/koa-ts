@@ -78,7 +78,7 @@ export class BabelService {
                       a =>
                         a.type === 'ImportSpecifier' &&
                         a.local.name === bindingKey &&
-                        a.imported.name === 'connect',
+                        (a.imported as any).name === 'connect',
                     )?.[0]
                     if (possibleConnect) {
                       // result.push(bindings[bindingKey].identifier)
@@ -397,7 +397,7 @@ export class BabelService {
     traverse(ast, {
       Identifier(path) {
         if (path.node.name === 'exposes') {
-          const parent = path.findParent(path => path.type === 'ObjectProperty')
+          const parent = path.findParent(path => path.type === 'ObjectProperty') as any
           const properties = (parent.node as any)?.value.properties
             .filter((a: any) => a.type === 'ObjectProperty')
             .map((a: any) => a.value.name) as string[]
