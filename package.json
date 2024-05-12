@@ -13,7 +13,8 @@
     "prod:build": "node ./build.js",
     "prod:start": "prisma generate && prisma migrate deploy && export NODE_ENV=production; node ./dist/index.js",
     "lint": "eslint app/**/*.ts",
-    "format": "eslint app/**/*.ts --fix"
+    "format": "eslint app/**/*.ts --fix",
+    "interview": "export NODE_ENV=development; ts-node-dev --transpile-only -O '{\"esModuleInterop\": true}' --respawn --inspect -r tsconfig-paths/register console/interview.ts"
   },
   "author": "unix (unix.bio@gmail.com)",
   "bugs": {
