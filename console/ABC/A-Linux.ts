@@ -9,7 +9,7 @@ export const run = () => {
   
   const lines: number|string[] = [];
   let n: number;
-  rl.on("line", (line) => {
+  rl.on('line', (line) => {
     lines.push(line);
   
     if (lines.length === 1) {
