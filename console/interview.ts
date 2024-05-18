@@ -1,8 +1,13 @@
-import { run } from './ABC/A-Linux'
+import { testALinux, testUnionFindSet } from './ABC/A-Linux'
 import { case1, case2 } from './HL/microMacroTasks'
 import { runCellLife } from './HL/cellLife'
 import { testPointInPolygon } from './YS/isPointInPolygon'
-// run()
-// case2()
-// runCellLife()
-testPointInPolygon()
+import { testCombineFromArray, testPermute } from './ABC/statistics'
+import { testWalk } from './ABC/walk'
+import { testJoinChars } from './ABC/joinChars'
+import { testComputePrefixFunction, testKmpSearch } from './ABC/KMP'
+import { testMatchPartNames } from './ABC/matchPartNames'
+
+// testALinux()
+// testMatchPartNames()
+testUnionFindSet()
