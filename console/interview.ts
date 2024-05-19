@@ -7,7 +7,6 @@ import { testWalk } from './ABC/walk'
 import { testJoinChars } from './ABC/joinChars'
 import { testComputePrefixFunction, testKmpSearch } from './ABC/KMP'
 import { testMatchPartNames } from './ABC/matchPartNames'
+import { testDpi } from './ABC/Dpi'
 
-// testALinux()
-// testMatchPartNames()
-testUnionFindSet()
+testDpi()
