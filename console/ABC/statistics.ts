@@ -27,12 +27,6 @@ export function permute(nums: number[]) {
   return result
 }
 
-export const testPermute = () => {
-  // 测试代码
-  const nums = [1, 2, 3]
-  console.log(permute(nums))
-}
-
 function combineFromArray(
   elements: string[],
   m: number,
@@ -52,6 +46,12 @@ function combineFromArray(
   }
 
   return result
+}
+
+export const testPermute = () => {
+  // 测试代码
+  const nums = [1, 2, 3]
+  console.log(permute(nums))
 }
 
 export const testCombineFromArray = () => {
