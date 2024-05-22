@@ -1,3 +1,3 @@
-import { testBfs } from './ABC/bfs'
+import { testAsyncPool } from './HL/cellLife'
 
-testBfs()
+testAsyncPool()
