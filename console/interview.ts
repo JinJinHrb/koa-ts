@@ -1,3 +1,3 @@
-import { testAsyncPool } from './HL/cellLife'
+import { testHeapSort } from './ABC/Heap'
 
-testAsyncPool()
+testHeapSort()
