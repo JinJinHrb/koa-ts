@@ -1,3 +1,4 @@
+/* 小顶堆 */
 class MinHeap {
   heap: number[]
 
@@ -105,7 +106,7 @@ class MinHeap {
   }
 }
 
-function heapSort(arr: number[]) {
+function minHeapSort(arr: number[]) {
   const heap = new MinHeap()
   arr.forEach(item => heap.add(item))
   const sortedArray = []
@@ -115,9 +116,9 @@ function heapSort(arr: number[]) {
   return sortedArray
 }
 
-export const testHeapSort = () => {
+export const testMinHeapSort = () => {
   // 示例用法：
   const array = [5, 3, 7, 4, 9, 6, 1, 10, 2, 8]
-  const sortedArray = heapSort(array)
+  const sortedArray = minHeapSort(array)
   console.log(sortedArray) // 输出: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
