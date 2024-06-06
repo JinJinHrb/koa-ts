@@ -1,3 +1,3 @@
-import { testMaxHeapSort } from './ABC/MaxHeap'
+import { testJosephLoop } from './ABC/josephLoop'
 
-testMaxHeapSort()
+testJosephLoop()
