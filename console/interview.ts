@@ -1,3 +1,3 @@
-import { testJosephLoop } from './ABC/josephLoop'
+import { testTrappingRainWater } from './ABC/stacks/trappingRainWater'
 
-testJosephLoop()
+testTrappingRainWater()
