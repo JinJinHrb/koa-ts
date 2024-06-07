@@ -1,3 +1,3 @@
-import { testTrappingRainWater } from './ABC/stacks/trappingRainWater'
+import { testGetMaxSubArr } from './ABC/maxSubArr'
 
-testTrappingRainWater()
+testGetMaxSubArr()
