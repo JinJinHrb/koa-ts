@@ -1,3 +1,3 @@
-import { testGetMaxSubArr } from './ABC/maxSubArr'
+import { testGetReverseExpression } from './ABC/stacks/reverseExpression'
 
-testGetMaxSubArr()
+testGetReverseExpression()

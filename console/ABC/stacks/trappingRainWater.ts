@@ -8,50 +8,58 @@
 // 输入：height = [4,2,0,3,2,5]
 // 输出：9
 
-const getStageDiffs = (arr: number[]) =>
-  arr.reduce(
-    (states: number[], currentValue: number, currentIndex: number) => {
-      if (currentIndex === 0) {
-        return states
-      }
-      const previousValue = arr[currentIndex - 1]
-      const diff = currentValue - previousValue
-      states.push(diff)
-      return states
-    },
-    [0] as number[],
-  )
+function getTrappingRainWater(height: number[]) {
+  let left = 0,
+    right = height.length - 1
+  let leftMax = 0,
+    rightMax = 0
+  let water = 0
 
-const getTrappingRainWater = (arr: number[]) => {
-  const stageDiffs = getStageDiffs(arr)
-  const dp = Array.from({ length: stageDiffs.length }).fill(0) as number[]
-  const stack: number[] = []
-
-  // j 代表水位
-  for (let i = 0; i < stageDiffs.length; i++) {
-    const diff = stageDiffs[i]
-    const height = arr[i]
-    if (diff < 0) {
-      stack.push(i)
-    } else if (diff > 0) {
-      const ki = stack.length - 1
-      // let ki = stack.length - 1
-      // while (ki > -1) {
-      const heightKi = arr[ki]
-      if (height <= heightKi) {
-        break
+  while (left < right) {
+    if (height[left] < height[right]) {
+      if (height[left] >= leftMax) {
+        leftMax = height[left]
+      } else {
+        water += leftMax - height[left]
       }
-      const k = stack[ki]
-      const minBoard = Math.min(stageDiffs[k], diff)
-      const capacity = minBoard * (k - i)
-      dp[k] += capacity
-      // ki--
-      // }
+      left++
+    } else {
+      if (height[right] >= rightMax) {
+        rightMax = height[right]
+      } else {
+        water += rightMax - height[right]
+      }
+      right--
     }
   }
-  console.log('#39 stageDiffs:', stageDiffs, '\ndp:', dp)
-  return dp.reduce((sum, i) => sum + i, 0)
+  return water
 }
+
+/* const getTrappingRainWater = (heights: number[]) => {
+  let left = 0,
+    right = heights.length - 1,
+    maxLeft = 0,
+    maxRight = 0,
+    capacity = 0
+  while (left < right) {
+    if (heights[left] < heights[right]) {
+      if (heights[left] > maxLeft) {
+        maxLeft = heights[left]
+      } else {
+        capacity += maxLeft - heights[left]
+      }
+      left++
+    } else {
+      if (heights[right] > maxRight) {
+        maxRight = heights[right]
+      } else {
+        capacity += maxRight - heights[right]
+      }
+      right--
+    }
+  }
+  return capacity
+} */
 
 export const testTrappingRainWater = () => {
   const input = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
