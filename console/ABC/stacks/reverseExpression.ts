@@ -54,7 +54,45 @@ const getReverseExpression = (expression: string) => {
   while (opStack.length > 0) {
     digitStack.push(opStack.pop() as string)
   }
-  return digitStack.join(',')
+  // return digitStack.join(',')
+  return digitStack
+}
+
+function evalRPN(tokens: string[]) {
+  const stack: number[] = []
+  const operators = ['+', '-', '*', '/']
+
+  for (const token of tokens) {
+    if (!operators.includes(token)) {
+      stack.push(parseInt(token))
+    } else {
+      const num2 = stack.pop() as number
+      const num1 = stack.pop() as number
+      switch (token) {
+        case '+':
+          stack.push(num1 + num2)
+          break
+        case '-':
+          stack.push(num1 - num2)
+          break
+        case '*':
+          stack.push(num1 * num2)
+          break
+        case '/':
+          stack.push(Math.trunc(num1 / num2))
+          break // 注意JavaScript除法可能产生浮点数
+      }
+    }
+  }
+  return stack.pop()
+}
+
+export const testEvalRPN = () => {
+  console.log(evalRPN(['1', '2', '+']), 3)
+  console.log(evalRPN(['3', '4', '+']), 7)
+  console.log(evalRPN(['5', '2', '*', '3', '+']), 13)
+  console.log(evalRPN(['5', '2', '3', '*', '+']), 11)
+  console.log(evalRPN(['100', '50', '25', '-', '/']), 4)
 }
 
 export const testGetReverseExpression = () => {

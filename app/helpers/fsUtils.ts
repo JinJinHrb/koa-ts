@@ -281,6 +281,33 @@ export const listFilteredFilesPromise = ({
   })
 }
 
+interface Pair<V> {
+  [key: string]: V
+}
+
+export const findDuplicateFiles = async (folderPath: string) => {
+  const obj: Pair<boolean> = {}
+  const duplicateFiles: string[] = []
+  const abnormalFiles: IFileState[] = []
+  await listFilteredFilesPromise({
+    folderPath,
+    filterHandler: (
+      value: IFileState,
+      index?: number | undefined,
+      array?: IFileState[] | undefined,
+    ) => {
+      if (typeof value.fname === 'string' && obj[value.fname]) {
+        duplicateFiles.push(value.absPath as string)
+      } else if (!value.fname) {
+        abnormalFiles.push(value)
+      }
+      return true
+    },
+    isRecur: true,
+  })
+  return [duplicateFiles, abnormalFiles]
+}
+
 type TFilterHandler = (value: IFileState, index?: number, array?: IFileState[]) => boolean
 
 /**

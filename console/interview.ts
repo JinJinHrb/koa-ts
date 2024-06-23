@@ -1,3 +1,3 @@
-import { testGetReverseExpression } from './ABC/stacks/reverseExpression'
+import { testLengthOfLongestSubstring } from './ABC/search/LongestSubString'
 
-testGetReverseExpression()
+testLengthOfLongestSubstring()

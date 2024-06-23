@@ -9,7 +9,7 @@ import deepClone from './deepClone'
 
 // 跳过 "type": "TSNonNullExpression" 获取 parentPath
 export const getParentPathSkipTSNonNullExpression = (
-  path: NodePath<Node> | NodePath<Identifier>,
+  path: NodePath<Node> | NodePath<Identifier> | null,
   degree = 1,
 ) => {
   if (!path) {
@@ -18,11 +18,11 @@ export const getParentPathSkipTSNonNullExpression = (
   if (!_.isNumber(degree) || degree < 1) {
     throw new Error('degree must be number and cannot be less than 1')
   }
-  while (degree > 0) {
-    if (path.parentPath?.node.type === 'TSNonNullExpression') {
+  while (path && degree > 0) {
+    if (path && path.parentPath?.node.type === 'TSNonNullExpression') {
       path = path.parentPath.parentPath
     } else {
-      path = path.parentPath
+      path = path ? path.parentPath : null
     }
     degree--
   }
