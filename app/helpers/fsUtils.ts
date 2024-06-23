@@ -285,22 +285,22 @@ interface Pair<V> {
   [key: string]: V
 }
 
-interface DuplicateFiles {
+interface FilePaths {
   [key: string]: string[]
 }
 
 export const findDuplicateFiles = async (
   folderPath: string,
-): Promise<[DuplicateFiles, IFileState[]]> => {
+): Promise<[FilePaths, IFileState[]]> => {
   const obj: Pair<string> = {}
-  const duplicateFiles: DuplicateFiles = {}
+  const duplicateFiles: FilePaths = {}
   const abnormalFiles: IFileState[] = []
   await listFilteredFilesPromise({
     folderPath,
     filterHandler: (
       value: IFileState,
-      index?: number | undefined,
-      array?: IFileState[] | undefined,
+      // index?: number | undefined,
+      // array?: IFileState[] | undefined,
     ) => {
       if (typeof value.fname === 'string') {
         if (obj[value.fname]) {
@@ -319,6 +319,50 @@ export const findDuplicateFiles = async (
     isRecur: true,
   })
   return [duplicateFiles, abnormalFiles]
+}
+
+export const searchNodeModules = async (folderPath: string, targets: string[]) => {
+  const jsonKeys = ['dependencies', 'devDependencies', 'peerDependencies']
+  const targetFiles: FilePaths = {}
+  const abnormalFiles: IFileState[] = []
+  await listFilteredFilesPromise({
+    folderPath,
+    filterHandler: (
+      value: IFileState,
+      // index?: number | undefined,
+      // array?: IFileState[] | undefined,
+    ) => {
+      if (value.fname === 'package.json') {
+        const content = fs.readFileSync(value.absPath as string, 'utf8')
+        if (content) {
+          try {
+            const json = JSON.parse(content)
+            // dependencies, devDependencies, peerDependencies
+            jsonKeys.forEach(k => {
+              if (json[k]) {
+                Object.keys(json[k]).forEach(key => {
+                  if (targets.includes(key)) {
+                    if (!targetFiles[key]) {
+                      targetFiles[key] = []
+                    }
+                    targetFiles[key].push(value.absPath as string)
+                  }
+                })
+              }
+            })
+          } catch (error) {
+            console.log('error:', error, 'value:', value)
+            abnormalFiles.push(value)
+          }
+        }
+      } else if (!value.fname) {
+        abnormalFiles.push(value)
+      }
+      return true
+    },
+    isRecur: true,
+  })
+  return { targetFiles, abnormalFiles }
 }
 
 type TFilterHandler = (value: IFileState, index?: number, array?: IFileState[]) => boolean

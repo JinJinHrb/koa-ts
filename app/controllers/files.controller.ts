@@ -5,6 +5,7 @@ import {
   IFileState,
   findDuplicateFiles,
   listFilteredFilesPromise,
+  searchNodeModules,
 } from 'app/helpers/fsUtils'
 import fs from 'fs'
 import path from 'path'
@@ -14,6 +15,12 @@ import path from 'path'
 @Controller('/files')
 export class FilesController {
   constructor(private sessionsService: SessionsService) {}
+
+  @Post('/searchNodeModules')
+  async searchNodeModules(@Body() params: { folderPath: string }) {
+    const { folderPath } = params
+    return await searchNodeModules(folderPath, ['stack-utils'])
+  }
 
   @Post('/findDuplicates')
   async findDuplicates(@Body() params: { folderPath: string }) {
