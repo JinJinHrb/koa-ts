@@ -1,7 +1,11 @@
 import { Post, JsonController, Body, Controller } from 'routing-controllers'
 import { SessionsService } from '../services'
 import { Service } from 'typedi'
-import { listFilteredFilesPromise } from 'app/helpers/fsUtils'
+import {
+  IFileState,
+  findDuplicateFiles,
+  listFilteredFilesPromise,
+} from 'app/helpers/fsUtils'
 import fs from 'fs'
 import path from 'path'
 
@@ -10,6 +14,13 @@ import path from 'path'
 @Controller('/files')
 export class FilesController {
   constructor(private sessionsService: SessionsService) {}
+
+  @Post('/findDuplicates')
+  async findDuplicates(@Body() params: { folderPath: string }) {
+    const { folderPath } = params
+    const [duplicateFiles, abnormalFiles] = await findDuplicateFiles(folderPath)
+    return { duplicateFiles, abnormalFiles }
+  }
 
   @Post('/appendSuffix')
   async appendSuffix(@Body() params: any) {

@@ -285,9 +285,15 @@ interface Pair<V> {
   [key: string]: V
 }
 
-export const findDuplicateFiles = async (folderPath: string) => {
-  const obj: Pair<boolean> = {}
-  const duplicateFiles: string[] = []
+interface DuplicateFiles {
+  [key: string]: string[]
+}
+
+export const findDuplicateFiles = async (
+  folderPath: string,
+): Promise<[DuplicateFiles, IFileState[]]> => {
+  const obj: Pair<string> = {}
+  const duplicateFiles: DuplicateFiles = {}
   const abnormalFiles: IFileState[] = []
   await listFilteredFilesPromise({
     folderPath,
@@ -296,8 +302,15 @@ export const findDuplicateFiles = async (folderPath: string) => {
       index?: number | undefined,
       array?: IFileState[] | undefined,
     ) => {
-      if (typeof value.fname === 'string' && obj[value.fname]) {
-        duplicateFiles.push(value.absPath as string)
+      if (typeof value.fname === 'string') {
+        if (obj[value.fname]) {
+          if (!duplicateFiles[value.fname]) {
+            duplicateFiles[value.fname] = [obj[value.fname]]
+          }
+          duplicateFiles[value.fname].push(value.absPath as string)
+        } else {
+          obj[value.fname] = value.absPath as string
+        }
       } else if (!value.fname) {
         abnormalFiles.push(value)
       }
@@ -360,6 +373,7 @@ export const listStatsPromise = async (
             elem.fileFlag = elem.isFile()
             elem.directoryFlag = elem.isDirectory()
             elem.symbolicLinkFlag = elem.isSymbolicLink()
+            elem.absPath = pathUtil.resolve(folderPath, elem.fname)
           })
           if (filterHandler && filterHandler instanceof Function) {
             feed = feed.filter(filterHandler)
